@@ -37,8 +37,8 @@ QueryDialog {
                 break;
             case XMLHttpRequest.DONE: {
                 var text = request.responseText
-                if (text.match(/<a href="(\/\/qneptunea\.googlecode\.com\/files\/qneptunea_([0-9]+\.[0-9]+\.[0-9]+)_armel.deb)" /)) {
-                    root.download = 'http:'.concat(RegExp.$1)
+                if (text.match(/<a href="(\/attachments\/download\/[0-9]+\/qneptunea_([0-9]+\.[0-9]+\.[0-9]+)_armel\.deb)"/)) {
+                    root.download = 'http://dev.qtquick.me'.concat(RegExp.$1)
                     root.version = RegExp.$2
                     if (currentVersion.version < root.version) {
                         root.open()
@@ -53,7 +53,7 @@ QueryDialog {
             }
         }
 
-        request.open('GET', 'http://code.google.com/p/'.concat(applicationName.toLowerCase()).concat('/downloads/list'));
+        request.open('GET', 'http://dev.qtquick.me/projects/'.concat(applicationName.toLowerCase()).concat('/files'));
         request.send();
     }
 }
