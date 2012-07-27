@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<actions>
+    <highlight regexp="[Hh][Tt][Tt][Pp]://[Tt][Ww][Ii][Tt][Tt][Ee][Rr]\.[Cc][Oo][Mm]/#!/\w+" name="qneptunea-url" specialCaseOf="http-url"/>
+    <highlight regexp="qneptunea://.*" name="qneptunea"/>
+</actions>

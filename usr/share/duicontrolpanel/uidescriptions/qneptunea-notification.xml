@@ -1,0 +1,5 @@
+<settings>
+    <boolean key="/apps/ControlPanel/QNeptunea/Notification/Mentions" title="Mentions" />
+    <boolean key="/apps/ControlPanel/QNeptunea/Notification/DirectMessages" title="Direct Messages" />
+    <boolean key="/apps/ControlPanel/QNeptunea/Notification/SavedSearches" title="Saved Searches" />
+</settings>

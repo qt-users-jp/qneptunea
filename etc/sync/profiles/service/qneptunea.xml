@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile name="qneptunea" type="service">
+   <key name="destinationtype" value="online" />
+   <profile name="qneptunea" type="client" />
+</profile>

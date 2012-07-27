@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Name=QNeptunea
+Exec=/opt/qneptunea/bin/qneptunea.sh
+Icon=/usr/share/icons/hicolor/80x80/apps/qneptunea80.png
+X-Window-Icon=
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+MimeType=x-maemo-highlight/qneptunea-url;x-maemo-urischeme/qneptunea;
+X-Maemo-Service=com.twitter
+X-Maemo-Object-Path=/com/twitter
+X-Maemo-Method=com.twitter.launchWithLink

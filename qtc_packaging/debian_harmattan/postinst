@@ -1,0 +1,67 @@
+#!/bin/sh
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+DEFAULT_MIMETYPES_FILE='/usr/share/applications/defaults.list'
+MIMETYPE_STR1='x-maemo-highlight/qneptunea-url=qneptunea_harmattan.desktop'
+MIMETYPE_STR2='x-maemo-urischeme/qneptunea=qneptunea_harmattan.desktop'
+
+case "$1" in
+    configure)
+        if [ -e /tmp/qneptunea.upgrade ]; then
+            rm /tmp/qneptunea.upgrade
+        else
+            echo "Adding mimetypes"
+            if [ -f $DEFAULT_MIMETYPES_FILE ]; then
+               if grep -qs $MIMETYPE_STR1 $DEFAULT_MIMETYPES_FILE
+               then
+                  echo " x-maemo-highlight/qneptunea-url already set"
+               else
+                  echo $MIMETYPE_STR1 >> $DEFAULT_MIMETYPES_FILE
+                  echo " x-maemo-highlight/qneptunea-url set"
+               fi
+
+               if grep -qs $MIMETYPE_STR2 $DEFAULT_MIMETYPES_FILE
+               then
+                  echo " x-maemo-urischeme/qneptunea already set"
+               else
+                  echo $MIMETYPE_STR2 >> $DEFAULT_MIMETYPES_FILE
+                  echo " x-maemo-urischeme/qneptunea set"
+               fi
+            fi
+
+            echo "Updating desktop database"
+            update-desktop-database
+
+            /usr/bin/aegis-exec -s -u user dbus-send --dest=com.meego.msyncd --print-reply /synchronizer com.meego.msyncd.installPlugin string:'qneptunea' || echo com.meego.msyncd failed
+
+            gconftool -s /apps/ControlPanel/QNeptunea/Notification/Mentions -t bool true
+            gconftool -s /apps/ControlPanel/QNeptunea/Notification/DirectMessages -t bool true
+            gconftool -s /apps/ControlPanel/QNeptunea/Notification/SavedSearches -t bool false
+            gconftool -s /apps/QNeptunea/Theme/Splash/Portrait -t string /opt/qneptunea/plugins/theme/splash-portrait.png
+            gconftool -s /apps/QNeptunea/Theme/Splash/Landscape -t string /opt/qneptunea/plugins/theme/splash-landscape.png
+
+            /usr/bin/aegis-exec -s -u user dbus-send --dest=com.meego.msyncd --print-reply /synchronizer com.meego.msyncd.startSync string:'qneptunea' || echo com.meego.msyncd failed
+        fi
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# Make sure the installation is always considered successful
+exit 0

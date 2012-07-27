@@ -1,0 +1,4 @@
+AbstractPreviewPlugin 1.0 AbstractPreviewPlugin.qml
+ImagePlugin 1.0 ImagePlugin.qml
+UrlShortenerPlugin 1.0 UrlShortenerPlugin.qml
+WebPreviewPlugin 1.0 WebPreviewPlugin.qml

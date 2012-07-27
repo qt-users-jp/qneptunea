@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>avatar-mask48.png</file>
+        <file>avatar-mask73.png</file>
+    </qresource>
+</RCC>

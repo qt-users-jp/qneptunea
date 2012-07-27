@@ -1,0 +1,188 @@
+qneptunea (0.3.0) unstable; urgency=low
+  * <Add change description here>
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Mon, 23 Jul 2012 00:48:51 +0900
+
+qneptunea (0.0.29) unstable; urgency=low
+  * Stability issue fixed
+  * Map updated
+  * Preview updated
+  * gyazo and miil photo preview supported
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Mon, 21 May 2012 11:34:25 +0900
+
+qneptunea (0.0.28) unstable; urgency=low
+  * avatar cache improved
+  * saved search notification
+  * notofication with vibration
+  * upload photo to some 3rd party services supported
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Thu, 10 May 2012 01:36:33 +0900
+
+qneptunea (0.0.27) unstable; urgency=low
+  * notification enabled while running
+  * hide services not available in menus
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Thu, 03 May 2012 23:32:28 +0900
+
+qneptunea (0.0.26) unstable; urgency=low
+  * a lot of small fixes
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Mon, 30 Apr 2012 00:56:09 +0900
+
+qneptunea (0.0.25) unstable; urgency=low
+  * Youtube preview supported
+  * services work against tweets
+  * About Page updated
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Mon, 23 Apr 2012 00:13:56 +0900
+
+qneptunea (0.0.24) unstable; urgency=low
+  * Last position was not saved
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sat, 21 Apr 2012 01:52:33 +0900
+
+qneptunea (0.0.23) unstable; urgency=low
+  * Translation removed
+  * Preview issue fixed
+  * Issues fixed: 70, 72, 73 and 74
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Fri, 20 Apr 2012 21:07:45 +0900
+
+qneptunea (0.0.22) unstable; urgency=low
+  * Pocket supported
+  * Instapaper supported
+  * streaming issue fixed
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Thu, 19 Apr 2012 01:23:11 +0900
+
+qneptunea (0.0.21) unstable; urgency=low
+  * Performance improvement
+  * Shortcut supports Search/Search User
+  * Issues fixed: 51, 57, 62, 67 and much more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Tue, 17 Apr 2012 00:41:00 +0900
+
+qneptunea (0.0.20) unstable; urgency=low
+  * Shortcut available
+  * Theme bug fixes
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sun, 15 Apr 2012 19:17:57 +0900
+
+qneptunea (0.0.19) unstable; urgency=low
+  * Main menu improved
+  * Theme system improved
+  * Issues fixed: 59, 63, 65 and much more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Wed, 11 Apr 2012 11:44:42 +0900
+
+qneptunea (0.0.18) unstable; urgency=low
+  * Introduced theming system
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sun, 08 Apr 2012 17:20:54 +0900
+
+qneptunea (0.0.17) unstable; urgency=low
+  * Translation added(Issue 50)
+  * Saved Search Streaming loading error fixed
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Fri, 06 Apr 2012 23:57:44 +0900
+
+qneptunea (0.0.16) unstable; urgency=low
+  * Flickr and other previews supported
+  * Tweet with location fixed
+  * Issues fixed: 49 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Thu, 05 Apr 2012 23:18:34 +0900
+
+qneptunea (0.0.15) unstable; urgency=low
+  * reduce twitter API usage in Search Stream
+  * completion for @ and #
+  * media/location UI changed in the tweet page
+  * url preview plugin system updated and supported more urls
+  * refresh cache when a user changed
+  * Issues fixed: 15, 44, 45, 47 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Wed, 04 Apr 2012 16:22:05 +0900
+
+qneptunea (0.0.14) unstable; urgency=low
+  * Last read position restored if possible
+  * avatar cached
+  * Issues fixed: 5, 42 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Fri, 30 Mar 2012 13:45:39 +0900
+
+qneptunea (0.0.13) unstable; urgency=low
+  * Icons updated
+  * Conversation view updated
+  * Issues fixed: 11, 39, 41 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Fri, 09 Mar 2012 16:06:09 +0900
+
+qneptunea (0.0.12) unstable; urgency=low
+  * tweets from users in "mute" list don't appear on Timeline and Saved Search Stream
+  * DM send page updated
+  * disables screen saver while active
+  * Issues fixed: 20, 26, 32, 40 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Fri, 09 Mar 2012 00:03:23 +0900
+
+qneptunea (0.0.11) unstable; urgency=low
+  * reduce power consumption
+  * Isses fixed: 17, 27 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sat, 18 Feb 2012 18:22:09 +0900
+
+qneptunea (0.0.10) unstable; urgency=low
+  * tweet button was not working :p
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Wed, 15 Feb 2012 14:06:21 +0900
+
+qneptunea (0.0.9) unstable; urgency=low
+  * Settings page updated
+  * Issues fixed: 12, 20, 22 and more
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Wed, 15 Feb 2012 13:34:21 +0900
+
+qneptunea (0.0.8) unstable; urgency=low
+  * Tweet page updated
+  * Issue 8, 9, 10, 14 and 16 fixed
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Tue, 14 Feb 2012 01:21:04 +0900
+
+qneptunea (0.0.7) unstable; urgency=low
+  * UI changed
+  * https://twitter.com/#!/LogonAniket/status/168679801559851008
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Mon, 13 Feb 2012 00:45:26 +0900
+
+qneptunea (0.0.6) unstable; urgency=low
+  * bug fixes
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sun, 12 Feb 2012 03:22:44 +0900
+
+qneptunea (0.0.5) unstable; urgency=low
+  * icon updated
+  * bug fixes
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Fri, 10 Feb 2012 17:01:16 +0900
+
+qneptunea (0.0.4) unstable; urgency=low
+  * Scroll up if a view is active an on top
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Tue, 07 Feb 2012 20:53:51 +0900
+
+qneptunea (0.0.3) unstable; urgency=low
+  * Performance improvement and bug fixes
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Tue, 07 Feb 2012 11:31:27 +0900
+
+qneptunea (0.0.2) unstable; urgency=low
+  * new tweet flag fixed
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Mon, 30 Jan 2012 23:04:26 +0900
+
+qneptunea (0.0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Wed, 04 Jan 2012 17:50:48 +0900

@@ -1,0 +1,1 @@
+include(./icons/icons.pri)

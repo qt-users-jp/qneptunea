@@ -1,0 +1,5 @@
+include(./duicontrolpanel/duicontrolpanel.pri)
+include(./contentaction/contentaction.pri)
+include(./dbus-1/dbus-1.pri)
+include(./meegotouch/meegotouch.pri)
+include(./themes/themes.pri)
