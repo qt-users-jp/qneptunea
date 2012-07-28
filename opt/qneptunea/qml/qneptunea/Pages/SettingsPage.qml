@@ -267,100 +267,33 @@ AbstractPage {
                 color: constants.textColor
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
+                opacity: !constants.streaming ? 1.0 : 0.5
             }
 
-            Grid {
-                columns: 3
+            Slider {
+                id: updateInterval
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width - 30
+                minimumValue: 0
+                maximumValue: 10
+                stepSize: 1
                 enabled: !constants.streaming
-                width: parent.width
+                valueIndicatorVisible: true
+                valueIndicatorText: qsTr('%1 min(s)', 'update interval', value).arg(value)
+                valueIndicatorMargin: 20
+                value: constants.updateInterval
+                onValueChanged: if (root.status === PageStatus.Active) constants.updateInterval = value
 
-                Item { width: 30; height: 1 }
-
-                Text {
-                    anchors.verticalCenter: updateIntervalHome.verticalCenter
-                    text: qsTr('Home:')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                }
-
-                Slider {
-                    id: updateIntervalHome
-                    width: root.width / 2
-                    minimumValue: 0
-                    maximumValue: 10
-                    stepSize: 1
-                    valueIndicatorVisible: true
-                    valueIndicatorText: value + 'mins'
-                    value: constants.updateIntervalHome
-                    onValueChanged: if (root.status === PageStatus.Active) constants.updateIntervalHome = value
-                }
-
-                Item { width: 30; height: 1 }
-
-                Text {
-                    anchors.verticalCenter: updateIntervalMentions.verticalCenter
-                    text: qsTr('Mentions:')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                }
-
-                Slider {
-                    id: updateIntervalMentions
-                    width: root.width / 2
-                    minimumValue: 0
-                    maximumValue: 10
-                    stepSize: 1
-                    valueIndicatorVisible: true
-                    valueIndicatorText: value + 'mins'
-                    value: constants.updateIntervalMentions
-                    onValueChanged: if (root.status === PageStatus.Active) constants.updateIntervalMentions = value
-                }
-
-                Item { width: 30; height: 1 }
-
-                Text {
-                    anchors.verticalCenter: updateIntervalDirectMessages.verticalCenter
-                    text: qsTr('Direct Messages:')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                }
-
-                Slider {
-                    id: updateIntervalDirectMessages
-                    width: root.width / 2
-                    minimumValue: 0
-                    maximumValue: 10
-                    stepSize: 1
-                    valueIndicatorVisible: true
-                    valueIndicatorText: value + 'mins'
-                    value: constants.updateIntervalDirectMessages
-                    onValueChanged: if (root.status === PageStatus.Active) constants.updateIntervalDirectMessages = value
-                }
-
-                Item { width: 30; height: 1 }
-
-                Text {
-                    anchors.verticalCenter: updateIntervalSavedSearches.verticalCenter
-                    text: qsTr('Saved Searches:')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                }
-
-                Slider {
-                    id: updateIntervalSavedSearches
-                    width: root.width / 2
-                    minimumValue: 0
-                    maximumValue: 10
-                    stepSize: 1
-                    valueIndicatorVisible: true
-                    valueIndicatorText: value + 'mins'
-                    value: constants.updateIntervalSavedSearches
-                    onValueChanged: if (root.status === PageStatus.Active) constants.updateIntervalSavedSearches = value
-                }
+                states: [
+                    State {
+                        name: "disabled"
+                        when: updateInterval.value === 0
+                        PropertyChanges {
+                            target: updateInterval
+                            valueIndicatorText: qsTr('OFF')
+                        }
+                    }
+                ]
             }
 
             Text {

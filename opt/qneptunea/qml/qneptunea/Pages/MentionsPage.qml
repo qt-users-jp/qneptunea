@@ -290,7 +290,7 @@ AbstractPage {
 
     Timer {
         running: !constants.streaming && interval > 0 && test.online
-        interval: constants.updateIntervalMentions * 60 * 1000
+        interval: constants.updateInterval * 60 * 1000
         repeat: true
         onTriggered: {
             for (var i = 0; i < model.childObjects.length; i++) {

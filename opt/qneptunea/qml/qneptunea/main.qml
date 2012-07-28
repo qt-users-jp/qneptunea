@@ -308,6 +308,13 @@ PageStackWindow {
         onTriggered: test.exec()
     }
 
+    Timer {
+        running: !constants.streaming && interval > 0 && !test.online
+        interval: constants.updateInterval * 60 * 1000
+        repeat: true
+        onTriggered: test.exec()
+    }
+
     OAuth {
         id: oauth
         consumer_key: consumerKey

@@ -189,15 +189,6 @@ QtObject {
     property bool streaming: settings.readData('Connection/Streaming', true)
     onStreamingChanged: settings.saveData('Connection/Streaming', constants.streaming)
 
-    property int updateIntervalHome: settings.readData('Connection/UpdateInterval/Home', 5)
-    onUpdateIntervalHomeChanged: settings.saveData('Connection/UpdateInterval/Home', constants.updateIntervalHome)
-
-    property int updateIntervalMentions: settings.readData('Connection/UpdateInterval/Mentions', 5)
-    onUpdateIntervalMentionsChanged: settings.saveData('Connection/UpdateInterval/Mentions', constants.updateIntervalMentions)
-
-    property int updateIntervalDirectMessages: settings.readData('Connection/UpdateInterval/DirectMessages', 5)
-    onUpdateIntervalDirectMessagesChanged: settings.saveData('Connection/UpdateInterval/DirectMessages', constants.updateIntervalDirectMessages)
-
-    property int updateIntervalSavedSearches: settings.readData('Connection/UpdateInterval/SavedSearches', 5)
-    onUpdateIntervalSavedSearchesChanged: settings.saveData('Connection/UpdateInterval/SavedSearches', constants.updateIntervalSavedSearches)
+    property int updateInterval: settings.readData('Connection/UpdateInterval', 5)
+    onUpdateIntervalChanged: settings.saveData('Connection/UpdateInterval', constants.updateInterval)
 }
