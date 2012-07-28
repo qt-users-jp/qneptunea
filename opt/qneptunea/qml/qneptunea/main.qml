@@ -301,7 +301,7 @@ PageStackWindow {
     Test { id: test; property bool online: networkConfigurationManager.online && test.ok }
 
     Timer {
-        running: networkConfigurationManager.online
+        running: networkConfigurationManager.online && constants.streaming
         interval: test.ok ? 60 * 1000 : 30 * 1000
         triggeredOnStart: true
         repeat: true
