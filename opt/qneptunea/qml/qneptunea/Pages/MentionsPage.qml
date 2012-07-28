@@ -185,7 +185,8 @@ AbstractPage {
 
             MentionsModel {
                 id: mentions
-                count: 100
+                count: 50
+                pushOrder: MentionsModel.PushAtOnce
                 sortKey: 'id_str'
                 max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
 
@@ -194,6 +195,7 @@ AbstractPage {
                 property int lastSize: 0
 
                 function loadUntilLatest() {
+                    mentions.pushOrder = MentionsModel.PushOlderToNewer
                     loadingUntilLatest = true
                     lastSize = size
                     since_id = size > 0 ? get(0).id_str : ''
@@ -254,6 +256,7 @@ AbstractPage {
 //            }
 
             if (!mentions.loading) {
+                mentions.pushOrder = MentionsModel.PushNewerToOlder
                 mentions.max_id = mentions.size == 0 ? '' : mentions.get(mentions.size - 1).id_str
                 mentions.count = 50
                 mentions.since_id = ''

@@ -142,7 +142,8 @@ AbstractPage {
             id: model
             DirectMessagesModel {
                 id: directMessagesModel
-                count: 100
+                count: 25
+                pushOrder: DirectMessagesModel.PushAtOnce
                 sortKey: 'id_str'
                 max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
 
@@ -151,6 +152,7 @@ AbstractPage {
                 property int lastSize: 0
 
                 function loadUntilLatest() {
+                    directMessagesModel.pushOrder = DirectMessagesModel.PushOlderToNewer
                     loadingUntilLatest = true
                     lastSize = size
                     since_id = size > 0 ? get(0).id_str : ''
@@ -185,7 +187,8 @@ AbstractPage {
 
             DirectMessagesSentModel {
                 id: directMessagesSentModel
-                count: 100
+                count: 25
+                pushOrder: DirectMessagesSentModel.PushAtOnce
                 sortKey: 'id_str'
                 max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
 
@@ -194,6 +197,7 @@ AbstractPage {
                 property int lastSize: 0
 
                 function loadUntilLatest() {
+                    directMessagesSentModel.pushOrder = DirectMessagesSentModel.PushOlderToNewer
                     loadingUntilLatest = true
                     lastSize = size
                     since_id = size > 0 ? get(0).id_str : ''
@@ -247,6 +251,7 @@ AbstractPage {
         }
         onMore: {
             if (!directMessagesModel.loading) {
+                directMessagesModel.pushOrder = DirectMessagesModel.PushNewerToOlder
                 directMessagesModel.max_id = directMessagesModel.get(directMessagesModel.size - 1).id_str
                 directMessagesModel.count = 50
                 directMessagesModel.since_id = ''
@@ -255,6 +260,7 @@ AbstractPage {
             }
 
             if (!directMessagesSentModel.loading) {
+                directMessagesSentModel.pushOrder = DirectMessagesSentModel.PushNewerToOlder
                 directMessagesSentModel.max_id = directMessagesSentModel.get(directMessagesSentModel.size - 1).id_str
                 directMessagesSentModel.count = 50
                 directMessagesSentModel.since_id = ''

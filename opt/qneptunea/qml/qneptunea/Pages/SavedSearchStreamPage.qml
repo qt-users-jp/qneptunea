@@ -138,6 +138,7 @@ AbstractPage {
         SearchStatusesModel {
             id: searchStatuses
             rpp: 50
+            pushOrder: SearchStatusesModel.PushAtOnce
             sortKey: 'id_str'
             max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
             onFiltering: if (window.filter(value)) searchStatuses.filter();
@@ -146,6 +147,7 @@ AbstractPage {
             property int lastSize: 0
 
             function loadUntilLatest() {
+                searchStatuses.pushOrder = SearchStatusesModel.PushOlderToNewer
                 loadingUntilLatest = true
                 lastSize = size
                 since_id = size > 0 ? get(0).id_str : ''
@@ -242,6 +244,7 @@ AbstractPage {
                 var child = model.childObjects[i]
                 if (!child.loading) {
                     if (!child.streaming) {
+                        child.pushOrder = SearchStatusesModel.PushNewerToOlder
                         child.max_id = child.size == 0 ? '' : child.get(child.size - 1).id_str
                         child.rpp = 20
                         child.since_id = ''

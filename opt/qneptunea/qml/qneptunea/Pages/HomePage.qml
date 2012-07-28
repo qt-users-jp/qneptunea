@@ -131,7 +131,8 @@ AbstractPage {
             }
             HomeTimelineModel {
                 id: homeTimeline
-                count: 100
+                count: 50
+                pushOrder: HomeTimelineModel.PushAtOnce
                 sortKey: 'id_str'
                 max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
                 onFiltering: if (window.filter(value)) homeTimeline.filter();
@@ -140,6 +141,7 @@ AbstractPage {
                 property int lastSize: 0
 
                 function loadUntilLatest() {
+                    homeTimeline.pushOrder = HomeTimelineModel.PushOlderToNewer
                     loadingUntilLatest = true
                     lastSize = size
                     since_id = size > 0 ? model.get(0).id_str : ''
@@ -191,6 +193,7 @@ AbstractPage {
         }
         onMore: {
             if (!homeTimeline.loading) {
+                homeTimeline.pushOrder = HomeTimelineModel.PushNewerToOlder
                 homeTimeline.max_id = homeTimeline.size == 0 ? '' : homeTimeline.get(homeTimeline.size - 1).id_str
                 homeTimeline.count = 50
                 homeTimeline.since_id = ''
