@@ -7,7 +7,7 @@ StateGroup {
     property bool enabled: true
     property bool visible: true
     property bool loading: false
-    property string message
+    property string message: []
 
     property string text
     property variant media
