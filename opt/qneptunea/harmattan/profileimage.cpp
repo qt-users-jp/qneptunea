@@ -40,6 +40,7 @@ private slots:
     void changed();
     void onlineStateChanged(bool online);
     void check();
+    void retrieve();
     void setCache(const QUrl &cache);
     void finished();
     void done();
@@ -141,13 +142,9 @@ ProfileImage::Private::Private(ProfileImage *parent)
     , q(parent)
     , reply(0)
 {
-    if (networkConfigurationManager.isOnline()) {
-        timer.setSingleShot(true);
-        timer.setInterval(50);
-        connect(&timer, SIGNAL(timeout()), this, SLOT(check()));
-    } else {
-        connect(&networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
-    }
+    timer.setSingleShot(true);
+    timer.setInterval(50);
+    connect(&timer, SIGNAL(timeout()), this, SLOT(check()));
     connect(q, SIGNAL(sourceChanged(QUrl)), this, SLOT(changed()), Qt::QueuedConnection);
     connect(q, SIGNAL(idChanged(QUrl)), this, SLOT(changed()), Qt::QueuedConnection);
     connect(&watcher, SIGNAL(finished()), this, SLOT(done()));
@@ -165,7 +162,7 @@ void ProfileImage::Private::changed()
 
 void ProfileImage::Private::onlineStateChanged(bool online)
 {
-    if (online) check();
+    if (online) retrieve();
 }
 
 void ProfileImage::Private::check()
@@ -192,12 +189,21 @@ void ProfileImage::Private::check()
     if (avatars.contains(sourceHash()) && avatars.value(sourceHash()) == idHash()) {
         setCache(cacheDir.absoluteFilePath(thumbnail));
     } else {
-        QNetworkRequest request(source);
-        request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::AlwaysNetwork);
-        request.setRawHeader("User-Agent", "QNeptunea for Nokia N9");
-        reply = networkAccessManager->get(request);
-        connect(reply, SIGNAL(finished()), this, SLOT(finished()));
+        if (networkConfigurationManager.isOnline()) {
+            retrieve();
+        } else {
+            connect(&networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
+        }
     }
+}
+
+void ProfileImage::Private::retrieve()
+{
+    QNetworkRequest request(source);
+    request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::AlwaysNetwork);
+    request.setRawHeader("User-Agent", "QNeptunea for Nokia N9");
+    reply = networkAccessManager->get(request);
+    connect(reply, SIGNAL(finished()), this, SLOT(finished()));
 }
 
 void ProfileImage::Private::finished()
