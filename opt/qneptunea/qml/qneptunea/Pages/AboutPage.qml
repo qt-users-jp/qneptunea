@@ -36,21 +36,14 @@ AbstractLinkPage {
             Rectangle { width: parent.width; height: 2; color: constants.separatorNormalColor }
 
             Text {
-                text: qsTr('<a style="%1;" href="http://code.google.com/p/qneptunea/">Website</a>').arg(constants.linkStyle)
+                text: qsTr('<a style="%1;" href="http://dev.qtquick.me/projects/qneptunea">QNeptunea website</a>').arg(constants.linkStyle)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontXLarge
                 color: constants.textColor
                 onLinkActivated: root.openLink(link)
             }
             Text {
-                text: qsTr('<a style="%1;" href="https://gitorious.org/qneptunea">Source repository</a>').arg(constants.linkStyle)
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontXLarge
-                color: constants.textColor
-                onLinkActivated: root.openLink(link)
-            }
-            Text {
-                text: qsTr('Powerd by: <a style="%1;" href="https://gitorious.org/twitter4qml">twitter4qml</a>').arg(constants.linkStyle)
+                text: qsTr('Powerd by: <a style="%1;" href="http://dev.qtquick.me/projects/twitter4qml">Twitter4QML</a>').arg(constants.linkStyle)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontXLarge
                 color: constants.textColor
@@ -66,7 +59,15 @@ AbstractLinkPage {
             }
 
             Text {
-                text: qsTr('<a style="%1;" href="http://code.google.com/p/qneptunea/issues/list">Feedback</a>').arg(constants.linkStyle)
+                text: qsTr('<a style="%1;" href="http://dev.qtquick.me/documents/6">Feedback</a>').arg(constants.linkStyle)
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontXLarge
+                color: constants.textColor
+                onLinkActivated: root.openLink(link)
+            }
+
+            Text {
+                text: qsTr('<a style="%1;" href="http://dev.qtquick.me/documents/7">Contribution</a>').arg(constants.linkStyle)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontXLarge
                 color: constants.textColor
