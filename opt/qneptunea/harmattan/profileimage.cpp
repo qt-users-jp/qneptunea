@@ -190,7 +190,7 @@ void ProfileImage::Private::check()
         setCache(cacheDir.absoluteFilePath(thumbnail));
     } else {
         if (networkConfigurationManager.isOnline()) {
-            retrieve();
+            QTimer::singleShot(10, this, SLOT(retrieve()));
         } else {
             connect(&networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
         }
