@@ -1,4 +1,5 @@
 #include "profileimage.h"
+#include "networkconfigurationmanager.h"
 
 #include <QtCore/QBuffer>
 #include <QtCore/QCryptographicHash>
@@ -37,6 +38,7 @@ public:
 
 private slots:
     void changed();
+    void onlineStateChanged(bool online);
     void check();
     void setCache(const QUrl &cache);
     void finished();
@@ -58,6 +60,7 @@ public:
     static QMap<QString, QString> avatars;
     static QMap<QString, int> avatarsCounter;
     static QNetworkAccessManager *networkAccessManager;
+    static NetworkConfigurationManager networkConfigurationManager;
 };
 
 QDir ProfileImage::Private::cacheDir;
@@ -65,6 +68,7 @@ QMap<int, QImage> ProfileImage::Private::masks;
 QMap<QString, QString> ProfileImage::Private::avatars;
 QMap<QString, int> ProfileImage::Private::avatarsCounter;
 QNetworkAccessManager *ProfileImage::Private::networkAccessManager = 0;
+NetworkConfigurationManager ProfileImage::Private::networkConfigurationManager;
 
 void createAvatar(QIODevice *ioDevice, QString cache)
 {
@@ -137,9 +141,13 @@ ProfileImage::Private::Private(ProfileImage *parent)
     , q(parent)
     , reply(0)
 {
-    timer.setSingleShot(true);
-    timer.setInterval(50);
-    connect(&timer, SIGNAL(timeout()), this, SLOT(check()));
+    if (networkConfigurationManager.isOnline()) {
+        timer.setSingleShot(true);
+        timer.setInterval(50);
+        connect(&timer, SIGNAL(timeout()), this, SLOT(check()));
+    } else {
+        connect(&networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
+    }
     connect(q, SIGNAL(sourceChanged(QUrl)), this, SLOT(changed()), Qt::QueuedConnection);
     connect(q, SIGNAL(idChanged(QUrl)), this, SLOT(changed()), Qt::QueuedConnection);
     connect(&watcher, SIGNAL(finished()), this, SLOT(done()));
@@ -153,6 +161,11 @@ void ProfileImage::Private::changed()
 {
     if (timer.isActive()) return;
     timer.start();
+}
+
+void ProfileImage::Private::onlineStateChanged(bool online)
+{
+    if (online) check();
 }
 
 void ProfileImage::Private::check()
