@@ -10,7 +10,7 @@ StateGroup {
     property string message
 
     property string text
-    property variant media
+    property variant media: []
     property variant location
 
     // overload this function in subclasses
