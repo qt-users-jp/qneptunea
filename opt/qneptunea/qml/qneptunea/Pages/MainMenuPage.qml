@@ -7,7 +7,7 @@ import '../Delegates'
 AbstractPage {
     id: root
 
-    title: qsTr('Menu')
+    title: qsTr('QNeptunea for N9 %1').arg(currentVersion.version)
 
     property alias editing: shortcuts.editing
 
