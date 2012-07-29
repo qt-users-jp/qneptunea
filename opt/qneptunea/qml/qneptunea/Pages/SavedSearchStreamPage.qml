@@ -188,6 +188,11 @@ AbstractPage {
     }
 
     function resetModels() {
+        for (var i = 0; i < model.childObjects.length; i++) {
+            var child = model.childObjects[i]
+            console.debug(i, typeof child)
+            child.destroy()
+        }
         for (var j = 0; j < savedSearchesModel.searchTerms.length; j++) {
             model.addModel(searchModel.createObject(model, {'q': unescape(savedSearchesModel.searchTerms[j])}))
         }
@@ -230,11 +235,7 @@ AbstractPage {
                 for (var i = 0; i < model.childObjects.length; i++) {
                     var child = model.childObjects[i]
                     if (!child.loading) {
-                        if (child.streaming) {
-                            child.reload()
-                        } else {
-                            child.loadUntilLatest()
-                        }
+                        child.loadUntilLatest()
                     }
                 }
             }
