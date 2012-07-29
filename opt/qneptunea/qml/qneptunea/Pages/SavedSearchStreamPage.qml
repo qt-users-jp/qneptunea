@@ -238,6 +238,9 @@ AbstractPage {
                         child.loadUntilLatest()
                     }
                 }
+                if (constants.streaming && !filterStream.loading) {
+                    filterStream.reload()
+                }
             }
         }
         onMore: {

@@ -366,14 +366,22 @@ PageStackWindow {
     SavedSearchesModel {
         id: savedSearchesModel
         property variant searchTerms: []
-        onSizeChanged: {
-            var searchTerms = []
-            for (var i = 0; i < size; i++) {
-                searchTerms.push(get(i).query.toLowerCase())
+        onSizeChanged: setSearchTermDelayed.running = true
+
+        Timer {
+            id: setSearchTermDelayed
+            repeat: false
+            running: false
+            interval: 100
+            onTriggered: {
+                var searchTerms = []
+                for (var i = 0; i < savedSearchesModel.size; i++) {
+                    searchTerms.push(savedSearchesModel.get(i).query.toLowerCase())
+                }
+                savedSearchesModel.searchTerms = searchTerms
             }
-//            console.debug('SavedSearchesModel.onSizeChanged', size, searchTerms)
-            savedSearchesModel.searchTerms = searchTerms
         }
+
 //        onSearchTermsChanged: console.debug("savedSearchesModel.searchTerms.join(',')", savedSearchesModel.searchTerms.join(','))
     }
 
