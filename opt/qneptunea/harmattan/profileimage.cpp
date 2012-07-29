@@ -61,7 +61,7 @@ public:
     static QMap<QString, QString> avatars;
     static QMap<QString, int> avatarsCounter;
     static QNetworkAccessManager *networkAccessManager;
-    static NetworkConfigurationManager networkConfigurationManager;
+    static NetworkConfigurationManager *networkConfigurationManager;
 };
 
 QDir ProfileImage::Private::cacheDir;
@@ -69,7 +69,7 @@ QMap<int, QImage> ProfileImage::Private::masks;
 QMap<QString, QString> ProfileImage::Private::avatars;
 QMap<QString, int> ProfileImage::Private::avatarsCounter;
 QNetworkAccessManager *ProfileImage::Private::networkAccessManager = 0;
-NetworkConfigurationManager ProfileImage::Private::networkConfigurationManager;
+NetworkConfigurationManager *ProfileImage::Private::networkConfigurationManager = 0;
 
 void createAvatar(QIODevice *ioDevice, QString cache)
 {
@@ -189,10 +189,10 @@ void ProfileImage::Private::check()
     if (avatars.contains(sourceHash()) && avatars.value(sourceHash()) == idHash()) {
         setCache(cacheDir.absoluteFilePath(thumbnail));
     } else {
-        if (networkConfigurationManager.isOnline()) {
+        if (networkConfigurationManager->isOnline()) {
             QTimer::singleShot(10, this, SLOT(retrieve()));
         } else {
-            connect(&networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
+            connect(networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
         }
     }
 }
@@ -296,6 +296,7 @@ void ProfileImage::Private::setCache(const QUrl &cache)
 void ProfileImage::setup(QNetworkAccessManager *networkAccessManager)
 {
     ProfileImage::Private::networkAccessManager = networkAccessManager;
+    ProfileImage::Private::networkConfigurationManager = new NetworkConfigurationManager;
     QDir cacheDir = QDir::homePath();
 
     QString dotCache(".cache");
@@ -375,6 +376,7 @@ void ProfileImage::cleanup()
     }
     QSqlDatabase db = QSqlDatabase::database();
     db.commit();
+    delete ProfileImage::Private::networkConfigurationManager;
 }
 
 ProfileImage::ProfileImage(QObject *parent)
