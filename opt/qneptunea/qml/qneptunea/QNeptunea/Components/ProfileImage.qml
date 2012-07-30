@@ -15,6 +15,12 @@ Item {
         source: profileImage.cache
 //        opacity: status === Image.Ready ? 1.0 : 0.0
 //        Behavior on opacity { NumberAnimation {} }
+
+        onStatusChanged: {
+            if (status === Image.Error) {
+                profileImage.clearCache()
+            }
+        }
     }
 
     ProfileImageUrl {

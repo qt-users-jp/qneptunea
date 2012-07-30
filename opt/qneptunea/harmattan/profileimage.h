@@ -25,6 +25,7 @@ public:
 public slots:
     void setSource(const QUrl &source);
     void setId(const QUrl &id);
+    void clearCache();
 
 signals:
     void sourceChanged(const QUrl &source);

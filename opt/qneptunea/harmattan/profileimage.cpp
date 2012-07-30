@@ -36,6 +36,8 @@ public:
     QUrl id;
     QUrl cache;
 
+    void clearCache();
+
 private slots:
     void changed();
     void onlineStateChanged(bool online);
@@ -265,8 +267,9 @@ void ProfileImage::Private::setCache(const QUrl &cache)
                     query.addBindValue(key);
                     if (query.first()) {
                         cacheDir.remove(query.value(0).toString());
-                    } else {
-                        DEBUG() << query.lastError();
+//                    } else {
+//                        DEBUG() << query.lastError();
+//                        DEBUG() << key << value << query.boundValues();
                     }
                 }
 
@@ -277,6 +280,7 @@ void ProfileImage::Private::setCache(const QUrl &cache)
                     query.addBindValue(key);
                     if (!query.exec()) {
                         DEBUG() << query.lastError();
+                        DEBUG() << key << value << query.boundValues();
                     }
                 }
             } else {
@@ -285,12 +289,28 @@ void ProfileImage::Private::setCache(const QUrl &cache)
                 query.addBindValue(key);
                 if (!query.exec()) {
                     DEBUG() << query.lastError();
+                    DEBUG() << key << value << query.boundValues();
                 }
             }
         }
         avatars[sourceHash()] = idHash();
     }
     QMetaObject::invokeMethod(q, "cacheChanged", Qt::QueuedConnection, Q_ARG(QUrl, cache));
+}
+
+void ProfileImage::Private::clearCache()
+{
+    QString key = sourceHash();
+    avatars.remove(key);
+    QFile::remove(cache.toLocalFile());
+
+    QSqlQuery remove("DELETE FROM Cache WHERE key=?;");
+    remove.addBindValue(key);
+    if (!remove.exec()) {
+        DEBUG() << remove.lastError();
+        DEBUG() << remove.boundValues();
+    }
+    setCache(QUrl());
 }
 
 void ProfileImage::setup(QNetworkAccessManager *networkAccessManager, NetworkConfigurationManager *networkConfigurationManager)
@@ -364,7 +384,7 @@ void ProfileImage::cleanup()
     int key = record.indexOf("key");
     int value = record.indexOf("value");
     while (query.next()) {
-        DEBUG() << query.value(key).toString() << query.value(value).toString();
+//        DEBUG() << query.value(key).toString() << query.value(value).toString();
         cacheDir.remove(QString("%1-%2.png").arg(query.value(key).toString()).arg(query.value(value).toString()));
 
         QSqlQuery remove("DELETE FROM Cache WHERE key=?;");
@@ -407,6 +427,11 @@ void ProfileImage::setId(const QUrl &id)
     if (d->id == id) return;
     d->id = id;
     emit idChanged(id);
+}
+
+void ProfileImage::clearCache()
+{
+    d->clearCache();
 }
 
 const QUrl &ProfileImage::cache() const
