@@ -8,8 +8,6 @@ ListView {
     height: 700
 
     flickableDirection: Flickable.VerticalFlick
-    flickDeceleration: 1200
-    maximumFlickVelocity: 7600
     clip: true
 
     property bool loading: false
