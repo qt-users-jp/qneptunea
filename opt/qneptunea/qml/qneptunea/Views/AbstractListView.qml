@@ -24,10 +24,10 @@ ListView {
         __toBeReload = false
     }
     onMovementEnded: {
-        if (__toBeReload && test.online) {
+        if (__toBeReload) {
             reload()
         }
-        if (__toBeMore && test.online) {
+        if (__toBeMore) {
             more()
         }
         __toBeMore = false
