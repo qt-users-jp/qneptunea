@@ -148,9 +148,8 @@ AbstractPage {
                     max_id = ''
                     count = 200
                     page = 1
+                    view.contentY++
                     reload()
-                    if (view.atYBeginning)
-                        view.contentY++
                 }
 
                 onLoadingChanged: {
@@ -163,6 +162,7 @@ AbstractPage {
                             root.updateLoadedUntilLastPos()
                         } else if (loadingUntilLatest) {
                             if (lastSize == size) {
+                                view.contentY--
                                 loadingUntilLatest = false
                             } else {
                                 lastSize = size
