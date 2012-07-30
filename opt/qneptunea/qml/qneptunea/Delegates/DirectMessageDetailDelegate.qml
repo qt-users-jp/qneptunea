@@ -63,12 +63,12 @@ MouseArea {
                 anchors.leftMargin: constants.iconLeftMargin
                 anchors.top: parent.top
                 anchors.topMargin: 5
-                width: constants.listViewIconSize
+                width: 73
                 height: width
 
                 ProfileImage {
                     anchors.fill: parent
-                    source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(sender.screen_name).concat('&size=').concat(constants.listViewIconSizeName) : ''
+                    source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(sender.screen_name).concat('&size=bigger') : ''
                     _id: sender.profile_image_url ? sender.profile_image_url : ''
                 }
             }
