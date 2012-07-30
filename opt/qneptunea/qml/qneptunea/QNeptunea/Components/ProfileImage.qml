@@ -13,8 +13,8 @@ Item {
         id: image
         anchors.fill: parent
         source: profileImage.cache
-//        opacity: status === Image.Ready ? 1.0 : 0.0
-//        Behavior on opacity { NumberAnimation {} }
+        opacity: status === Image.Ready ? 1.0 : 0.0
+        Behavior on opacity { NumberAnimation {} }
 
         onStatusChanged: {
             if (status === Image.Error) {
