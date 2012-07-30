@@ -141,12 +141,13 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     if (background) {
         viewer.setMainQmlFile(QLatin1String("qml/qneptunea-cron/cron.qml"));
     } else {
+        NetworkConfigurationManager *networkConfigurationManager = new NetworkConfigurationManager;
         ThemeDownloader::networkAccessManager = viewer.engine()->networkAccessManager();
-        ProfileImage::setup(viewer.engine()->networkAccessManager());
+        ProfileImage::setup(viewer.engine()->networkAccessManager(), networkConfigurationManager);
         viewer.engine()->addImportPath(QLatin1String("/opt/qneptunea/plugins/api/"));
         viewer.engine()->addImportPath(QLatin1String("/opt/qneptunea/qml/qneptunea/"));
         viewer.engine()->addImageProvider(QLatin1String("qneptunea"), new Thumbnailer);
-        viewer.engine()->rootContext()->setContextProperty("networkConfigurationManager", new NetworkConfigurationManager);
+        viewer.engine()->rootContext()->setContextProperty("networkConfigurationManager", networkConfigurationManager);
         viewer.engine()->rootContext()->setContextProperty("ActionHandler", new ActionHandler);
         viewer.engine()->rootContext()->setContextProperty("app", server);
         viewer.engine()->rootContext()->setContextProperty("LANG", QString(qgetenv("LANG")));

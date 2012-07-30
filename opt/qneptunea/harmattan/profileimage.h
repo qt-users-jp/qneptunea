@@ -5,6 +5,7 @@
 #include <QtCore/QUrl>
 
 class QNetworkAccessManager;
+class NetworkConfigurationManager;
 
 class ProfileImage : public QObject
 {
@@ -13,7 +14,7 @@ class ProfileImage : public QObject
     Q_PROPERTY(QUrl _id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QUrl cache READ cache NOTIFY cacheChanged)
 public:
-    static void setup(QNetworkAccessManager *networkAccessManager);
+    static void setup(QNetworkAccessManager *networkAccessManager, NetworkConfigurationManager *networkConfigurationManager);
     static void cleanup();
     explicit ProfileImage(QObject *parent = 0);
 

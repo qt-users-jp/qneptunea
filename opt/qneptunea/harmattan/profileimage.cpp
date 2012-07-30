@@ -293,10 +293,10 @@ void ProfileImage::Private::setCache(const QUrl &cache)
     QMetaObject::invokeMethod(q, "cacheChanged", Qt::QueuedConnection, Q_ARG(QUrl, cache));
 }
 
-void ProfileImage::setup(QNetworkAccessManager *networkAccessManager)
+void ProfileImage::setup(QNetworkAccessManager *networkAccessManager, NetworkConfigurationManager *networkConfigurationManager)
 {
     ProfileImage::Private::networkAccessManager = networkAccessManager;
-    ProfileImage::Private::networkConfigurationManager = new NetworkConfigurationManager;
+    ProfileImage::Private::networkConfigurationManager = networkConfigurationManager;
     QDir cacheDir = QDir::homePath();
 
     QString dotCache(".cache");

@@ -23,6 +23,7 @@ NetworkConfigurationManager::Private::Private(NetworkConfigurationManager *paren
     , online(false)
     , q(parent)
 {
+    connect(&manager, SIGNAL(configurationChanged(QNetworkConfiguration)), this, SLOT(debug()));
     connect(&manager, SIGNAL(updateCompleted()), this, SLOT(debug()));
     connect(&manager, SIGNAL(onlineStateChanged(bool)), this, SLOT(debug()));
     manager.updateConfigurations();
@@ -30,7 +31,7 @@ NetworkConfigurationManager::Private::Private(NetworkConfigurationManager *paren
 
 void NetworkConfigurationManager::Private::debug()
 {
-    bool o = manager.isOnline() && manager.allConfigurations(QNetworkConfiguration::Active).length() > 0;
+    bool o = manager.isOnline();
     if (online == o) return;
     online = o;
     emit q->onlineStateChanged(online);
@@ -46,4 +47,5 @@ bool NetworkConfigurationManager::isOnline() const
 {
     return d->online;
 }
+
 #include "networkconfigurationmanager.moc"
