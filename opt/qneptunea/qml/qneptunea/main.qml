@@ -181,7 +181,32 @@ PageStackWindow {
         }
 
         source: constants.logo
-        visible: test.online
+        opacity: 0.0
+
+        states: [
+            State {
+                name: "test.ok"
+                when: test.online
+                PropertyChanges {
+                    target: logo
+                    opacity: 1.0
+                }
+            },
+            State {
+                name: "online"
+                when: networkConfigurationManager.online
+                PropertyChanges {
+                    target: logo
+                    opacity: 0.25
+                }
+            }
+        ]
+
+        transitions: [
+            Transition {
+                NumberAnimation {}
+            }
+        ]
     }
 
     StateGroup {
