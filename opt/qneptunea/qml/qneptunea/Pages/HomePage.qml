@@ -124,7 +124,7 @@ AbstractPage {
             id: model
             UserStreamModel {
                 id: userStream
-                enabled: !homeTimeline.loading && !positionViewAtBeginning.running && test.online && constants.streaming
+                enabled: !(homeTimeline.loading && homeTimeline.pushOrder != HomeTimelineModel.PushOlderToNewer) && !positionViewAtBeginning.running && test.online && constants.streaming
                 onFollowedBy: infoBanners.followedBy(status)
                 onFavorited: infoBanners.favorited(status)
                 onFiltering: if (window.filter(value)) userStream.filter();
