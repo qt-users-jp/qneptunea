@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
-SUBDIRS = usr opt
+SUBDIRS = usr opt share
 
 OTHER_FILES += \
     qtc_packaging/debian_harmattan/rules \

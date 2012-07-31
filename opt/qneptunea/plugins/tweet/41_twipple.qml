@@ -4,7 +4,7 @@ import QtQuick 1.1
 
 TweetPlugin {
     id: root
-    name: 'Upload media to twipple'
+    name: qsTr('Upload media to twipple')
     icon: './twipple/twipple.png'
 
     enabled: root.media.length > 0
@@ -34,7 +34,7 @@ TweetPlugin {
                 root.text += get(0).url
                 var media = []
                 root.media = media
-                root.message = 'Uploaded!'
+                root.message = qsTr('Uploaded!')
             } else {
                 root.message = xmlParser.xml
             }

@@ -9,6 +9,7 @@ AbstractPage {
     id: root
 
     title: qsTr('Settings')
+    busy: userTimeline.loading
 
     StatusDelegate {
         id: delegate
@@ -107,6 +108,7 @@ AbstractPage {
         cellWidth: 160
         cellHeight: 160
         clip: true
+        opacity: 0
 
         model: themes
 
@@ -182,6 +184,7 @@ AbstractPage {
 
         contentHeight: detailContainer.height
         clip: true
+        opacity: 0
 
         Column {
             id: detailContainer
@@ -466,6 +469,7 @@ AbstractPage {
 
         contentHeight: pluginsContainer.height
         clip: true
+        opacity: 0
 
         Column {
             id: pluginsContainer
@@ -480,63 +484,93 @@ AbstractPage {
                     icon: model.plugin.icon
                     text: model.plugin.name
 
-                    onClicked: {
-
-                        pageStack.push(Qt.createComponent(model.plugin.page))
-                    }
+                    onClicked: pageStack.push(Qt.createComponent(model.plugin.page))
                 }
             }
         }
     }
 
-    toolBarLayout: AbstractToolBarLayout {
-        ToolSpacer {}
+    ListView {
+        id: translationView
+        anchors.top: delegate.bottom
+        anchors.topMargin: 5
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: root.footerHeight
 
-        ToolIcon {
-            id: showDetail
-            platformIconId: "toolbar-settings"
-            opacity: enabled ? 1.0 : 0.5
-            onClicked: root.state = 'detail'
+        clip: true
+        opacity: 0
+
+        model: app.translations
+        delegate: AbstractListDelegate {
+            width: parent.width
+            height: constants.fontLarge * 3
+            driilldown: false
+//            icon: model.plugin.icon
+            text: model.modelData.name
+
+            separatorColor: model.modelData.code === app.translation.code ? constants.separatorToMeColor : constants.separatorNormalColor
+            onClicked: {
+                app.translation = model.modelData
+                infoBanners.message({'iconSource': '', 'text': qsTr('Restart QNeptunea')})
+            }
         }
-
-        ToolIcon {
-            id: showTheme
-            platformIconId: "toolbar-frequent-used"
-            opacity: enabled ? 1.0 : 0.5
-            onClicked: root.state = 'theme'
-        }
-
-        ToolIcon {
-            id: showPlugins
-            platformIconId: "toolbar-tools"
-            opacity: enabled ? 1.0 : 0.5
-            onClicked: root.state = 'plugins'
-        }
-
     }
 
-    state: 'detail'
+    toolBarLayout: AbstractToolBarLayout {
+        ButtonRow {
+            TabButton {
+                id: showDetail
+                iconSource: 'image://theme/icon-m-toolbar-settings'.concat(theme.inverted ? "-white" : "")
+                checkable: true
+                checked: true
+            }
+
+            TabButton {
+                id: showTheme
+                iconSource: 'image://theme/icon-m-toolbar-frequent-used'.concat(theme.inverted ? "-white" : "")
+                checkable: true
+            }
+
+            TabButton {
+                id: showPlugins
+                iconSource: 'image://theme/icon-m-toolbar-tools'.concat(theme.inverted ? "-white" : "")
+                checkable: true
+            }
+
+            TabButton {
+                id: showTranslation
+                iconSource: 'image://theme/icon-m-toolbar-select-text'.concat(theme.inverted ? "-white" : "")
+                checkable: true
+            }
+        }
+    }
+
     states: [
         State {
-            name: 'theme'
-            PropertyChanges { target: root; title: qsTr('Settings - Theme'); busy: qneptuneaTheme.loading || userTimeline.loading }
-            PropertyChanges { target: detailView; opacity: 0 }
-            PropertyChanges { target: pluginsView; opacity: 0 }
-            PropertyChanges { target: showTheme; enabled: false }
+            name: 'detail'
+            when: showDetail.checked
+            PropertyChanges { target: root; title: qsTr('Settings - Detail') }
+            PropertyChanges { target: detailView; opacity: 1 }
         },
         State {
-            name: 'detail'
-            PropertyChanges { target: root; title: qsTr('Settings - Detail'); busy: userTimeline.loading }
-            PropertyChanges { target: themeView; opacity: 0 }
-            PropertyChanges { target: pluginsView; opacity: 0 }
-            PropertyChanges { target: showDetail; enabled: false }
+            name: 'theme'
+            when: showTheme.checked
+            PropertyChanges { target: root; title: qsTr('Settings - Theme'); busy: qneptuneaTheme.loading || userTimeline.loading }
+            PropertyChanges { target: themeView; opacity: 1 }
         },
         State {
             name: 'plugins'
-            PropertyChanges { target: root; title: qsTr('Settings - Plugins'); busy: userTimeline.loading }
-            PropertyChanges { target: detailView; opacity: 0 }
-            PropertyChanges { target: themeView; opacity: 0 }
-            PropertyChanges { target: showPlugins; enabled: false }
+            when: showPlugins.checked
+            PropertyChanges { target: root; title: qsTr('Settings - Plugins') }
+            PropertyChanges { target: pluginsView; opacity: 1 }
+        },
+        State {
+            name: 'translations'
+            when: showTranslation.checked
+            PropertyChanges { target: root; title: qsTr('Settings - Language') }
+            PropertyChanges { target: translationView; opacity: 1 }
         }
     ]
 
@@ -551,6 +585,10 @@ AbstractPage {
         },
         Transition {
             from: "plugins"
+            NumberAnimation { properties: 'opacity' }
+        },
+        Transition {
+            from: "translations"
             NumberAnimation { properties: 'opacity' }
         }
     ]

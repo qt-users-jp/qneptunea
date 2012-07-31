@@ -2,7 +2,7 @@ import QNeptunea.Service 1.0
 
 ServicePlugin {
     id: root
-    service: 'Copy to clipboard'
+    service: qsTr('Copy to clipboard')
     icon: 'image://theme/icon-m-toolbar-tag'.concat(theme.inverted ? "-white" : "")
 
     function open(link, parameters) {

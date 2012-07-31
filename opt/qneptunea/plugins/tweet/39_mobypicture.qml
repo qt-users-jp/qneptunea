@@ -4,7 +4,7 @@ import QtQuick 1.1
 
 TweetPlugin {
     id: root
-    name: 'Upload media to Mobypicture'
+    name: qsTr('Upload media to Mobypicture')
     icon: './mobypicture/mobypicture.png'
 
     enabled: root.media.length > 0
@@ -21,7 +21,7 @@ TweetPlugin {
                 root.text += json.media.mediaurl
                 var media = []
                 root.media = media
-                root.message = 'Uploaded!'
+                root.message = qsTr('Uploaded!')
             } else {
                 root.message = result
             }

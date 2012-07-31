@@ -77,7 +77,7 @@ AbstractLinkPage {
             Rectangle { width: parent.width; height: 2; color: constants.separatorNormalColor }
 
             Text {
-                text: 'Developer:'
+                text: qsTr('Developer:')
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontXLarge
                 color: constants.textColor
@@ -92,7 +92,7 @@ AbstractLinkPage {
                 onClicked: pageStack.push(userPage, {'id_str': task_jp.id_str})
             }
             Text {
-                text: 'Graphics:'
+                text: qsTr('Graphics:')
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontXLarge
                 color: constants.textColor

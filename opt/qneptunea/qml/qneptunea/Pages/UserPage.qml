@@ -53,7 +53,7 @@ AbstractLinkPage {
                 property int buttonWidth: (width - constants.listViewMargins * columns) / columns
                 Button {
                     width: parent.buttonWidth
-                    text: 'Tweets'
+                    text: qsTr('Tweets')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -66,7 +66,7 @@ AbstractLinkPage {
                 }
                 Button {
                     width: parent.buttonWidth
-                    text: 'Favourites'
+                    text: qsTr('Favourites')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -80,7 +80,7 @@ AbstractLinkPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'Following'
+                    text: qsTr('Following')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -93,7 +93,7 @@ AbstractLinkPage {
                 }
                 Button {
                     width: parent.buttonWidth
-                    text: 'Followers'
+                    text: qsTr('Followers')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -107,7 +107,7 @@ AbstractLinkPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'Listed'
+                    text: qsTr('Listed')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -121,7 +121,7 @@ AbstractLinkPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'List'
+                    text: qsTr('List')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }

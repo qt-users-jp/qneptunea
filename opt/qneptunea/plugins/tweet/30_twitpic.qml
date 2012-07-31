@@ -3,7 +3,7 @@ import QNeptunea 1.0
 
 TweetPlugin {
     id: root
-    name: 'Upload media to twitpic'
+    name: qsTr('Upload media to twitpic')
     icon: './twitpic/twitpic.png'
 
     enabled: root.media.length > 0
@@ -20,7 +20,7 @@ TweetPlugin {
                 root.text += json.url
                 var media = []
                 root.media = media
-                root.message = 'Uploaded!'
+                root.message = qsTr('Uploaded!')
             } else {
                 root.message = result
             }

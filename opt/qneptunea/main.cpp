@@ -1,6 +1,5 @@
 #include <QtCore/QDir>
 #include <QtCore/QFile>
-#include <QtCore/QSettings>
 #include <QtCore/QTimer>
 #include <QtGui/QApplication>
 #include <QtGlobal>

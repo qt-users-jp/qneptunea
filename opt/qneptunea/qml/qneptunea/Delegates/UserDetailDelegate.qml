@@ -104,7 +104,7 @@ Item {
                         color: constants.nameColor
                     }
                     Text {
-                        text: 'FOLLOWS YOU'
+                        text: qsTr('FOLLOWS YOU')
                         font.family: constants.fontFamily
                         font.pixelSize: constants.fontDefault
                         color: constants.textColor

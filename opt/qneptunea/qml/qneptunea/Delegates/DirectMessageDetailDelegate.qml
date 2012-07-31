@@ -144,21 +144,14 @@ MouseArea {
                 spacing: constants.listViewMargins
 
                 Text {
-                    text: 'Sent to'
+                    text: qsTr('Sent to %1').arg(recipient.name ? recipient.name : '')
                     anchors.bottom: parent.bottom
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontSmall
                     color: constants.textColor
-                }
-
-                Text {
-                    anchors.bottom: parent.bottom
-                    text: recipient.name ? recipient.name : ''
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontSmall
-                    color: constants.nameColor
                     MouseArea {
                         anchors.fill: parent
+                        anchors.margins: - parent.height / 3
                         onClicked: root.userClicked(recipient)
                     }
                 }

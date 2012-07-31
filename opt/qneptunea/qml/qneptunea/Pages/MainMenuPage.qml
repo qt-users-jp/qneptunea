@@ -71,7 +71,7 @@ AbstractPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'Tweets'
+                    text: qsTr('Tweets')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -84,7 +84,7 @@ AbstractPage {
                 }
                 Button {
                     width: parent.buttonWidth
-                    text: 'Favourites'
+                    text: qsTr('Favourites')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -98,7 +98,7 @@ AbstractPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'Following'
+                    text: qsTr('Following')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -111,7 +111,7 @@ AbstractPage {
                 }
                 Button {
                     width: parent.buttonWidth
-                    text: 'Followers'
+                    text: qsTr('Followers')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -125,7 +125,7 @@ AbstractPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'Listed'
+                    text: qsTr('Listed')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     Label {
                         anchors.right: parent.right
@@ -139,7 +139,7 @@ AbstractPage {
 
                 Button {
                     width: parent.buttonWidth
-                    text: 'List'
+                    text: qsTr('List')
                     platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
                     onClicked: pageStack.push(listsPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }

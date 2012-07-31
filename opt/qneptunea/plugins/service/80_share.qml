@@ -2,7 +2,7 @@ import QNeptunea.Service 1.0
 
 ServicePlugin {
     id: root
-    service: 'Share'
+    service: qsTr('Share')
     icon: 'image://theme/icon-m-toolbar-share'.concat(theme.inverted ? "-white" : "")
 
     function open(link, parameters) {
