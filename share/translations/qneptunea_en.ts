@@ -850,7 +850,7 @@
         <location line="+1"/>
         <source>%1 version %2 is available.
 Do you want to download the package?
-code.google.com/p/qneptunea
+dev.qtquick.me/projects/qneptunea/files
 
 If installation fails, clear brower cache
 $ rm /home/user/.grob/cache/http*/*

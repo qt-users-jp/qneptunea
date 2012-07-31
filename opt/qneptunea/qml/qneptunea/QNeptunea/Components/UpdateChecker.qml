@@ -7,7 +7,7 @@ QueryDialog {
     property string applicationName: 'QNeptunea'
     icon: 'file://usr/share/icons/hicolor/256x256/apps/qneptunea256.png'
     titleText: qsTr('New version available')
-    message: qsTr('%1 version %2 is available.\nDo you want to download the package?\ncode.google.com/p/qneptunea\n\nIf installation fails, clear brower cache\n$ rm /home/user/.grob/cache/http*/*\nThen download the package again.').arg(root.applicationName).arg(root.version)
+    message: qsTr('%1 version %2 is available.\nDo you want to download the package?\ndev.qtquick.me/projects/qneptunea/files\n\nIf installation fails, clear brower cache\n$ rm /home/user/.grob/cache/http*/*\nThen download the package again.').arg(root.applicationName).arg(root.version)
 
     platformStyle: QueryDialogStyle { messageFontPixelSize: 22 }
     property string version
