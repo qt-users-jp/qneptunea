@@ -411,7 +411,7 @@ AbstractLinkPage {
                 if (root.linkMenu) root.linkMenu.close()
                 menu.close()
                 if (__status.user.id_str == oauth.user_id || __status.retweeted) {
-                    pageStack.push(tweetPage, {'statusText': ' RT @' + __status.user.screen_name + ': ' + __status.text, 'in_reply_to': __status})
+                    pageStack.push(tweetPage, {'statusText': ' RT @' + __status.user.screen_name + ': ' + __status.text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&'), 'in_reply_to': __status})
                 } else {
                     pageStack.push(tweetPage, {'in_reply_to': __status})
                 }

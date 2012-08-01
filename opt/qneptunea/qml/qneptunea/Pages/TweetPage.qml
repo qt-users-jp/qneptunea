@@ -197,7 +197,7 @@ AbstractLinkPage {
                             anchors.top: parent.top
                             anchors.left: parent.left
                             anchors.right: tweetLandscape.left
-                            text: root.statusText == '' && typeof root.in_reply_to !== 'undefined' ? root.in_reply_to.text : root.statusText
+                            text: root.statusText == '' && typeof root.in_reply_to !== 'undefined' ? root.in_reply_to.text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&') : root.statusText
                             textFormat: TextEdit.PlainText
                             wrapMode: TextEdit.WordWrap
                             enabled: !status.loading && !currentPluginLoading
