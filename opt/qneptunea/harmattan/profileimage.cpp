@@ -149,7 +149,7 @@ ProfileImage::Private::Private(ProfileImage *parent)
     connect(&timer, SIGNAL(timeout()), this, SLOT(check()));
     connect(q, SIGNAL(sourceChanged(QUrl)), this, SLOT(changed()), Qt::QueuedConnection);
     connect(q, SIGNAL(idChanged(QUrl)), this, SLOT(changed()), Qt::QueuedConnection);
-    connect(&watcher, SIGNAL(finished()), this, SLOT(done()));
+    connect(&watcher, SIGNAL(finished()), this, SLOT(done()), Qt::QueuedConnection);
 }
 
 ProfileImage::Private::~Private()
@@ -194,7 +194,7 @@ void ProfileImage::Private::check()
         if (networkConfigurationManager->isOnline()) {
             QTimer::singleShot(10, this, SLOT(retrieve()));
         } else {
-            connect(networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
+            connect(networkConfigurationManager, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)), Qt::QueuedConnection);
         }
     }
 }
@@ -379,7 +379,7 @@ void ProfileImage::cleanup()
 {
     QDir cacheDir = ProfileImage::Private::cacheDir;
 
-    QSqlQuery query("SELECT key, value FROM Cache ORDER BY lastModified LIMIT 100000 OFFSET 1000;");
+    QSqlQuery query("SELECT key, value FROM Cache ORDER BY lastModified LIMIT 100000 OFFSET 10000;");
     QSqlRecord record = query.record();
     int key = record.indexOf("key");
     int value = record.indexOf("value");
