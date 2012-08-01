@@ -33,7 +33,7 @@ AbstractLinkPage {
                 }
                 Text {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr('<a style="%1" href="http://getpocket.com/">http://getpocket.com/</a>').arg(constants.linkStyle)
+                    text: '<a style="'.concat(constants.linkStyle).concat('" href="http://getpocket.com/">http://getpocket.com/</a>')
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontLarge
                     font.bold: true

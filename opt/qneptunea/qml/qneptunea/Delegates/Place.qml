@@ -9,7 +9,7 @@ Row {
 
     Text {
         anchors.bottom: parent.bottom
-        text: qsTr('<a style="%2">%1</a>').arg(typeof place.full_name !== 'undefined' ? place.full_name : '').arg(constants.placeStyle)
+        text: '<a style="'.concat(constants.placeStyle).concat('">').concat(typeof place.full_name !== 'undefined' ? place.full_name : '').concat('</a>')
         font.family: constants.fontFamily
         font.pixelSize: constants.fontSmall
         color: constants.textColor

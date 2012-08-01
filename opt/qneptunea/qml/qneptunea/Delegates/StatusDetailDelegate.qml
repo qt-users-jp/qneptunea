@@ -145,7 +145,7 @@ MouseArea {
                 width: parent.width
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                text: qsTr('<style type="text/css">a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}</style>%1').arg(__item.rich_text).arg(constants.linkStyle).arg(constants.screenNameStyle).arg(constants.hashTagStyle).arg(constants.mediaStyle)
+                text: '<style type="text/css">a.link{'.concat(constants.linkStyle).concat('} a.screen_name{').concat(constants.screenNameStyle).concat('} a.hash_tag{').concat(constants.hashTagStyle).concat('} a.media{').concat(constants.mediaStyle).concat('}</style>').concat(__item.rich_text)
                 lineHeightMode: Text.FixedHeight
                 lineHeight: constants.fontLarge * 1.40
                 font.family: constants.fontFamily

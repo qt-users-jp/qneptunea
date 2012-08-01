@@ -149,14 +149,14 @@ Item {
 
             Text {
                 width: parent.width
-                text: qsTr('<a style="%2" href="%1">%1</a>').arg(user.location).arg(constants.placeStyle)
+                text: '<a style="'.concat(constants.placeStyle).concat('" href="').concat(user.location).concat('">').concat(user.location).concat('</a>')
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontSmall
                 color: constants.textColor
             }
             Text {
                 width: parent.width
-                text: qsTr('<a style="%2" href="%1">%1</a>').arg(user.url).arg(constants.linkStyle)
+                text: '<a style="'.concat(constants.linkStyle).concat('" href="').concat(user.url).concat('">').concat(user.url).concat('</a>')
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
 

@@ -261,7 +261,7 @@ AbstractLinkPage {
                     Text {
                         width: parent.width
                         wrapMode: Text.Wrap
-                        text: visible ? qsTr('<a style="%2">%1</a>').arg(root.__status.place.full_name).arg(constants.placeStyle) : ''
+                        text: visible ? '<a style="'.concat(constants.placeStyle).concat('">').concat(root.__status.place.full_name).concat('</a>') : ''
                         font.family: constants.fontFamily
                         font.pixelSize: constants.fontLarge
                         visible: typeof root.__status.place !== 'undefined' && typeof root.__status.place.full_name !== 'undefined'
@@ -269,7 +269,7 @@ AbstractLinkPage {
                     Text {
                         width: parent.width
                         wrapMode: Text.Wrap
-                        text: visible ? qsTr('<a style="%2">%1</a>').arg(root.__status.place.country).arg(constants.placeStyle) : ''
+                        text: visible ? '<a style="'.concat(constants.placeStyle).concat('">').concat(root.__status.place.country).concat('</a>') : ''
                         font.family: constants.fontFamily
                         font.pixelSize: constants.fontLarge
                         visible: typeof root.__status.place !== 'undefined' && typeof root.__status.place.country !== 'undefined'

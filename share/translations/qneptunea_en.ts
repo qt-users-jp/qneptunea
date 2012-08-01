@@ -242,12 +242,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>&lt;a style=&quot;%1&quot; href=&quot;http://getpocket.com/&quot;&gt;http://getpocket.com/&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+41"/>
         <source>username:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -283,12 +278,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
-        <source>&lt;a style=&quot;%1&quot; href=&quot;http://www.instapaper.com/&quot;&gt;http://www.instapaper.com/&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+40"/>
         <source>Email address:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -462,14 +452,6 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+11"/>
         <source>Near by</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Place</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/Place.qml" line="+12"/>
-        <source>&lt;a style=&quot;%2&quot;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -698,12 +680,7 @@
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+148"/>
-        <source>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+186"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -721,13 +698,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+251"/>
-        <location line="+8"/>
-        <source>&lt;a style=&quot;%2&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+57"/>
+        <location line="+316"/>
         <source>Delete the tweet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -840,12 +811,6 @@ Then download the package again.</source>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+107"/>
         <source>FOLLOWS YOU</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <location line="+7"/>
-        <source>&lt;a style=&quot;%2&quot; href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
