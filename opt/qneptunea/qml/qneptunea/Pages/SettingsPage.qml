@@ -99,7 +99,6 @@ AbstractPage {
     GridView {
         id: themeView
         anchors.top: delegate.bottom
-        anchors.topMargin: 5
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
@@ -176,7 +175,6 @@ AbstractPage {
     Flickable {
         id: detailView
         anchors.top: delegate.bottom
-        anchors.topMargin: 5
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
@@ -461,7 +459,6 @@ AbstractPage {
     Flickable {
         id: pluginsView
         anchors.top: delegate.bottom
-        anchors.topMargin: 5
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
@@ -480,7 +477,6 @@ AbstractPage {
                 model: settingsPlugins.pluginInfo
                 delegate: AbstractListDelegate {
                     width: parent.width
-                    height: constants.fontLarge * 3
                     icon: model.plugin.icon
                     text: model.plugin.name
 
@@ -493,7 +489,6 @@ AbstractPage {
     ListView {
         id: translationView
         anchors.top: delegate.bottom
-        anchors.topMargin: 5
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
@@ -505,7 +500,6 @@ AbstractPage {
         model: app.translations
         delegate: AbstractListDelegate {
             width: parent.width
-            height: constants.fontLarge * 3
             driilldown: false
 //            icon: model.plugin.icon
             text: model.modelData.name

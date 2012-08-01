@@ -2,7 +2,7 @@ import QtQuick 1.1
 
 MouseArea {
     width: 100
-    height: 62
+    height: constants.fontDefault + 40
 
     property alias icon: icon.source
     property alias text: text.text

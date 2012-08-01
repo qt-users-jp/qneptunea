@@ -146,7 +146,6 @@ AbstractPage {
             }
             AbstractListDelegate {
                 width: parent.width
-                height: constants.fontLarge * 3
                 icon: 'image://theme/icon-m-toolbar-alarm'.concat(theme.inverted ? "-white" : "")
                 text: qsTr('Trend')
 
@@ -154,7 +153,6 @@ AbstractPage {
             }
             AbstractListDelegate {
                 width: parent.width
-                height: constants.fontLarge * 3
                 icon: 'image://theme/icon-m-toolbar-contact'.concat(theme.inverted ? "-white" : "")
                 text: qsTr('Suggestions')
 
@@ -162,7 +160,6 @@ AbstractPage {
             }
             AbstractListDelegate {
                 width: parent.width
-                height: constants.fontLarge * 3
                 icon: 'image://theme/icon-m-common-location'.concat(theme.inverted ? "-inverse" : "")
                 text: qsTr('Near by')
 
@@ -170,7 +167,6 @@ AbstractPage {
             }
             AbstractListDelegate {
                 width: parent.width
-                height: constants.fontLarge * 3
                 icon: 'image://theme/icon-m-toolbar-settings'.concat(theme.inverted ? "-white" : "")
                 text: qsTr('Settings')
 
@@ -178,7 +174,6 @@ AbstractPage {
             }
             AbstractListDelegate {
                 width: parent.width
-                height: constants.fontLarge * 3
                 icon: 'image://theme/icon-m-toolbar-tag'.concat(theme.inverted ? "-white" : "")
                 text: qsTr('Legal')
 
@@ -186,7 +181,6 @@ AbstractPage {
             }
             AbstractListDelegate {
                 width: parent.width
-                height: constants.fontLarge * 3
                 icon: 'image://theme/icon-m-toolbar-application'.concat(theme.inverted ? "-white" : "")
                 text: qsTr('About')
 
@@ -197,7 +191,6 @@ AbstractPage {
                 model: savedSearchesModel
                 delegate: AbstractListDelegate {
                     width: viewport.width
-                    height: constants.fontLarge * 3
                     icon: 'image://theme/icon-m-toolbar-search'.concat(theme.inverted ? "-white" : "")
                     text: model.name
                     separatorVisible: index < savedSearchesModel.size - 1
