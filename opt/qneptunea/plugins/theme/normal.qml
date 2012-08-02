@@ -6,8 +6,8 @@ ThemePlugin {
     iconLeftMargin: 5
 
     title: 'QNeptunea'
-    author: 'QNeptuneaTheme'
-    property string description: 'Light theme for QNeptunea.'
+    author: '@task_jp'
+    property string description: qsTr('Light theme for QNeptunea.')
     property url preview: 'normal.png'
 
     inverted: false

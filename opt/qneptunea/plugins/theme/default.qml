@@ -5,8 +5,8 @@ ThemePlugin {
     id: plugin
 
     title: 'QNeptunea'
-    author: 'QNeptuneaTheme'
-    property string description: 'The default theme for QNeptunea.'
+    author: '@LogonAniket'
+    property string description: qsTr('Default Green Theme')
     property url preview: 'default.png'
 
     separatorToMeColor: '#FF33CA'
@@ -29,7 +29,7 @@ ThemePlugin {
 
     titleColor: '#FFFFFF'
     titleFontPixelSizePortrait: 30
-    titleFontPixelSizeLandscape: 30
+    titleFontPixelSizeLandscape: 23
 
     logoPortrait: 'logo-portrait.png'
     logoLandscape: 'logo-landscape.png'
