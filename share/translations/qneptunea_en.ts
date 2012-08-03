@@ -529,28 +529,30 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+11"/>
-        <source>Settings</source>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <source>Connectivity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+76"/>
-        <location line="+3"/>
-        <source>Sign out</source>
+        <location line="+6"/>
+        <source>Appearance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2"/>
-        <source>QNeptunea will be closed.</source>
+        <location line="+6"/>
+        <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Cancel</source>
+        <location line="+6"/>
+        <source>Misc</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>SettingsPageAppearanceTab</name>
     <message>
-        <location line="+102"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+90"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -576,16 +578,29 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>Streaming:</source>
+        <source>Theme:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPageConnectivityTab</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+17"/>
+        <source>Update mode:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>Update interval:</source>
+        <location line="+9"/>
+        <source>Streaming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Timer</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location line="+16"/>
+        <location line="+18"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
         <translation type="unfinished">
@@ -599,17 +614,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Restoring last position:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Screen saver:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+9"/>
         <source>Notifications:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -634,38 +639,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Restoring last position:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPageMiscTab</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+14"/>
+        <location line="+3"/>
+        <source>Sign out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>QNeptunea will be closed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Display time-out:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>QNeptunea update check:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Sign out...</source>
+        <location line="+22"/>
+        <source>Language:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+19"/>
         <source>Restart QNeptunea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Settings - Theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Settings - Language</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-18"/>
-        <source>Settings - Detail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Settings - Plugins</source>
+        <location line="+11"/>
+        <source>Sign out...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

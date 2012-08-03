@@ -8,534 +8,62 @@ import '../Delegates'
 AbstractPage {
     id: root
 
-    title: qsTr('Settings')
-    busy: userTimeline.loading
-
-    StatusDelegate {
-        id: delegate
-        anchors.top: parent.top; anchors.topMargin: root.headerHeight
-        anchors.left: parent.left
-        anchors.right: parent.right
-
-        UserTimelineModel { id: userTimeline; count: 1 }
-
-        item: userTimeline.size > 0 ? userTimeline.get(0) : undefined
-        user: userTimeline.size > 0 ? userTimeline.get(0).user : undefined
-    }
-
-    RetweetedByUserModel {
-        id: qneptuneaTheme
-        _id: 'QNeptuneaTheme'
-        count: 200
-        page: 1
-        sortKey: 'id_str'
-        property int lastSize: 0
-        onLoadingChanged: {
-            if (loading) return
-            if (size == lastSize) {
-                // read all data
-                for (var i = 0; i < size; i++) {
-                    themes.add(get(i))
-                }
-            } else {
-                // load until last
-                lastSize = size
-                page++
-                reload()
-            }
-
-        }
-    }
-
-    Timer {
-        running: true
-        interval: 10
-        repeat: false
-        onTriggered: {
-            for (var i = 0; i < themePlugins.pluginInfo.count; i++) {
-                themes.append(themePlugins.pluginInfo.get(i))
-            }
-        }
-    }
-
-    ListModel {
-        id: themes
-
-        function add(data) {
-            if (data.retweeted_status.media.length !== 1) return
-            if (data.retweeted_status.entities.urls.length !== 1) return
-
-            var theme = data.retweeted_status
-            var found = false
-            for (var i = 0; i < count; i++) {
-                if (get(i).vote < 0) continue
-                if (get(i).vote < theme.retweet_count) {
-                    insert(i, {'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme})
-                    found = true
-                    break
-                }
-            }
-            if (!found) {
-                append({'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme})
-            }
-        }
-    }
-
-    QueryDialog {
-        id: signOutConfirmation
-        icon: 'image://theme/icon-m-content-third-party-update'.concat(theme.inverted ? "-inverse" : "")
-        titleText: qsTr('Sign out')
-        message: qsTr('QNeptunea will be closed.')
-
-        acceptButtonText: qsTr('Sign out')
-        rejectButtonText: qsTr('Cancel')
-
-        onAccepted: {
-            oauth.unauthorize()
-            Qt.quit()
-        }
-    }
-
-    GridView {
-        id: themeView
-        anchors.top: delegate.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
+    SettingsPageConnectivityTab {
+        id: connectivity
+        anchors.fill: parent
+        anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
-
-        cellWidth: 160
-        cellHeight: 160
-        clip: true
         opacity: 0
-
-        model: themes
-
-        delegate: Image {
-            width: GridView.view.cellWidth
-            height: GridView.view.cellHeight
-            source: model.preview
-            fillMode: Image.PreserveAspectCrop
-            smooth: true
-            clip: true
-            Text {
-                anchors.centerIn: parent
-                text: 'TBD'
-                smooth: true
-                rotation: -20
-                font.pixelSize: 50
-                font.bold: true
-                style: Text.Outline
-                styleColor: 'white'
-                visible: typeof model.preview === 'undefined'
-            }
-
-            ProfileImage {
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                width: 48
-                height: 48
-                source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(model.author).concat('&size=normal')
-                smooth: true
-            }
-
-            CountBubble {
-                id: retweets
-                anchors.right: parent.right
-                anchors.top: parent.top
-                anchors.margins: 10
-                value: typeof model.vote !== 'undefined' ? model.vote : 0
-                largeSized: true
-                visible: value > 0
-            }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    var parameters = {}
-                    parameters.source = model.source
-                    parameters.preview = model.preview
-                    parameters.author = model.author
-                    parameters.description = model.description
-                    parameters.localPath = model.path
-                    parameters.retweet_count = model.vote
-                    parameters.retweeted = model.voted
-//                    console.debug('typeof model.vote', typeof model.vote)
-                    if (typeof model.vote === 'undefined') {
-                    } else {
-//                        console.debug('model.download', model.download)
-                        parameters.remoteUrl = model.download
-                    }
-                    pageStack.push(themePage, parameters)
-                }
-            }
-        }
     }
 
-    Flickable {
-        id: detailView
-        anchors.top: delegate.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
+    SettingsPageAppearanceTab {
+        id: appearance
+        anchors.fill: parent
+        anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
-
-        contentHeight: detailContainer.height
-        clip: true
         opacity: 0
-
-        Column {
-            id: detailContainer
-            width: parent.width
-            spacing: 4
-
-            Text {
-                text: qsTr('Icon size:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-            ButtonRow {
-                anchors.horizontalCenter: parent.horizontalCenter
-                Button {
-                    text: qsTr('Normal')
-                    platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
-                    checked: constants.listViewIconSize == 48
-                    onClicked: {
-                        constants.listViewIconSize = 48
-                        constants.listViewIconSizeName = 'normal'
-                    }
-                }
-                Button {
-                    text: qsTr('Bigger')
-                    platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
-                    checked: constants.listViewIconSize == 73
-                    onClicked: {
-                        constants.listViewIconSize = 73
-                        constants.listViewIconSizeName = 'bigger'
-                    }
-                }
-            }
-
-            Text {
-                text: qsTr('Font size:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-            Slider {
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 30
-                minimumValue: 20
-                maximumValue: 36
-                value: constants.fontDefault
-                onValueChanged: if (root.status === PageStatus.Active) constants.fontDefault = value
-            }
-
-            Text {
-                text: qsTr('Separator opacity:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-            Slider {
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 30
-                value: constants.separatorOpacity
-                onValueChanged: if (root.status === PageStatus.Active) constants.separatorOpacity = value
-            }
-
-            Text {
-                text: qsTr('Streaming:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-
-            Row {
-                Item { width: 30; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: constants.streaming
-                    onCheckedChanged: if (root.status === PageStatus.Active) constants.streaming = checked
-                    platformStyle: SwitchStyle { inverted: true }
-                }
-            }
-
-            Text {
-                text: qsTr('Update interval:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-                opacity: !constants.streaming ? 1.0 : 0.5
-            }
-
-            Slider {
-                id: updateInterval
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 30
-                minimumValue: 0
-                maximumValue: 10
-                stepSize: 1
-                enabled: !constants.streaming
-                valueIndicatorVisible: true
-                valueIndicatorText: qsTr('%1 min(s)', 'update interval', value).arg(value)
-                valueIndicatorMargin: 20
-                value: constants.updateInterval
-                onValueChanged: if (root.status === PageStatus.Active) constants.updateInterval = value
-
-                states: [
-                    State {
-                        name: "disabled"
-                        when: updateInterval.value === 0
-                        PropertyChanges {
-                            target: updateInterval
-                            valueIndicatorText: qsTr('OFF')
-                        }
-                    }
-                ]
-            }
-
-            Text {
-                text: qsTr('Restoring last position:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-
-            Row {
-                Item { width: 30; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: !constants.restoringLastPositionDisabled
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.restoringLastPositionDisabled = !checked
-                    platformStyle: SwitchStyle { inverted: true }
-                }
-            }
-
-            Text {
-                text: qsTr('Screen saver:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-
-            Row {
-                Item { width: 30; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: !constants.screenSaverDisabled
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.screenSaverDisabled = !checked
-                }
-            }
-
-            Text {
-                text: qsTr('Notifications:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-            }
-
-            Row {
-                spacing: 10
-                Item { width: 20; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: constants.mentionsNotification
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.mentionsNotification = checked
-                }
-
-                Text {
-                    anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr('Mentions')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.mentionsNotification = !constants.mentionsNotification }
-                }
-            }
-
-            Row {
-                spacing: 10
-                Item { width: 20; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: constants.messagesNotification
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.messagesNotification = checked
-                }
-
-                Text {
-                    anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr('Direct Messages')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.messagesNotification = !constants.messagesNotification }
-                }
-            }
-
-            Row {
-                spacing: 10
-                Item { width: 20; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: constants.searchesNotification
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.searchesNotification = checked
-                }
-
-                Text {
-                    anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr('Saved Searches')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.searchesNotification = !constants.searchesNotification }
-                }
-            }
-
-            Row {
-                spacing: 10
-                Item { width: 40; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: constants.notificationsWithHapticsFeedback
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.notificationsWithHapticsFeedback = checked
-                }
-
-                Text {
-                    anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr('with vibration')
-                    color: constants.textColor
-                    font.family: constants.fontFamily
-                    font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.notificationsWithHapticsFeedback = !constants.notificationsWithHapticsFeedback }
-                }
-            }
-
-            Text {
-                text: qsTr('QNeptunea update check:')
-                color: constants.textColor
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontDefault
-                visible: !currentVersion.trusted
-            }
-
-            Row {
-                visible: !currentVersion.trusted
-                Item { width: 30; height: 1 }
-
-                Switch {
-                    anchors.verticalCenter: parent.verticalCenter
-                    checked: !constants.updateCheckDisabled
-                    onCheckedChanged: if (root.status == PageStatus.Active) constants.updateCheckDisabled = !checked
-                    platformStyle: SwitchStyle { inverted: true }
-                }
-            }
-
-            Item {
-                width: parent.width
-                height: constants.fontDefault
-            }
-
-            Button {
-                anchors.right: parent.right
-                iconSource: 'image://theme/icon-m-toolbar-update'.concat(theme.inverted ? "-white" : "")
-                text: qsTr('Sign out...')
-                platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
-                onClicked: {
-                    signOutConfirmation.open()
-                }
-            }
-        }
     }
 
-    Flickable {
-        id: pluginsView
-        anchors.top: delegate.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
+    SettingsPagePluginsTab {
+        id: plugins
+        anchors.fill: parent
+        anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
-
-        contentHeight: pluginsContainer.height
-        clip: true
         opacity: 0
-
-        Column {
-            id: pluginsContainer
-            width: parent.width
-            spacing: 4
-
-            Repeater {
-                model: settingsPlugins.pluginInfo
-                delegate: AbstractListDelegate {
-                    width: parent.width
-                    icon: model.plugin.icon
-                    text: model.plugin.name
-
-                    onClicked: pageStack.push(Qt.createComponent(model.plugin.page))
-                }
-            }
-        }
     }
 
-    ListView {
-        id: translationView
-        anchors.top: delegate.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
+    SettingsPageMiscTab {
+        id: misc
+        anchors.fill: parent
+        anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
-
-        clip: true
         opacity: 0
-
-        model: app.translations
-        delegate: AbstractListDelegate {
-            width: parent.width
-            driilldown: false
-//            icon: model.plugin.icon
-            text: model.modelData.name
-
-            separatorColor: model.modelData.code === app.translation.code ? constants.separatorToMeColor : constants.separatorNormalColor
-            onClicked: {
-                app.translation = model.modelData
-                infoBanners.message({'iconSource': '', 'text': qsTr('Restart QNeptunea')})
-            }
-        }
     }
 
     toolBarLayout: AbstractToolBarLayout {
         ButtonRow {
             TabButton {
-                id: showDetail
-                iconSource: 'image://theme/icon-m-toolbar-settings'.concat(theme.inverted ? "-white" : "")
+                id: showConnectivity
+                iconSource: 'image://theme/icon-m-toolbar-refresh'.concat(theme.inverted ? "-white" : "")
                 checkable: true
                 checked: true
             }
 
             TabButton {
-                id: showTheme
-                iconSource: 'image://theme/icon-m-toolbar-frequent-used'.concat(theme.inverted ? "-white" : "")
+                id: showAppearance
+                iconSource: 'image://theme/icon-m-toolbar-gallery'.concat(theme.inverted ? "-white" : "")
                 checkable: true
             }
 
             TabButton {
                 id: showPlugins
-                iconSource: 'image://theme/icon-m-toolbar-tools'.concat(theme.inverted ? "-white" : "")
+                iconSource: 'image://theme/icon-m-toolbar-settings'.concat(theme.inverted ? "-white" : "")
                 checkable: true
             }
 
             TabButton {
-                id: showTranslation
-                iconSource: 'image://theme/icon-m-toolbar-select-text'.concat(theme.inverted ? "-white" : "")
+                id: showMisc
+                iconSource: 'image://theme/icon-m-toolbar-list'.concat(theme.inverted ? "-white" : "")
                 checkable: true
             }
         }
@@ -543,38 +71,38 @@ AbstractPage {
 
     states: [
         State {
-            name: 'detail'
-            when: showDetail.checked
-            PropertyChanges { target: root; title: qsTr('Settings - Detail') }
-            PropertyChanges { target: detailView; opacity: 1 }
+            name: 'connectivity'
+            when: showConnectivity.checked
+            PropertyChanges { target: root; title: qsTr('Connectivity') }
+            PropertyChanges { target: connectivity; opacity: 1 }
         },
         State {
-            name: 'theme'
-            when: showTheme.checked
-            PropertyChanges { target: root; title: qsTr('Settings - Theme'); busy: qneptuneaTheme.loading || userTimeline.loading }
-            PropertyChanges { target: themeView; opacity: 1 }
+            name: 'appearance'
+            when: showAppearance.checked
+            PropertyChanges { target: root; title: qsTr('Appearance'); busy: appearance.loading }
+            PropertyChanges { target: appearance; opacity: 1 }
         },
         State {
             name: 'plugins'
             when: showPlugins.checked
-            PropertyChanges { target: root; title: qsTr('Settings - Plugins') }
-            PropertyChanges { target: pluginsView; opacity: 1 }
+            PropertyChanges { target: root; title: qsTr('Plugins') }
+            PropertyChanges { target: plugins; opacity: 1 }
         },
         State {
-            name: 'translations'
-            when: showTranslation.checked
-            PropertyChanges { target: root; title: qsTr('Settings - Language') }
-            PropertyChanges { target: translationView; opacity: 1 }
+            name: 'misc'
+            when: showMisc.checked
+            PropertyChanges { target: root; title: qsTr('Misc') }
+            PropertyChanges { target: misc; opacity: 1 }
         }
     ]
 
     transitions: [
         Transition {
-            from: "theme"
+            from: 'connectivity'
             NumberAnimation { properties: 'opacity' }
         },
         Transition {
-            from: "detail"
+            from: 'appearance'
             NumberAnimation { properties: 'opacity' }
         },
         Transition {
@@ -582,7 +110,7 @@ AbstractPage {
             NumberAnimation { properties: 'opacity' }
         },
         Transition {
-            from: "translations"
+            from: "misc"
             NumberAnimation { properties: 'opacity' }
         }
     ]

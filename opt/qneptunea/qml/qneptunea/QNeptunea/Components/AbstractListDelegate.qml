@@ -41,12 +41,10 @@ MouseArea {
         source: 'image://theme/icon-m-common-drilldown-arrow'.concat(theme.inverted ? "-inverse" : "")
     }
 
-    Rectangle {
+    Separator {
         id: separator
         anchors.bottom: parent.bottom
+        anchors.bottomMargin: -constants.separatorHeight / 2
         width: parent.width - constants.listViewScrollbarWidth
-        height: constants.separatorHeight
-        opacity: constants.separatorOpacity
-        color: constants.separatorNormalColor
     }
 }
