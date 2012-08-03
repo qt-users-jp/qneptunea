@@ -155,39 +155,6 @@
     </message>
 </context>
 <context>
-    <name>AccountPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AccountPage.qml" line="+11"/>
-        <source>Account</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+113"/>
-        <source>Bio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Website</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Update</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+170"/>
-        <source>Sign out</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>AuthorizationPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AuthorizationPage.qml" line="+17"/>
