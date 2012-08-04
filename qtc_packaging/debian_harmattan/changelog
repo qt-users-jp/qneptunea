@@ -1,3 +1,8 @@
+qneptunea (0.3.1) unstable; urgency=low
+  * <Add change description here>
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sat, 04 Aug 2012 21:00:40 +0900
+
 qneptunea (0.3.0) unstable; urgency=low
   * Ghost vibrations in 0.0.28
   * Non-streaming mode
