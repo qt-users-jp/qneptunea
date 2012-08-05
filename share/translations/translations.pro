@@ -4,7 +4,7 @@ defineReplace(prependAll) {
 	return($$result)
 }
 
-LANGUAGES = en ja
+LANGUAGES = en ja tr
 
 TEMPLATE = app
 TARGET = phony_target
