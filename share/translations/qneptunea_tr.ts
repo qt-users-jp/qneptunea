@@ -736,7 +736,7 @@
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
         <source>en</source>
-        <translation>en</translation>
+        <translation>tr</translation>
     </message>
     <message>
         <location line="+1"/>
