@@ -56,7 +56,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/50_getpocket.qml" line="+5"/>
         <source>Pocket</source>
-        <translation>Cep</translation>
+        <translation>Pocket</translation>
     </message>
 </context>
 <context>
@@ -190,7 +190,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+118"/>
         <source>Sent to %1</source>
-        <translation>%1 &apos;a Gonder</translation>
+        <translation>%1 &apos;a Gonderildi</translation>
     </message>
 </context>
 <context>
@@ -203,7 +203,7 @@
     <message>
         <location line="+27"/>
         <source>Sent to %1</source>
-        <translation>%1 &apos;a Gonder</translation>
+        <translation>%1 &apos;a Gonderildi</translation>
     </message>
 </context>
 <context>
@@ -237,7 +237,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/getpocket/GetPocketSettings.qml" line="+9"/>
         <source>Pocket</source>
-        <translation>Cep</translation>
+        <translation>Pocket</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -586,9 +586,7 @@
         <location line="+16"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
-        <translation><numerusform>bir: %1 dakika
-
-diger: %1 dakika</numerusform></translation>
+        <translation><numerusform>%1 dakika</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -598,7 +596,7 @@ diger: %1 dakika</numerusform></translation>
     <message>
         <location line="+7"/>
         <source>Restoring last position:</source>
-        <translation>Son pozisyon getiriliyor:</translation>
+        <translation>Son konumlama getirilsin:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -658,7 +656,7 @@ diger: %1 dakika</numerusform></translation>
     <message>
         <location line="-18"/>
         <source>Settings - Detail</source>
-        <translation>Ayarla - Detay</translation>
+        <translation>Ayarlar - Detay</translation>
     </message>
     <message>
         <location line="+12"/>
