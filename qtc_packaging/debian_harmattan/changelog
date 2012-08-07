@@ -1,5 +1,7 @@
 qneptunea (0.3.1) unstable; urgency=low
-  * <Add change description here>
+  * Issue #22: Internationalization
+  * Issue #23: Encoding of less-than and greater-than characters when retweeting
+  * Issue #24: URL in DM doesn't become clickable
 
  -- Tasuku Suzuki <stasuku@gmail.com>  Sat, 04 Aug 2012 21:00:40 +0900
 
