@@ -527,28 +527,30 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+11"/>
-        <source>Settings</source>
-        <translation>Ayarlar</translation>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <source>Connectivity</source>
+        <translation>Baglanti</translation>
     </message>
     <message>
-        <location line="+76"/>
-        <location line="+3"/>
-        <source>Sign out</source>
-        <translation>Cikis Yap</translation>
+        <location line="+6"/>
+        <source>Appearance</source>
+        <translation>Gorunum</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <source>QNeptunea will be closed.</source>
-        <translation>QNeptunea kapatilacak.</translation>
+        <location line="+6"/>
+        <source>Plugins</source>
+        <translation>Eklentiler</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Cancel</source>
-        <translation>Iptal</translation>
+        <location line="+6"/>
+        <source>Misc</source>
+        <translation>Karisik</translation>
     </message>
+</context>
+<context>
+    <name>SettingsPageAppearanceTab</name>
     <message>
-        <location line="+102"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+90"/>
         <source>Icon size:</source>
         <translation>Ikon boyutu:</translation>
     </message>
@@ -574,16 +576,29 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>Streaming:</source>
-        <translation>Surekli yenileme:</translation>
+        <source>Theme:</source>
+        <translation>Tema:</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPageConnectivityTab</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+17"/>
+        <source>Update mode:</source>
+        <translation>Guncelleme modu:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>Update interval:</source>
-        <translation>Yenileme araligi:</translation>
+        <location line="+9"/>
+        <source>Streaming</source>
+        <translation>Anlik guncelleme</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Timer</source>
+        <translation>Zamanlayici</translation>
     </message>
     <message numerus="yes">
-        <location line="+16"/>
+        <location line="+18"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
         <translation><numerusform>%1 dakika</numerusform></translation>
@@ -594,17 +609,7 @@
         <translation>KAPAT</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Restoring last position:</source>
-        <translation>Son konumlama getirilsin:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Screen saver:</source>
-        <translation>Ekran koruyucu:</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+9"/>
         <source>Notifications:</source>
         <translation>Notifikasyonlar:</translation>
     </message>
@@ -629,39 +634,53 @@
         <translation>titresim ile</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Restoring last position:</source>
+        <translation>Son konumlama getirilsin:</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPageMiscTab</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+14"/>
+        <location line="+3"/>
+        <source>Sign out</source>
+        <translation>Cikis Yap</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>QNeptunea will be closed.</source>
+        <translation>QNeptunea kapatilacak.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cancel</source>
+        <translation>Iptal</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Display time-out:</source>
+        <translation>Goruntu zamanlamasi</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>QNeptunea update check:</source>
         <translation>QNeptunea güncellestirme kontrolu</translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Sign out...</source>
-        <translation>Cikis yap...</translation>
+        <location line="+22"/>
+        <source>Language:</source>
+        <translation>Dil:</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+19"/>
         <source>Restart QNeptunea</source>
         <translation>QNeptunea&apos;yi tekrar baslat</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Settings - Theme</source>
-        <translation>Ayarlar - Tema</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Settings - Language</source>
-        <translation>Ayarlar - Dil</translation>
-    </message>
-    <message>
-        <location line="-18"/>
-        <source>Settings - Detail</source>
-        <translation>Ayarlar - Detay</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Settings - Plugins</source>
-        <translation>Ayarlar - Eklentiler</translation>
+        <location line="+11"/>
+        <source>Sign out...</source>
+        <translation>Cikis yap...</translation>
     </message>
 </context>
 <context>
@@ -741,7 +760,7 @@
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>Ingilizce</translation>
+        <translation>Turkish</translation>
     </message>
 </context>
 <context>
