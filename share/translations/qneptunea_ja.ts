@@ -103,22 +103,22 @@
     <message>
         <location line="+7"/>
         <source>Powerd by: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</source>
-        <translation>Powerd by: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</translation>
+        <translation>利用バックエンド: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>includes: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</source>
-        <translation>includes: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</translation>
+        <translation>組込み: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/6&quot;&gt;Feedback&lt;/a&gt;</source>
-        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/6&quot;&gt;Feedback&lt;/a&gt;</translation>
+        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/6&quot;&gt;フィードバック&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/7&quot;&gt;Contribution&lt;/a&gt;</source>
-        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/7&quot;&gt;Contribution&lt;/a&gt;</translation>
+        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/7&quot;&gt;貢献&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagesPage.qml" line="+11"/>
         <source>Direct Messages</source>
-        <translation>Direct Messages</translation>
+        <translation>メッセージ</translation>
     </message>
 </context>
 <context>
@@ -386,12 +386,12 @@
     <message>
         <location line="+14"/>
         <source>Listed</source>
-        <translation>登録されたリスト</translation>
+        <translation>登録リスト</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>List</source>
-        <translation>リスト</translation>
+        <translation>保存リスト</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -426,7 +426,7 @@
     <message>
         <location line="+31"/>
         <source>Search / @people</source>
-        <translation>検索/ @people</translation>
+        <translation>検索/ @アカウント名</translation>
     </message>
 </context>
 <context>
@@ -466,7 +466,7 @@
     <message>
         <location filename="../../3rdparty/quazip-0.4.4/quazip/quazipfile.cpp" line="+213"/>
         <source>ZIP/UNZIP API error %1</source>
-        <translation>ZIP/UNZIP API error %1</translation>
+        <translation>ZIP/UNZIP API エラー %1</translation>
     </message>
 </context>
 <context>
@@ -527,28 +527,30 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+11"/>
-        <source>Settings</source>
-        <translation>設定</translation>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <source>Connectivity</source>
+        <translation>接続性</translation>
     </message>
     <message>
-        <location line="+76"/>
-        <location line="+3"/>
-        <source>Sign out</source>
-        <translation>サインアウト</translation>
+        <location line="+6"/>
+        <source>Appearance</source>
+        <translation>外観</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <source>QNeptunea will be closed.</source>
-        <translation>QNeptuneaを終了</translation>
+        <location line="+6"/>
+        <source>Plugins</source>
+        <translation>プラグイン</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Cancel</source>
-        <translation>キャンセル</translation>
+        <location line="+6"/>
+        <source>Misc</source>
+        <translation>いろいろ</translation>
     </message>
+</context>
+<context>
+    <name>SettingsPageAppearanceTab</name>
     <message>
-        <location line="+102"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+90"/>
         <source>Icon size:</source>
         <translation>アイコンサイズ:</translation>
     </message>
@@ -574,16 +576,29 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>Streaming:</source>
-        <translation>ストリーム:</translation>
+        <source>Theme:</source>
+        <translation>テーマ：</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPageConnectivityTab</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+17"/>
+        <source>Update mode:</source>
+        <translation>アップデートモード:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>Update interval:</source>
-        <translation>更新間隔:</translation>
+        <location line="+9"/>
+        <source>Streaming</source>
+        <translation>ストリーミング</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Timer</source>
+        <translation>タイマー</translation>
     </message>
     <message numerus="yes">
-        <location line="+16"/>
+        <location line="+18"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
         <translation><numerusform>現在: %1 分(s)
@@ -596,17 +611,7 @@
         <translation>OFF</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Restoring last position:</source>
-        <translation>最新の状態に戻す:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Screen saver:</source>
-        <translation>スクリーンセイバー:</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+9"/>
         <source>Notifications:</source>
         <translation>通知:</translation>
     </message>
@@ -618,7 +623,7 @@
     <message>
         <location line="+20"/>
         <source>Direct Messages</source>
-        <translation>メッセージ</translation>
+        <translation>Direct Messages</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -631,39 +636,53 @@
         <translation>バイブ</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Restoring last position:</source>
+        <translation>最新の状態に戻す:</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPageMiscTab</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+14"/>
+        <location line="+3"/>
+        <source>Sign out</source>
+        <translation>サインアウト</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>QNeptunea will be closed.</source>
+        <translation>QNeptuneaを終了</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cancel</source>
+        <translation>キャンセル</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Display time-out:</source>
+        <translation>表示 タイムアウト：</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>QNeptunea update check:</source>
         <translation>QNeptunea 更新確認:</translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Sign out...</source>
-        <translation>サインアウト...</translation>
+        <location line="+22"/>
+        <source>Language:</source>
+        <translation>言語：</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+19"/>
         <source>Restart QNeptunea</source>
         <translation>QNeptuneaを再起動</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Settings - Theme</source>
-        <translation>設定-テーマ</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Settings - Language</source>
-        <translation>設定-言語</translation>
-    </message>
-    <message>
-        <location line="-18"/>
-        <source>Settings - Detail</source>
-        <translation>設定-詳細</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Settings - Plugins</source>
-        <translation>設定-プラグイン</translation>
+        <location line="+11"/>
+        <source>Sign out...</source>
+        <translation>サインアウト...</translation>
     </message>
 </context>
 <context>
@@ -671,7 +690,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>
         <source>Suggestions</source>
-        <translation>おすすめ</translation>
+        <translation>オススメ</translation>
     </message>
 </context>
 <context>
@@ -710,7 +729,7 @@
     <message>
         <location line="+118"/>
         <source>%1 times retweeted</source>
-        <translation>%1 回返信</translation>
+        <translation>%1 回リツイート</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -766,7 +785,7 @@
         <location line="-368"/>
         <location line="+390"/>
         <source>Retweet</source>
-        <translation>リツィート</translation>
+        <translation>リツイート</translation>
     </message>
     <message>
         <location line="-382"/>
@@ -842,12 +861,12 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location line="+14"/>
         <source>Listed</source>
-        <translation>リスト入り</translation>
+        <translation>登録リスト</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>List</source>
-        <translation>リスト</translation>
+        <translation>保存リスト</translation>
     </message>
     <message>
         <location line="+20"/>
