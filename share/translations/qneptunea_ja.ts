@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.0">
 <context>
     <name>30_twitpic</name>
     <message>
@@ -11,7 +9,7 @@
     <message>
         <location line="+17"/>
         <source>Uploaded!</source>
-        <translation>アップロードどね</translation>
+        <translation>アップロード完了！</translation>
     </message>
 </context>
 <context>
@@ -213,7 +211,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+11"/>
         <source>DirectMessage</source>
-        <translation>DirectMessage</translation>
+        <translation>メッセージ</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -267,7 +265,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/HomePage.qml" line="+11"/>
         <source>Timeline</source>
-        <translation>Timeline</translation>
+        <translation>タイムライン</translation>
     </message>
 </context>
 <context>
@@ -368,7 +366,7 @@
     <message>
         <location line="+64"/>
         <source>Tweets</source>
-        <translation>Tweets</translation>
+        <translation>ツイート</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -398,7 +396,7 @@
     <message>
         <location line="+8"/>
         <source>Trend</source>
-        <translation>Trend</translation>
+        <translation>トレンド</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -423,7 +421,7 @@
     <message>
         <location line="+7"/>
         <source>About</source>
-        <translation>About</translation>
+        <translation>このアプリについて</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -460,7 +458,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/PreviewPage.qml" line="+9"/>
         <source>Preview</source>
-        <translation>事前</translation>
+        <translation>プレビュー</translation>
     </message>
 </context>
 <context>
@@ -513,7 +511,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SendDirectMessagePage.qml" line="+12"/>
         <source>Direct Message</source>
-        <translation>Direct Message</translation>
+        <translation>メッセージ</translation>
     </message>
     <message>
         <location line="+149"/>
@@ -572,7 +570,7 @@
     <message>
         <location line="+15"/>
         <source>Separator opacity:</source>
-        <translation>仕切り線太さ</translation>
+        <translation>仕切り線太さ:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -588,11 +586,9 @@
         <location line="+16"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
-        <translation>
-            <numerusform>現在: %1 分(s)
+        <translation><numerusform>現在: %1 分(s)
 
-残り: %1 分(s)</numerusform>
-        </translation>
+残り: %1 分(s)</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -622,7 +618,7 @@
     <message>
         <location line="+20"/>
         <source>Direct Messages</source>
-        <translation>Direct Messages</translation>
+        <translation>メッセージ</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -683,7 +679,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+186"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>by &lt;a style=&quot;%2&quot; href=&quot;ユーザ://%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -701,7 +697,7 @@
     <message>
         <location line="+316"/>
         <source>Delete the tweet</source>
-        <translation>tweetを削除</translation>
+        <translation>ツイートを削除</translation>
     </message>
 </context>
 <context>
@@ -755,7 +751,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TrendPage.qml" line="+9"/>
         <source>Trend</source>
-        <translation>Trend</translation>
+        <translation>トレンド</translation>
     </message>
 </context>
 <context>
@@ -764,7 +760,7 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+13"/>
         <location line="+449"/>
         <source>Tweet</source>
-        <translation>Tweet</translation>
+        <translation>ツイート</translation>
     </message>
     <message>
         <location line="-368"/>
@@ -783,7 +779,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/UpdateChecker.qml" line="+9"/>
         <source>New version available</source>
-        <translation>最新版</translation>
+        <translation>最新版へ更新可能</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -794,7 +790,7 @@ dev.qtquick.me/projects/qneptunea/files
 If installation fails, clear brower cache
 $ rm /home/user/.grob/cache/http*/*
 Then download the package again.</source>
-        <translation>最新版 %1 に %2 更新可能
+        <translation> %1 最新版 %2 に更新可能
 パッケージをダウンロードしますか?
 dev.qtquick.me/projects/qneptunea/files
 
@@ -826,7 +822,7 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+56"/>
         <source>Tweets</source>
-        <translation>Tweets</translation>
+        <translation>ツイート</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -846,7 +842,7 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location line="+14"/>
         <source>Listed</source>
-        <translation>登録されているリスト</translation>
+        <translation>リスト入り</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -856,22 +852,22 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location line="+20"/>
         <source>Unfollow @%1</source>
-        <translation>フォローを外す @%1</translation>
+        <translation>@%1 のフォローを外す </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Follow @%1</source>
-        <translation>フォロー @%1</translation>
+        <translation>@%1 をフォロー</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Unblock @%1</source>
-        <translation>ブロック解除 @%1</translation>
+        <translation>@%1 をブロック解除 </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block @%1</source>
-        <translation>ブロック @%1</translation>
+        <translation>@%1 をブロック </translation>
     </message>
     <message>
         <location line="+10"/>
@@ -884,7 +880,7 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+73"/>
         <source>API rate limited until %1</source>
-        <translation>API rate limited until %1</translation>
+        <translation>%1 までAPI レイトが制限されています。</translation>
     </message>
     <message>
         <location line="+181"/>
