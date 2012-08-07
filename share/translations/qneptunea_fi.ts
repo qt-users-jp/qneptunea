@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
 <context>
     <name>30_twitpic</name>
     <message>
@@ -603,10 +601,7 @@
         <location line="+18"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
-        <translation>
-            <numerusform>%1 min</numerusform>
-            <numerusform>%1 min</numerusform>
-        </translation>
+        <translation><numerusform>%1 min</numerusform><numerusform>%1 min</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -760,12 +755,12 @@
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
         <source>en</source>
-        <translation>en</translation>
+        <translation>fi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>Englanti</translation>
+        <translation>Suomi</translation>
     </message>
 </context>
 <context>
