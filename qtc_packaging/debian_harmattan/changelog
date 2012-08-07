@@ -1,3 +1,8 @@
+qneptunea (0.3.2) unstable; urgency=low
+  * <Add change description here>
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Tue, 07 Aug 2012 16:58:51 +0900
+
 qneptunea (0.3.1) unstable; urgency=low
   * Issue #22: Internationalization
   * Issue #23: Encoding of less-than and greater-than characters when retweeting
