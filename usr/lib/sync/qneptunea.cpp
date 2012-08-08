@@ -33,6 +33,7 @@ private:
 private:
     QNeptunea *q;
     QPointer<QProcess> qneptunea;
+    MGConfItem sync;
     MGConfItem mentionsNotification;
     MGConfItem messagesNotification;
     MGConfItem searchesNotification;
@@ -42,10 +43,12 @@ QNeptunea::Private::Private(QNeptunea *parent)
     : QObject(parent)
     , q(parent)
     , qneptunea(0)
+    , sync("/apps/QNeptunea/Sync")
     , mentionsNotification("/apps/ControlPanel/QNeptunea/Notification/Mentions")
     , messagesNotification("/apps/ControlPanel/QNeptunea/Notification/DirectMessages")
     , searchesNotification("/apps/ControlPanel/QNeptunea/Notification/SavedSearches")
 {
+    connect(&sync, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
     connect(&mentionsNotification, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
     connect(&messagesNotification, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
     connect(&searchesNotification, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
@@ -53,9 +56,10 @@ QNeptunea::Private::Private(QNeptunea *parent)
 
 void QNeptunea::Private::settingsUpdated()
 {
-    if (mentionsNotification.value().toBool()
-            || messagesNotification.value().toBool()
-            || searchesNotification.value().toBool()
+    if (sync.value(true).toBool() &&
+            ( mentionsNotification.value(true).toBool()
+            || messagesNotification.value(true).toBool()
+            || searchesNotification.value(true).toBool() )
             )
         start();
 }

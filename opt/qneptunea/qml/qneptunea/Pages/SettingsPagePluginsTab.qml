@@ -4,6 +4,7 @@ import '../QNeptunea/Components'
 Flickable {
     id: pluginsView
 
+    property int status: PageStatus.Inactive
     contentHeight: container.height
     clip: true
 

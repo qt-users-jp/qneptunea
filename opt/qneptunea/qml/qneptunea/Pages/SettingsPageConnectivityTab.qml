@@ -5,6 +5,7 @@ import '../QNeptunea/Components/'
 Flickable {
     id: root
 
+    property int status: PageStatus.Inactive
     contentHeight: container.height
     clip: true
 
@@ -82,7 +83,7 @@ Flickable {
             Switch {
                 anchors.verticalCenter: parent.verticalCenter
                 checked: constants.mentionsNotification
-                onCheckedChanged: if (root.status == PageStatus.Active) constants.mentionsNotification = checked
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.mentionsNotification = checked
             }
 
             Text {
@@ -102,7 +103,7 @@ Flickable {
             Switch {
                 anchors.verticalCenter: parent.verticalCenter
                 checked: constants.messagesNotification
-                onCheckedChanged: if (root.status == PageStatus.Active) constants.messagesNotification = checked
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.messagesNotification = checked
             }
 
             Text {
@@ -122,7 +123,7 @@ Flickable {
             Switch {
                 anchors.verticalCenter: parent.verticalCenter
                 checked: constants.searchesNotification
-                onCheckedChanged: if (root.status == PageStatus.Active) constants.searchesNotification = checked
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.searchesNotification = checked
             }
 
             Text {
@@ -142,7 +143,7 @@ Flickable {
             Switch {
                 anchors.verticalCenter: parent.verticalCenter
                 checked: constants.notificationsWithHapticsFeedback
-                onCheckedChanged: if (root.status == PageStatus.Active) constants.notificationsWithHapticsFeedback = checked
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.notificationsWithHapticsFeedback = checked
             }
 
             Text {
@@ -152,6 +153,25 @@ Flickable {
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
                 MouseArea { anchors.fill: parent; onClicked: constants.notificationsWithHapticsFeedback = !constants.notificationsWithHapticsFeedback }
+            }
+        }
+
+        Separator { width: parent.width }
+
+        Text {
+            text: qsTr('Sync:')
+            color: constants.textColor
+            font.family: constants.fontFamily
+            font.pixelSize: constants.fontDefault
+        }
+
+        Row {
+            Item { width: 30; height: 1 }
+
+            Switch {
+                anchors.verticalCenter: parent.verticalCenter
+                checked: constants.sync
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.sync = checked
             }
         }
 
@@ -170,7 +190,7 @@ Flickable {
             Switch {
                 anchors.verticalCenter: parent.verticalCenter
                 checked: !constants.restoringLastPositionDisabled
-                onCheckedChanged: if (root.status == PageStatus.Active) constants.restoringLastPositionDisabled = !checked
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.restoringLastPositionDisabled = !checked
                 platformStyle: SwitchStyle { inverted: true }
             }
         }

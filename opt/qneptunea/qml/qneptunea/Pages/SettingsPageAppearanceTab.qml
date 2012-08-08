@@ -8,6 +8,7 @@ import '../Delegates'
 Flickable {
     id: root
 
+    property int status: PageStatus.Inactive
     property bool loading: userTimeline.loading || qneptuneaTheme.loading
     contentHeight: container.height
     clip: true

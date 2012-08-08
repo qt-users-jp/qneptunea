@@ -5,6 +5,7 @@ import '../QNeptunea/Components/'
 Flickable {
     id: root
 
+    property int status: PageStatus.Inactive
     contentHeight: container.height
     clip: true
 
@@ -63,7 +64,7 @@ Flickable {
             Switch {
                 anchors.verticalCenter: parent.verticalCenter
                 checked: !constants.updateCheckDisabled
-                onCheckedChanged: if (root.status == PageStatus.Active) constants.updateCheckDisabled = !checked
+                onCheckedChanged: if (root.status === PageStatus.Active) constants.updateCheckDisabled = !checked
                 platformStyle: SwitchStyle { inverted: true }
             }
         }

@@ -46,6 +46,7 @@ case "$1" in
 
             /usr/bin/aegis-exec -s -u user dbus-send --dest=com.meego.msyncd --print-reply /synchronizer com.meego.msyncd.installPlugin string:'qneptunea' || echo com.meego.msyncd failed
 
+            gconftool -s /apps/QNeptunea/Sync -t bool true
             gconftool -s /apps/ControlPanel/QNeptunea/Notification/Mentions -t bool true
             gconftool -s /apps/ControlPanel/QNeptunea/Notification/DirectMessages -t bool true
             gconftool -s /apps/ControlPanel/QNeptunea/Notification/SavedSearches -t bool false

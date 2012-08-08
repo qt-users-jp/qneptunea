@@ -166,13 +166,17 @@ QtObject {
     property bool updateCheckDisabled: settings.readData('Power/UpdateCheckDisabled', false)
     onUpdateCheckDisabledChanged: settings.saveData('Power/UpdateCheckDisabled', constants.updateCheckDisabled)
 
+    property ConfItem syncConf: ConfItem { id: syncConf; key: '/apps/QNeptunea/Sync' }
+    property bool sync: typeof syncConf.value === 'undefined' ? true : syncConf.value
+    onSyncChanged: syncConf.value = root.sync
+
     property ConfItem mentionsNotificationConf: ConfItem { id: mentionsNotificationConf; key: '/apps/ControlPanel/QNeptunea/Notification/Mentions' }
-    property ConfItem messagesNotificationConf: ConfItem { id: messagesNotificationConf; key: '/apps/ControlPanel/QNeptunea/Notification/DirectMessages' }
-    property ConfItem searchesNotificationConf: ConfItem { id: searchesNotificationConf; key: '/apps/ControlPanel/QNeptunea/Notification/SavedSearches' }
     property bool mentionsNotification: mentionsNotificationConf.value
     onMentionsNotificationChanged: mentionsNotificationConf.value = root.mentionsNotification
+    property ConfItem messagesNotificationConf: ConfItem { id: messagesNotificationConf; key: '/apps/ControlPanel/QNeptunea/Notification/DirectMessages' }
     property bool messagesNotification: messagesNotificationConf.value
     onMessagesNotificationChanged: messagesNotificationConf.value = root.messagesNotification
+    property ConfItem searchesNotificationConf: ConfItem { id: searchesNotificationConf; key: '/apps/ControlPanel/QNeptunea/Notification/SavedSearches' }
     property bool searchesNotification: searchesNotificationConf.value
     onSearchesNotificationChanged: searchesNotificationConf.value = root.searchesNotification
 

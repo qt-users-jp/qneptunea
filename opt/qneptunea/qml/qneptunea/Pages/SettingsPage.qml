@@ -74,25 +74,25 @@ AbstractPage {
             name: 'connectivity'
             when: showConnectivity.checked
             PropertyChanges { target: root; title: qsTr('Connectivity') }
-            PropertyChanges { target: connectivity; opacity: 1 }
+            PropertyChanges { target: connectivity; opacity: 1; status: root.status }
         },
         State {
             name: 'appearance'
             when: showAppearance.checked
             PropertyChanges { target: root; title: qsTr('Appearance'); busy: appearance.loading }
-            PropertyChanges { target: appearance; opacity: 1 }
+            PropertyChanges { target: appearance; opacity: 1; status: root.status }
         },
         State {
             name: 'plugins'
             when: showPlugins.checked
             PropertyChanges { target: root; title: qsTr('Plugins') }
-            PropertyChanges { target: plugins; opacity: 1 }
+            PropertyChanges { target: plugins; opacity: 1; status: root.status }
         },
         State {
             name: 'misc'
             when: showMisc.checked
             PropertyChanges { target: root; title: qsTr('Misc') }
-            PropertyChanges { target: misc; opacity: 1 }
+            PropertyChanges { target: misc; opacity: 1; status: root.status }
         }
     ]
 
