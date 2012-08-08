@@ -5,7 +5,7 @@ ServicePlugin {
     service: qsTr('Copy to clipboard')
     icon: 'image://theme/icon-m-toolbar-tag'.concat(theme.inverted ? "-white" : "")
 
-    function open(link, parameters) {
+    function open(link, parameters, feedback) {
         root.loading = true
         clipboard.text = typeof parameters.openLink === 'undefined' ? parameters.text : link
         clipboard.selectAll()

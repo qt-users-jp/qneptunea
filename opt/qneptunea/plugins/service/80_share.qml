@@ -5,7 +5,7 @@ ServicePlugin {
     service: qsTr('Share')
     icon: 'image://theme/icon-m-toolbar-share'.concat(theme.inverted ? "-white" : "")
 
-    function open(link, parameters) {
+    function open(link, parameters, feedback) {
         root.loading = true
         share.url = link
         share.mimeType = 'text/x-url'

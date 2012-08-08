@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="en_US">
 <context>
+    <name>25_mstranslator</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
+        <source>MS Translator</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>30_twitpic</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/30_twitpic.qml" line="+6"/>
@@ -355,6 +363,45 @@
     <message>
         <location line="+0"/>
         <source>Subscribe</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MSTranslatorSettings</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
+        <source>MS Translator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>client_id:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>client_secret:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Sign In</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Sign Out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <location line="+5"/>
+        <source>Failed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -741,7 +788,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+186"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+171"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>

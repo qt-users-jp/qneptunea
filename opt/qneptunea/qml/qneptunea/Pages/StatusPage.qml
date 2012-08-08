@@ -359,7 +359,7 @@ AbstractLinkPage {
                     visible: model.plugin.matches(customItem.link)
                     onClicked: {
                         root.currentPlugin = plugin
-                        model.plugin.open(customItem.link, __status)
+                        model.plugin.open(customItem.link, __status, delegate)
                     }
                 }
             }

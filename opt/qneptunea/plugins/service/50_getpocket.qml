@@ -12,7 +12,7 @@ ServicePlugin {
         return settings.readData('getpocket.com/username', '').length > 0 && settings.readData('getpocket.com/password', '').length > 0
     }
 
-    function open(link, parameters) {
+    function open(link, parameters, feedback) {
         var username = settings.readData('getpocket.com/username', '')
         var password = settings.readData('getpocket.com/password', '')
         if (username.length == 0 || password.length == 0) {

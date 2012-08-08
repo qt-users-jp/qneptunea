@@ -19,27 +19,7 @@ MouseArea {
     signal userClicked(variant user)
     signal linkActivated(string link)
 
-    property StateGroup __pluginItem
-    property string translated: __pluginItem ? __pluginItem.result : ''
-
-    function translate() {
-        var plugin = translationPlugins.pluginMap['Microsoft Translator V2']
-//        console.debug(plugin)
-        if (typeof plugin !== 'undefined') {
-            var component = Qt.createComponent(plugin)
-            if (component.status === Component.Ready) {
-                var lang = LANG
-                if (lang.indexOf('_') > -1)
-                    lang = lang.substring(0, lang.indexOf('_'))
-                root.__pluginItem = component.createObject(root)
-                root.__pluginItem.translate('<html><body>'.concat(root.__item.rich_text).concat('</body></html>'), root.__item.plain_text, lang)
-            } else {
-                console.debug(component.errorString())
-            }
-        } else {
-            console.debug('plugin not found')
-        }
-    }
+    property alias translated: translated.text
 
     Item {
         id: container
@@ -152,20 +132,25 @@ MouseArea {
                 font.pixelSize: constants.fontLarge
                 color: constants.contentColor
                 onLinkActivated: root.linkActivated(link)
-                opacity: translated.length > 0 ? 0.75 : 1.0
+                opacity: translated.text.length > 0 ? 0.75 : 1.0
             }
             Text {
+                id: translated
                 width: parent.width
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                text: translated
-                visible: translated.length > 0
+                visible: translated.text.length > 0
                 lineHeightMode: Text.FixedHeight
                 lineHeight: constants.fontLarge * 1.40
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontLarge
                 color: constants.contentColor
                 onLinkActivated: root.linkActivated(link)
+                MouseArea {
+                    anchors.fill: parent
+                    z: -1
+                    onClicked: root.translated = ''
+                }
             }
 
             Row {

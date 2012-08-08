@@ -11,7 +11,7 @@ ServicePlugin {
         return settings.readData('instapaper.com/username', '').length > 0 && settings.readData('instapaper.com/password', '').length > 0
     }
 
-    function open(link, parameters) {
+    function open(link, parameters, feedback) {
         var username = settings.readData('instapaper.com/username', '')
         var password = settings.readData('instapaper.com/password', '')
         if (username.length == 0 || password.length == 0) {
