@@ -133,12 +133,24 @@ AbstractLinkPage {
         id: menu
         visualParent: flickable
         MenuLayout {
-//            MenuItemWithIcon {
-//                id: translation
-//                iconSource: 'image://theme/icon-m-toolbar-select-text'.concat(enabled ? "" : "-dimmed").concat(theme.inverted ? "-white" : "")
-//                text: qsTr('Translate')
-//                onClicked: delegate.translate()
-//            }
+            MenuItemWithIcon {
+                property bool muted: window.filters.indexOf('@'.concat(user.screen_name)) > -1
+                iconSource: 'image://theme/icon-m-toolbar-volume'.concat(muted ? '' : '-off').concat(theme.inverted ? "-white" : "")
+                text: muted ? qsTr('Unmute @%1').arg(user.screen_name) : qsTr('Mute @%1').arg(user.screen_name)
+                onClicked: {
+                    var filters = window.filters
+                    if (muted) {
+                        var index = filters.indexOf('@'.concat(user.screen_name))
+                        while (index > -1) {
+                            filters.splice(index, 1)
+                            index = filters.indexOf('@'.concat(user.screen_name))
+                        }
+                    } else {
+                        filters.unshift('@'.concat(user.screen_name))
+                    }
+                    window.filters = filters
+                }
+            }
             MenuItemWithIcon {
                 iconSource: 'image://theme/icon-m-toolbar-favorite-'.concat(user.following ? 'mark' : 'unmark').concat(theme.inverted ? "-white" : "")
                 text: user.following ? qsTr('Unfollow @%1').arg(user.screen_name) : qsTr('Follow @%1').arg(user.screen_name)

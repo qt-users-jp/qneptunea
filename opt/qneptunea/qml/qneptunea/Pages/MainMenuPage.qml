@@ -193,10 +193,16 @@ AbstractPage {
                     width: viewport.width
                     icon: 'image://theme/icon-m-toolbar-search'.concat(theme.inverted ? "-white" : "")
                     text: model.name
-                    separatorVisible: index < savedSearchesModel.size - 1
 
                     onClicked: pageStack.push(searchPage, {'id_str': model.name})
                 }
+            }
+
+            AbstractListDelegate {
+                width: parent.width
+                icon: 'image://theme/icon-m-toolbar-volume-off'.concat(theme.inverted ? "-white" : "")
+                text: qsTr('Mute')
+                onClicked: pageStack.push(mutePage, {})
             }
         }
 

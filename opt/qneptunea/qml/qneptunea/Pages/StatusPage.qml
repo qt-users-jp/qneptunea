@@ -325,6 +325,24 @@ AbstractLinkPage {
 //                onClicked: delegate.translate()
 //            }
             MenuItemWithIcon {
+                property bool muted: window.filters.indexOf('@'.concat(root.__user.screen_name)) > -1
+                iconSource: 'image://theme/icon-m-toolbar-volume'.concat(muted ? '' : '-off').concat(theme.inverted ? "-white" : "")
+                text: muted ? qsTr('Unmute @%1').arg(root.__user.screen_name) : qsTr('Mute @%1').arg(root.__user.screen_name)
+                onClicked: {
+                    var filters = window.filters
+                    if (muted) {
+                        var index = filters.indexOf('@'.concat(root.__user.screen_name))
+                        while (index > -1) {
+                            filters.splice(index, 1)
+                            index = filters.indexOf('@'.concat(root.__user.screen_name))
+                        }
+                    } else {
+                        filters.unshift('@'.concat(root.__user.screen_name))
+                    }
+                    window.filters = filters
+                }
+            }
+            MenuItemWithIcon {
                 iconSource: 'image://theme/icon-m-toolbar-delete'.concat(enabled ? "" : "-dimmed").concat(theme.inverted ? "-white" : "")
                 text: qsTr('Delete the tweet')
                 enabled: status.user.id_str === oauth.user_id

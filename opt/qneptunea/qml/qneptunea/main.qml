@@ -81,59 +81,73 @@ PageStackWindow {
     SettingsPlugins { id: settingsPlugins }
     TweetPlugins { id: tweetPlugins }
 
-    ListMembersModel {
-        id: mute
-        owner_screen_name: oauth.screen_name
-        slug: 'mute'
-        property variant ids: settings.readData('Mute/IDs', '0').split(',')
-        onIdsChanged: settings.saveData('Mute/IDs', ids.join(','))
+    property variant filters: settings.readData('Filters', '').split(/\n/)
+    property variant user_filters: []
+    property variant hashtag_filters: []
+    property variant url_filters: []
+    property variant text_filters: []
 
-        onNextCursorChanged: console.debug('onNextCursorChanged', nextCursor)
-        onNextCursorStrChanged: console.debug('onNextCursorStrChanged', cursor, nextCursorStr)
-        onPreviousCursorChanged: console.debug('onPreviousCursorChanged', previousCursor)
-        onPreviousCursorStrChanged: console.debug('onPreviousCursorStrChanged', previousCursorStr)
-
-        Timer {
-            interval: 100
-            repeat: false
-            running: !mute.loading
-            onTriggered: {
-//                console.debug('mute.next_cursor_str', mute.next_cursor_str)
-                if (mute.next_cursor_str == '') {
-                    // error
-                } else if (mute.next_cursor_str != '0') {
-                    mute.cursor = mute.next_cursor_str
-                    mute.reload()
-                } else {
-                    mute.ids = mute.idList
-                }
+    onFiltersChanged: {
+        var user_filters = []
+        var hashtag_filters = []
+        var url_filters = []
+        var text_filters = []
+        for (var i = 0; i < window.filters.length; i++) {
+            var f = window.filters[i]
+            if (f[0] === '@') {
+                user_filters.push(f.substring(1).toLowerCase())
+            } else if (f[0] === '#') {
+                hashtag_filters.push(f.substring(1).toLowerCase())
+            } else if (f.substring(0, 7) === 'http://' || f.substring(0, 8) === 'https://') {
+                url_filters.push(f)
+            } else {
+                text_filters.push(f.toLowerCase())
             }
         }
+
+        window.user_filters = user_filters
+        window.hashtag_filters = hashtag_filters
+        window.url_filters = url_filters
+        window.text_filters = text_filters
+        settings.saveData('Filters', window.filters.join('\n'))
     }
 
     function filter(item) {
-        if (typeof item.user !== 'undefined') {
-//            console.debug(item.user.screen_name)
-            // tweets
-            var text = item.text
-            if (typeof item.retweeted_status !== 'undefined') text = item.retweeted_status.text
-            if (text.indexOf(oauth.user_id) > -1) return false
-
-//            console.debug(item.user.screen_name, item.user.id_str, mute.ids.indexOf(item.user.id_str))
-            if (mute.ids.indexOf(item.user.id_str) > -1)
-                return true
-            if (typeof item.in_reply_to_user_id_str !== 'undefined' && mute.ids.indexOf(item.in_reply_to_user_id_str) > -1)
-                return true;
-            if (typeof item.retweeted_status !== 'undefined' && noRetweetIds.idList.indexOf(item.user.id_str) > -1)
-                return true;
-//            console.debug(item.user.screen_name, false)
-        } else {
-            // direct messages
-            if (mute.ids.indexOf(item.sender.id_str) > -1)
-                return true
-            if (mute.ids.indexOf(item.recipient.id_str) > -1)
-                return true
+        var status = item
+        if (typeof item.retweeted_status !== 'undefined') {
+            status = item.retweeted_status
         }
+        var entities = status.entities
+        var text = status.text.toLowerCase()
+
+        if (typeof status.user !== 'undefined') {
+            if (user_filters.indexOf(item.user.screen_name.toLowerCase()) > -1) return true
+            if (typeof entities !== 'undefined' && typeof entities.user_mentions.length !== 'undefined') {
+                for (var i = 0; i < entities.user_mentions.length; i++) {
+                    if (user_filters.indexOf(entities.user_mentions[i].screen_name.toLowerCase()) > -1) return true
+                }
+            }
+        }
+
+        if (typeof entities !== 'undefined' && typeof entities.hashtags.length !== 'undefined') {
+            for (var i = 0; i < entities.hashtags.length; i++) {
+                if (hashtag_filters.indexOf(entities.hashtags[i].text.toLowerCase()) > -1) return true
+            }
+        }
+
+        if (typeof entities !== 'undefined' && typeof entities.urls.length !== 'undefined') {
+            for (var i = 0; i < entities.urls.length; i++) {
+                var url = entities.urls[i].expanded_url.toLowerCase()
+                for (var j = 0; j < url_filters.length; j++) {
+                    if (url.substring(0, url_filters[j].length) === url_filters[j]) return true
+                }
+            }
+        }
+
+        for (var i = 0; i < text_filters.length; i++) {
+            if (text.indexOf(text_filters[i]) > -1) return true
+        }
+
         return false;
     }
 
@@ -470,6 +484,7 @@ PageStackWindow {
     Component { id: slugPage; SlugPage{} }
     Component { id: nearByPage; NearByPage{} }
     Component { id: themePage; ThemePage{} }
+    Component { id: mutePage; MutePage{} }
 
     TextEdit { id: clipboard; visible: false }
 

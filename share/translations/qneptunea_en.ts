@@ -426,7 +426,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+19"/>
+        <source>Mute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Search / @people</source>
         <translation type="unfinished"></translation>
     </message>
@@ -444,6 +449,28 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+11"/>
         <source>Mentions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MutePage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MutePage.qml" line="+11"/>
+        <source>Mute Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>@selop
+#Lumia
+http://nokia.ly/
+HTML5
+...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -483,6 +510,16 @@
     <name>SearchPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+69"/>
+        <source>Unmute %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mute %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Save search</source>
         <translation type="unfinished"></translation>
     </message>
@@ -552,7 +589,7 @@
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+90"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+91"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -585,7 +622,7 @@
 <context>
     <name>SettingsPageConnectivityTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+17"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+18"/>
         <source>Update mode:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -640,6 +677,11 @@
     </message>
     <message>
         <location line="+11"/>
+        <source>Sync:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Restoring last position:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -647,7 +689,7 @@
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+14"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+15"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation type="unfinished"></translation>
@@ -717,7 +759,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+317"/>
+        <source>Unmute @%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mute @%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Delete the tweet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -866,7 +918,17 @@ Then download the package again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+15"/>
+        <source>Unmute @%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mute @%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Unfollow @%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -899,7 +961,7 @@ Then download the package again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+181"/>
+        <location line="+195"/>
         <source>@%1 following you</source>
         <translation type="unfinished"></translation>
     </message>

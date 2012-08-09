@@ -64,6 +64,24 @@ AbstractPage {
         property int savedIndex: savedSearchesModel.searchTerms.indexOf(unescape(root.id_str).toLowerCase())
         MenuLayout {
             MenuItemWithIcon {
+                property bool muted: window.filters.indexOf(root.id_str) > -1
+                iconSource: 'image://theme/icon-m-toolbar-volume'.concat(muted ? '' : '-off').concat(theme.inverted ? "-white" : "")
+                text: muted ? qsTr('Unmute %1').arg(root.id_str) : qsTr('Mute %1').arg(root.id_str)
+                onClicked: {
+                    var filters = window.filters
+                    if (muted) {
+                        var index = filters.indexOf(root.id_str)
+                        while (index > -1) {
+                            filters.splice(index, 1)
+                            index = filters.indexOf(root.id_str)
+                        }
+                    } else {
+                        filters.unshift(root.id_str)
+                    }
+                    window.filters = filters
+                }
+            }
+            MenuItemWithIcon {
                 property bool saved: menu.savedIndex < 0
                 iconSource: 'image://theme/icon-m-toolbar-favorite'.concat(saved ? '-unmark' : '-mark').concat(theme.inverted ? "-white" : "")
                 text: saved ? qsTr('Save search') : qsTr('Remove saved search')
