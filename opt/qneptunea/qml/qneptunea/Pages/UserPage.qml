@@ -51,78 +51,46 @@ AbstractLinkPage {
                 spacing: constants.listViewMargins
                 property int columns: window.inPortrait ? 2 : 3
                 property int buttonWidth: (width - constants.listViewMargins * columns) / columns
-                Button {
+
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Tweets')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: user.statuses_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: user.statuses_count
                     onClicked: pageStack.push(userTimelinePage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
-                Button {
+
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Favourites')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: user.favourites_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: user.favourites_count
                     onClicked: pageStack.push(favouritesPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Following')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: user.friends_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: user.friends_count
                     onClicked: pageStack.push(followingPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
-                Button {
+
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Followers')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: user.followers_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: user.followers_count
                     onClicked: pageStack.push(followersPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Listed')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: user.listed_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: user.listed_count
                     onClicked: pageStack.push(listedPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
+                    numberVisible: false
                     onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
             }

@@ -69,78 +69,45 @@ AbstractPage {
                 property int columns: window.inPortrait ? 2 : 3
                 property int buttonWidth: (width - constants.listViewMargins * columns) / columns
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Tweets')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: verifyCredentials.statuses_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: verifyCredentials.statuses_count
                     onClicked: pageStack.push(userTimelinePage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }
-                Button {
+
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Favourites')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: verifyCredentials.favourites_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: verifyCredentials.favourites_count
                     onClicked: pageStack.push(favouritesPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Following')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: verifyCredentials.friends_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: verifyCredentials.friends_count
                     onClicked: pageStack.push(followingPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }
-                Button {
+
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Followers')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: verifyCredentials.followers_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: verifyCredentials.followers_count
                     onClicked: pageStack.push(followersPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Listed')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
-                    Label {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: verifyCredentials.listed_count
-                        platformStyle: LabelStyle { fontPixelSize: constants.fontLSmall }
-                    }
+                    number: verifyCredentials.listed_count
                     onClicked: pageStack.push(listedPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }
 
-                Button {
+                ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    platformStyle: ButtonStyle { horizontalAlignment: Text.AlignLeft; fontPixelSize: constants.fontLarge }
+                    numberVisible: false
                     onClicked: pageStack.push(listsPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
                 }
             }
