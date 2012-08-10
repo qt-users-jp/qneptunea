@@ -1,3 +1,8 @@
+qneptunea (0.3.3) unstable; urgency=low
+  * <Add change description here>
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Sat, 11 Aug 2012 00:57:30 +0900
+
 qneptunea (0.3.2) unstable; urgency=low
   * Feature #20: Option to disable periodical polling
   * Feature #21: Global Filter for tweets
