@@ -100,7 +100,7 @@ PageStackWindow {
                 hashtag_filters.push(f.substring(1).toLowerCase())
             } else if (f.substring(0, 7) === 'http://' || f.substring(0, 8) === 'https://') {
                 url_filters.push(f)
-            } else {
+            } else if (f.length > 0){
                 text_filters.push(f.toLowerCase())
             }
         }
