@@ -617,7 +617,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
         <source>Connectivity</source>
-        <translation>Liitettävyys</translation>
+        <translation>Käytettävyys</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -627,7 +627,7 @@ HTML5
     <message>
         <location line="+6"/>
         <source>Plugins</source>
-        <translation>Pluginit</translation>
+        <translation>Liitännäiset</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -650,7 +650,7 @@ HTML5
     <message>
         <location line="+9"/>
         <source>Bigger</source>
-        <translation>Suurempi</translation>
+        <translation>Suuri</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -678,12 +678,12 @@ HTML5
     <message>
         <location line="+9"/>
         <source>Streaming</source>
-        <translation>Streamaus</translation>
+        <translation>Jatkuva</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Timer</source>
-        <translation>Ajastin</translation>
+        <translation>Ajastettu</translation>
     </message>
     <message numerus="yes">
         <location line="+18"/>
@@ -724,7 +724,7 @@ HTML5
     <message>
         <location line="+11"/>
         <source>Sync:</source>
-        <translation>Synkronoi:</translation>
+        <translation>Taustapäivitys:</translation>
     </message>
     <message>
         <location line="+19"/>
