@@ -140,6 +140,11 @@
         <source>Graphics:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+15"/>
+        <source>Contributor:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AbstractLinkPage</name>

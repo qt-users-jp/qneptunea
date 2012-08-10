@@ -106,6 +106,21 @@ AbstractLinkPage {
                 }
                 onClicked: pageStack.push(userPage, {'id_str': logonAniket.id_str})
             }
+            Text {
+                text: qsTr('Contributor:')
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontXLarge
+                color: constants.textColor
+            }
+            UserDelegate {
+                width: parent.width
+                user: kenya888
+                User {
+                    id: kenya888
+                    screen_name: 'kenya888'
+                }
+                onClicked: pageStack.push(userPage, {'id_str': kenya888.id_str})
+            }
         }
     }
 
