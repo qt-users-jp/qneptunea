@@ -141,7 +141,7 @@
     <message>
         <location line="+9"/>
         <source>Open in the default app</source>
-        <translation>標準アプリで開く</translation>
+        <translation>既定のアプリで開く</translation>
     </message>
 </context>
 <context>
@@ -386,7 +386,7 @@
     <message>
         <location line="+14"/>
         <source>Listed</source>
-        <translation>登録リスト</translation>
+        <translation>追加リスト</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -406,7 +406,7 @@
     <message>
         <location line="+7"/>
         <source>Near by</source>
-        <translation>位置情報</translation>
+        <translation>位置情報から検索</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -442,7 +442,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+11"/>
         <source>Mentions</source>
-        <translation>返信</translation>
+        <translation>関連ツイート</translation>
     </message>
 </context>
 <context>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+11"/>
         <source>Near by</source>
-        <translation>位置情報</translation>
+        <translation>位置情報から検索</translation>
     </message>
 </context>
 <context>
@@ -618,12 +618,12 @@
     <message>
         <location line="+18"/>
         <source>Mentions</source>
-        <translation>返信</translation>
+        <translation>関連ツイート</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Direct Messages</source>
-        <translation>Direct Messages</translation>
+        <translation>メッセージ</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -861,7 +861,7 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location line="+14"/>
         <source>Listed</source>
-        <translation>登録リスト</translation>
+        <translation>追加リスト</translation>
     </message>
     <message>
         <location line="+14"/>
