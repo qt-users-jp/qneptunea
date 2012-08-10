@@ -516,7 +516,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+23"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>

@@ -21,6 +21,18 @@ AbstractPage {
             width: parent.width
             placeholderText: qsTr('@selop\n#Lumia\nhttp://nokia.ly/\nHTML5\n...')
             text: window.filters.join('\n')
+            platformStyle: TextAreaStyle { textFont.pixelSize: constants.fontDefault }
+
+            states: [
+                State {
+                    name: "empty"
+                    when: filters.text.length == 0
+                    PropertyChanges {
+                        target: filters
+                        implicitHeight: constants.fontDefault * 10
+                    }
+                }
+            ]
         }
     }
 
