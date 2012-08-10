@@ -23,7 +23,6 @@ public slots:
 
 private slots:
     void finished(int exitCode, QProcess::ExitStatus exitStatus);
-    void settingsUpdated();
 
 private:
     void syncSuccess();
@@ -48,29 +47,28 @@ QNeptunea::Private::Private(QNeptunea *parent)
     , messagesNotification("/apps/ControlPanel/QNeptunea/Notification/DirectMessages")
     , searchesNotification("/apps/ControlPanel/QNeptunea/Notification/SavedSearches")
 {
-    connect(&sync, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
-    connect(&mentionsNotification, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
-    connect(&messagesNotification, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
-    connect(&searchesNotification, SIGNAL(valueChanged()), this, SLOT(settingsUpdated()));
-}
-
-void QNeptunea::Private::settingsUpdated()
-{
-    if (sync.value(true).toBool() &&
-            ( mentionsNotification.value(true).toBool()
-            || messagesNotification.value(true).toBool()
-            || searchesNotification.value(true).toBool() )
-            )
-        start();
+    connect(&sync, SIGNAL(valueChanged()), this, SLOT(start()));
+    connect(&mentionsNotification, SIGNAL(valueChanged()), this, SLOT(start()));
+    connect(&messagesNotification, SIGNAL(valueChanged()), this, SLOT(start()));
+    connect(&searchesNotification, SIGNAL(valueChanged()), this, SLOT(start()));
 }
 
 void QNeptunea::Private::start()
 {
-    if (qneptunea) return;
-    qneptunea = new QProcess(this);
-    connect(qneptunea, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(finished(int, QProcess::ExitStatus)));
-    qneptunea->start("/opt/qneptunea/bin/qneptunea", QStringList() << "cron");
+    qDebug() << Q_FUNC_INFO << sync.value();
 
+    if (sync.value(true).toBool() &&
+            ( mentionsNotification.value(true).toBool()
+            || messagesNotification.value(true).toBool()
+            || searchesNotification.value(true).toBool() )
+            ) {
+        if (qneptunea) return;
+        qneptunea = new QProcess(this);
+        connect(qneptunea, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(finished(int, QProcess::ExitStatus)));
+        qneptunea->start("/opt/qneptunea/bin/qneptunea", QStringList() << "cron");
+    } else {
+        syncSuccess();
+    }
 }
 
 void QNeptunea::Private::abort()
