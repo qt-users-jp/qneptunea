@@ -1,5 +1,13 @@
 <?xml version="1.0" ?><!DOCTYPE TS><TS language="tr" version="2.0">
 <context>
+    <name>25_mstranslator</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
+        <source>MS Translator</source>
+        <translation>MS Cevirici</translation>
+    </message>
+</context>
+<context>
     <name>30_twitpic</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/30_twitpic.qml" line="+6"/>
@@ -357,6 +365,45 @@
     </message>
 </context>
 <context>
+    <name>MSTranslatorSettings</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
+        <source>MS Translator</source>
+        <translation>MS Cevirici</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
+        <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Abone Ol &amp; Kayit Yap&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>client_id:</source>
+        <translation>client_id:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>client_secret:</source>
+        <translation>client_secret:</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Sign In</source>
+        <translation>Giris Yap</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Sign Out</source>
+        <translation>Cikis Yap</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <location line="+5"/>
+        <source>Failed</source>
+        <translation>Basarisiz</translation>
+    </message>
+</context>
+<context>
     <name>MainMenuPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+10"/>
@@ -369,27 +416,27 @@
         <translation>Tweetler</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
         <source>Favourites</source>
         <translation>Favoriler</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
         <source>Following</source>
         <translation>Takip Ettikleri</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
         <source>Followers</source>
         <translation>Takipciler</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
         <source>Listed</source>
         <translation>Listelenen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
@@ -424,7 +471,12 @@
         <translation>Hakkinda</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+19"/>
+        <source>Mute</source>
+        <translation>Sessizlestir</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Search / @people</source>
         <translation>Ara / @people</translation>
     </message>
@@ -443,6 +495,28 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+11"/>
         <source>Mentions</source>
         <translation>Bahsetmeler</translation>
+    </message>
+</context>
+<context>
+    <name>MutePage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MutePage.qml" line="+11"/>
+        <source>Mute Settings</source>
+        <translation>Sessizlestirme Ayarlari</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>@selop
+#Lumia
+http://nokia.ly/
+HTML5
+...</source>
+        <translation>@selop⏎ #Lumia⏎ http://nokia.ly/⏎ HTML5⏎ ...</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Save</source>
+        <translation>Kaydet</translation>
     </message>
 </context>
 <context>
@@ -481,6 +555,16 @@
     <name>SearchPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+69"/>
+        <source>Unmute %1</source>
+        <translation>Sesini Ac %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mute %1</source>
+        <translation>Sessiz %1</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Save search</source>
         <translation>Aramayi kaydet</translation>
     </message>
@@ -550,7 +634,7 @@
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+90"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+91"/>
         <source>Icon size:</source>
         <translation>Ikon boyutu:</translation>
     </message>
@@ -583,7 +667,7 @@
 <context>
     <name>SettingsPageConnectivityTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+17"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+18"/>
         <source>Update mode:</source>
         <translation>Guncelleme modu:</translation>
     </message>
@@ -635,6 +719,11 @@
     </message>
     <message>
         <location line="+11"/>
+        <source>Sync:</source>
+        <translation>Esitle:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Restoring last position:</source>
         <translation>Son konumlama getirilsin:</translation>
     </message>
@@ -642,7 +731,7 @@
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+14"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+15"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation>Cikis Yap</translation>
@@ -694,7 +783,7 @@
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+186"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+171"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt; tarafindan</translation>
     </message>
@@ -712,7 +801,17 @@
         <translation>Konusma</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+317"/>
+        <source>Unmute @%1</source>
+        <translation>Sesini Ac @%1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mute @%1</source>
+        <translation>Sessizlestir @%1</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Delete the tweet</source>
         <translation>Tweeti sil</translation>
     </message>
@@ -831,37 +930,47 @@ Then download the package again.</source>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+56"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+57"/>
         <source>Tweets</source>
         <translation>Tweetler</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
         <source>Favourites</source>
         <translation>Favoriler</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
         <source>Following</source>
         <translation>Takip Ettikleri</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
         <source>Followers</source>
         <translation>Takipciler</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
         <source>Listed</source>
         <translation>Listelenen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+15"/>
+        <source>Unmute @%1</source>
+        <translation>Sesini Ac @%1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mute @%1</source>
+        <translation>Sessizlestir @%1</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Unfollow @%1</source>
         <translation>Takibi birak @%1</translation>
     </message>
@@ -894,7 +1003,7 @@ Then download the package again.</source>
         <translation>%1 &apos;e kadar API limitlendi</translation>
     </message>
     <message>
-        <location line="+181"/>
+        <location line="+195"/>
         <source>@%1 following you</source>
         <translation>@%1 seni takip ediyor</translation>
     </message>
