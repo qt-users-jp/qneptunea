@@ -10,6 +10,10 @@ AbstractLinkPage {
     title: qsTr('QNeptunea for N9 %1').arg(currentVersion.version)
     visualParent: container
 
+    property string defaultTranslatorTwitterIds: 'translator1_twitter_id,translator2_twitter_id,...'
+    property string translatorTwitterIds: qsTr('translator1_twitter_id,translator2_twitter_id,...')
+    property variant translators: defaultTranslatorTwitterIds === translatorTwitterIds ? [] : translatorTwitterIds.split(/, */)
+
     Flickable {
         id: container
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
@@ -120,6 +124,25 @@ AbstractLinkPage {
                     screen_name: 'kenya888'
                 }
                 onClicked: pageStack.push(userPage, {'id_str': kenya888.id_str})
+            }
+            Text {
+                text: qsTr('Translator:')
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontXLarge
+                color: constants.textColor
+                visible: translators.length > 0
+            }
+            Repeater {
+                model: translators
+                UserDelegate {
+                    width: content.width
+                    user: translator
+                    User {
+                        id: translator
+                        screen_name: model.modelData
+                    }
+                    onClicked: pageStack.push(userPage, {'id_str': translator.id_str})
+                }
             }
         }
     }

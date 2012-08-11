@@ -111,6 +111,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>translator1_twitter_id,translator2_twitter_id,...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>A &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; client for &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
@@ -153,6 +158,11 @@
     <message>
         <location line="+15"/>
         <source>Contributor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Translator:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
