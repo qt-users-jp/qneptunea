@@ -13,6 +13,7 @@ ServicePlugin {
     }
 
     function open(link, parameters, feedback) {
+        root.loading = true
         root.delegate = feedback
         var client_id = settings.readData('microsofttranslator.com/client_id', '')
         var client_secret = settings.readData('microsofttranslator.com/client_secret', '')
@@ -35,6 +36,7 @@ ServicePlugin {
                                     translate(JSON.parse(request.responseText).access_token, parameters.text)
                                     break
                                 case XMLHttpRequest.ERROR:
+                                    root.loading = false
                                     break
                                 }
                             }
@@ -61,10 +63,11 @@ ServicePlugin {
                                 case XMLHttpRequest.LOADING:
                                     break
                                 case XMLHttpRequest.DONE: {
-                                    console.debug(request.responseText)
+//                                    console.debug(request.responseText)
                                     parser.xml = '<?xml version="1.0"?>\n'.concat(request.responseText).concat('\n')
                                     break }
                                 case XMLHttpRequest.ERROR:
+                                    root.loading = false
                                     break
                                 }
                             }
@@ -84,6 +87,9 @@ ServicePlugin {
                 if (parser.count > 0) {
                     root.delegate.translated = parser.get(0).text
                 }
+                root.loading = false
+            } else if (status === XmlListModel.Error) {
+                root.loading = false
             }
         }
     }
