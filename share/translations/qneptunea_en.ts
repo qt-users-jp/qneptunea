@@ -68,12 +68,22 @@
         <source>Pocket</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+39"/>
+        <source>Done!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>51_instapaper</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/51_instapaper.qml" line="+5"/>
         <source>Instapaper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+36"/>
+        <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

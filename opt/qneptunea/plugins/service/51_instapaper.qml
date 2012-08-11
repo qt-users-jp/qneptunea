@@ -33,7 +33,7 @@ ServicePlugin {
                                 case XMLHttpRequest.DONE: {
                                     root.result = (request.status == 201)
                                     if (root.result) {
-                                        root.message = 'Done!'
+                                        root.message = qsTr('Done!')
                                     } else {
                                         root.message = request.responseText
                                     }
