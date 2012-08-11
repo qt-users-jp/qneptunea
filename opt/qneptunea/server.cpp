@@ -32,6 +32,7 @@ Server::Private::Private()
         translator->load(dir.absoluteFilePath(qm));
 
         QVariantMap t;
+        translator->translate("Translation", "note for translators: translate \"en\" to *your* lang code and \"English\" to your lang name in your language.");
         QString code = translator->translate("Translation", "en");
         QString name = translator->translate("Translation", "English"); // please specify like "Nihongo / Japanese"
         t.insert(QLatin1String("code"), code);

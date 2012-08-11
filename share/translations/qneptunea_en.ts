@@ -883,6 +883,11 @@ HTML5
     <name>Translation</name>
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
+        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>en</source>
         <translation>en</translation>
     </message>
