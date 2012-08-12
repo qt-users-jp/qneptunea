@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.0">
 <context>
     <name>25_mstranslator</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
-        <source>MS Translator</source>
-        <translation>MS Translator</translation>
+        <source>Microsoft Translator</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -14,7 +12,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/30_twitpic.qml" line="+6"/>
         <source>Upload media to twitpic</source>
-        <translation>Medien hochladen nach twitpic</translation>
+        <translation>Medien Upload - twitpic</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -27,7 +25,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/31_yfrog.qml" line="+7"/>
         <source>Upload media to yfrog</source>
-        <translation>Medien hochladen nach yfrog</translation>
+        <translation>Medien Upload - yfrog</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -40,7 +38,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/39_mobypicture.qml" line="+7"/>
         <source>Upload media to Mobypicture</source>
-        <translation>Medien hochladen nach Mobypicture</translation>
+        <translation>Medien Upload - Mobypicture</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -53,7 +51,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/41_twipple.qml" line="+7"/>
         <source>Upload media to twipple</source>
-        <translation>Medien hochladen nach twipple</translation>
+        <translation>Medien Upload - twipple</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -71,7 +69,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+39"/>
         <source>Done!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -84,7 +82,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+36"/>
         <source>Done!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -100,7 +98,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/90_clipboard.qml" line="+5"/>
         <source>Copy to clipboard</source>
-        <translation>In die Zwischenablage kopieren</translation>
+        <translation>In Zwischenablage kopieren</translation>
     </message>
 </context>
 <context>
@@ -109,6 +107,11 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+10"/>
         <source>QNeptunea for N9 %1</source>
         <translation>QNeptunea für N9 %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>translator1_twitter_id,translator2_twitter_id,...</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
@@ -128,7 +131,7 @@
     <message>
         <location line="+8"/>
         <source>includes: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</source>
-        <translation>beinhaltet: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</translation>
+        <translation>Beinhaltet: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -153,7 +156,12 @@
     <message>
         <location line="+15"/>
         <source>Contributor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Translator:</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -166,7 +174,8 @@
     <message>
         <location line="+9"/>
         <source>Open in the default app</source>
-        <translation>In der Standardanwendung öffnen</translation>
+        <translation>Standardgemäß öffnen
+</translation>
     </message>
 </context>
 <context>
@@ -192,8 +201,7 @@
     <message>
         <location line="+7"/>
         <source>2. Enter 7 digits pin code</source>
-        <translation>2. 7-stellige Pin eingeben
-2. Enter 7 digits pin code</translation>
+        <translation>2. 7-stellige Pin eingeben</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -242,7 +250,7 @@
     <message>
         <location line="+41"/>
         <source>Copy to clipboard</source>
-        <translation>In die Zwischenablage kopieren</translation>
+        <translation>In Zwischenablage kopieren</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -337,7 +345,7 @@
     <message>
         <location line="+6"/>
         <source>Tos</source>
-        <translation>Tos</translation>
+        <translation>AGB</translation>
     </message>
 </context>
 <context>
@@ -386,8 +394,8 @@
     <name>MSTranslatorSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
-        <source>MS Translator</source>
-        <translation>MS Translator</translation>
+        <source>Microsoft Translator</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
@@ -529,7 +537,11 @@
 http://nokia.ly/
 HTML5
 ...</source>
-        <translation>@selop⏎ #Lumia⏎ http://nokia.ly/⏎ HTML5⏎ ...</translation>
+        <translation>@selop
+#Lumia
+http://nokia.ly/
+HTML5
+...</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -703,10 +715,7 @@ HTML5
         <location line="+18"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
-        <translation>
-            <numerusform>%1 Minute(n)</numerusform>
-            <numerusform>%1 Minute(n)</numerusform>
-        </translation>
+        <translation><numerusform>%1 Minute(n)</numerusform><numerusform>%1 Minute(n)</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -874,13 +883,18 @@ HTML5
     <name>Translation</name>
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
+        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>en</source>
         <translation>de</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>deutsch</translation>
+        <translation>Deutsch</translation>
     </message>
 </context>
 <context>
@@ -927,7 +941,13 @@ dev.qtquick.me/projects/qneptunea/files
 If installation fails, clear brower cache
 $ rm /home/user/.grob/cache/http*/*
 Then download the package again.</source>
-        <translation>%1 Version %2 ist verfügbar.⏎ Wollen Sie das Paket herunterladen?⏎ dev.qtquick.me/projects/qneptunea/files⏎ ⏎ Löschen Sie den Browser Cache falls die Installation fehlschläg:t⏎ $ rm /home/user/.grob/cache/http*/*⏎ Danach erneut das Paket herunterladen.</translation>
+        <translation>%1 Version %2 ist verfügbar.
+Wollen Sie das Paket herunterladen?
+dev.qtquick.me/projects/qneptunea/files
+
+Löschen Sie den Browser Cache falls die Installation fehlschlägt:
+$ rm /home/user/.grob/cache/http*/*
+Danach erneut das Paket herunterladen.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1032,7 +1052,8 @@ Then download the package again.</source>
         <location line="+11"/>
         <source>@%1 favorited your tweet
 %2</source>
-        <translation>@%1  favorisiert deinen Tweet⏎ %2</translation>
+        <translation>@%1  favorisiert deinen Tweet
+%2</translation>
     </message>
 </context>
 </TS>
