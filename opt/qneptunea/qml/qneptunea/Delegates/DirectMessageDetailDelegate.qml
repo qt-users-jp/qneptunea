@@ -131,7 +131,7 @@ MouseArea {
                 spacing: constants.listViewMargins
 
                 Text {
-                    text: item.created_at ? Qt.formatDateTime(new Date(item.created_at), 'M/d hh:mm') : ''
+                    text: item.created_at ? Qt.formatDateTime(new Date(item.created_at), qsTr('M/d hh:mm')) : ''
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontSmall
                     color: constants.textColor

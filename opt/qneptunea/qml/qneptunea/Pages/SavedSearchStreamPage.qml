@@ -124,7 +124,7 @@ AbstractPage {
                 PropertyChanges {
                     target: root
                     created_at: topData.created_at
-                    title: Qt.formatDateTime(new Date(root.created_at), 'M/d hh:mm')
+                    title: Qt.formatDateTime(new Date(root.created_at), qsTr('M/d hh:mm'))
                 }
             }
         ]

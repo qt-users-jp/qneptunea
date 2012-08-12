@@ -27,7 +27,7 @@ Page {
                 when: root.view.moving && __topData.created_at
                 PropertyChanges {
                     target: header
-                    text: Qt.formatDateTime(new Date(__topData.created_at), 'M/d hh:mm')
+                    text: Qt.formatDateTime(new Date(__topData.created_at), qsTr('M/d hh:mm'))
                 }
             }
         ]
