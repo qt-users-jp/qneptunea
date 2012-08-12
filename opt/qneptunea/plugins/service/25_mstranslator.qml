@@ -19,8 +19,9 @@ ServicePlugin {
         var client_secret = settings.readData('microsofttranslator.com/client_secret', '')
 
         var url = 'https://datamarket.accesscontrol.windows.net/v2/OAuth2-13'
-        var query = 'grant_type=client_credentials&client_id='.concat(client_id).concat('&client_secret=').concat(escape(client_secret)).concat('&scope=').concat(escape('http://api.microsofttranslator.com'))
+        var query = 'grant_type=client_credentials&client_id='.concat(encodeURIComponent(client_id)).concat('&client_secret=').concat(encodeURIComponent(client_secret)).concat('&scope=').concat(encodeURIComponent('http://api.microsofttranslator.com'))
 
+        var responseText = ''
         var request = new XMLHttpRequest()
         request.open('POST', url)
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
@@ -31,9 +32,27 @@ ServicePlugin {
                                 case XMLHttpRequest.HEADERS_RECEIVED:
                                     break
                                 case XMLHttpRequest.LOADING:
+                                    responseText = request.responseText
                                     break
                                 case XMLHttpRequest.DONE:
-                                    translate(JSON.parse(request.responseText).access_token, parameters.text)
+                                    if (request.responseText.length > 0)
+                                        responseText = request.responseText
+                                    var json
+                                    try {
+                                        json = JSON.parse(responseText)
+                                    } catch(e) {
+                                        root.loading = false
+                                        break
+                                    }
+
+                                    if (typeof json.access_token !== 'undefined') {
+                                        translate(json.access_token, parameters.text)
+                                    } else if (typeof json.error !== 'undefined') {
+                                        root.loading = false
+                                    } else {
+                                        root.loading = false
+                                    }
+
                                     break
                                 case XMLHttpRequest.ERROR:
                                     root.loading = false
@@ -50,6 +69,7 @@ ServicePlugin {
         if (lang.indexOf('_') > -1)
             lang = lang.substring(0, lang.indexOf('_'))
         var url = 'http://api.microsofttranslator.com/v2/Http.svc/Translate?'.concat('text=').concat(encodeURIComponent(source)).concat('&to=').concat(lang)
+
         var request = new XMLHttpRequest()
         request.open('GET', url)
         request.setRequestHeader('Authorization', 'Bearer '.concat(accessToken))
