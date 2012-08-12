@@ -3,8 +3,8 @@
     <name>25_mstranslator</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
-        <source>MS Translator</source>
-        <translation>MS Cevirici</translation>
+        <source>Microsoft Translator</source>
+        <translation>Microsoft Translator</translation>
     </message>
 </context>
 <context>
@@ -66,6 +66,11 @@
         <source>Pocket</source>
         <translation>Pocket</translation>
     </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+39"/>
+        <source>Done!</source>
+        <translation>Yapildi!</translation>
+    </message>
 </context>
 <context>
     <name>51_instapaper</name>
@@ -73,6 +78,11 @@
         <location filename="../../opt/qneptunea/plugins/settings/51_instapaper.qml" line="+5"/>
         <source>Instapaper</source>
         <translation>Instapaper</translation>
+    </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+36"/>
+        <source>Done!</source>
+        <translation>Yapildi!</translation>
     </message>
 </context>
 <context>
@@ -97,6 +107,11 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+10"/>
         <source>QNeptunea for N9 %1</source>
         <translation>N9 icin QNeptunea %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>translator1_twitter_id,translator2_twitter_id,...</source>
+        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -137,6 +152,16 @@
         <location line="+15"/>
         <source>Graphics:</source>
         <translation>Grafikler:</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Contributor:</source>
+        <translation>Katki Saglayan:</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Translator:</source>
+        <translation>Translator:</translation>
     </message>
 </context>
 <context>
@@ -368,8 +393,8 @@
     <name>MSTranslatorSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
-        <source>MS Translator</source>
-        <translation>MS Cevirici</translation>
+        <source>Microsoft Translator</source>
+        <translation>Microsoft Translator</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -514,7 +539,7 @@ HTML5
         <translation>@selop⏎ #Lumia⏎ http://nokia.ly/⏎ HTML5⏎ ...</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+23"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
@@ -853,6 +878,11 @@ HTML5
     <name>Translation</name>
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
+        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
+        <translation>cevirmenlere tavsiye:&quot;en&quot; ve &quot;English&quot; gibi kelimeleri kendi dilinizdeki karsiliklariyla cevirin.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>en</source>
         <translation>tr</translation>
     </message>
