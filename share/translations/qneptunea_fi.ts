@@ -3,8 +3,8 @@
     <name>25_mstranslator</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
-        <source>MS Translator</source>
-        <translation>MS Translator</translation>
+        <source>Microsoft Translator</source>
+        <translation>Microsoft Translator</translation>
     </message>
 </context>
 <context>
@@ -66,6 +66,11 @@
         <source>Pocket</source>
         <translation>Pocket</translation>
     </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+39"/>
+        <source>Done!</source>
+        <translation>Valmis!</translation>
+    </message>
 </context>
 <context>
     <name>51_instapaper</name>
@@ -73,6 +78,11 @@
         <location filename="../../opt/qneptunea/plugins/settings/51_instapaper.qml" line="+5"/>
         <source>Instapaper</source>
         <translation>Instapaper</translation>
+    </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+36"/>
+        <source>Done!</source>
+        <translation>Valmis!</translation>
     </message>
 </context>
 <context>
@@ -97,6 +107,11 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+10"/>
         <source>QNeptunea for N9 %1</source>
         <translation>QNeptunea N9:lle %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>translator1_twitter_id,translator2_twitter_id,...</source>
+        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -137,6 +152,16 @@
         <location line="+15"/>
         <source>Graphics:</source>
         <translation>Grafiikka:</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Contributor:</source>
+        <translation>Avustaja:</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Translator:</source>
+        <translation>Kääntäjä:</translation>
     </message>
 </context>
 <context>
@@ -368,8 +393,8 @@
     <name>MSTranslatorSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
-        <source>MS Translator</source>
-        <translation>MS Translator</translation>
+        <source>Microsoft Translator</source>
+        <translation>Microsoft Translator</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -518,7 +543,7 @@ HTML5
 ...</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+23"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
@@ -753,7 +778,7 @@ HTML5
     <message>
         <location line="+14"/>
         <source>Display time-out:</source>
-        <translation>Näytä aikakatkaisu:</translation>
+        <translation>Näytön aikakatkaisu:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -857,6 +882,11 @@ HTML5
     <name>Translation</name>
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
+        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
+        <translation>kääntäjät huomio: käännä &quot;en&quot; *kielesi* koodiksi ja &quot;English&quot; kielesi nimeksi omalla kielelläsi.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>en</source>
         <translation>fi</translation>
     </message>
