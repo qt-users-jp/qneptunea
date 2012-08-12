@@ -54,7 +54,7 @@ AbstractLinkPage {
             TextField {
                 id: clientId
                 width: parent.width
-                enabled: !root.busy
+                enabled: !root.busy && !root.signedIn
                 text: settings.readData('microsofttranslator.com/client_id', '')
                 maximumLength: 50
                 platformStyle: TextFieldStyle { textFont.pixelSize: constants.fontDefault }
@@ -74,7 +74,7 @@ AbstractLinkPage {
             TextField {
                 id: clientSecret
                 width: parent.width
-                enabled: !root.busy
+                enabled: !root.busy && !root.signedIn
                 text: settings.readData('microsofttranslator.com/client_secret', '')
                 maximumLength: 100
                 platformStyle: TextFieldStyle { textFont.pixelSize: constants.fontDefault }
@@ -109,12 +109,10 @@ AbstractLinkPage {
                 function signIn() {
                     root.busy = true
 
-//                    var clientId = settings.readData('microsofttranslator.com/clientId', '')
-//                    var clientSecret = settings.readData('microsofttranslator.com/clientSecret', '')
-
                     var url = 'https://datamarket.accesscontrol.windows.net/v2/OAuth2-13'
-                    var query = 'grant_type=client_credentials&client_id='.concat(clientId.text).concat('&client_secret=').concat(escape(clientSecret.text)).concat('&scope=').concat(escape('http://api.microsofttranslator.com'))
+                    var query = 'grant_type=client_credentials&client_id='.concat(encodeURIComponent(clientId.text)).concat('&client_secret=').concat(encodeURIComponent(clientSecret.text)).concat('&scope=').concat(encodeURIComponent('http://api.microsofttranslator.com'))
 
+                    var responseText = ''
                     var request = new XMLHttpRequest()
                     request.open('POST', url)
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
@@ -125,12 +123,26 @@ AbstractLinkPage {
                                             case XMLHttpRequest.HEADERS_RECEIVED:
                                                 break
                                             case XMLHttpRequest.LOADING:
+                                                responseText = request.responseText
                                                 break
                                             case XMLHttpRequest.DONE: {
-                                                if (typeof JSON.parse(request.responseText).access_token !== 'undefined') {
+                                                if (request.responseText.length > 0)
+                                                    responseText = request.responseText
+                                                var json
+                                                try {
+                                                    json = JSON.parse(responseText)
+                                                } catch(e) {
+                                                    root.message(responseText, root.__icon)
+                                                    root.busy = false
+                                                    break
+                                                }
+
+                                                if (typeof json.access_token !== 'undefined') {
                                                     settings.saveData('microsofttranslator.com/client_id', clientId.text)
                                                     settings.saveData('microsofttranslator.com/client_secret', clientSecret.text)
                                                     pageStack.pop()
+                                                } else if (typeof json.error !== 'undefined') {
+                                                    root.message(qsTr('Failed: %1').arg(json.error), root.__icon)
                                                 } else {
                                                     root.message(qsTr('Failed'), root.__icon)
                                                 }
@@ -149,7 +161,7 @@ AbstractLinkPage {
                 function signOut() {
                     root.busy = true
                     clientId.text = ''
-                    clientId.text = ''
+                    clientSecret.text = ''
                     settings.saveData('microsofttranslator.com/client_id', '')
                     settings.saveData('microsofttranslator.com/client_secret', '')
                     root.signedIn = false
