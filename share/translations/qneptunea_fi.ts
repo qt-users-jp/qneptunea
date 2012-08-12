@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
+        <translation>vertama</translation>
     </message>
     <message>
         <location line="+19"/>
