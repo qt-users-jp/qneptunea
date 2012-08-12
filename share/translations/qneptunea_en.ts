@@ -568,7 +568,7 @@ HTML5
     </message>
 </context>
 <context>
-    <name>QuaZipFilePrivate</name>
+    <name>QuaZipFile</name>
     <message>
         <location filename="../../3rdparty/quazip-0.4.4/quazip/quazipfile.cpp" line="+213"/>
         <source>ZIP/UNZIP API error %1</source>
