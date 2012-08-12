@@ -3,7 +3,7 @@ import QtQuick 1.1
 
 ServicePlugin {
     id: root
-    service: 'MS Translator V2'
+    service: 'Microsoft Translator'
     icon: 'mstranslator.png'
 
     property variant delegate

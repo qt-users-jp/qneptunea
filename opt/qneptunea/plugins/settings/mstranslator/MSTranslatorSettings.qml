@@ -6,7 +6,7 @@ import QNeptunea.Components 1.0
 AbstractLinkPage {
     id: root
 
-    title: qsTr('MS Translator')
+    title: qsTr('Microsoft Translator')
     visualParent: container
 
     property url __icon: 'mstranslator.png'

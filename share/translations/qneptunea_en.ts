@@ -5,7 +5,7 @@
     <name>25_mstranslator</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
-        <source>MS Translator</source>
+        <source>Microsoft Translator</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -395,7 +395,7 @@
     <name>MSTranslatorSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
-        <source>MS Translator</source>
+        <source>Microsoft Translator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
