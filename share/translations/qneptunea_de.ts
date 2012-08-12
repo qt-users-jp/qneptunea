@@ -4,7 +4,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
         <source>Microsoft Translator</source>
-        <translation type="unfinished"/>
+        <translation>Microsoft Translator</translation>
     </message>
 </context>
 <context>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+39"/>
         <source>Done!</source>
-        <translation type="unfinished"/>
+        <translation>Fertig!</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+36"/>
         <source>Done!</source>
-        <translation type="unfinished"/>
+        <translation>Fertig!</translation>
     </message>
 </context>
 <context>
@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation type="unfinished"/>
+        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -121,7 +121,7 @@
     <message>
         <location line="+10"/>
         <source>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/qneptunea&quot;&gt;QNeptunea website&lt;/a&gt;</source>
-        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/qneptunea&quot;&gt;QNeptunea webseite&lt;/a&gt;</translation>
+        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/qneptunea&quot;&gt;QNeptunea Webseite&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -156,12 +156,12 @@
     <message>
         <location line="+15"/>
         <source>Contributor:</source>
-        <translation type="unfinished"/>
+        <translation>Mitwirkender:</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Translator:</source>
-        <translation type="unfinished"/>
+        <translation>Übersetzer:</translation>
     </message>
 </context>
 <context>
@@ -174,8 +174,7 @@
     <message>
         <location line="+9"/>
         <source>Open in the default app</source>
-        <translation>Standardgemäß öffnen
-</translation>
+        <translation>Standardgemäß öffnen</translation>
     </message>
 </context>
 <context>
@@ -395,7 +394,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
         <source>Microsoft Translator</source>
-        <translation type="unfinished"/>
+        <translation>Microsoft Translator</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -666,7 +665,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+91"/>
         <source>Icon size:</source>
-        <translation>Icon Größe:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -884,7 +883,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
         <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
-        <translation type="unfinished"/>
+        <translation>Notiz für Übersetzer: Übersetze &quot;en&quot; in dein Sprachkürzel (de) und &quot;English&quot; in deinen Sprachnamen (Deutsch).</translation>
     </message>
     <message>
         <location line="+1"/>
