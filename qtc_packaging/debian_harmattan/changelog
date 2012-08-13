@@ -1,3 +1,8 @@
+qneptunea (0.3.4) unstable; urgency=low
+  * <Add change description here>
+
+ -- Tasuku Suzuki <stasuku@gmail.com>  Tue, 14 Aug 2012 03:22:58 +0900
+
 qneptunea (0.3.3) unstable; urgency=low
   * found an XSS hole
   * update AboutPage
