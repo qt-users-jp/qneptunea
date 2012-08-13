@@ -1,5 +1,8 @@
 qneptunea (0.3.3) unstable; urgency=low
-  * <Add change description here>
+  * found an XSS hole
+  * update AboutPage
+  * German support
+  * imgur.com preview
 
  -- Tasuku Suzuki <stasuku@gmail.com>  Sat, 11 Aug 2012 00:57:30 +0900
 

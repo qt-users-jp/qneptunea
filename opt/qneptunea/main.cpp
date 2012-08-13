@@ -75,7 +75,7 @@ void Private::activate()
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QScopedPointer<QApplication> app(createApplication(argc, argv));
-//    MComponentData::createInstance(argc, argv);
+    MComponentData::createInstance(argc, argv);
 
     bool background = app->arguments().contains("cron");
 
