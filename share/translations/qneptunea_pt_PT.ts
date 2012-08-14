@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt_PT" version="2.0">
 <context>
     <name>25_mstranslator</name>
     <message>
@@ -326,7 +324,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/HomePage.qml" line="+11"/>
         <source>Timeline</source>
-        <translation>Linha de Tempo</translation>
+        <translation>Tweets</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -617,7 +615,7 @@ HTML5
     <message>
         <location filename="../../3rdparty/quazip-0.4.4/quazip/quazipfile.cpp" line="+213"/>
         <source>ZIP/UNZIP API error %1</source>
-        <translation>ZIP/UNZIP API erro %1</translation>
+        <translation>ZIP/UNZIP erro API %1</translation>
     </message>
 </context>
 <context>
@@ -625,7 +623,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SavedSearchStreamPage.qml" line="+11"/>
         <source>Saved Search Timeline</source>
-        <translation>Procura Linha de tempo guardada</translation>
+        <translation>Procura Tweets guardados</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -772,10 +770,7 @@ HTML5
         <location line="+18"/>
         <source>%1 min(s)</source>
         <comment>update interval</comment>
-        <translation>
-            <numerusform>um: %1 min(s)</numerusform>
-            <numerusform>vários: %1 min(s)</numerusform>
-        </translation>
+        <translation><numerusform>um: %1 min(s)</numerusform><numerusform>vários: %1 min(s)</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -898,12 +893,12 @@ HTML5
     <message>
         <location line="+317"/>
         <source>Unmute @%1</source>
-        <translation>Retirar silêncio %1</translation>
+        <translation>Retirar silêncio @%1</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mute @%1</source>
-        <translation>Silenciar %1</translation>
+        <translation>Silenciar @%1</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1011,7 +1006,7 @@ Quer fazer o download desta versão?
 dev.qtquick.me/projects/qneptunea/files
 Se a instalação falhar, limpe a cache do browser
 $ rm /home/user/.grob/cache/http*/*
-Depois faça o download da nova versão novamente.</translation>
+Depois faça novamente o download da nova versão.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1067,12 +1062,12 @@ Depois faça o download da nova versão novamente.</translation>
     <message>
         <location line="+15"/>
         <source>Unmute @%1</source>
-        <translation>Retirar silêncio %1</translation>
+        <translation>Retirar silêncio @%1</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mute @%1</source>
-        <translation>Silenciar %1</translation>
+        <translation>Silenciar @%1</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1124,7 +1119,7 @@ Depois faça o download da nova versão novamente.</translation>
         <location line="+11"/>
         <source>@%1 favorited your tweet
 %2</source>
-        <translation>@%1 marcou como favorito o seu tweet
+        <translation>@%1 marcou o seu tweet como favorito
 %2</translation>
     </message>
 </context>
