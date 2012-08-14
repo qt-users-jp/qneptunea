@@ -186,6 +186,14 @@
     </message>
 </context>
 <context>
+    <name>AbstractTabPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AbstractTabPage.qml" line="+30"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
+</context>
+<context>
     <name>AuthorizationPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AuthorizationPage.qml" line="+17"/>
@@ -234,7 +242,12 @@
         <translation>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+14"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Sent to %1</source>
         <translation>An %1 gesendet</translation>
     </message>
@@ -263,6 +276,19 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagesPage.qml" line="+11"/>
         <source>Direct Messages</source>
         <translation>Direkte Nachrichten</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
+</context>
+<context>
+    <name>FavouritesPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/FavouritesPage.qml" line="+22"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
@@ -299,6 +325,11 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/HomePage.qml" line="+11"/>
         <source>Timeline</source>
         <translation>Zeitstrahl</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
@@ -379,7 +410,12 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+89"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+25"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
+    <message>
+        <location line="+64"/>
         <source>Unsubscribe</source>
         <translation>Abonnement entfernen</translation>
     </message>
@@ -422,7 +458,12 @@
         <translation>Abmelden</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
+        <source>Failed: %1</source>
+        <translation>Fehlgeschlagen: %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <location line="+5"/>
         <source>Failed</source>
         <translation>Fehlgeschlagen</translation>
@@ -521,6 +562,11 @@
         <source>Mentions</source>
         <translation>Erwähnungen</translation>
     </message>
+    <message>
+        <location line="+116"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
 </context>
 <context>
     <name>MutePage</name>
@@ -565,7 +611,7 @@ HTML5
     </message>
 </context>
 <context>
-    <name>QuaZipFilePrivate</name>
+    <name>QuaZipFile</name>
     <message>
         <location filename="../../3rdparty/quazip-0.4.4/quazip/quazipfile.cpp" line="+213"/>
         <source>ZIP/UNZIP API error %1</source>
@@ -579,11 +625,21 @@ HTML5
         <source>Saved Search Timeline</source>
         <translation>Gespeicherte Suchanfrage</translation>
     </message>
+    <message>
+        <location line="+116"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+69"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+26"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
+    <message>
+        <location line="+43"/>
         <source>Unmute %1</source>
         <translation>Stummschaltung für %1 entfernen</translation>
     </message>
@@ -812,7 +868,12 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+171"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+162"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>durch &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
@@ -1033,6 +1094,14 @@ Danach erneut das Paket herunterladen.</translation>
         <location line="+10"/>
         <source>Report @%1 for spam</source>
         <translation>Melde @%1 als Spammer</translation>
+    </message>
+</context>
+<context>
+    <name>UserTimelinePage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserTimelinePage.qml" line="+22"/>
+        <source>M/d hh:mm</source>
+        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
