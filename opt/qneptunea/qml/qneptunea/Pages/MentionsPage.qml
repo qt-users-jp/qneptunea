@@ -226,6 +226,8 @@ AbstractPage {
                         }
                     }
                 }
+
+                onFiltering: if (window.filter(value)) mentions.filter();
             }
             onSizeChanged: {
                 mentions.lastSize = mentions.size
