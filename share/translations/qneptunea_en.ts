@@ -1113,6 +1113,14 @@ Then download the package again.</source>
     </message>
 </context>
 <context>
+    <name>default</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/default.qml" line="+9"/>
+        <source>Default Green Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
@@ -1128,6 +1136,14 @@ Then download the package again.</source>
         <location line="+11"/>
         <source>@%1 favorited your tweet
 %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>normal</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+10"/>
+        <source>Light theme for QNeptunea.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
