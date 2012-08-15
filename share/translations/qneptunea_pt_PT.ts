@@ -333,6 +333,14 @@
     </message>
 </context>
 <context>
+    <name>ImagePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ImagePreviewPage.qml" line="+9"/>
+        <source>Preview</source>
+        <translation>Previsão</translation>
+    </message>
+</context>
+<context>
     <name>InstapaperSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/instapaper/InstapaperSettings.qml" line="+9"/>
@@ -603,14 +611,6 @@ HTML5
     </message>
 </context>
 <context>
-    <name>PreviewPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/PreviewPage.qml" line="+9"/>
-        <source>Preview</source>
-        <translation>Previsão</translation>
-    </message>
-</context>
-<context>
     <name>QuaZipFile</name>
     <message>
         <location filename="../../3rdparty/quazip-0.4.4/quazip/quazipfile.cpp" line="+213"/>
@@ -744,9 +744,14 @@ HTML5
         <translation>Separador de opacidade:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+62"/>
         <source>Theme:</source>
         <translation>Tema:</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <source>Color scheme:</source>
+        <translation>Esquema de Cores:</translation>
     </message>
 </context>
 <context>
@@ -1104,14 +1109,22 @@ Depois faça novamente o download da nova versão.</translation>
     </message>
 </context>
 <context>
+    <name>VideoPreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
+        <source>Preview</source>
+        <translation>Previsão</translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+73"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
         <source>API rate limited until %1</source>
         <translation>Taxa API limitada até %1</translation>
     </message>
     <message>
-        <location line="+195"/>
+        <location line="+196"/>
         <source>@%1 following you</source>
         <translation>@%1 está a segui-lo</translation>
     </message>
