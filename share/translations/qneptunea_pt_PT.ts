@@ -146,7 +146,7 @@
     <message>
         <location line="+10"/>
         <source>Developer:</source>
-        <translation>Responsável:</translation>
+        <translation>Programador:</translation>
     </message>
     <message>
         <location line="+15"/>
