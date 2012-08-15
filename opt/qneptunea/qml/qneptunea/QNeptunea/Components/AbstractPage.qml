@@ -61,7 +61,6 @@ Page {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        z: 100
         states: [
             State {
                 name: 'hidden'

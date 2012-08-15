@@ -335,6 +335,14 @@
     </message>
 </context>
 <context>
+    <name>ImagePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ImagePreviewPage.qml" line="+9"/>
+        <source>Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InstapaperSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/instapaper/InstapaperSettings.qml" line="+9"/>
@@ -597,14 +605,6 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+11"/>
         <source>Near by</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PreviewPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/PreviewPage.qml" line="+9"/>
-        <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1096,6 +1096,14 @@ Then download the package again.</source>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserTimelinePage.qml" line="+22"/>
         <source>M/d hh:mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VideoPreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
+        <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -462,7 +462,8 @@ PageStackWindow {
     Component { id: statusPage; StatusPage {} }
     Component { id: tweetPage; TweetPage {} }
     Component { id: searchPage; SearchPage {} }
-    Component { id: previewPage; PreviewPage {} }
+    Component { id: imagePreviewPage; ImagePreviewPage {} }
+    Component { id: videoPreviewPage; VideoPreviewPage {} }
     Component { id: userTimelinePage; UserTimelinePage {} }
     Component { id: favouritesPage; FavouritesPage {} }
     Component { id: followingPage; FollowingPage {} }

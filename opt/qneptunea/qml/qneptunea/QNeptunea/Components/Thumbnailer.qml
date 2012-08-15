@@ -30,7 +30,7 @@ MouseArea {
     states: [
         State {
             name: "image"
-            when: root.type === 'image' || root.type === 'web'
+            when: root.type === 'image' || root.type === 'video'
             PropertyChanges { target: loader; sourceComponent: image }
             PropertyChanges { target: root; visible: true }
         },
@@ -63,10 +63,12 @@ MouseArea {
 //    }
 
     onClicked: {
-        if (root.type == 'image')
-            pageStack.push(previewPage, {'type': root.__pluginItem.type, 'url': root.__pluginItem.detail})
-        else if (root.type == 'web')
+        if (root.type == 'web')
             root.parent.openLink(root.__pluginItem.detail)
+        else if (root.type == 'image')
+            pageStack.push(imagePreviewPage, {'type': root.__pluginItem.type, 'url': root.__pluginItem.detail})
+        else if (root.type == 'video')
+            pageStack.push(videoPreviewPage, {'type': root.__pluginItem.type, 'url': root.__pluginItem.detail})
     }
 
     function update() {
