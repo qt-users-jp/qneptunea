@@ -182,6 +182,9 @@ Flickable {
                         id: icon
                         anchors.centerIn: parent
                         source: '/usr/share/themes/blanco/meegotouch/images/theme/'.concat(model.name).concat('/').concat(model.prefix).concat('meegotouch-button-accent').concat(theme.inverted ? '-inverted-background.png' : '-background.png')
+                        scale: constants.themeColorScheme === model.index + 1 ? 1.25 : 1.0
+                        smooth: true
+                        Behavior on scale { NumberAnimation { easing.type: Easing.OutBack } }
                     }
 
                     onClicked: {
