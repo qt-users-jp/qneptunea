@@ -144,6 +144,55 @@ Flickable {
         }
 
         Text {
+            text: qsTr('Color scheme:')
+            color: constants.textColor
+            font.family: constants.fontFamily
+            font.pixelSize: constants.fontDefault
+        }
+
+        Flow {
+            width: parent.width
+            Repeater {
+                model: ListModel {
+                    ListElement { name: 'basement'; prefix: 'meegotouch-button/' }
+                    ListElement { name: 'color2'; prefix: 'color2-' }
+                    ListElement { name: 'color3'; prefix: 'color3-' }
+                    ListElement { name: 'color4'; prefix: 'color4-' }
+                    ListElement { name: 'color5'; prefix: 'color5-' }
+                    ListElement { name: 'color6'; prefix: 'color6-' }
+                    ListElement { name: 'color7'; prefix: 'color7-' }
+                    ListElement { name: 'color8'; prefix: 'color8-' }
+                    ListElement { name: 'color9'; prefix: 'color9-' }
+                    ListElement { name: 'color10'; prefix: 'color10-' }
+                    ListElement { name: 'color11'; prefix: 'color11-' }
+                    ListElement { name: 'color12'; prefix: 'color12-' }
+                    ListElement { name: 'color13'; prefix: 'color13-' }
+                    ListElement { name: 'color14'; prefix: 'color14-' }
+                    ListElement { name: 'color15'; prefix: 'color15-' }
+                    ListElement { name: 'color16'; prefix: 'color16-' }
+                    ListElement { name: 'color17'; prefix: 'color17-' }
+                    ListElement { name: 'color18'; prefix: 'color18-' }
+                    ListElement { name: 'color19'; prefix: 'color19-' }
+                }
+
+                delegate: MouseArea {
+                    width: 60
+                    height: 60
+                    Image {
+                        id: icon
+                        anchors.centerIn: parent
+                        source: '/usr/share/themes/blanco/meegotouch/images/theme/'.concat(model.name).concat('/').concat(model.prefix).concat('meegotouch-button-accent').concat(theme.inverted ? '-inverted-background.png' : '-background.png')
+                    }
+
+                    onClicked: {
+                        console.debug(icon.source)
+                        constants.themeColorScheme = model.index + 1
+                    }
+                }
+            }
+        }
+
+        Text {
             text: qsTr('Theme:')
             color: constants.textColor
             font.family: constants.fontFamily

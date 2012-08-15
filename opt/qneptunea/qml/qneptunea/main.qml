@@ -13,6 +13,8 @@ PageStackWindow {
     id: window
     showToolBar: false
 
+    property alias logoVisible: logo.visible
+
     platformStyle: PageStackWindowStyle {
         background: constants.background
     }
@@ -254,6 +256,7 @@ PageStackWindow {
     UIConstants { id: constants }
 
     Binding { target: theme; property: 'inverted'; value: constants.themeInverted }
+    Binding { target: theme; property: 'colorScheme'; value: constants.themeColorScheme }
 
     Column {
         id: infoBanners

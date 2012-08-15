@@ -742,8 +742,13 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+62"/>
         <source>Theme:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <source>Color scheme:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1110,12 +1115,12 @@ Then download the package again.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+73"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
         <source>API rate limited until %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+195"/>
+        <location line="+196"/>
         <source>@%1 following you</source>
         <translation type="unfinished"></translation>
     </message>

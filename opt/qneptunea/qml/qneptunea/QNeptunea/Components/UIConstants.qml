@@ -10,6 +10,8 @@ QtObject {
 
     property bool themeInverted: settings.readData('Appearance/ThemeInverted', true)
     onThemeInvertedChanged: settings.saveData('Appearance/ThemeInverted', root.themeInverted)
+    property int themeColorScheme: settings.readData('Appearance/ThemeColorScheme', 3)
+    onThemeColorSchemeChanged: settings.saveData('Appearance/ThemeColorScheme', root.themeColorScheme)
 
     property ConfItem splashPortraitConf: ConfItem { id: splashPortraitConf; key: '/apps/QNeptunea/Theme/Splash/Portrait' }
     property ConfItem splashLandscapeConf: ConfItem { id: splashLandscapeConf; key: '/apps/QNeptunea/Theme/Splash/Landscape' }
