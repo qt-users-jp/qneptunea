@@ -550,7 +550,7 @@
         <translation>Silenciar</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+13"/>
         <source>Search / @people</source>
         <translation>Procurar / @people</translation>
     </message>
@@ -696,7 +696,7 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
         <source>Connectivity</source>
         <translation>Conetividade</translation>
     </message>
@@ -744,12 +744,12 @@ HTML5
         <translation>Separador de opacidade:</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+65"/>
         <source>Theme:</source>
         <translation>Tema:</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-52"/>
         <source>Color scheme:</source>
         <translation>Esquema de Cores:</translation>
     </message>
@@ -896,7 +896,7 @@ HTML5
         <translation>Ver Conversa</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+315"/>
         <source>Unmute @%1</source>
         <translation>Retirar silêncio @%1</translation>
     </message>
@@ -1117,6 +1117,14 @@ Depois faça novamente o download da nova versão.</translation>
     </message>
 </context>
 <context>
+    <name>default</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/default.qml" line="+9"/>
+        <source>Default Green Theme</source>
+        <translation>Tema Verde por Defeito</translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
@@ -1134,6 +1142,14 @@ Depois faça novamente o download da nova versão.</translation>
 %2</source>
         <translation>@%1 marcou o seu tweet como favorito
 %2</translation>
+    </message>
+</context>
+<context>
+    <name>normal</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+10"/>
+        <source>Light theme for QNeptunea.</source>
+        <translation>Tema Light para QNeptunea</translation>
     </message>
 </context>
 </TS>
