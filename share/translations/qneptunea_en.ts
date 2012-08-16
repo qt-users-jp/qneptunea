@@ -771,8 +771,7 @@ HTML5
     </message>
     <message numerus="yes">
         <location line="+18"/>
-        <source>%1 min(s)</source>
-        <comment>update interval</comment>
+        <source>%n minute(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>

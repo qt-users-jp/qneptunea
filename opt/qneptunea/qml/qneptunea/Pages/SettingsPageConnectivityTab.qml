@@ -50,7 +50,7 @@ Flickable {
             stepSize: 1
             enabled: !constants.streaming
             valueIndicatorVisible: true
-            valueIndicatorText: qsTr('%1 min(s)', 'update interval', value).arg(value)
+            valueIndicatorText: qsTr('%n minute(s)', '', value)
             valueIndicatorMargin: 20
             value: constants.updateInterval
             onValueChanged: if (root.status === PageStatus.Active) constants.updateInterval = value
