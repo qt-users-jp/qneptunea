@@ -552,7 +552,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+13"/>
         <source>Search / @people</source>
         <translation type="unfinished"></translation>
     </message>
@@ -694,7 +694,7 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
         <source>Connectivity</source>
         <translation type="unfinished"></translation>
     </message>
@@ -742,12 +742,12 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+65"/>
         <source>Theme:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-52"/>
         <source>Color scheme:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -897,7 +897,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+315"/>
         <source>Unmute @%1</source>
         <translation type="unfinished"></translation>
     </message>

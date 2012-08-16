@@ -108,25 +108,8 @@ ListView {
     }
 
     ScrollBar {
-        anchors.top: parent.top
-        anchors.right: parent.right
         height: root.height * topItemIndex / 100
-
-        Behavior on height {
-            SmoothedAnimation { velocity: 50 }
-        }
+        target: root
+        Behavior on height { SmoothedAnimation { velocity: 50 } }
     }
-
-//    Rectangle {
-//        anchors.right: scrollBar.left
-//        width: 75
-//        height: 100
-//        Column {
-//            Text { text: topItemIndex }
-//            Text { text: scrollBar.height }
-//            Text { text: root.count }
-//            Text { text: root.model.size }
-//            Text { text: root.height }
-//        }
-//    }
 }

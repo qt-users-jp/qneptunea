@@ -307,10 +307,8 @@ AbstractLinkPage {
     }
 
     ScrollBar {
-        anchors.top: parent.top; anchors.topMargin: root.headerHeight
-        anchors.right: flickable.right
+        target: flickable
         height: flickable.contentY / 10
-        width: constants.listViewScrollbarWidth
     }
 
     Menu {

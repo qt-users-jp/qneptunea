@@ -173,13 +173,8 @@ AbstractPage {
             }
         }
 
-        ScrollBar {
-            anchors.top: parent.top
-            anchors.right: parent.right
-            height: flickable.height * flickable.contentY / (flickable.contentHeight - flickable.height)
-//            onHeightChanged: console.debug(height, flickable.contentY, flickable.contentHeight, flickable.height)
-        }
     }
+    ScrollBar { target: flickable }
 
 
     TextField {

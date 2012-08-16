@@ -14,7 +14,9 @@ AbstractPage {
         anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
         opacity: 0
+        visible: opacity > 0
     }
+    ScrollBar { target: connectivity }
 
     SettingsPageAppearanceTab {
         id: appearance
@@ -22,7 +24,9 @@ AbstractPage {
         anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
         opacity: 0
+        visible: opacity > 0
     }
+    ScrollBar { target: appearance }
 
     SettingsPagePluginsTab {
         id: plugins
@@ -30,7 +34,9 @@ AbstractPage {
         anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
         opacity: 0
+        visible: opacity > 0
     }
+    ScrollBar { target: plugins }
 
     SettingsPageMiscTab {
         id: misc
@@ -38,7 +44,9 @@ AbstractPage {
         anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
         opacity: 0
+        visible: opacity > 0
     }
+    ScrollBar { target: misc }
 
     toolBarLayout: AbstractToolBarLayout {
         ButtonRow {
