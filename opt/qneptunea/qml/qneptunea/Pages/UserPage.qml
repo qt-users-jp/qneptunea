@@ -41,7 +41,7 @@ AbstractLinkPage {
                 user: user
                 followsYou: typeof showFriendships.relationship.target !== 'undefined' && showFriendships.relationship.target.following
                 onAvatarClicked: {
-                    pageStack.push(previewPage, {'type': 'image', url: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(user.screen_name).concat('&size=original')})
+                    pageStack.push(imagePreviewPage, {'type': 'image', url: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(user.screen_name).concat('&size=original')})
                 }
 
                 onLinkActivated: root.openLink(link)
