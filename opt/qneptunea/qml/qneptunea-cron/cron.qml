@@ -39,6 +39,76 @@ Window {
         fadeIntensity: 0.0
     }
 
+    property variant filters: settings.readData('Filters', '').split(/\n/)
+    property variant user_filters: []
+    property variant hashtag_filters: []
+    property variant url_filters: []
+    property variant text_filters: []
+
+    onFiltersChanged: {
+        var user_filters = []
+        var hashtag_filters = []
+        var url_filters = []
+        var text_filters = []
+        for (var i = 0; i < window.filters.length; i++) {
+            var f = window.filters[i]
+            if (f[0] === '@') {
+                user_filters.push(f.substring(1).toLowerCase())
+            } else if (f[0] === '#') {
+                hashtag_filters.push(f.substring(1).toLowerCase())
+            } else if (f.substring(0, 7) === 'http://' || f.substring(0, 8) === 'https://') {
+                url_filters.push(f)
+            } else if (f.length > 0){
+                text_filters.push(f.toLowerCase())
+            }
+        }
+
+        window.user_filters = user_filters
+        window.hashtag_filters = hashtag_filters
+        window.url_filters = url_filters
+        window.text_filters = text_filters
+        settings.saveData('Filters', window.filters.join('\n'))
+    }
+
+    function filter(item) {
+        var status = item
+        if (typeof item.retweeted_status !== 'undefined') {
+            status = item.retweeted_status
+        }
+        var entities = status.entities
+        var text = status.text.toLowerCase()
+
+        if (typeof status.user !== 'undefined') {
+            if (user_filters.indexOf(item.user.screen_name.toLowerCase()) > -1) return true
+            if (typeof entities !== 'undefined' && typeof entities.user_mentions.length !== 'undefined') {
+                for (var i = 0; i < entities.user_mentions.length; i++) {
+                    if (user_filters.indexOf(entities.user_mentions[i].screen_name.toLowerCase()) > -1) return true
+                }
+            }
+        }
+
+        if (typeof entities !== 'undefined' && typeof entities.hashtags.length !== 'undefined') {
+            for (var i = 0; i < entities.hashtags.length; i++) {
+                if (hashtag_filters.indexOf(entities.hashtags[i].text.toLowerCase()) > -1) return true
+            }
+        }
+
+        if (typeof entities !== 'undefined' && typeof entities.urls.length !== 'undefined') {
+            for (var i = 0; i < entities.urls.length; i++) {
+                var url = entities.urls[i].expanded_url.toLowerCase()
+                for (var j = 0; j < url_filters.length; j++) {
+                    if (url.substring(0, url_filters[j].length) === url_filters[j]) return true
+                }
+            }
+        }
+
+        for (var i = 0; i < text_filters.length; i++) {
+            if (text.indexOf(text_filters[i]) > -1) return true
+        }
+
+        return false;
+    }
+
     Mentions { id: mentions }
     DirectMessages { id: directMessages }
     SavedSearches { id: savedSearches }

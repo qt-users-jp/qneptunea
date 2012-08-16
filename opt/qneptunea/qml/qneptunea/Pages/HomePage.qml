@@ -127,7 +127,7 @@ AbstractPage {
                 enabled: !(homeTimeline.loading && homeTimeline.pushOrder != HomeTimelineModel.PushOlderToNewer) && !positionViewAtBeginning.running && test.online && constants.streaming
                 onFollowedBy: infoBanners.followedBy(status)
                 onFavorited: infoBanners.favorited(status)
-                onFiltering: if (window.filter(value)) userStream.filter();
+                onFiltering: if (window.filter(value)) userStream.filter()
             }
             HomeTimelineModel {
                 id: homeTimeline
@@ -135,7 +135,7 @@ AbstractPage {
                 pushOrder: HomeTimelineModel.PushAtOnce
                 sortKey: 'id_str'
                 max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
-                onFiltering: if (window.filter(value)) homeTimeline.filter();
+                onFiltering: if (window.filter(value)) homeTimeline.filter()
                 property bool loadingUntilLastPos: true
                 property bool loadingUntilLatest: false
                 property int lastSize: 0

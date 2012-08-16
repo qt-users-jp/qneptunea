@@ -227,7 +227,7 @@ AbstractPage {
                     }
                 }
 
-                onFiltering: if (window.filter(value)) mentions.filter();
+                onFiltering: if (window.filter(value)) mentions.filter()
             }
             onSizeChanged: {
                 mentions.lastSize = mentions.size

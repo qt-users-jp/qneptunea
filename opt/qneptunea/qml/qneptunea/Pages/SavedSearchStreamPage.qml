@@ -141,7 +141,7 @@ AbstractPage {
             pushOrder: SearchStatusesModel.PushAtOnce
             sortKey: 'id_str'
             max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
-            onFiltering: if (window.filter(value)) searchStatuses.filter();
+            onFiltering: if (window.filter(value)) searchStatuses.filter()
             property bool loadingUntilLastPos: true
             property bool loadingUntilLatest: false
             property int lastSize: 0

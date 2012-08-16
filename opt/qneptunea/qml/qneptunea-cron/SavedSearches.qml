@@ -21,6 +21,7 @@ Item {
             rpp: 200
             sortKey: 'id_str'
             since_id: settings.readData('SavedSearchStreamPage/maxReadIdStr', '')
+            onFiltering: if (window.filter(value)) searchStatuses.filter()
         }
     }
 

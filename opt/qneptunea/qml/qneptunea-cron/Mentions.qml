@@ -36,5 +36,7 @@ MentionsModel {
             model.done = true
         }
     }
+
+    onFiltering: if (window.filter(value)) model.filter()
 }
 
