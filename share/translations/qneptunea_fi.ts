@@ -550,7 +550,7 @@
         <translation>Mykistä</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+13"/>
         <source>Search / @people</source>
         <translation>Etsi / @ihmiset</translation>
     </message>
@@ -696,7 +696,7 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
         <source>Connectivity</source>
         <translation>Käytettävyys</translation>
     </message>
@@ -744,12 +744,12 @@ HTML5
         <translation>Erottimen läpinäkyvyys:</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+65"/>
         <source>Theme:</source>
         <translation>Teema:</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-52"/>
         <source>Color scheme:</source>
         <translation>Värit:</translation>
     </message>
@@ -896,7 +896,7 @@ HTML5
         <translation>Keskustelu</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+315"/>
         <source>Unmute @%1</source>
         <translation>Poista mykistys @%1</translation>
     </message>
@@ -1118,6 +1118,14 @@ Yritä sitten asennuspaketin latausta uudelleen.</translation>
     </message>
 </context>
 <context>
+    <name>default</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/default.qml" line="+9"/>
+        <source>Default Green Theme</source>
+        <translation>Vihreä oletusteema</translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
@@ -1135,6 +1143,14 @@ Yritä sitten asennuspaketin latausta uudelleen.</translation>
 %2</source>
         <translation>@%1 suosi twiittiäsi
 %2</translation>
+    </message>
+</context>
+<context>
+    <name>normal</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+10"/>
+        <source>Light theme for QNeptunea.</source>
+        <translation>Vaalea teema QNeptunealle.</translation>
     </message>
 </context>
 </TS>
