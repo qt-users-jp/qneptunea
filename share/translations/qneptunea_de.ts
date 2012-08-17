@@ -773,9 +773,8 @@ HTML5
     </message>
     <message numerus="yes">
         <location line="+18"/>
-        <source>%1 min(s)</source>
-        <comment>update interval</comment>
-        <translation><numerusform>%1 Minute(n)</numerusform><numerusform>%1 Minute(n)</numerusform></translation>
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n Minute(n)</numerusform><numerusform>%n Minute(n)</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
