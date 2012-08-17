@@ -333,6 +333,14 @@
     </message>
 </context>
 <context>
+    <name>ImagePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ImagePreviewPage.qml" line="+9"/>
+        <source>Preview</source>
+        <translation>Onizleme</translation>
+    </message>
+</context>
+<context>
     <name>InstapaperSettings</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/instapaper/InstapaperSettings.qml" line="+9"/>
@@ -542,7 +550,7 @@
         <translation>Sessizlestir</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+13"/>
         <source>Search / @people</source>
         <translation>Ara / @people</translation>
     </message>
@@ -582,7 +590,7 @@
 http://nokia.ly/
 HTML5
 ...</source>
-        <translation>@selop⏎ #Lumia⏎ http://nokia.ly/⏎ HTML5⏎ ...</translation>
+        <translation>@selop  #Lumia  http://nokia.ly/ HTML5 ...</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -596,14 +604,6 @@ HTML5
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+11"/>
         <source>Near by</source>
         <translation>Yakininda</translation>
-    </message>
-</context>
-<context>
-    <name>PreviewPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/PreviewPage.qml" line="+9"/>
-        <source>Preview</source>
-        <translation>Onizleme</translation>
     </message>
 </context>
 <context>
@@ -692,7 +692,7 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+76"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
         <source>Connectivity</source>
         <translation>Baglanti</translation>
     </message>
@@ -740,9 +740,14 @@ HTML5
         <translation>Ayirac parlakligi:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+65"/>
         <source>Theme:</source>
         <translation>Tema:</translation>
+    </message>
+    <message>
+        <location line="-52"/>
+        <source>Color scheme:</source>
+        <translation>Renk semasi:</translation>
     </message>
 </context>
 <context>
@@ -764,9 +769,8 @@ HTML5
     </message>
     <message numerus="yes">
         <location line="+18"/>
-        <source>%1 min(s)</source>
-        <comment>update interval</comment>
-        <translation><numerusform>%1 dakika</numerusform></translation>
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n dakika</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -887,7 +891,7 @@ HTML5
         <translation>Konusma</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+315"/>
         <source>Unmute @%1</source>
         <translation>Sesini Ac @%1</translation>
     </message>
@@ -997,7 +1001,7 @@ dev.qtquick.me/projects/qneptunea/files
 If installation fails, clear brower cache
 $ rm /home/user/.grob/cache/http*/*
 Then download the package again.</source>
-        <translation>%1 surumu %2 mevcut. \n Paketi indirmek ister misiniz? \n dev.qtquick.me/projects/qneptunea/files \n Eger yukleme basarisiz olursa tarayici onbellegini temizleyin \n $ rm /home/user/.grob/cache/http*/* \n Sonra paketi tekrar yukleyin.</translation>
+        <translation>%1 surumu %2 mevcut.  Paketi indirmek ister misiniz?  Eger yukleme basarisiz olursa tarayici onbellegini temizleyin ve paketi tekrar yukleyin.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1095,14 +1099,30 @@ Then download the package again.</source>
     </message>
 </context>
 <context>
+    <name>VideoPreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
+        <source>Preview</source>
+        <translation>Onizleme</translation>
+    </message>
+</context>
+<context>
+    <name>default</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/default.qml" line="+9"/>
+        <source>Default Green Theme</source>
+        <translation>Varsayilan Yesil Tema</translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+73"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
         <source>API rate limited until %1</source>
         <translation>%1 &apos;e kadar API limitlendi</translation>
     </message>
     <message>
-        <location line="+195"/>
+        <location line="+196"/>
         <source>@%1 following you</source>
         <translation>@%1 seni takip ediyor</translation>
     </message>
@@ -1111,6 +1131,14 @@ Then download the package again.</source>
         <source>@%1 favorited your tweet
 %2</source>
         <translation>@%1 senin tweetini favoriledi %2</translation>
+    </message>
+</context>
+<context>
+    <name>normal</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+10"/>
+        <source>Light theme for QNeptunea.</source>
+        <translation>QNeptunea icin hafif tema.</translation>
     </message>
 </context>
 </TS>
