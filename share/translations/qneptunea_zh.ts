@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
+        <translation>m&apos;d&apos;b&apos;x&apos;h</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -231,7 +231,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+118"/>
         <source>Sent to %1</source>
-        <translation>发送到 %1</translation>
+        <translation>发给 %1</translation>
     </message>
 </context>
 <context>
@@ -249,7 +249,7 @@
     <message>
         <location line="+13"/>
         <source>Sent to %1</source>
-        <translation>发送到 %1</translation>
+        <translation>发给 %1</translation>
     </message>
 </context>
 <context>
@@ -487,7 +487,7 @@
     <message>
         <location line="+64"/>
         <source>Tweets</source>
-        <translation>自推</translation>
+        <translation>推文</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -851,7 +851,7 @@ HTML5
     <message>
         <location line="+19"/>
         <source>Restart QNeptunea</source>
-        <translation>重启QNeptunea</translation>
+        <translation>设置将在重启QNeptunea后生效！</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -973,7 +973,7 @@ HTML5
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+13"/>
         <location line="+449"/>
         <source>Tweet</source>
-        <translation>自推</translation>
+        <translation>发推</translation>
     </message>
     <message>
         <location line="-368"/>
@@ -1029,7 +1029,7 @@ Then download the package again.</source>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+57"/>
         <source>Tweets</source>
-        <translation>自推</translation>
+        <translation>推文</translation>
     </message>
     <message>
         <location line="+7"/>
