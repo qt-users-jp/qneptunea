@@ -116,7 +116,7 @@
     <message>
         <location line="+19"/>
         <source>A &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; client for &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</source>
-        <translation>Um &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; cliente para&lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</translation>
+        <translation>Cliente &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; para &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -156,7 +156,7 @@
     <message>
         <location line="+15"/>
         <source>Contributor:</source>
-        <translation>Participante:</translation>
+        <translation>Contribuições:</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -169,7 +169,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+68"/>
         <source>Open in the browser</source>
-        <translation>Abrir no browser</translation>
+        <translation>Abrir no Browser</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -383,7 +383,7 @@
     <message>
         <location line="+6"/>
         <source>Tos</source>
-        <translation>Tos</translation>
+        <translation>Serviço</translation>
     </message>
 </context>
 <context>
@@ -425,7 +425,7 @@
     <message>
         <location line="+64"/>
         <source>Unsubscribe</source>
-        <translation>Remover subscrição</translation>
+        <translation>Remover Subscrição</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -517,7 +517,7 @@
     <message>
         <location line="+8"/>
         <source>Trend</source>
-        <translation>Assuntos do momento:</translation>
+        <translation>Assuntos do Momento:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -527,12 +527,12 @@
     <message>
         <location line="+7"/>
         <source>Near by</source>
-        <translation>Nas proximidades</translation>
+        <translation>Nas Proximidades</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Settings</source>
-        <translation>Definções</translation>
+        <translation>Definições</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -581,7 +581,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MutePage.qml" line="+11"/>
         <source>Mute Settings</source>
-        <translation>Definições de silenciar</translation>
+        <translation>Definições de Silenciar</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -607,7 +607,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+11"/>
         <source>Near by</source>
-        <translation>Nas proximidades</translation>
+        <translation>Nas Proximidades</translation>
     </message>
 </context>
 <context>
@@ -623,7 +623,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SavedSearchStreamPage.qml" line="+11"/>
         <source>Saved Search Timeline</source>
-        <translation>Procura Tweets guardados</translation>
+        <translation>Tweets Procuras Guardadas</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -651,12 +651,12 @@ HTML5
     <message>
         <location line="+18"/>
         <source>Save search</source>
-        <translation>Guardar procura</translation>
+        <translation>Guardar Procura</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Remove saved search</source>
-        <translation>Remover procura guardada</translation>
+        <translation>Remover Procura Guardada</translation>
     </message>
 </context>
 <context>
@@ -698,7 +698,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
         <source>Connectivity</source>
-        <translation>Conetividade</translation>
+        <translation>Ligação</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -741,7 +741,7 @@ HTML5
     <message>
         <location line="+15"/>
         <source>Separator opacity:</source>
-        <translation>Separador de opacidade:</translation>
+        <translation>Separador de Opacidade:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -764,7 +764,7 @@ HTML5
     <message>
         <location line="+9"/>
         <source>Streaming</source>
-        <translation>Transmissão</translation>
+        <translation>Streaming</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -907,7 +907,7 @@ HTML5
     <message>
         <location line="+17"/>
         <source>Delete the tweet</source>
-        <translation>Apagar o tweet</translation>
+        <translation>Apagar o Tweet</translation>
     </message>
 </context>
 <context>
@@ -958,7 +958,7 @@ HTML5
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>Português</translation>
+        <translation>Português Europeu</translation>
     </message>
 </context>
 <context>
@@ -966,7 +966,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TrendPage.qml" line="+9"/>
         <source>Trend</source>
-        <translation>Assuntos do momento</translation>
+        <translation>Assuntos do Momento</translation>
     </message>
 </context>
 <context>
@@ -994,7 +994,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/UpdateChecker.qml" line="+9"/>
         <source>New version available</source>
-        <translation>Nova versão disponível</translation>
+        <translation>Nova Versão Disponível</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1005,8 +1005,8 @@ dev.qtquick.me/projects/qneptunea/files
 If installation fails, clear brower cache
 $ rm /home/user/.grob/cache/http*/*
 Then download the package again.</source>
-        <translation>%1 Versão %2 está disponível.
-Quer fazer o download desta versão?
+        <translation>%1 A versão %2 está disponível.
+Quer fazer o download desta nova versão?
 dev.qtquick.me/projects/qneptunea/files
 Se a instalação falhar, limpe a cache do browser
 $ rm /home/user/.grob/cache/http*/*
