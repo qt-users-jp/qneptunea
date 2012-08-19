@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>m&apos;d&apos;b&apos;x&apos;h</translation>
+        <translation>mdbxh</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -770,9 +770,9 @@ HTML5
     <message numerus="yes">
         <location line="+18"/>
         <source>%n minute(s)</source>
-        <translation><numerusform>多元化的翻译
-之一： %n 分钟(秒)
-其他： %n 分钟(秒)</numerusform></translation>
+        <translation><numerusform>Pluralized Translations
+one: %n 分钟
+other: %n 分钟</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
