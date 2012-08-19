@@ -1127,7 +1127,7 @@ Then download the package again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>@%1 following you</source>
         <translation type="unfinished"></translation>
     </message>

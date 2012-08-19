@@ -117,6 +117,7 @@ PageStackWindow {
     function filter(item) {
         var status = item
         if (typeof item.retweeted_status !== 'undefined') {
+            if (noRetweetIds.idList.indexOf(item.user.id_str) > -1) return true
             status = item.retweeted_status
         }
         var entities = status.entities
