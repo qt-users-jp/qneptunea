@@ -31,7 +31,7 @@ isEmpty(vcproj) {
 LUPDATE = $$[QT_INSTALL_BINS]/lupdate -locations relative -no-ui-lines
 LRELEASE = $$[QT_INSTALL_BINS]/lrelease
 
-TRANSLATIONS = $$prependAll(LANGUAGES, $$PWD/qneptunea_,.ts)
+TRANSLATIONS = $$PWD/qneptunea_en.ts
 
 lupdate.files = TRANSLATIONS
 lupdate.commands = $$LUPDATE $$PWD/../../ -ts $$TRANSLATIONS
