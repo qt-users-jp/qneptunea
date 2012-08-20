@@ -167,7 +167,7 @@
 <context>
     <name>AbstractLinkPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+68"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+97"/>
         <source>Open in the browser</source>
         <translation>Tarayicida ac</translation>
     </message>
@@ -858,6 +858,14 @@ HTML5
     </message>
 </context>
 <context>
+    <name>SlidesharePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+11"/>
+        <source>SlideShare</source>
+        <translation>SlideShare</translation>
+    </message>
+</context>
+<context>
     <name>SlugPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>
@@ -1099,11 +1107,11 @@ Then download the package again.</source>
     </message>
 </context>
 <context>
-    <name>VideoPreviewPage</name>
+    <name>YoutubePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
-        <source>Preview</source>
-        <translation>Onizleme</translation>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+10"/>
+        <source>Youtube</source>
+        <translation>Youtube</translation>
     </message>
 </context>
 <context>
@@ -1122,7 +1130,7 @@ Then download the package again.</source>
         <translation>%1 &apos;e kadar API limitlendi</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>@%1 following you</source>
         <translation>@%1 seni takip ediyor</translation>
     </message>
