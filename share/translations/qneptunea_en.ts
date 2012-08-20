@@ -1104,10 +1104,10 @@ Then download the package again.</source>
     </message>
 </context>
 <context>
-    <name>VideoPreviewPage</name>
+    <name>YoutubePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
-        <source>Preview</source>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+10"/>
+        <source>Youtube</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

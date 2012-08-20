@@ -7,12 +7,11 @@ import '../QNeptunea/Components/'
 AbstractPage {
     id: root
 
-    title: qsTr('Preview')
+    title: qsTr('Youtube')
     busy: true
 
     property string type
-    property string url
-    property string videoId
+    property string _id
 
     Video {
         id: video
@@ -83,6 +82,7 @@ AbstractPage {
 
     XmlListModel {
         id: youtube
+        source: 'http://gdata.youtube.com/feeds/api/videos/'.concat(root._id)
         query: "/entry/media:group"
         namespaceDeclarations: 'declare default element namespace "http://www.w3.org/2005/Atom"; declare namespace media="http://search.yahoo.com/mrss/"; declare namespace yt="http://gdata.youtube.com/schemas/2007";'
 
@@ -90,30 +90,6 @@ AbstractPage {
         XmlRole { name: 'description'; query: 'media:description/string()' }
         XmlRole { name: 'content'; query: "media:content[@type = 'video/3gpp'][2]/@url/string()" }
         XmlRole { name: 'duration'; query: "media:content[@type = 'video/3gpp'][2]/@duration/number()" }
-    }
-
-    StateGroup {
-        states: [
-            State {
-                when: root.url.length > 0
-                PropertyChanges {
-                    target: root
-                    videoId: root.url.substring('http://www.youtube.com/watch?v='.length)
-                }
-            }
-        ]
-    }
-
-    StateGroup {
-        states: [
-            State {
-                when: /*root.status === PageStatus.Active && */root.videoId.length > 0
-                PropertyChanges {
-                    target: youtube
-                    source: 'http://gdata.youtube.com/feeds/api/videos/'.concat(root.videoId)
-                }
-            }
-        ]
     }
 
     StateGroup {

@@ -1,8 +1,9 @@
 import QtQuick 1.1
 import QNeptunea.Preview 1.0
 
-VideoPlugin {
+GenericPreviewPlugin {
     id: root
+    type: 'youtube'
     domains: ['www.youtube.com', 'youtube.com', 'm.youtube.com', 'youtu.be', 'y2u.be']
 
     function load(url, domain) {
@@ -28,8 +29,7 @@ VideoPlugin {
 
 
         root.thumbnail = 'http://img.youtube.com/vi/'.concat(id).concat('/1.jpg')
-        root.detail = 'http://www.youtube.com/watch?v='.concat(id)
-        console.debug(root.thumbnail, id.length)
+        root._id = id
         return id.length > 0
     }
 }

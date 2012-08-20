@@ -1,5 +1,5 @@
 AbstractPreviewPlugin 1.0 AbstractPreviewPlugin.qml
 ImagePlugin 1.0 ImagePlugin.qml
-VideoPlugin 1.0 VideoPlugin.qml
+GenericPreviewPlugin 1.0 GenericPreviewPlugin.qml
 UrlShortenerPlugin 1.0 UrlShortenerPlugin.qml
 WebPreviewPlugin 1.0 WebPreviewPlugin.qml
