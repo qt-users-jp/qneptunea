@@ -190,7 +190,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AbstractTabPage.qml" line="+30"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -244,7 +244,7 @@
     <message>
         <location line="+14"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -280,7 +280,7 @@
     <message>
         <location line="+116"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -288,7 +288,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/FavouritesPage.qml" line="+22"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -329,7 +329,7 @@
     <message>
         <location line="+98"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -420,7 +420,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+25"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -573,7 +573,7 @@
     <message>
         <location line="+116"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -628,7 +628,7 @@ HTML5
     <message>
         <location line="+116"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -636,7 +636,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+26"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -843,7 +843,7 @@ HTML5
     <message>
         <location line="+20"/>
         <source>QNeptunea update check:</source>
-        <translation>QNeptunea update controle:</translation>
+        <translation>Controleren op QNeptunea updates:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -882,7 +882,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+162"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1113,7 +1113,7 @@ Download het installatiebestand daarna nogmaals.</translation>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserTimelinePage.qml" line="+22"/>
         <source>M/d hh:mm</source>
-        <translation>M/d uu:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
