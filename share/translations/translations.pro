@@ -4,7 +4,7 @@ defineReplace(prependAll) {
 	return($$result)
 }
 
-LANGUAGES = en ja tr fi de pt_PT zh
+LANGUAGES = en ja tr fi de pt_PT zh nl
 
 TEMPLATE = app
 TARGET = phony_target
@@ -31,7 +31,7 @@ isEmpty(vcproj) {
 LUPDATE = $$[QT_INSTALL_BINS]/lupdate -locations relative -no-ui-lines
 LRELEASE = $$[QT_INSTALL_BINS]/lrelease
 
-TRANSLATIONS = $$PWD/qneptunea_en.ts
+TRANSLATIONS = $$prependAll(LANGUAGES, $$PWD/qneptunea_,.ts)
 
 lupdate.files = TRANSLATIONS
 lupdate.commands = $$LUPDATE $$PWD/../../ -ts $$TRANSLATIONS
