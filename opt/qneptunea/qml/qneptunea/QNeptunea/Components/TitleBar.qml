@@ -9,13 +9,18 @@ MouseArea {
     property alias text: title.text
     property alias busy: busy.running
 
-    Text {
+    AutoScrollText {
         id: title
-        anchors.centerIn: parent
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.margins: Math.max(2 * logo.x + logo.width, root.width - busy.x)
         color: constants.titleColor
         font.bold: true
         font.pixelSize: constants.titleFontPixelSize
         font.family: constants.fontFamily
+        horizontalAlignment: Text.AlignHCenter
+        elide: Text.ElideRight
     }
 
     BusyIndicator {
