@@ -863,6 +863,14 @@ HTML5
     </message>
 </context>
 <context>
+    <name>SlidesharePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+11"/>
+        <source>SlideShare</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SlugPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>

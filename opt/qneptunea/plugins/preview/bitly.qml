@@ -3,7 +3,7 @@ import QNeptunea.Preview 1.0
 
 UrlShortenerPlugin {
     id: root
-    domains: ['bit.ly', 'j.mp', 'amzn.to', 'nyti.ms', 'pep.si', 'orino.co', 'sgk.me', 'pnpr.jp', 'amba.to', 'ana.ms', 'nifty.jp']
+    domains: ['bit.ly', 'j.mp', 'amzn.to', 'nyti.ms', 'pep.si', 'orino.co', 'sgk.me', 'pnpr.jp', 'amba.to', 'ana.ms', 'nifty.jp', 'slidesha.re']
 
     function load(url, domain) {
         var request = new XMLHttpRequest();

@@ -468,6 +468,7 @@ PageStackWindow {
     Component { id: searchPage; SearchPage {} }
     Component { id: imagePreviewPage; ImagePreviewPage {} }
     Component { id: youtubePreviewPage; YoutubePreviewPage {} }
+    Component { id: slidesharePreviewPage; SlidesharePreviewPage {} }
     Component { id: userTimelinePage; UserTimelinePage {} }
     Component { id: favouritesPage; FavouritesPage {} }
     Component { id: followingPage; FollowingPage {} }

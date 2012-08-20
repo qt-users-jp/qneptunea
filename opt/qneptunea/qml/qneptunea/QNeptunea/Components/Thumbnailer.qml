@@ -30,7 +30,7 @@ MouseArea {
     states: [
         State {
             name: "image"
-            when: root.type === 'image' || root.type === 'youtube'
+            when: root.type === 'image' || root.type === 'youtube' || root.type === 'slideshare'
             PropertyChanges { target: loader; sourceComponent: image }
             PropertyChanges { target: root; visible: true }
         },
@@ -69,6 +69,8 @@ MouseArea {
             pageStack.push(imagePreviewPage, {'type': root.__pluginItem.type, 'url': root.__pluginItem.detail})
         else if (root.type == 'youtube')
             pageStack.push(youtubePreviewPage, {'type': root.__pluginItem.type, '_id': root.__pluginItem._id})
+        else if (root.type == 'slideshare')
+            pageStack.push(slidesharePreviewPage, {'type': root.__pluginItem.type, '_id': root.__pluginItem._id})
     }
 
     function update() {
