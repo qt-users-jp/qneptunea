@@ -83,6 +83,8 @@ PageStackWindow {
     SettingsPlugins { id: settingsPlugins }
     TweetPlugins { id: tweetPlugins }
 
+    property variant friends: []
+
     property variant filters: settings.readData('Filters', '').split(/\n/)
     property variant user_filters: []
     property variant hashtag_filters: []

@@ -127,7 +127,11 @@ AbstractPage {
                 enabled: !(homeTimeline.loading && homeTimeline.pushOrder != HomeTimelineModel.PushOlderToNewer) && !positionViewAtBeginning.running && test.online && constants.streaming
                 onFollowedBy: infoBanners.followedBy(status)
                 onFavorited: infoBanners.favorited(status)
-                onFiltering: if (window.filter(value)) userStream.filter()
+                onFiltering: {
+                    if (window.friends.length > 0 && window.friends.indexOf(value.user.id_str) < 0) userStream.filter()
+                    if (window.filter(value)) userStream.filter()
+                }
+                onFriendsChanged: window.friends = friends
             }
             HomeTimelineModel {
                 id: homeTimeline

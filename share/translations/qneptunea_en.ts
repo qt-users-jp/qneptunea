@@ -1038,7 +1038,7 @@ Then download the package again.</source>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+57"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+68"/>
         <source>Tweets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1135,7 +1135,7 @@ Then download the package again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+199"/>
         <source>@%1 following you</source>
         <translation type="unfinished"></translation>
     </message>

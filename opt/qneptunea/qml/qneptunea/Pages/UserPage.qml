@@ -15,6 +15,17 @@ AbstractLinkPage {
     User {
         id: user
         id_str: root.id_str
+        onFollowingChanged: {
+            if (window.friends.length === 0) return
+
+            var friends = window.friends
+            if (following) {
+                friends.push(user.id_str)
+            } else if (friends.indexOf(user.id_str) > -1) {
+                friends.splice(friends.indexOf(user.id_str), 1)
+            }
+            window.friends = friends
+        }
     }
 
     ShowFriendships {
