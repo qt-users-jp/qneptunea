@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
+        <translation>Jarno</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -956,7 +956,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
         <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
-        <translation>opmerking voor vertalers: vertaal &quot;en&quot; naar *jouw* taalcode en &quot;English&quot; naar jouw taal in de vertaling (Nederlands).</translation>
+        <translation>opmerking voor vertalers: vertaal &quot;nl&quot; naar *jouw* taalcode en &quot;Nederlands&quot; naar jouw taal in de vertaling.</translation>
     </message>
     <message>
         <location line="+1"/>
