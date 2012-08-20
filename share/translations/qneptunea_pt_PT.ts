@@ -167,7 +167,7 @@
 <context>
     <name>AbstractLinkPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+68"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+97"/>
         <source>Open in the browser</source>
         <translation>Abrir no Browser</translation>
     </message>
@@ -862,6 +862,14 @@ HTML5
     </message>
 </context>
 <context>
+    <name>SlidesharePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+11"/>
+        <source>SlideShare</source>
+        <translation>DeslizarPartilhar</translation>
+    </message>
+</context>
+<context>
     <name>SlugPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>
@@ -1108,11 +1116,11 @@ Depois faça novamente o download da nova versão.</translation>
     </message>
 </context>
 <context>
-    <name>VideoPreviewPage</name>
+    <name>YoutubePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
-        <source>Preview</source>
-        <translation>Previsão</translation>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+10"/>
+        <source>Youtube</source>
+        <translation>Youtube</translation>
     </message>
 </context>
 <context>
@@ -1131,7 +1139,7 @@ Depois faça novamente o download da nova versão.</translation>
         <translation>Taxa API limitada até %1</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>@%1 following you</source>
         <translation>@%1 está a segui-lo</translation>
     </message>
