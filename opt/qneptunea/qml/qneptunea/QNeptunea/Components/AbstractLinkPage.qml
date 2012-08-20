@@ -1,5 +1,6 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import Twitter4QML 1.0
 import QNeptunea 1.0
 
 AbstractPage {
@@ -29,6 +30,25 @@ AbstractPage {
 
     signal headerClicked()
 
+    User {
+        id: userToOpen
+        onIdStrChanged: {
+            if (id_str.length > 0)
+                pageStack.push(userPage, {'id_str': userToOpen.id_str})
+        }
+    }
+    StateGroup {
+        states: [
+            State {
+                when: userToOpen.loading
+                PropertyChanges {
+                    target: root
+                    running: true
+                }
+            }
+        ]
+    }
+
     function openLink(link, parameters) {
         console.debug(link)
         switch (true) {
@@ -40,6 +60,15 @@ AbstractPage {
             break
         case /^status:\/\//.test(link):
             pageStack.push(statusPage, {'id_str': link.substring(8)})
+            break
+        case /^https?:\/\/(mobile\.)?twitter\.com\/[a-zA-z0-9_]+\/status\/([0-9]+)$/.test(link):
+            pageStack.push(statusPage, {'id_str': RegExp.$2})
+            break
+        case /^https?:\/\/(mobile\.)?twitter\.com\/([a-zA-z0-9_]+)$/.test(link):
+            if (userToOpen.screen_name === RegExp.$2 && !userToOpen.loading && userToOpen.id_str.length > 0)
+                pageStack.push(userPage, {'id_str': userToOpen.id_str})
+            else
+                userToOpen.screen_name = RegExp.$2
             break
         default:
             if (!root.linkMenu) {

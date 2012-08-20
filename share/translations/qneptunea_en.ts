@@ -169,7 +169,7 @@
 <context>
     <name>AbstractLinkPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+68"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+97"/>
         <source>Open in the browser</source>
         <translation type="unfinished"></translation>
     </message>
