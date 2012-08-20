@@ -42,7 +42,16 @@ Server::Private::Private()
             translation = t;
         }
 //        DEBUG() << t;
-        translations.append(t);
+        bool inserted = false;
+        for (int i = 0; i < translations.count(); i++) {
+            if (translations.at(i).toMap().value(QLatin1String("name")).toString() > name) {
+                translations.insert(i, t);
+                inserted = true;
+                break;
+            }
+        }
+        if (!inserted)
+            translations.append(t);
     }
 
     if (translation.isEmpty())
