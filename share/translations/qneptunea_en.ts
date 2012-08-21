@@ -116,6 +116,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>A &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; client for &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
@@ -955,19 +960,24 @@ HTML5
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
-        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+37"/>
         <source>en</source>
         <translation>en</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>English</source>
         <translation>English</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>en (Please translate this &quot;en&quot; to *your* langage code like &quot;ja&quot; or &quot;pt_PT&quot;.)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>English (Please translate this &quot;English&quot; to *your* langage name like &quot;Japanese&quot; or &quot;Portuguese (Portugal)&quot;.)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

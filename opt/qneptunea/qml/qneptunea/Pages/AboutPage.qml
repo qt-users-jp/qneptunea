@@ -12,6 +12,8 @@ AbstractLinkPage {
 
     property string defaultTranslatorTwitterIds: 'translator1_twitter_id,translator2_twitter_id,...'
     property string translatorTwitterIds: qsTr('translator1_twitter_id,translator2_twitter_id,...')
+    property string defaultTranslatorTwitterIds2: 'translator_twitter_id(s) (Please translate this "translator_twitter_id(s)" to *your* twitter id(s) like "task_jp" or "task_jp, LogonAniket".)'
+    property string translatorTwitterIds2: qsTr('translator_twitter_id(s) (Please translate this "translator_twitter_id(s)" to *your* twitter id(s) like "task_jp" or "task_jp, LogonAniket".)')
     property variant translators: defaultTranslatorTwitterIds === translatorTwitterIds ? [] : translatorTwitterIds.split(/, */)
 
     Flickable {

@@ -32,9 +32,12 @@ Server::Private::Private()
         translator->load(dir.absoluteFilePath(qm));
 
         QVariantMap t;
-        translator->translate("Translation", "note for translators: translate \"en\" to *your* lang code and \"English\" to your lang name in your language.");
-        QString code = translator->translate("Translation", "en");
-        QString name = translator->translate("Translation", "English"); // please specify like "Nihongo / Japanese"
+        QString code = translator->translate("Translation", "en (Please translate this \"en\" to *your* langage code like \"ja\" or \"pt_PT\".)").section(QLatin1String(" ("), 0, 0);
+        if (code.isEmpty())
+            code = translator->translate("Translation", "en");
+        QString name = translator->translate("Translation", "English (Please translate this \"English\" to *your* langage name like \"Japanese\" or \"Portuguese (Portugal)\".)").section(QLatin1String(" ("), 0, 0);
+        if (name.isEmpty())
+            name = translator->translate("Translation", "English");
         t.insert(QLatin1String("code"), code);
         t.insert(QLatin1String("name"), name);
         if (code == lang) {
