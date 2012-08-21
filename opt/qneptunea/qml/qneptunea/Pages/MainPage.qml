@@ -79,17 +79,20 @@ Page {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         tools: ToolBarLayout {
-            ToolIcon {
-                platformIconId: "toolbar-new-email"
-                opacity: enabled ? 1.0 : 0.5
-                onClicked: pageStack.push(tweetPage)
-            }
-
             ButtonRow {
+                TabButton {
+                    iconSource: 'image://theme/icon-m-toolbar-new-email'.concat(theme.inverted ? "-white" : "")
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: pageStack.push(tweetPage)
+                    }
+                }
+
                 TabButton {
                     id: homeButton
                     iconSource: 'image://theme/icon-m-toolbar-home'.concat(theme.inverted ? "-white" : "")
                     tab: home
+                    checked: true
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
