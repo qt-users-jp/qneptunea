@@ -136,12 +136,12 @@
     <message>
         <location line="+8"/>
         <source>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/6&quot;&gt;Feedback&lt;/a&gt;</source>
-        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/6&quot;&gt;Rückmeldung&lt;/a&gt;</translation>
+        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/6&quot;&gt;Fehler melden&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/7&quot;&gt;Contribution&lt;/a&gt;</source>
-        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/7&quot;&gt;Mitwirkende&lt;/a&gt;</translation>
+        <translation>&lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/documents/7&quot;&gt;Code beisteuern&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -167,7 +167,7 @@
 <context>
     <name>AbstractLinkPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+68"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+97"/>
         <source>Open in the browser</source>
         <translation>Im Browser öffnen</translation>
     </message>
@@ -862,6 +862,14 @@ HTML5
     </message>
 </context>
 <context>
+    <name>SlidesharePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+11"/>
+        <source>SlideShare</source>
+        <translation>SlideShare</translation>
+    </message>
+</context>
+<context>
     <name>SlugPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>
@@ -1035,7 +1043,7 @@ Danach erneut das Paket herunterladen.</translation>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+57"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+68"/>
         <source>Tweets</source>
         <translation>Tweets</translation>
     </message>
@@ -1109,11 +1117,11 @@ Danach erneut das Paket herunterladen.</translation>
     </message>
 </context>
 <context>
-    <name>VideoPreviewPage</name>
+    <name>YoutubePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
-        <source>Preview</source>
-        <translation>Vorschau</translation>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+10"/>
+        <source>Youtube</source>
+        <translation>Youtube</translation>
     </message>
 </context>
 <context>
@@ -1132,7 +1140,7 @@ Danach erneut das Paket herunterladen.</translation>
         <translation>Beschränkter API Wert bis %1</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+199"/>
         <source>@%1 following you</source>
         <translation>@%1 folgt dir</translation>
     </message>
