@@ -5,32 +5,33 @@ ImagePlugin {
     id: root
     domains: ['streamzoo.com']
 
+    property url excpurl: 'image://theme/icon-m-common-fault'
+
     function load(url, domain) {
         var id = url.substring('http://streamzoo.com/i/'.length);
-        getStreamzooImageUrl(url, function(ret){ root.thumbnail = ret; root.detail = ret });
+        getStreamzooImageUrl(url);
         return id.length > 0;
     }
 
-    function getStreamzooImageUrl(url, callback) {
+    function getStreamzooImageUrl(url) {
         var request = new XMLHttpRequest();
         request.open('GET', url);
         request.setRequestHeader("Content-Type", "text/xml");
         request.onreadystatechange = function() {
-                    if ( request.readyState === XMLHttpRequest.HEADERS_RECEIVED) {
-                        console.debug(request.getAllResponseHeaders());
-                    } else if ( request.readyState === XMLHttpRequest.DONE) {
+                    if ( request.readyState === XMLHttpRequest.DONE) {
                         var re = new RegExp(/(http:\/\/cdn\.streamzoo\.com\/si_.[^"]*)/)
-                        // Exception URL non-image post (text, sound, video). show alternative image
-                        var excpurl = 'image://theme/icon-m-common-fault'
 
                         if (request.status === 200) {
-                            if(re(request.responseText)) {
-                                callback(RegExp.$1)
+                            if(re.test(request.responseText)) {
+                                root.thumbnail = RegExp.$1
+                                root.detail = RegExp.$1
                             } else {
-                                callback(excpurl)
+                                root.thumbnail = root.excpurl
+                                root.detail = root.excpurl
                             }
                         } else {
-                            callback(excpurl)
+                            root.thumbnail = root.excpurl
+                            root.detail = root.excpurl
                         }
                     }
                 }

@@ -5,52 +5,50 @@ ImagePlugin {
     id: root
     domains: ['mogsnap.jp']
 
+    property url excpurl: 'image://theme/icon-m-common-fault'
+
     function load(url, domain) {
-        var id = url.substring('http://mogsnap.jp/'.length);
-        getMogSnapImageUrl(url, function(ret){ root.thumbnail = ret[0]; root.detail = ret[1] });
-        return id.length > 0;
+        var id = url.substring('http://mogsnap.jp/'.length)
+        getMogSnapImageUrl(url)
+        return id.length > 0
     }
 
-    function getMogSnapImageUrl(url, callback) {
-        var request = new XMLHttpRequest();
-        request.open('GET', url);
-        request.setRequestHeader("Content-Type", "text/xml");
+    function getMogSnapImageUrl(url) {
+        var request = new XMLHttpRequest()
+        request.open('GET', url)
+        request.setRequestHeader("Content-Type", "text/xml")
         request.onreadystatechange = function() {
-                    if ( request.readyState === XMLHttpRequest.HEADERS_RECEIVED) {
-                        console.debug(request.getAllResponseHeaders());
-                    } else if ( request.readyState === 4 && request.status === 200 ) {
-                        var re = new RegExp("http://(twitpic|yfrog).com/[0123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ]*");
-                        var picurl = request.responseText.match(re).shift();
-                        console.debug(picurl);
-                        var id = '';
+                    if ( request.readyState === 4 && request.status === 200 ) {
+                        var re = new RegExp("http://(twitpic|yfrog).com/[0-9a-zA-Z]*")
+                        var picurl = request.responseText.match(re).shift()
+                        var _id
 
-                        var a = picurl.split('/');
+                        var a = picurl.split('/')
                         a.shift() // http:
                         a.shift() // ' ' (blank)
                         var picdomain = a.shift() // domainname
-                        //console.debug("picdomain is ".concat(picdomain));
-
-                        var b = new Array();
 
                         switch(picdomain) {
                         case 'twitpic.com': {
-                            id = picurl.substring('http://twitpic.com/'.length)
-                            b[0] = 'http://twitpic.com/show/thumb/'.concat(id);
-                            b[1] = 'http://twitpic.com/show/large/'.concat(id);
-                            break;
+                            _id = picurl.substring('http://twitpic.com/'.length)
+                            root.thumbnail = 'http://twitpic.com/show/thumb/'.concat(_id)
+                            root.detail = 'http://twitpic.com/show/large/'.concat(_id)
+                            break
                         }
                         case 'yfrog.com': {
-                            id = picurl.substring('http://yfrog.com/'.length)
-                            b[0] = 'http://yfrog.com/'.concat(id).concat(':small');
-                            b[1] = 'http://yfrog.com/'.concat(id).concat(':medium');
-                            break;
+                            _id = picurl.substring('http://yfrog.com/'.length)
+                            root.thumbnail = 'http://yfrog.com/'.concat(_id).concat(':small')
+                            root.detail = 'http://yfrog.com/'.concat(_id).concat(':medium')
+                            break
+                        }
+                        default: {
+                            root.thumbnail = root.excpurl
+                            root.detail = root.excpurl
+                            break
                         }
                         }
-                        //console.debug(b[0]);
-                        //console.debug(b[1]);
-                        callback(b);
                     }
                 }
-        request.send();
+        request.send()
     }
 }
