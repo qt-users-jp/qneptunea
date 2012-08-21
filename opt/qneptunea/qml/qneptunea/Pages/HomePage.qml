@@ -128,7 +128,7 @@ AbstractPage {
                 onFollowedBy: infoBanners.followedBy(status)
                 onFavorited: infoBanners.favorited(status)
                 onFiltering: {
-                    if (window.friends.length > 0 && window.friends.indexOf(value.user.id_str) < 0) userStream.filter()
+                    if (value.user.id_str !== oauth.user_id && window.friends.length > 0 && window.friends.indexOf(value.user.id_str) < 0) userStream.filter()
                     if (window.filter(value)) userStream.filter()
                 }
                 onFriendsChanged: window.friends = friends
