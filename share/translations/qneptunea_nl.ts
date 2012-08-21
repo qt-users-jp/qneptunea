@@ -961,12 +961,12 @@ HTML5
     <message>
         <location line="+1"/>
         <source>en</source>
-        <translation>en</translation>
+        <translation>nl</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>Engels</translation>
+        <translation>Dutch</translation>
     </message>
 </context>
 <context>
