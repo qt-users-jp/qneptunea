@@ -114,6 +114,11 @@
         <translation>tradutor1_twitter_id,tradutor2_twitter_id,...</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
+        <translation>msullx</translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>A &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; client for &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</source>
         <translation>Cliente &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; para &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</translation>
@@ -954,18 +959,23 @@ HTML5
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
-        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
-        <translation>nota para os tradutores: traduza &quot;en&quot; para o  *seu* código de linguagem e &quot;English&quot; para o nome da língua na sua linguagem.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+37"/>
         <source>en</source>
         <translation>pt_PT</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>English</source>
+        <translation>Português Europeu</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>en (Please translate this &quot;en&quot; to *your* langage code like &quot;ja&quot; or &quot;pt_PT&quot;.)</source>
+        <translation>pt_PT</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>English (Please translate this &quot;English&quot; to *your* langage name like &quot;Japanese&quot; or &quot;Portuguese (Portugal)&quot;.)</source>
         <translation>Português Europeu</translation>
     </message>
 </context>
@@ -1042,7 +1052,7 @@ Depois faça novamente o download da nova versão.</translation>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+57"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+68"/>
         <source>Tweets</source>
         <translation>Tweets</translation>
     </message>
@@ -1139,7 +1149,7 @@ Depois faça novamente o download da nova versão.</translation>
         <translation>Taxa API limitada até %1</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+199"/>
         <source>@%1 following you</source>
         <translation>@%1 está a segui-lo</translation>
     </message>
