@@ -61,14 +61,14 @@ AbstractPage {
         case /^status:\/\//.test(link):
             pageStack.push(statusPage, {'id_str': link.substring(8)})
             break
-        case /^https?:\/\/(mobile\.)?twitter\.com\/[a-zA-z0-9_]+\/status\/([0-9]+)$/.test(link):
-            pageStack.push(statusPage, {'id_str': RegExp.$2})
+        case /^https?:\/\/(mobile\.)?twitter\.com\/(#!\/)?[a-zA-z0-9_]+\/status\/([0-9]+)$/.test(link):
+            pageStack.push(statusPage, {'id_str': RegExp.$3})
             break
-        case /^https?:\/\/(mobile\.)?twitter\.com\/([a-zA-z0-9_]+)$/.test(link):
-            if (userToOpen.screen_name === RegExp.$2 && !userToOpen.loading && userToOpen.id_str.length > 0)
+        case /^https?:\/\/(mobile\.)?twitter\.com\/(#!\/)?([a-zA-z0-9_]+)$/.test(link):
+            if (userToOpen.screen_name === RegExp.$3 && !userToOpen.loading && userToOpen.id_str.length > 0)
                 pageStack.push(userPage, {'id_str': userToOpen.id_str})
             else
-                userToOpen.screen_name = RegExp.$2
+                userToOpen.screen_name = RegExp.$3
             break
         default:
             if (!root.linkMenu) {
