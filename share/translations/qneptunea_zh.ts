@@ -114,6 +114,11 @@
         <translation>mdbxh</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
+        <translation>mdbxh</translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>A &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; client for &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</source>
         <translation>一个&lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#推特&lt;/a&gt;客户端 用于 &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</translation>
@@ -167,7 +172,7 @@
 <context>
     <name>AbstractLinkPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+68"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+97"/>
         <source>Open in the browser</source>
         <translation>在浏览器里打开</translation>
     </message>
@@ -860,6 +865,14 @@ other: %n 分钟</numerusform></translation>
     </message>
 </context>
 <context>
+    <name>SlidesharePreviewPage</name>
+    <message>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+11"/>
+        <source>SlideShare</source>
+        <translation>SlideShare</translation>
+    </message>
+</context>
+<context>
     <name>SlugPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>
@@ -944,18 +957,23 @@ other: %n 分钟</numerusform></translation>
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
-        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
-        <translation>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+37"/>
         <source>en</source>
         <translation>zh</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>English</source>
+        <translation>中文</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>en (Please translate this &quot;en&quot; to *your* langage code like &quot;ja&quot; or &quot;pt_PT&quot;.)</source>
+        <translation>zh</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>English (Please translate this &quot;English&quot; to *your* langage name like &quot;Japanese&quot; or &quot;Portuguese (Portugal)&quot;.)</source>
         <translation>中文</translation>
     </message>
 </context>
@@ -1027,7 +1045,7 @@ Then download the package again.</source>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+57"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+68"/>
         <source>Tweets</source>
         <translation>推文</translation>
     </message>
@@ -1101,11 +1119,11 @@ Then download the package again.</source>
     </message>
 </context>
 <context>
-    <name>VideoPreviewPage</name>
+    <name>YoutubePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/VideoPreviewPage.qml" line="+10"/>
-        <source>Preview</source>
-        <translation>预览</translation>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+10"/>
+        <source>Youtube</source>
+        <translation>Youtube</translation>
     </message>
 </context>
 <context>
@@ -1124,7 +1142,7 @@ Then download the package again.</source>
         <translation>%1 到达API使用上限</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+199"/>
         <source>@%1 following you</source>
         <translation>@%1 正在关注你</translation>
     </message>
