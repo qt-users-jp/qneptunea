@@ -123,7 +123,7 @@ PageStackWindow {
             status = item.retweeted_status
         }
         var entities = status.entities
-        var text = status.text.toLowerCase()
+        var text = status.plain_text.toLowerCase()
 
         if (typeof status.user !== 'undefined') {
             if (user_filters.indexOf(item.user.screen_name.toLowerCase()) > -1) return true
