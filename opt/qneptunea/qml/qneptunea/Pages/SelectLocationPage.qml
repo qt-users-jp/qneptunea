@@ -1,4 +1,5 @@
 import QtQuick 1.1
+import QtWebKit 1.0
 import QtMobility.location 1.1
 import com.nokia.meego 1.0
 import '../QNeptunea/Components/'
@@ -7,44 +8,60 @@ AbstractPage {
     id: root
 
     title: qsTr('Location')
-    busy: positionSource.loading || map.status !== Image.Ready
+    busy: positionSource.loading || map.loading
+
+    property double _lat: positionSource.valid ? positionSource.position.coordinate.latitude : 0.0
+    property double _long: positionSource.valid ? positionSource.position.coordinate.longitude : 0.0
 
     PositionSource {
         id: positionSource
-        updateInterval: 10000
+        updateInterval: 5000
         active: root.status === PageStatus.Active
         property bool loading: active && (!position.latitudeValid || !position.longitudeValid)
         property bool valid: active && position.latitudeValid && position.longitudeValid
     }
 
-    Image {
+    WebView {
         id: map
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
+        preferredWidth: width
+        preferredHeight: height
+        url: 'GoogleMaps.html'
 
-        property double _lat: positionSource.valid ? positionSource.position.coordinate.latitude : 0.0
-        property double _long: positionSource.valid ? positionSource.position.coordinate.longitude : 0.0
-        source: positionSource.valid ? "http://maps.google.com/staticmap?zoom=17&center=" + _lat + "," + _long + "&size=" + width + "x" + height : ''
+        property bool loading: false
+        onLoadStarted: loading = true
+        onLoadFinished: loading = false
+        onAlert: console.debug('alert:', message)
 
-        Item {
-            anchors.centerIn: parent
-            height: pin.height * 2
-            visible: positionSource.valid
-            Image {
-                id: pin
-                source: 'http://maps.gstatic.com/mapfiles/markers2/marker.png'
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.top
-            }
+        javaScriptWindowObjects: QtObject {
+            id: js
+            WebView.windowObjectName: "qml"
+            property real lat: root._lat
+            property real lng: root._long
+            onLatChanged: map.evaluateJavaScript('updatePosition()')
+            onLngChanged: map.evaluateJavaScript('updatePosition()')
         }
-        MouseArea {
-            anchors.fill: parent
+    }
+
+    toolBarLayout: AbstractToolBarLayout {
+        backOnly: true
+        ToolButton {
             enabled: positionSource.valid
+            checked: enabled
+            text: 'OK'
             onClicked: {
                 locationSelected = {'latitude': positionSource.position.coordinate.latitude, 'longitude': positionSource.position.coordinate.longitude }
                 pageStack.pop()
             }
         }
-    }
 
-    toolBarLayout: AbstractToolBarLayout { backOnly: true }
+        ToolIcon {
+            iconSource: '../images/zoom-in'.concat(theme.inverted ? '-white.png' : '.png')
+            onClicked: map.evaluateJavaScript('zoomIn()')
+        }
+        ToolIcon {
+            iconSource: '../images/zoom-out'.concat(theme.inverted ? '-white.png' : '.png')
+            onClicked: map.evaluateJavaScript('zoomOut()')
+        }
+    }
 }

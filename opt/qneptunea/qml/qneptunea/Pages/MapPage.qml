@@ -14,7 +14,9 @@ AbstractPage {
 
     WebView {
         id: map
-        anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight - 1
+        anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
+        preferredWidth: width
+        preferredHeight: height
         url: 'GoogleMaps.html'
 
         property bool loading: false
@@ -28,16 +30,6 @@ AbstractPage {
             property real lat: root._lat
             property real lng: root._long
         }
-
-        states: [
-            State {
-                when: !map.loading
-                PropertyChanges {
-                    target: map
-                    anchors.bottomMargin: root.footerHeight
-                }
-            }
-        ]
     }
 
     toolBarLayout: AbstractToolBarLayout {
