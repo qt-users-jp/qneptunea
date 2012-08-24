@@ -378,7 +378,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/LegalPage.qml" line="+10"/>
         <source>Legal</source>
-        <translation>Termos</translation>
+        <translation>Términos</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -502,7 +502,7 @@
     <message>
         <location line="+7"/>
         <source>Following</source>
-        <translation>Seguindo</translation>
+        <translation>Siguiendo</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -663,7 +663,7 @@ HTML5
 <context>
     <name>SelectLocationPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+10"/>
         <source>Location</source>
         <translation>Ubicación</translation>
     </message>
@@ -714,7 +714,7 @@ HTML5
     <message>
         <location line="+6"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Configuraciones</translation>
     </message>
 </context>
 <context>
@@ -810,7 +810,7 @@ HTML5
     <message>
         <location line="+11"/>
         <source>Sync:</source>
-        <translation>Sinc:</translation>
+        <translation>Sincronizar:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1042,7 +1042,7 @@ Luego vuelva a descargar la nueva versión.</translation>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+107"/>
         <source>FOLLOWS YOU</source>
-        <translation>SEGUIDORES</translation>
+        <translation>TE SIGUE</translation>
     </message>
 </context>
 <context>
@@ -1147,7 +1147,7 @@ Luego vuelva a descargar la nueva versión.</translation>
     <message>
         <location line="+199"/>
         <source>@%1 following you</source>
-        <translation>@%1 está siguiendo</translation>
+        <translation>@%1 te está siguiendo</translation>
     </message>
     <message>
         <location line="+11"/>
