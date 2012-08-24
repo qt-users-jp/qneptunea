@@ -4,7 +4,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
         <source>Microsoft Translator</source>
-        <translation>Traducido por JHenriqz</translation>
+        <translation>Microsoft Traductor</translation>
     </message>
 </context>
 <context>
@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>JHenriqz</translation>
+        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -443,7 +443,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
         <source>Microsoft Translator</source>
-        <translation>Traducido por JHenriqz</translation>
+        <translation>Microsoft Traductor</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -453,12 +453,12 @@
     <message>
         <location line="+14"/>
         <source>client_id:</source>
-        <translation>client_id:</translation>
+        <translation>id del cliente:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>client_secret:</source>
-        <translation>client_secret:</translation>
+        <translation>Contraseña:</translation>
     </message>
     <message>
         <location line="+28"/>
