@@ -10,7 +10,7 @@ AbstractLinkPage {
     visualParent: container
 
     property url __icon: 'mstranslator.png'
-    property bool signedIn: settings.readData('microsofttranslator.com/client_id', '').length > 0 && settings.readData('microsofttranslator.com/client_secret', '').length > 0
+    property bool signedIn: settings.readData('microsofttranslator.com/client_id', 'qneptunea').length > 0 && settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=').length > 0
 
     Flickable {
         id: container
@@ -55,7 +55,7 @@ AbstractLinkPage {
                 id: clientId
                 width: parent.width
                 enabled: !root.busy && !root.signedIn
-                text: settings.readData('microsofttranslator.com/client_id', '')
+                text: settings.readData('microsofttranslator.com/client_id', 'qneptunea')
                 maximumLength: 50
                 platformStyle: TextFieldStyle { textFont.pixelSize: constants.fontDefault }
                 platformSipAttributes: SipAttributes {
@@ -75,7 +75,7 @@ AbstractLinkPage {
                 id: clientSecret
                 width: parent.width
                 enabled: !root.busy && !root.signedIn
-                text: settings.readData('microsofttranslator.com/client_secret', '')
+                text: settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=')
                 maximumLength: 100
                 platformStyle: TextFieldStyle { textFont.pixelSize: constants.fontDefault }
                 platformSipAttributes: SipAttributes {
