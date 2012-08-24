@@ -121,7 +121,8 @@
     <message>
         <location line="+19"/>
         <source>A &lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#Twitter&lt;/a&gt; client for &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</source>
-        <translation>一个&lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#推特&lt;/a&gt;客户端 用于 &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</translation>
+        <translation>一个&lt;a style=&quot;%1;&quot; href=&quot;search://#Twitter&quot;&gt;#推特&lt;/a&gt;客户端
+用于 &lt;a style=&quot;%1;&quot; href=&quot;search://#Nokia&quot;&gt;#Nokia&lt;/a&gt; &lt;a style=&quot;%1;&quot; href=&quot;search://#N9&quot;&gt;#N9&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -663,7 +664,7 @@ HTML5
 <context>
     <name>SelectLocationPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+10"/>
         <source>Location</source>
         <translation>定位</translation>
     </message>
@@ -775,9 +776,7 @@ HTML5
     <message numerus="yes">
         <location line="+18"/>
         <source>%n minute(s)</source>
-        <translation><numerusform>Pluralized Translations
-one: %n 分钟
-other: %n 分钟</numerusform></translation>
+        <translation><numerusform>%n 分钟</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1158,7 +1157,7 @@ Then download the package again.</source>
     <message>
         <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+10"/>
         <source>Light theme for QNeptunea.</source>
-        <translation>QNeptunea.明亮主题</translation>
+        <translation>明亮主题</translation>
     </message>
 </context>
 </TS>
