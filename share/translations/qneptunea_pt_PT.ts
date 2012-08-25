@@ -111,7 +111,7 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>tradutor1_twitter_id,tradutor2_twitter_id,...</translation>
+        <translation>@msullx</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -136,7 +136,7 @@
     <message>
         <location line="+8"/>
         <source>includes: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</source>
-        <translation>inclui: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</translation>
+        <translation>Inclui: &lt;a style=&quot;%1;&quot; href=&quot;http://quazip.sourceforge.net/&quot;&gt;QuaZIP&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -223,7 +223,7 @@
     <message>
         <location line="+8"/>
         <source>3. Authorize</source>
-        <translation>3. Autorizado</translation>
+        <translation>3. Autorizar</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+11"/>
         <source>DirectMessage</source>
-        <translation>MensagemDireta</translation>
+        <translation>Mensagem Direta</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -522,7 +522,7 @@
     <message>
         <location line="+8"/>
         <source>Trend</source>
-        <translation>Assuntos do Momento:</translation>
+        <translation>Assuntos do Momento</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -667,7 +667,7 @@ HTML5
 <context>
     <name>SelectLocationPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+10"/>
         <source>Location</source>
         <translation>Localização</translation>
     </message>
@@ -690,12 +690,12 @@ HTML5
     <message>
         <location line="+149"/>
         <source>Send to %1</source>
-        <translation>Enviado para %1</translation>
+        <translation>Enviar para %1</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Send</source>
-        <translation>Enviado</translation>
+        <translation>Enviar</translation>
     </message>
 </context>
 <context>
@@ -718,7 +718,7 @@ HTML5
     <message>
         <location line="+6"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Miscelâneos</translation>
     </message>
 </context>
 <context>
