@@ -195,7 +195,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AbstractTabPage.qml" line="+30"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -249,7 +249,7 @@
     <message>
         <location line="+14"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -285,7 +285,7 @@
     <message>
         <location line="+116"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/FavouritesPage.qml" line="+22"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -334,7 +334,7 @@
     <message>
         <location line="+98"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -425,7 +425,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+25"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -578,7 +578,7 @@
     <message>
         <location line="+116"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -624,12 +624,12 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SavedSearchStreamPage.qml" line="+11"/>
         <source>Saved Search Timeline</source>
-        <translation>Лента сохранённого поиска</translation>
+        <translation>Сохранённый поиск</translation>
     </message>
     <message>
         <location line="+116"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
@@ -637,17 +637,17 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+26"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Unmute %1</source>
-        <translation>Получать уведомления %1</translation>
+        <translation>Не глушить %1</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mute %1</source>
-        <translation>Не получать уведомления %1</translation>
+        <translation>Приглушить %1</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -699,7 +699,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
         <source>Connectivity</source>
-        <translation>Подключение</translation>
+        <translation>Основное</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -727,7 +727,7 @@ HTML5
     <message>
         <location line="+8"/>
         <source>Normal</source>
-        <translation>Нормальный</translation>
+        <translation>Стандартный</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -747,7 +747,7 @@ HTML5
     <message>
         <location line="+65"/>
         <source>Theme:</source>
-        <translation>Тема:</translation>
+        <translation>Темы:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -770,7 +770,7 @@ HTML5
     <message>
         <location line="+8"/>
         <source>Timer</source>
-        <translation>Таймер</translation>
+        <translation>По таймеру</translation>
     </message>
     <message numerus="yes">
         <location line="+18"/>
@@ -790,7 +790,7 @@ HTML5
     <message>
         <location line="+18"/>
         <source>Mentions</source>
-        <translation>Отклики</translation>
+        <translation>Упоминания</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -805,7 +805,7 @@ HTML5
     <message>
         <location line="+20"/>
         <source>with vibration</source>
-        <translation>с вибро</translation>
+        <translation>с вибрацией</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -883,7 +883,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+162"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -906,12 +906,12 @@ HTML5
     <message>
         <location line="+315"/>
         <source>Unmute @%1</source>
-        <translation>Получать уведомления @%1</translation>
+        <translation>Не глушить @%1</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mute @%1</source>
-        <translation>Не получать уведомления @%1</translation>
+        <translation>Приглушить @%1</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -989,13 +989,13 @@ HTML5
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+13"/>
         <location line="+449"/>
         <source>Tweet</source>
-        <translation>Твит</translation>
+        <translation>Отправить</translation>
     </message>
     <message>
         <location line="-368"/>
         <location line="+390"/>
         <source>Retweet</source>
-        <translation>Ретвит</translation>
+        <translation>Ретвитнуть</translation>
     </message>
     <message>
         <location line="-382"/>
@@ -1081,12 +1081,12 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location line="+15"/>
         <source>Unmute @%1</source>
-        <translation>Получать уведомления @%1</translation>
+        <translation>Не глушить @%1</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mute @%1</source>
-        <translation>Не получать уведомления @%1</translation>
+        <translation>Приглушить @%1</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1119,7 +1119,7 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserTimelinePage.qml" line="+22"/>
         <source>M/d hh:mm</source>
-        <translation>M/d hh:mm</translation>
+        <translation>d/M hh:mm</translation>
     </message>
 </context>
 <context>
