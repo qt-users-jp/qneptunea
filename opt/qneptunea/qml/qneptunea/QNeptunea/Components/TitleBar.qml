@@ -40,7 +40,7 @@ MouseArea {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
-        anchors.margins: Math.max(2 * logo.x + logo.width, root.width - busy.x)
+        anchors.margins: parent.height
         color: constants.titleColor
         font.bold: true
         font.pixelSize: constants.titleFontPixelSize
