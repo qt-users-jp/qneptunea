@@ -88,6 +88,19 @@
     </message>
 </context>
 <context>
+    <name>44_twitgoo</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/tweet/44_twitgoo.qml" line="+33"/>
+        <source>Upload media to TwitGoo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Uploaded!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>50_getpocket</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/50_getpocket.qml" line="+31"/>
