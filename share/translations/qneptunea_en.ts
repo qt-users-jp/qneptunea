@@ -75,6 +75,19 @@
     </message>
 </context>
 <context>
+    <name>43_posterous</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/tweet/43_posterous.qml" line="+32"/>
+        <source>Upload media to Posterous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Uploaded!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>50_getpocket</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/50_getpocket.qml" line="+31"/>
