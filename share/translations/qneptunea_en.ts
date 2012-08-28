@@ -62,6 +62,19 @@
     </message>
 </context>
 <context>
+    <name>42_imgly</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/tweet/42_imgly.qml" line="+32"/>
+        <source>Upload media to img.ly</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Uploaded!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>50_getpocket</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/settings/50_getpocket.qml" line="+31"/>
