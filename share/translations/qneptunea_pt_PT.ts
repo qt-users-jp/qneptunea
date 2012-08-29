@@ -145,7 +145,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
-        <translation>QNeptunea para N9 %1</translation>
+        <translation>QNeptunea N9 %1</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
-        <translation>QNeptunea para N9 %1</translation>
+        <translation>QNeptunea N9 %1</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -856,7 +856,7 @@ HTML5
     <message>
         <location line="+7"/>
         <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
-        <translation>Deseja traduzir o QNeptunea para a sua linguagem? Visite &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; e traduza-o de forma online!</translation>
+        <translation>Quer traduzir o QNeptunea para a sua linguagem? Visite &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; e traduza-o de forma online!</translation>
     </message>
     <message>
         <location line="+15"/>
