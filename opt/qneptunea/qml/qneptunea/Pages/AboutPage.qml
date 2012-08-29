@@ -75,7 +75,7 @@ AbstractLinkPage {
                 onLinkActivated: root.openLink(link)
             }
             Text {
-                text: qsTr('Powerd by: <a style="%1;" href="http://dev.qtquick.me/projects/twitter4qml">Twitter4QML</a>').arg(constants.linkStyle)
+                text: qsTr('Powered by: <a style="%1;" href="http://dev.qtquick.me/projects/twitter4qml">Twitter4QML</a>').arg(constants.linkStyle)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontXLarge
                 color: constants.textColor
