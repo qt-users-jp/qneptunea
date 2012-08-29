@@ -26,6 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import com.nokia.extras 1.0
 import Twitter4QML 1.0
 import QNeptunea.Components 1.0
 
@@ -37,6 +38,49 @@ AbstractLinkPage {
 
     property url __icon: 'mstranslator.png'
     property bool signedIn: settings.readData('microsofttranslator.com/client_id', 'qneptunea').length > 0 && settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=').length > 0
+
+    ListModel {
+        id: langSource
+        ListElement { code: 'ar'; value: QT_TR_NOOP("Arabic") }
+        ListElement { code: 'bg'; value: QT_TR_NOOP("Bulgarian") }
+        ListElement { code: 'ca'; value: QT_TR_NOOP("Catalan") }
+        ListElement { code: 'zh-CHS'; value: QT_TR_NOOP("Chinese (Simplified)") }
+        ListElement { code: 'zh-CHT'; value: QT_TR_NOOP("Chinese (Traditional)") }
+        ListElement { code: 'cs'; value: QT_TR_NOOP("Czech") }
+        ListElement { code: 'da'; value: QT_TR_NOOP("Danish") }
+        ListElement { code: 'nl'; value: QT_TR_NOOP("Dutch") }
+        ListElement { code: 'en'; value: QT_TR_NOOP("English") }
+        ListElement { code: 'et'; value: QT_TR_NOOP("Estonian") }
+        ListElement { code: 'fa'; value: QT_TR_NOOP("Fersian (Farsi)") }
+        ListElement { code: 'fi'; value: QT_TR_NOOP("Finnish") }
+        ListElement { code: 'fr'; value: QT_TR_NOOP("French") }
+        ListElement { code: 'de'; value: QT_TR_NOOP("German") }
+        ListElement { code: 'el'; value: QT_TR_NOOP("Greek") }
+        ListElement { code: 'ht'; value: QT_TR_NOOP("Haitian Creole") }
+        ListElement { code: 'he'; value: QT_TR_NOOP("Hebrew") }
+        ListElement { code: 'hi'; value: QT_TR_NOOP("Hindi") }
+        ListElement { code: 'hu'; value: QT_TR_NOOP("Hungarian") }
+        ListElement { code: 'id'; value: QT_TR_NOOP("Indonesian") }
+        ListElement { code: 'it'; value: QT_TR_NOOP("Italian") }
+        ListElement { code: 'ja'; value: QT_TR_NOOP("Japanese") }
+        ListElement { code: 'ko'; value: QT_TR_NOOP("Korean") }
+        ListElement { code: 'lv'; value: QT_TR_NOOP("Latvian") }
+        ListElement { code: 'lt'; value: QT_TR_NOOP("Lithuanian") }
+        ListElement { code: 'mww'; value: QT_TR_NOOP("Hmong Daw") }
+        ListElement { code: 'no'; value: QT_TR_NOOP("Norwegian") }
+        ListElement { code: 'pl'; value: QT_TR_NOOP("Polish") }
+        ListElement { code: 'pt'; value: QT_TR_NOOP("Portuguese") }
+        ListElement { code: 'ro'; value: QT_TR_NOOP("Romanian") }
+        ListElement { code: 'ru'; value: QT_TR_NOOP("Russian") }
+        ListElement { code: 'sk'; value: QT_TR_NOOP("Slovak") }
+        ListElement { code: 'sl'; value: QT_TR_NOOP("Slovenian") }
+        ListElement { code: 'es'; value: QT_TR_NOOP("Spanish") }
+        ListElement { code: 'sv'; value: QT_TR_NOOP("Swedish") }
+        ListElement { code: 'th'; value: QT_TR_NOOP("Thai") }
+        ListElement { code: 'tr'; value: QT_TR_NOOP("Turkish") }
+        ListElement { code: 'uk'; value: QT_TR_NOOP("Ukrainian") }
+        ListElement { code: 'vi'; value: QT_TR_NOOP("Vietnamese") }
+    }
 
     Flickable {
         id: container
@@ -108,6 +152,50 @@ AbstractLinkPage {
                     actionKeyLabel: 'Sign In'
                 }
                 Keys.onReturnPressed: button.signIn()
+            }
+
+            Text {
+                text: qsTr('translate to:')
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+                color: constants.textColor
+            }
+
+            Item {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width - 30
+                height: 256
+                Tumbler {
+                    columns: [
+                        TumblerColumn {
+                            id: to
+                            items: ListModel {
+                                id: langModel
+                                Component.onCompleted: {
+                                    for (var i = 0; i < langSource.count; i++) {
+                                        var l = langSource.get(i)
+                                        l.value = qsTr(l.value)
+                                        langModel.append(l)
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                    onChanged: {
+                        settings.saveData('microsofttranslator.com/to', langModel.get(to.selectedIndex).code)
+                    }
+                    Component.onCompleted: {
+                        var message = qsTr('en (Please translate this "en" to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)')
+                        var lang = settings.readData('microsofttranslator.com/to', message.substring(0, message.indexOf(' (')))
+                        for (var i = 0; i < langModel.count; i++) {
+                            var l = langSource.get(i)
+                            if (langModel.get(i).code === lang) {
+                                to.selectedIndex = i
+                                break
+                            }
+                        }
+                    }
+                }
             }
         }
     }

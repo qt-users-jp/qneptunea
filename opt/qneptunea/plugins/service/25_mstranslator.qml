@@ -91,10 +91,10 @@ ServicePlugin {
 
 
     function translate(accessToken, source) {
-        var lang = LANG
-        if (lang.indexOf('_') > -1)
-            lang = lang.substring(0, lang.indexOf('_'))
+        var message = qsTr('en (Please translate this "en" to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)')
+        var lang = settings.readData('microsofttranslator.com/to', message.substring(0, message.indexOf(' (')))
         var url = 'http://api.microsofttranslator.com/v2/Http.svc/Translate?'.concat('text=').concat(encodeURIComponent(source)).concat('&to=').concat(lang)
+        console.debug(url)
 
         var request = new XMLHttpRequest()
         request.open('GET', url)
