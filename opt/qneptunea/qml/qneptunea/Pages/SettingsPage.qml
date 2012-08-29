@@ -31,7 +31,7 @@ import Twitter4QML 1.0
 import '../QNeptunea/Components/'
 import '../Delegates'
 
-AbstractPage {
+AbstractLinkPage {
     id: root
 
     SettingsPageConnectivityTab {
@@ -71,6 +71,7 @@ AbstractPage {
         anchors.bottomMargin: root.footerHeight
         opacity: 0
         visible: opacity > 0
+        onLinkActivated: root.openLink(link)
     }
     ScrollBar { target: misc }
 
@@ -125,7 +126,7 @@ AbstractPage {
         State {
             name: 'misc'
             when: showMisc.checked
-            PropertyChanges { target: root; title: qsTr('Misc') }
+            PropertyChanges { target: root; title: qsTr('Misc'); visualParent: misc }
             PropertyChanges { target: misc; opacity: 1; status: root.status }
         }
     ]

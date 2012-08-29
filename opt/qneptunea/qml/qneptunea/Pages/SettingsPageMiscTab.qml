@@ -35,6 +35,8 @@ Flickable {
     contentHeight: container.height
     clip: true
 
+    signal linkActivated(string link)
+
     QueryDialog {
         id: signOutConfirmation
         icon: 'image://theme/icon-m-content-third-party-update'.concat(theme.inverted ? "-inverse" : "")
@@ -53,7 +55,7 @@ Flickable {
     Column {
         id: container
         width: parent.width
-        spacing: 4
+        spacing: 10
 
         Text {
             text: qsTr('Display time-out:')
@@ -121,6 +123,17 @@ Flickable {
                     }
                 }
             }
+        }
+
+        Text {
+            text: qsTr('Do you want to translate QNeptunea to your language? visit <a style="%1" href="%2">t.co/aai7EhBi</a> and translate it online!').arg(constants.linkStyle).arg('https://www.transifex.com/projects/p/qneptunea/')
+            x: 30
+            width: parent.width - x
+            wrapMode: Text.Wrap
+            color: constants.textColor
+            font.family: constants.fontFamily
+            font.pixelSize: constants.fontDefault
+            onLinkActivated: root.linkActivated(link)
         }
 
         Separator { width: parent.width }
