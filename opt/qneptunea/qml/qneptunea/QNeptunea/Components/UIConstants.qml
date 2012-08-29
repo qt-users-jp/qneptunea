@@ -223,4 +223,12 @@ QtObject {
 
     property int updateInterval: settings.readData('Connection/UpdateInterval', 5)
     onUpdateIntervalChanged: settings.saveData('Connection/UpdateInterval', constants.updateInterval)
+
+    property string dateFormat: settings.readData('Appearance/DateFormat', 'd MMM')
+    onDateFormatChanged: settings.saveData('Appearance/DateFormat', constants.dateFormat)
+
+    property string timeFormat: settings.readData('Appearance/TimeFormat', 'hh:mm')
+    onTimeFormatChanged: settings.saveData('Appearance/TimeFormat', constants.timeFormat)
+
+    property string dateTimeFormat: root.dateFormat.concat(' ').concat(root.timeFormat)
 }

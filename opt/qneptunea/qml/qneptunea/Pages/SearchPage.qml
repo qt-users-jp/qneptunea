@@ -49,7 +49,7 @@ AbstractPage {
                 when: view.moving && __topData.created_at
                 PropertyChanges {
                     target: root
-                    title: Qt.formatDateTime(new Date(__topData.created_at), qsTr('M/d hh:mm'))
+                    title: Qt.formatDateTime(new Date(__topData.created_at), constants.dateTimeFormat)
                 }
             }
         ]

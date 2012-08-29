@@ -185,7 +185,7 @@ MouseArea {
 
                 Text {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: __item.created_at ? Qt.formatDateTime(new Date(__item.created_at), qsTr('M/d hh:mm')) : ''
+                    text: __item.created_at ? Qt.formatDateTime(new Date(__item.created_at), constants.dateTimeFormat) : ''
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontSmall
                     color: constants.textColor

@@ -232,14 +232,6 @@
     </message>
 </context>
 <context>
-    <name>AbstractTabPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AbstractTabPage.qml" line="+56"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>AuthorizationPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AuthorizationPage.qml" line="+43"/>
@@ -288,12 +280,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+27"/>
         <source>Sent to %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -321,19 +308,6 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagesPage.qml" line="+37"/>
         <source>Direct Messages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+116"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>FavouritesPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/FavouritesPage.qml" line="+48"/>
-        <source>M/d hh:mm</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -370,11 +344,6 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/HomePage.qml" line="+37"/>
         <source>Timeline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+98"/>
-        <source>M/d hh:mm</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -464,12 +433,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+51"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+64"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
         <source>Unsubscribe</source>
         <translation type="unfinished"></translation>
     </message>
@@ -616,11 +580,6 @@
         <source>Mentions</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+116"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>MutePage</name>
@@ -667,21 +626,11 @@ HTML5
         <source>Saved Search Timeline</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+116"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+52"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+43"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
         <source>Unmute %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -761,7 +710,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+117"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+169"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -786,7 +735,12 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+13"/>
+        <source>Date format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
         <source>Theme:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -930,12 +884,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+188"/>
-        <source>M/d hh:mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+197"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1154,14 +1103,6 @@ Then download the package again.</source>
     <message>
         <location line="+10"/>
         <source>Report @%1 for spam</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>UserTimelinePage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserTimelinePage.qml" line="+48"/>
-        <source>M/d hh:mm</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -97,6 +97,58 @@ Flickable {
         }
     }
 
+    TumblerColumn {
+        id: firstColumn
+        items: ListModel { id: firstColumnModel }
+    }
+
+    TumblerColumn {
+        id: secondColumn
+        items: ListModel { id: secondColumnModel }
+    }
+
+    TumblerColumn {
+        id: thirdColumn
+        items: ListModel { id: thirdColumnModel }
+    }
+
+    Component.onCompleted: {
+        var dateFormat = constants.dateFormat
+
+        var dateFormats = ['d', 'M', 'MMM']
+        var separators = [' ', '-', '/']
+
+        for (var i = 0; i < dateFormats.length; i++) {
+            var f = dateFormats[i]
+            firstColumnModel.append({'format': f, 'value': Qt.formatDateTime(new Date(), f)})
+            if (dateFormat.substring(0, f.length) === f) {
+                firstColumn.selectedIndex = i
+            }
+        }
+
+        dateFormat = dateFormat.substring(dateFormats[firstColumn.selectedIndex].length)
+        console.debug(dateFormat)
+
+        for (var i = 0; i < separators.length; i++) {
+            var s = separators[i]
+            secondColumnModel.append({'format': s, 'value': s})
+            if (dateFormat.substring(0, s.length) === s) {
+                secondColumn.selectedIndex = i
+            }
+        }
+
+        dateFormat = dateFormat.substring(separators[secondColumn.selectedIndex].length)
+        console.debug(dateFormat)
+
+        for (var i = 0; i < dateFormats.length; i++) {
+            var f = dateFormats[i]
+            thirdColumnModel.append({'format': f, 'value': Qt.formatDateTime(new Date(), f)})
+            if (dateFormat.substring(0, f.length) === f) {
+                thirdColumn.selectedIndex = i
+            }
+        }
+    }
+
     Column {
         id: container
         width: parent.width
@@ -167,6 +219,30 @@ Flickable {
             width: parent.width - 30
             value: constants.separatorOpacity
             onValueChanged: if (root.status === PageStatus.Active) constants.separatorOpacity = value
+        }
+
+        Text {
+            text: qsTr('Date format:')
+            color: constants.textColor
+            font.family: constants.fontFamily
+            font.pixelSize: constants.fontDefault
+        }
+
+        Item {
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: constants.fontDefault * 15
+            height: 128
+            Tumbler {
+                id: dateFormat
+                columns: [ firstColumn, secondColumn, thirdColumn ]
+                onChanged: {
+                    var dateFormat = firstColumnModel.get(firstColumn.selectedIndex).format
+                    dateFormat += secondColumnModel.get(secondColumn.selectedIndex).format
+                    dateFormat += thirdColumnModel.get(thirdColumn.selectedIndex).format
+                    console.debug(dateFormat)
+                    constants.dateFormat = dateFormat
+                }
+            }
         }
 
         Text {
