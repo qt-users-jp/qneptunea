@@ -71,6 +71,7 @@ AbstractLinkPage {
         anchors.bottomMargin: root.footerHeight
         opacity: 0
         visible: opacity > 0
+        interactive: typeof root.linkMenu === 'undefined'
         onLinkActivated: root.openLink(link)
     }
     ScrollBar { target: misc }
