@@ -34,10 +34,17 @@ ImagePlugin {
     function load(url, domain) {
         var a = url.split('/')
         var id = a.pop()
-        var user = a.pop()
-        var baseurl = 'http://img.f.hatena.ne.jp/images/fotolife/'.concat(user.substring(0, 1)).concat('/').concat(user).concat('/').concat(id.substring(0, 8)).concat('/')
-        root.thumbnail = baseurl.concat(id).concat('_m.jpg')
-        root.detail = baseurl.concat(id).concat('.jpg')
+        var re = new RegExp(/.jpg/)
+        if(re.test(id)) {
+            root.thumbnail = url.replace(/.jpg/, '_m.jpg')
+            root.detail = url
+        } else {
+            var user = a.pop()
+            var baseurl = 'http://img.f.hatena.ne.jp/images/fotolife/%1/%2/%3/%4%5.jpg'.arg(user.substring(0, 1)).arg(user).arg(id.substring(0, 8)).arg(id)
+            root.thumbnail = baseurl.arg('_m')
+            root.detail = baseurl.arg('')
+        }
+
         return id.length > 0
     }
 }
