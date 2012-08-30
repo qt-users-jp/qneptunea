@@ -47,7 +47,7 @@ ImagePlugin {
             id = url.substring('http://imgur.com/'.length)
             var re = new RegExp(/gallery.*/)
             if(re.test(id)) { id = id.split('/').pop() }
-            getImgurPhotoUrl('http://api.imgur.com/2/image/'.concat(id).concat('.json'))
+            getImgurPhotoUrl('http://api.imgur.com/2/image/%1.json'.arg(id))
             break;
         }
         }

@@ -57,7 +57,7 @@ ImagePlugin {
         }
         }
         console.debug("Photo ID is " + id);
-        var apiurl = 'http://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key='.concat(root.apikey).concat('&format=json&nojsoncallback=1&photo_id=').concat(id);
+        var apiurl = 'http://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=%1&format=json&nojsoncallback=1&photo_id=%2'.arg(root.apikey).arg(id)
         getFlickrPhotoUrl(apiurl);
         return id.length > 0;
     }

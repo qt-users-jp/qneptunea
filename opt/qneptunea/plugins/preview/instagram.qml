@@ -32,10 +32,11 @@ ImagePlugin {
     domains: ['instagr.am', 'instagram.com']
 
     function load(url, domain) {
-        var prefixurl = 'http://'.concat(domain).concat('/p/')
+        var prefixurl = 'http://%1/p/'.arg(domain)
         var id = url.substring(prefixurl.length).split('/').shift()
-        root.thumbnail = prefixurl.concat(id).concat('/media?size=t')
-        root.detail = prefixurl.concat(id).concat('/media?size=l')
+        prefixurl = prefixurl.concat('%1/media?size=%2').arg(id)
+        root.thumbnail = prefixurl.arg('t')
+        root.detail = prefixurl.arg('l')
         return id.length > 0
     }
 }

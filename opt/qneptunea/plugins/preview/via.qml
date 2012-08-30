@@ -37,7 +37,7 @@ ImagePlugin {
     function load(url, domain) {
         var id = url.substring('http://via.me/-'.length);
         console.debug('id is '.concat(id))
-        var apiurl = 'http://api.via.me/v1/posts/'.concat(id).concat('?client_id=').concat(root.clientid);
+        var apiurl = 'http://api.via.me/v1/posts/%1?client_id=%2'.arg(id).arg(root.clientid);
         getViamePhotoUrl(apiurl);
         return id.length > 0;
     }
