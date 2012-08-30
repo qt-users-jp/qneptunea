@@ -116,7 +116,7 @@ Flickable {
         var dateFormat = constants.dateFormat
 
         var dateFormats = ['d', 'M', 'MMM']
-        var separators = [' ', '-', '/']
+        var separators = [' ', '-', '/', '.']
 
         for (var i = 0; i < dateFormats.length; i++) {
             var f = dateFormats[i]
