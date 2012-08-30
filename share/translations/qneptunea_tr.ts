@@ -6,6 +6,11 @@
         <source>Microsoft Translator</source>
         <translation>Microsoft Translator</translation>
     </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
+        <translation>tr (Lutfen bu &apos;tr&apos; yi linkteki dilinize en uygun ulke koduna gore cevirin.http://msdn.microsoft.com/en-us/library/hh456380)</translation>
+    </message>
 </context>
 <context>
     <name>30_twitpic</name>
@@ -444,12 +449,12 @@
 <context>
     <name>MSTranslatorSettings</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+35"/>
+        <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+36"/>
         <source>Microsoft Translator</source>
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+68"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Abone Ol &amp; Kayit Yap&lt;/a&gt;</translation>
     </message>
@@ -464,7 +469,212 @@
         <translation>client_secret:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+20"/>
+        <source>translate to:</source>
+        <translation>suna cevir:</translation>
+    </message>
+    <message>
+        <location line="-114"/>
+        <source>Arabic</source>
+        <translation>Arap</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bulgarian</source>
+        <translation>Bulgar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Catalan</source>
+        <translation>Katalanca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Chinese (Simplified)</source>
+        <translation>Cince (Basitlestirilmis)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Chinese (Traditional)</source>
+        <translation>Cince (Geleneksel)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Czech</source>
+        <translation>Cekce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Danish</source>
+        <translation>Danca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dutch</source>
+        <translation>Hollandaca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>English</source>
+        <translation>Turkish</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Estonian</source>
+        <translation>Estonca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fersian (Farsi)</source>
+        <translation>Farsca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Finnish</source>
+        <translation>Fince</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>French</source>
+        <translation>Fransizca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>German</source>
+        <translation>Almanca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Greek</source>
+        <translation>Yunanca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Haitian Creole</source>
+        <translation>Haiti Kreyolu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hebrew</source>
+        <translation>Ibranice</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hindi</source>
+        <translation>Hint</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hungarian</source>
+        <translation>Macarca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indonesian</source>
+        <translation>Endonezce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Italian</source>
+        <translation>Italyanca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Japanese</source>
+        <translation>Japonca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Korean</source>
+        <translation>Korece</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Latvian</source>
+        <translation>Letonca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lithuanian</source>
+        <translation>Litvanca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hmong Daw</source>
+        <translation>Hmong Dili</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Norwegian</source>
+        <translation>Norvecce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Polish</source>
+        <translation>Lehce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Portuguese</source>
+        <translation>Portekizce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Romanian</source>
+        <translation>Romence</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Russian</source>
+        <translation>Rusca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Slovak</source>
+        <translation>Slovakca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Slovenian</source>
+        <translation>Slovence</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Spanish</source>
+        <translation>Ispanyolca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Swedish</source>
+        <translation>Isvecce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Thai</source>
+        <translation>Tayca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Turkish</source>
+        <translation>Turkce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ukrainian</source>
+        <translation>Ukraynaca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vietnamese</source>
+        <translation>Vietnam Dili</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
+        <translation>tr (Lutfen bu &apos;tr&apos; yi linkteki dilinize en uygun ulke koduna gore cevirin.http://msdn.microsoft.com/en-us/library/hh456380)</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Sign In</source>
         <translation>Giris Yap</translation>
     </message>
