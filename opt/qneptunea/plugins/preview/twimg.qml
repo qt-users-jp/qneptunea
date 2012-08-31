@@ -29,11 +29,24 @@ import QNeptunea.Preview 1.0
 
 ImagePlugin {
     id: root
-    domains: ['p.twimg.com', 'a0.twimg.com']
+    domains: ['p.twimg.com', 'a0.twimg.com', 'si0.twimg.com', 'pbs.twimg.com']
 
     function load(url, domain) {
-        root.thumbnail = url
-        root.detail = url
+        var re = new RegExp(/#twimg/)
+        if (re.test(url) > 0) { url = url.replace(/#twimg/, '') }
+        if (domain === 'p.twimg.com' || domain === 'pbs.twimg.com') {
+            re = new RegExp(/:large/)
+            if (re.test(url)) {
+                root.thumbnail = url.replace(/:large/, ':thumb')
+                root.detail = url
+            } else {
+                root.thumbnail = url.concat(':thumb')
+                root.detail = url.concat(':large')
+            }
+        } else {
+            root.thumbnail = url
+            root.detail = url
+        }
         return true
     }
 }
