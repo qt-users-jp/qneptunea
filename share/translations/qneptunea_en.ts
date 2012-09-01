@@ -1029,7 +1029,7 @@ HTML5
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+43"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+44"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation type="unfinished"></translation>
@@ -1060,12 +1060,12 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+40"/>
         <source>Restart QNeptunea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
         <translation type="unfinished"></translation>
     </message>

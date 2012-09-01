@@ -26,6 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import com.nokia.extras 1.0
 import '../QNeptunea/Components/'
 
 Flickable {
@@ -107,23 +108,50 @@ Flickable {
             visible: !currentVersion.trusted
         }
 
-
-        ButtonColumn {
+        Item {
             anchors.horizontalCenter: parent.horizontalCenter
-
-            Repeater {
-                model: app.translations
-                delegate: Button {
-                    text: model.modelData.name
-                    platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
-                    checked: model.modelData.code === app.translation.code
-                    onClicked: {
-                        app.translation = model.modelData
-                        infoBanners.message({'iconSource': '', 'text': qsTr('Restart QNeptunea')})
+            width: parent.width - 100
+            height: 400
+            Tumbler {
+                columns: [
+                    TumblerColumn {
+                        id: translation
+                        items: ListModel {
+                            id: translationModel
+                            Component.onCompleted: {
+                                for (var i = 0; i < app.translations.length; i++) {
+                                    translationModel.append({'value': app.translations[i].name})
+                                }
+                            }
+                        }
+                    }
+                ]
+                onChanged: {
+                    app.translation = app.translations[translation.selectedIndex]
+                }
+                Component.onCompleted: {
+                    for (var i = 0; i < app.translations.length; i++) {
+                        if (app.translation.code === app.translations[i].code) {
+                            translation.selectedIndex = i
+                            break
+                        }
                     }
                 }
             }
         }
+
+        Text {
+            text: qsTr('Restart QNeptunea')
+            x: 30
+            width: parent.width - x
+            wrapMode: Text.Wrap
+            color: constants.textColor
+            font.family: constants.fontFamily
+            font.pixelSize: constants.fontDefault
+            onLinkActivated: root.linkActivated(link)
+        }
+
+        Separator { width: parent.width }
 
         Text {
             text: qsTr('Do you want to translate QNeptunea to your language? visit <a style="%1" href="%2">t.co/aai7EhBi</a> and translate it online!').arg(constants.linkStyle).arg('https://www.transifex.com/projects/p/qneptunea/')
