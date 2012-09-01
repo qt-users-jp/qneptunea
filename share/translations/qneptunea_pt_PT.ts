@@ -249,7 +249,7 @@
     <message>
         <location line="+7"/>
         <source>2. Enter 7 digits pin code</source>
-        <translation>2. Inserir o código de 7 dígitos</translation>
+        <translation>2. Insira o código de 7 dígitos</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -259,7 +259,7 @@
     <message>
         <location line="+8"/>
         <source>3. Authorize</source>
-        <translation>3. Autorizar</translation>
+        <translation>3. Autorize</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -616,7 +616,7 @@
     <message>
         <location line="+1"/>
         <source>Portuguese</source>
-        <translation>Português</translation>
+        <translation>Português Europeu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1046,7 +1046,7 @@ HTML5
     <message>
         <location line="+14"/>
         <source>Display time-out:</source>
-        <translation>Time-out do Ecrã:</translation>
+        <translation>Activar Time-out do Ecrã:</translation>
     </message>
     <message>
         <location line="+20"/>
