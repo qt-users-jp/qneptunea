@@ -142,7 +142,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/90_clipboard.qml" line="+31"/>
         <source>Copy to clipboard</source>
-        <translation>Copiar para o clipboard</translation>
+        <translation>Copiar para o Clipboard</translation>
     </message>
 </context>
 <context>
