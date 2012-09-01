@@ -946,7 +946,7 @@ HTML5
     <message>
         <location line="+13"/>
         <source>Date format:</source>
-        <translation>数据格式：</translation>
+        <translation>日期格式：</translation>
     </message>
     <message>
         <location line="+76"/>
