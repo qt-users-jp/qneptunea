@@ -63,7 +63,7 @@ AbstractLinkPage {
             if (done) return
 
             var rich_text = root.__status.rich_text
-            var href = new RegExp(/<a class="link" href="(http:\/\/.+?)"/g);
+            var href = new RegExp(/<a class="link" href="(https?:\/\/.+?)"/g);
             var arr;
             while ((arr = href.exec(rich_text)) !== null) {
                 var url = arr[1]
