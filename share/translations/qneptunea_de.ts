@@ -2,15 +2,20 @@
 <context>
     <name>25_mstranslator</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+5"/>
+        <location filename="../../opt/qneptunea/plugins/settings/25_mstranslator.qml" line="+31"/>
         <source>Microsoft Translator</source>
         <translation>Microsoft Translator</translation>
+    </message>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
+        <translation>de</translation>
     </message>
 </context>
 <context>
     <name>30_twitpic</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/tweet/30_twitpic.qml" line="+6"/>
+        <location filename="../../opt/qneptunea/plugins/tweet/30_twitpic.qml" line="+32"/>
         <source>Upload media to twitpic</source>
         <translation>Medien Upload - twitpic</translation>
     </message>
@@ -23,7 +28,7 @@
 <context>
     <name>31_yfrog</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/tweet/31_yfrog.qml" line="+7"/>
+        <location filename="../../opt/qneptunea/plugins/tweet/31_yfrog.qml" line="+33"/>
         <source>Upload media to yfrog</source>
         <translation>Medien Upload - yfrog</translation>
     </message>
@@ -36,7 +41,7 @@
 <context>
     <name>39_mobypicture</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/tweet/39_mobypicture.qml" line="+7"/>
+        <location filename="../../opt/qneptunea/plugins/tweet/39_mobypicture.qml" line="+33"/>
         <source>Upload media to Mobypicture</source>
         <translation>Medien Upload - Mobypicture</translation>
     </message>
@@ -49,7 +54,7 @@
 <context>
     <name>41_twipple</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/tweet/41_twipple.qml" line="+7"/>
+        <location filename="../../opt/qneptunea/plugins/tweet/41_twipple.qml" line="+33"/>
         <source>Upload media to twipple</source>
         <translation>Medien Upload - twipple</translation>
     </message>
@@ -60,14 +65,53 @@
     </message>
 </context>
 <context>
+    <name>42_imgly</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/tweet/42_imgly.qml" line="+32"/>
+        <source>Upload media to img.ly</source>
+        <translation>Medien Upload - img.ly</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Uploaded!</source>
+        <translation>Hochgeladen!</translation>
+    </message>
+</context>
+<context>
+    <name>43_posterous</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/tweet/43_posterous.qml" line="+32"/>
+        <source>Upload media to Posterous</source>
+        <translation>Medien Upload - Posterous</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Uploaded!</source>
+        <translation>Hochgeladen!</translation>
+    </message>
+</context>
+<context>
+    <name>44_twitgoo</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/tweet/44_twitgoo.qml" line="+33"/>
+        <source>Upload media to TwitGoo</source>
+        <translation>Medien Upload - TwitGoo</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Uploaded!</source>
+        <translation>Hochgeladen!</translation>
+    </message>
+</context>
+<context>
     <name>50_getpocket</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/50_getpocket.qml" line="+5"/>
+        <location filename="../../opt/qneptunea/plugins/settings/50_getpocket.qml" line="+31"/>
         <source>Pocket</source>
         <translation>Pocket</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+39"/>
+        <location filename="../../opt/qneptunea/plugins/service/50_getpocket.qml" line="+65"/>
         <source>Done!</source>
         <translation>Fertig!</translation>
     </message>
@@ -75,12 +119,12 @@
 <context>
     <name>51_instapaper</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/51_instapaper.qml" line="+5"/>
+        <location filename="../../opt/qneptunea/plugins/settings/51_instapaper.qml" line="+31"/>
         <source>Instapaper</source>
         <translation>Instapaper</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+36"/>
+        <location filename="../../opt/qneptunea/plugins/service/51_instapaper.qml" line="+62"/>
         <source>Done!</source>
         <translation>Fertig!</translation>
     </message>
@@ -88,7 +132,7 @@
 <context>
     <name>80_share</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/80_share.qml" line="+5"/>
+        <location filename="../../opt/qneptunea/plugins/service/80_share.qml" line="+31"/>
         <source>Share</source>
         <translation>Teilen</translation>
     </message>
@@ -96,7 +140,7 @@
 <context>
     <name>90_clipboard</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/90_clipboard.qml" line="+5"/>
+        <location filename="../../opt/qneptunea/plugins/service/90_clipboard.qml" line="+31"/>
         <source>Copy to clipboard</source>
         <translation>In Zwischenablage kopieren</translation>
     </message>
@@ -104,13 +148,18 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+10"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
         <translation>QNeptunea für N9 %1</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
+        <translation>Morpog</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
         <translation>Morpog</translation>
     </message>
     <message>
@@ -125,8 +174,8 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Powerd by: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</source>
-        <translation>Unterstützt von: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</translation>
+        <source>Powered by: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</source>
+        <translation>Basierend auf: &lt;a style=&quot;%1;&quot; href=&quot;http://dev.qtquick.me/projects/twitter4qml&quot;&gt;Twitter4QML&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -167,7 +216,7 @@
 <context>
     <name>AbstractLinkPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+97"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+123"/>
         <source>Open in the browser</source>
         <translation>Im Browser öffnen</translation>
     </message>
@@ -180,23 +229,15 @@
 <context>
     <name>AbstractListView</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+73"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+99"/>
         <source>Loading...</source>
         <translation>Lädt...</translation>
     </message>
 </context>
 <context>
-    <name>AbstractTabPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AbstractTabPage.qml" line="+30"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-</context>
-<context>
     <name>AuthorizationPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AuthorizationPage.qml" line="+17"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AuthorizationPage.qml" line="+43"/>
         <source>Authentication</source>
         <translation>Authentifizierung</translation>
     </message>
@@ -229,7 +270,7 @@
 <context>
     <name>DirectMessageDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+118"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+144"/>
         <source>Sent to %1</source>
         <translation>An %1 gesendet</translation>
     </message>
@@ -237,17 +278,12 @@
 <context>
     <name>DirectMessageDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+120"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+146"/>
         <source>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</source>
         <translation>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+27"/>
         <source>Sent to %1</source>
         <translation>An %1 gesendet</translation>
     </message>
@@ -255,7 +291,7 @@
 <context>
     <name>DirectMessagePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+37"/>
         <source>DirectMessage</source>
         <translation>Direkte Nachricht</translation>
     </message>
@@ -273,28 +309,15 @@
 <context>
     <name>DirectMessagesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagesPage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagesPage.qml" line="+37"/>
         <source>Direct Messages</source>
         <translation>Direkte Nachrichten</translation>
-    </message>
-    <message>
-        <location line="+116"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-</context>
-<context>
-    <name>FavouritesPage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/FavouritesPage.qml" line="+22"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
     <name>GetPocketSettings</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/getpocket/GetPocketSettings.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/plugins/settings/getpocket/GetPocketSettings.qml" line="+35"/>
         <source>Pocket</source>
         <translation>Pocket</translation>
     </message>
@@ -322,20 +345,15 @@
 <context>
     <name>HomePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/HomePage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/HomePage.qml" line="+37"/>
         <source>Timeline</source>
         <translation>Zeitstrahl</translation>
-    </message>
-    <message>
-        <location line="+98"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
     <name>ImagePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ImagePreviewPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ImagePreviewPage.qml" line="+35"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
@@ -343,7 +361,7 @@
 <context>
     <name>InstapaperSettings</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/instapaper/InstapaperSettings.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/plugins/settings/instapaper/InstapaperSettings.qml" line="+35"/>
         <source>Instapaper</source>
         <translation>Instapaper</translation>
     </message>
@@ -371,7 +389,7 @@
 <context>
     <name>LegalPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/LegalPage.qml" line="+10"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/LegalPage.qml" line="+36"/>
         <source>Legal</source>
         <translation>Rechtliches</translation>
     </message>
@@ -389,7 +407,7 @@
 <context>
     <name>ListDetailPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListDetailPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListDetailPage.qml" line="+35"/>
         <location line="+51"/>
         <source>Create</source>
         <translation>Erstellen</translation>
@@ -418,12 +436,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+25"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-    <message>
-        <location line="+64"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
         <source>Unsubscribe</source>
         <translation>Abonnement entfernen</translation>
     </message>
@@ -436,12 +449,12 @@
 <context>
     <name>MSTranslatorSettings</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/plugins/settings/mstranslator/MSTranslatorSettings.qml" line="+36"/>
         <source>Microsoft Translator</source>
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+68"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Abonnieren &amp; registrieren&lt;/a&gt;</translation>
     </message>
@@ -456,7 +469,212 @@
         <translation>client_secret:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+20"/>
+        <source>translate to:</source>
+        <translation>übersetze nach:</translation>
+    </message>
+    <message>
+        <location line="-114"/>
+        <source>Arabic</source>
+        <translation>Arabisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bulgarian</source>
+        <translation>Bulgarisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Catalan</source>
+        <translation>Katalanisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Chinese (Simplified)</source>
+        <translation>Chinesisch (einfach)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Chinese (Traditional)</source>
+        <translation>Chinesisch (traditionell)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Czech</source>
+        <translation>Tschechisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Danish</source>
+        <translation>Dänisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dutch</source>
+        <translation>Niederländisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>English</source>
+        <translation>Deutsch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Estonian</source>
+        <translation>Estnisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fersian (Farsi)</source>
+        <translation>Farsisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Finnish</source>
+        <translation>Finnisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>French</source>
+        <translation>Französisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>German</source>
+        <translation>Deutsch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Greek</source>
+        <translation>Griechisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Haitian Creole</source>
+        <translation>Haitisch Kreolisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hebrew</source>
+        <translation>Hebräisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hindi</source>
+        <translation>Hindi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hungarian</source>
+        <translation>Ungarisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indonesian</source>
+        <translation>Indonesisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Italian</source>
+        <translation>Italienisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Japanese</source>
+        <translation>Japanisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Korean</source>
+        <translation>Koreanisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Latvian</source>
+        <translation>Lettisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lithuanian</source>
+        <translation>Litauisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hmong Daw</source>
+        <translation>Hmong</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Norwegian</source>
+        <translation>Norwegisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Polish</source>
+        <translation>Polnisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Portuguese</source>
+        <translation>Portugiesisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Romanian</source>
+        <translation>Rumänisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Russian</source>
+        <translation>Russisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Slovak</source>
+        <translation>Slowakisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Slovenian</source>
+        <translation>Slowenisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Spanish</source>
+        <translation>Spanisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Swedish</source>
+        <translation>Schwedisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Thai</source>
+        <translation>Thailändisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Turkish</source>
+        <translation>Türkisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ukrainian</source>
+        <translation>Ukrainisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vietnamese</source>
+        <translation>Vietnamesisch</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
+        <translation>de</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Sign In</source>
         <translation>Anmelden</translation>
     </message>
@@ -480,7 +698,7 @@
 <context>
     <name>MainMenuPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+10"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
         <translation>QNeptunea für N9 %1</translation>
     </message>
@@ -558,7 +776,7 @@
 <context>
     <name>MapPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MapPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MapPage.qml" line="+35"/>
         <source>Map</source>
         <translation>Karte</translation>
     </message>
@@ -566,20 +784,15 @@
 <context>
     <name>MentionsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>Erwähnungen</translation>
-    </message>
-    <message>
-        <location line="+116"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
     <name>MutePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MutePage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MutePage.qml" line="+37"/>
         <source>Mute Settings</source>
         <translation>Stumm Einstellungen</translation>
     </message>
@@ -605,7 +818,7 @@ HTML5
 <context>
     <name>NearByPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/NearByPage.qml" line="+37"/>
         <source>Near by</source>
         <translation>In der Nähe</translation>
     </message>
@@ -621,25 +834,15 @@ HTML5
 <context>
     <name>SavedSearchStreamPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SavedSearchStreamPage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SavedSearchStreamPage.qml" line="+37"/>
         <source>Saved Search Timeline</source>
         <translation>Gespeicherte Suchanfrage</translation>
-    </message>
-    <message>
-        <location line="+116"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+26"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-    <message>
-        <location line="+43"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
         <source>Unmute %1</source>
         <translation>Stummschaltung für %1 entfernen</translation>
     </message>
@@ -662,7 +865,7 @@ HTML5
 <context>
     <name>SelectLocationPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectLocationPage.qml" line="+36"/>
         <source>Location</source>
         <translation>Aufenthaltsort</translation>
     </message>
@@ -670,7 +873,7 @@ HTML5
 <context>
     <name>SelectMediaPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectMediaPage.qml" line="+8"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SelectMediaPage.qml" line="+34"/>
         <source>Gallery</source>
         <translation>Gallerie</translation>
     </message>
@@ -678,7 +881,7 @@ HTML5
 <context>
     <name>SendDirectMessagePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SendDirectMessagePage.qml" line="+12"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SendDirectMessagePage.qml" line="+38"/>
         <source>Direct Message</source>
         <translation>Direkte Nachricht</translation>
     </message>
@@ -696,7 +899,7 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+84"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+112"/>
         <source>Connectivity</source>
         <translation>Verbindungen</translation>
     </message>
@@ -719,7 +922,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+91"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+169"/>
         <source>Icon size:</source>
         <translation>Symbolgröße:</translation>
     </message>
@@ -744,7 +947,12 @@ HTML5
         <translation>Trennleisten Transparenz:</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+13"/>
+        <source>Date format:</source>
+        <translation>Datumsformat:</translation>
+    </message>
+    <message>
+        <location line="+76"/>
         <source>Theme:</source>
         <translation>Theme:</translation>
     </message>
@@ -757,7 +965,7 @@ HTML5
 <context>
     <name>SettingsPageConnectivityTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+18"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+44"/>
         <source>Update mode:</source>
         <translation>Update Modus:</translation>
     </message>
@@ -820,7 +1028,7 @@ HTML5
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+15"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+44"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation>Abmelden</translation>
@@ -851,12 +1059,17 @@ HTML5
         <translation>Sprache:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+40"/>
         <source>Restart QNeptunea</source>
         <translation>QNeptunea neustarten</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
+        <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
+        <translation>Möchtest du QNeptunea in deine Sprache übersetzen? Besuche &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; und übersetze es online!</translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Sign out...</source>
         <translation>Abmelden...</translation>
     </message>
@@ -864,7 +1077,7 @@ HTML5
 <context>
     <name>SlidesharePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+11"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlidesharePreviewPage.qml" line="+37"/>
         <source>SlideShare</source>
         <translation>SlideShare</translation>
     </message>
@@ -872,7 +1085,7 @@ HTML5
 <context>
     <name>SlugPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SlugPage.qml" line="+35"/>
         <source>Suggestions</source>
         <translation>Vorschläge</translation>
     </message>
@@ -880,12 +1093,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+162"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+197"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>durch &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
@@ -898,7 +1106,7 @@ HTML5
 <context>
     <name>StatusPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+13"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+39"/>
         <source>Conversation</source>
         <translation>Unterhaltung</translation>
     </message>
@@ -921,7 +1129,7 @@ HTML5
 <context>
     <name>ThemePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ThemePage.qml" line="+12"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ThemePage.qml" line="+38"/>
         <source>Theme</source>
         <translation>Theme</translation>
     </message>
@@ -954,25 +1162,30 @@ HTML5
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+35"/>
-        <source>note for translators: translate &quot;en&quot; to *your* lang code and &quot;English&quot; to your lang name in your language.</source>
-        <translation>Notiz für Übersetzer: Übersetze &quot;en&quot; in dein Sprachkürzel (de) und &quot;English&quot; in deinen Sprachnamen (Deutsch).</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+63"/>
         <source>en</source>
         <translation>de</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>English</source>
+        <translation>Deutsch</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>en (Please translate this &quot;en&quot; to *your* langage code like &quot;ja&quot; or &quot;pt_PT&quot;.)</source>
+        <translation>de</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>English (Please translate this &quot;English&quot; to *your* langage name like &quot;Japanese&quot; or &quot;Portuguese (Portugal)&quot;.)</source>
         <translation>Deutsch</translation>
     </message>
 </context>
 <context>
     <name>TrendPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TrendPage.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TrendPage.qml" line="+35"/>
         <source>Trend</source>
         <translation>Trend</translation>
     </message>
@@ -980,7 +1193,7 @@ HTML5
 <context>
     <name>TweetPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+13"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
         <location line="+449"/>
         <source>Tweet</source>
         <translation>Tweet</translation>
@@ -1000,7 +1213,7 @@ HTML5
 <context>
     <name>UpdateChecker</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/UpdateChecker.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/UpdateChecker.qml" line="+35"/>
         <source>New version available</source>
         <translation>Neue Version verfügbar</translation>
     </message>
@@ -1035,7 +1248,7 @@ Danach erneut das Paket herunterladen.</translation>
 <context>
     <name>UserDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+107"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+133"/>
         <source>FOLLOWS YOU</source>
         <translation>FOLGT DIR</translation>
     </message>
@@ -1043,7 +1256,7 @@ Danach erneut das Paket herunterladen.</translation>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+68"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+94"/>
         <source>Tweets</source>
         <translation>Tweets</translation>
     </message>
@@ -1109,17 +1322,9 @@ Danach erneut das Paket herunterladen.</translation>
     </message>
 </context>
 <context>
-    <name>UserTimelinePage</name>
-    <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserTimelinePage.qml" line="+22"/>
-        <source>M/d hh:mm</source>
-        <translation>d/M - hh:mm</translation>
-    </message>
-</context>
-<context>
     <name>YoutubePreviewPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+10"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/YoutubePreviewPage.qml" line="+36"/>
         <source>Youtube</source>
         <translation>Youtube</translation>
     </message>
@@ -1127,7 +1332,7 @@ Danach erneut das Paket herunterladen.</translation>
 <context>
     <name>default</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/theme/default.qml" line="+9"/>
+        <location filename="../../opt/qneptunea/plugins/theme/default.qml" line="+35"/>
         <source>Default Green Theme</source>
         <translation>Grünes Standardtheme</translation>
     </message>
@@ -1135,7 +1340,7 @@ Danach erneut das Paket herunterladen.</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+75"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+101"/>
         <source>API rate limited until %1</source>
         <translation>Beschränkter API Wert bis %1</translation>
     </message>
@@ -1155,7 +1360,7 @@ Danach erneut das Paket herunterladen.</translation>
 <context>
     <name>normal</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+10"/>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+36"/>
         <source>Light theme for QNeptunea.</source>
         <translation>Helles Theme für Qneptunea.</translation>
     </message>
