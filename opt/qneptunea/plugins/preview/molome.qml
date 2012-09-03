@@ -29,21 +29,13 @@ import QNeptunea.Preview 1.0
 
 ImagePlugin {
     id: root
-    domains: ['molo.me', 'molome.com', 'www.molo.me', 'www.molome.com']
+    domains: ['p.molo.me', 'molo.me']
 
     function load(url, domain) {
-        var arr = url.split('/')
-        var pictureCode = ''
+        var pictureCode = url.split('/').pop()
 
-        if (arr.indexOf('p') > -1)
-            pictureCode = arr[arr.indexOf('p') + 1]
-        else
-            console.debug('pictureCode not found in', url, arr)
-
-        if (pictureCode.indexOf('?') > -1)
-            pictureCode = pictureCode.substring(pictureCode.indexOf('?'))
-        root.thumbnail = 'http://p210x210.molo.me/'.concat(pictureCode).concat('_210x210')
-        root.detail = 'http://molo.me/p/'.concat(pictureCode).concat('/preview')
+        root.thumbnail = 'http://p210x210.molo.me/%1_210x210'.arg(pictureCode)
+        root.detail = 'http://p.molo.me/%1'.arg(pictureCode)
         return pictureCode.length > 0
     }
 }
