@@ -396,7 +396,7 @@ AbstractLinkPage {
 
     toolBarLayout: AbstractToolBarLayout {
         ToolIcon {
-            platformIconId: "toolbar-reply"
+                platformIconId: "toolbar-reply"
 //            iconSource: '../images/mentions'.concat(theme.inverted ? '-white.png' : '.png')
             onClicked: {
                 if (root.linkMenu) root.linkMenu.close()

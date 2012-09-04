@@ -43,21 +43,24 @@ ListView {
     property bool __wasAtYBeginning: false
     property int __scrollStartedAt: 0
 
-    onMovementStarted: {
-        __wasAtYBeginning = atYBeginning
-        __scrollStartedAt = contentY
-        __toBeMore = false
-        __toBeReload = false
-    }
-    onMovementEnded: {
-        if (__toBeReload) {
-            reload()
+    Connections {
+        target: root
+        onMovementStarted: {
+            __wasAtYBeginning = atYBeginning
+            __scrollStartedAt = contentY
+            __toBeMore = false
+            __toBeReload = false
         }
-        if (__toBeMore) {
-            more()
+        onMovementEnded: {
+            if (__toBeReload) {
+                reload()
+            }
+            if (__toBeMore) {
+                more()
+            }
+            __toBeMore = false
+            __toBeReload = false
         }
-        __toBeMore = false
-        __toBeReload = false
     }
 
     property bool __toBeReload: false

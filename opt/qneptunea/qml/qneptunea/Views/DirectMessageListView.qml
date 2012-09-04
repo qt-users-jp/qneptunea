@@ -33,6 +33,7 @@ AbstractListView {
     height: 700
 
     property bool active: false
+    property bool __pressed: false
 
     delegate: DirectMessageDelegate {
         id: delegate
@@ -42,11 +43,23 @@ AbstractListView {
         recipient: model.recipient
         onClicked: root.showDetail(model)
         onLinkActivated: root.linkActivated(link)
+
+        onPressed: root.__pressed = true
+
         onPressAndHold: {
-            console.debug(model.text)
-            console.debug(model.plain_text)
-            console.debug(model.rich_text)
+            var parameters = {}
+            parameters['in_reply_to'] = model
+            if (model.recipient_id == oauth.user_id) {
+                parameters['recipient'] = model.sender
+            } else {
+                parameters['recipient'] = model.recipient
+            }
+            pageStack.push(sendDirectMessagePage, parameters)
+            root.__pressed = false
         }
+
+        onCanceled: root.__pressed = false
+        onReleased: root.__pressed = false
 
         property int height2: delegate.height
         property bool wasAtYBeginning: false
@@ -54,7 +67,7 @@ AbstractListView {
         ListView.onAdd: SequentialAnimation {
             ScriptAction {
                 script: {
-                    delegate.wasAtYBeginning = delegate.ListView.view.atYBeginning && !root.active
+                    delegate.wasAtYBeginning = delegate.ListView.view.atYBeginning && (!root.active || root.__pressed)
                     if (delegate.wasAtYBeginning) delegate.ListView.view.contentY += 1
                 }
             }

@@ -231,7 +231,7 @@
 <context>
     <name>AbstractListView</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+99"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+102"/>
         <source>Loading...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -108,6 +108,8 @@ Page {
             ButtonRow {
                 TabButton {
                     iconSource: 'image://theme/icon-m-toolbar-new-email'.concat(theme.inverted ? "-white" : "")
+                    enabled: !directMessageButton.checked
+                    opacity: enabled ? 1.0 : 0.5
                     MouseArea {
                         anchors.fill: parent
                         onClicked: pageStack.push(tweetPage)
