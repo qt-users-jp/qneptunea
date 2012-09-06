@@ -397,6 +397,21 @@ AbstractLinkPage {
         }
 
         ToolIcon {
+            iconSource: '../images/retweet'.concat(theme.inverted ? '-white.png' : '.png')
+            enabled: !root.__status.retweeted && (root.__retweeted ? true : !root.__user.protected)
+            opacity: enabled ? 1.0 : 0.5
+            onClicked: {
+                if (root.linkMenu) root.linkMenu.close()
+                menu.close()
+                if (__status.user.id_str == oauth.user_id || __status.retweeted) {
+                    pageStack.push(tweetPage, {'statusText': ' RT @%1: %2'.arg(__status.user.screen_name).arg(__status.text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')), 'in_reply_to': __status})
+                } else {
+                    pageStack.push(tweetPage, {'in_reply_to': __status})
+                }
+            }
+        }
+
+        ToolIcon {
             id: favorite
             iconSource: 'image://theme/icon-m-toolbar-favorite-unmark'.concat(theme.inverted ? "-white" : "")
             opacity: enabled ? 1.0 : 0.5
@@ -419,21 +434,6 @@ AbstractLinkPage {
                     }
                 }
             ]
-        }
-
-        ToolIcon {
-            iconSource: '../images/retweet'.concat(theme.inverted ? '-white.png' : '.png')
-            enabled: !root.__status.retweeted && (root.__retweeted ? true : !root.__user.protected)
-            opacity: enabled ? 1.0 : 0.5
-            onClicked: {
-                if (root.linkMenu) root.linkMenu.close()
-                menu.close()
-                if (__status.user.id_str == oauth.user_id || __status.retweeted) {
-                    pageStack.push(tweetPage, {'statusText': ' RT @%1: %2'.arg(__status.user.screen_name).arg(__status.text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')), 'in_reply_to': __status})
-                } else {
-                    pageStack.push(tweetPage, {'in_reply_to': __status})
-                }
-            }
         }
 
         ToolIcon {

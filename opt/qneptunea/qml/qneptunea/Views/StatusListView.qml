@@ -43,7 +43,7 @@ AbstractListView {
 
     ActionBar {
         id: actions
-        width: height * 3 * 1.5
+        width: height * 3 * 1.25
         enabled: !status.loading
 
         property bool __retweeted: typeof status.retweeted_status.id_str !== 'undefined'
@@ -73,6 +73,18 @@ AbstractListView {
             }
         }
         Button {
+            iconSource: '../images/retweet'.concat(theme.inverted ? '.png' : '-white.png')
+            enabled: typeof actions.__status !== 'undefined' && actions.__status.user.id_str !== oauth.user_id
+            opacity: enabled ? 1.0 : 0.75
+            onClicked: {
+                if (actions.__status.retweeted)
+                    status.destroyStatus()
+                else
+                    status.retweetStatus({'id': actions.__status.id_str})
+                actions.parent = root
+            }
+        }
+        Button {
             id: favorite
             iconSource: 'image://theme/icon-m-toolbar-favorite-unmark'.concat(theme.inverted ? '' : '-white')
             onClicked: {
@@ -92,18 +104,6 @@ AbstractListView {
                     }
                 }
             ]
-        }
-        Button {
-            iconSource: '../images/retweet'.concat(theme.inverted ? '.png' : '-white.png')
-            enabled: typeof actions.__status !== 'undefined' && actions.__status.user.id_str !== oauth.user_id
-            opacity: enabled ? 1.0 : 0.75
-            onClicked: {
-                if (actions.__status.retweeted)
-                    status.destroyStatus()
-                else
-                    status.retweetStatus({'id': actions.__status.id_str})
-                actions.parent = root
-            }
         }
     }
 
@@ -131,7 +131,7 @@ AbstractListView {
             } else {
                 actions.x = Math.max(actions.height, mouse.x - actions.width - actions.height)
             }
-            actions.y = Math.min(Math.max(0, mouse.y - actions.height * 2), delegate.height - actions.height)
+            actions.y = Math.max(0, mouse.y - actions.height * 2)
         }
 
         onCanceled: root.__pressed = false
