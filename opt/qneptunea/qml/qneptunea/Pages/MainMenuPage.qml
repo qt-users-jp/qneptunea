@@ -26,6 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import Twitter4QML 1.0
 import '../QNeptunea/Components/'
 import '../Delegates'
 
@@ -33,6 +34,7 @@ AbstractPage {
     id: root
 
     title: qsTr('QNeptunea for N9 %1').arg(currentVersion.version)
+    busy: verifyCredentials.loading || listsAllModel.loading
 
     property alias editing: shortcuts.editing
 
@@ -138,8 +140,10 @@ AbstractPage {
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    numberVisible: false
+                    number: listsAllModel.size
                     onClicked: pageStack.push(listsPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+
+                    ListsAllModel { id: listsAllModel; user_id: verifyCredentials.id_str }
                 }
             }
             AbstractListDelegate {

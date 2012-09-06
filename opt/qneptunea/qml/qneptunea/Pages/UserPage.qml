@@ -35,7 +35,7 @@ AbstractLinkPage {
 
     screen_name: user.screen_name
     title: to_s(screen_name, '@%1')
-    busy: user.loading
+    busy: user.loading || listsAllModel.loading
     visualParent: flickable
 
     User {
@@ -130,8 +130,10 @@ AbstractLinkPage {
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    numberVisible: false
+                    number: listsAllModel.size
                     onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+
+                    ListsAllModel { id: listsAllModel; user_id: user.id_str }
                 }
             }
         }

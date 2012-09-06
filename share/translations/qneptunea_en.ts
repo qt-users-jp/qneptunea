@@ -695,12 +695,12 @@
 <context>
     <name>MainMenuPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+35"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Tweets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -730,7 +730,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Trend</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1276,7 +1276,7 @@ Then download the package again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Unmute @%1</source>
         <translation type="unfinished"></translation>
     </message>
