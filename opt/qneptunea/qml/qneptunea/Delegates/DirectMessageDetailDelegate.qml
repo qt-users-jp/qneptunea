@@ -25,8 +25,6 @@
  */
 
 import QtQuick 1.1
-import com.nokia.meego 1.0
-import Twitter4QML 1.0
 import '../QNeptunea/Components/'
 
 MouseArea {
@@ -44,6 +42,7 @@ MouseArea {
     Item {
         id: container
         anchors.left: parent.left
+        anchors.leftMargin: constants.listViewScrollbarWidth
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         height: detailArea.y + detailArea.height + 12
@@ -94,8 +93,8 @@ MouseArea {
 
                 ProfileImage {
                     anchors.fill: parent
-                    source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(sender.screen_name).concat('&size=bigger') : ''
-                    _id: sender.profile_image_url ? sender.profile_image_url : ''
+                    source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(sender.screen_name) : ''
+                    _id: to_s(sender.profile_image_url)
                 }
             }
 
@@ -108,14 +107,14 @@ MouseArea {
                 anchors.leftMargin: constants.listViewMargins
 
                 Text {
-                    text: sender && sender.name ? sender.name : ''
+                    text: sender ? to_s(sender.name) : ''
                     font.bold: true
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontLarge
                     color: constants.nameColor
                 }
                 Text {
-                    text: sender && sender.screen_name ? '@' + sender.screen_name : ''
+                    text: sender ? to_s(sender.screen_name, '@%1') : ''
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontLarge
                     color: constants.nameColor
@@ -143,7 +142,7 @@ MouseArea {
                 width: parent.width
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                text: qsTr('<style type="text/css">a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}</style>%1').arg(item.rich_text).arg(constants.linkStyle).arg(constants.screenNameStyle).arg(constants.hashTagStyle).arg(constants.mediaStyle)
+                text: '<style type="text/css">a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}</style>%1'.arg(item.rich_text).arg(constants.linkStyle).arg(constants.screenNameStyle).arg(constants.hashTagStyle).arg(constants.mediaStyle)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontLarge
                 color: constants.contentColor
@@ -170,7 +169,7 @@ MouseArea {
                 spacing: constants.listViewMargins
 
                 Text {
-                    text: qsTr('Sent to %1').arg(recipient.name ? recipient.name : '')
+                    text: qsTr('Sent to %1').arg(to_s(recipient.name))
                     anchors.bottom: parent.bottom
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontSmall
@@ -190,7 +189,7 @@ MouseArea {
                         anchors.bottom: parent.bottom
                         width: parent.width
                         height: width
-                        source: recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(recipient.screen_name).concat('&size=').concat(constants.listViewIconSizeName) : ''
+                        source: recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(recipient.screen_name).arg(constants.listViewIconSizeName) : ''
                         _id: recipient.profile_image_url ? recipient.profile_image_url : ''
                         smooth: true
                     }

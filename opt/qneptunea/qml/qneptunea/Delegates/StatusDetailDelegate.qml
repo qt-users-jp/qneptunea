@@ -25,8 +25,6 @@
  */
 
 import QtQuick 1.1
-import com.nokia.meego 1.0
-import Twitter4QML 1.0
 import '../QNeptunea/Components/'
 
 MouseArea {
@@ -38,7 +36,7 @@ MouseArea {
     property variant item
     property variant user
 
-    property bool retweeted: item.retweeted_status !== undefined && item.retweeted_status.user !== undefined
+    property bool retweeted: defined(item.retweeted_status) && defined(item.retweeted_status.user)
     property variant __item: retweeted ? item.retweeted_status : item
     property bool __favorited: __item.favorited
 
@@ -50,19 +48,17 @@ MouseArea {
     Item {
         id: container
         anchors.left: parent.left
+        anchors.leftMargin: constants.listViewScrollbarWidth
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         height: detailArea.y + detailArea.height + 12
         clip: true
 
-        Rectangle {
+        Separator {
             id: line
             anchors.bottom: parent.bottom
             anchors.left: parent.left
             anchors.right: parent.right
-            height: constants.separatorHeight
-            color: constants.separatorNormalColor
-            opacity: constants.separatorOpacity
 
             states: [
                 State {
@@ -101,8 +97,8 @@ MouseArea {
 
                 ProfileImage {
                     anchors.fill: parent
-                    source: root.temporary ? '' : (__item.user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(__item.user.screen_name).concat('&size=bigger') : '')
-                    _id: root.temporary ? '' : (__item.user.profile_image_url ? __item.user.profile_image_url : '')
+                    source: root.temporary ? '' : (__item.user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(__item.user.screen_name) : '')
+                    _id: root.temporary ? '' : to_s(__item.user.profile_image_url)
                 }
             }
 
@@ -115,7 +111,7 @@ MouseArea {
                 anchors.leftMargin: constants.listViewMargins
 
                 Text {
-                    text: __item.user && __item.user.name ? __item.user.name : ''
+                    text: defined(__item.user) ? to_s(__item.user.name) : ''
                     textFormat: Text.PlainText
                     font.bold: true
                     font.family: constants.fontFamily
@@ -123,7 +119,7 @@ MouseArea {
                     color: constants.nameColor
                 }
                 Text {
-                    text: __item.user && __item.user.screen_name ? '@' + __item.user.screen_name : ''
+                    text: defined(__item.user) ? to_s(__item.user.screen_name, '@%1') : ''
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontDefault
                     color: constants.nameColor
@@ -151,7 +147,7 @@ MouseArea {
                 width: parent.width
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                text: '<style type="text/css">a.link{'.concat(constants.linkStyle).concat('} a.screen_name{').concat(constants.screenNameStyle).concat('} a.hash_tag{').concat(constants.hashTagStyle).concat('} a.media{').concat(constants.mediaStyle).concat('}</style>').concat(__item.rich_text)
+                text: '<style type="text/css">a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}</style>%1'.arg(__item.rich_text).arg(constants.linkStyle).arg(constants.screenNameStyle).arg(constants.hashTagStyle).arg(constants.mediaStyle)
                 lineHeightMode: Text.FixedHeight
                 lineHeight: constants.fontLarge * 1.40
                 font.family: constants.fontFamily
