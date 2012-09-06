@@ -34,7 +34,7 @@ AbstractLinkPage {
     id: root
 
     screen_name: user.screen_name
-    title: screen_name ? '@' + screen_name : ''
+    title: to_s(screen_name, '@%1')
     busy: user.loading
     visualParent: flickable
 
@@ -66,7 +66,7 @@ AbstractLinkPage {
         contentWidth: width
         contentHeight: container.height
         clip: true
-        interactive: typeof root.linkMenu === 'undefined'
+        interactive: !defined(root.linkMenu)
 
         Column {
             id: container
@@ -76,15 +76,18 @@ AbstractLinkPage {
                 id: delegate
                 width: parent.width
                 user: user
-                followsYou: typeof showFriendships.relationship.target !== 'undefined' && showFriendships.relationship.target.following
+                followsYou: defined(showFriendships.relationship.target) && showFriendships.relationship.target.following
                 onAvatarClicked: {
-                    pageStack.push(imagePreviewPage, {'type': 'image', url: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(user.screen_name).concat('&size=original')})
+                    pageStack.push(imagePreviewPage, {'type': 'image', url: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=original'.arg(user.screen_name)})
                 }
 
                 onLinkActivated: root.openLink(link)
             }
             Flow {
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewMargins
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewMargins
                 spacing: constants.listViewMargins
                 property int columns: window.inPortrait ? 2 : 3
                 property int buttonWidth: (width - constants.listViewMargins * columns) / columns
@@ -139,16 +142,16 @@ AbstractLinkPage {
         visualParent: flickable
         MenuLayout {
             MenuItemWithIcon {
-                property bool muted: window.filters.indexOf('@'.concat(user.screen_name)) > -1
+                property bool muted: window.filters.indexOf('@%1'.arg(user.screen_name)) > -1
                 iconSource: 'image://theme/icon-m-toolbar-volume'.concat(muted ? '' : '-off').concat(theme.inverted ? "-white" : "")
                 text: muted ? qsTr('Unmute @%1').arg(user.screen_name) : qsTr('Mute @%1').arg(user.screen_name)
                 onClicked: {
                     var filters = window.filters
                     if (muted) {
-                        var index = filters.indexOf('@'.concat(user.screen_name))
+                        var index = filters.indexOf('@%1'.arg(user.screen_name))
                         while (index > -1) {
                             filters.splice(index, 1)
-                            index = filters.indexOf('@'.concat(user.screen_name))
+                            index = filters.indexOf('@%1'.arg(user.screen_name))
                         }
                     } else {
                         filters.unshift('@'.concat(user.screen_name))
@@ -208,8 +211,8 @@ AbstractLinkPage {
             }
         }
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(screen_name).concat('&size=bigger')
-            shortcutUrl: 'user://'.concat(id_str).concat('/').concat(screen_name)
+            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(screen_name)
+            shortcutUrl: 'user://%1/%2'.arg(id_str).arg(screen_name)
         }
         ToolIcon {
             platformIconId: "toolbar-view-menu"
@@ -219,7 +222,7 @@ AbstractLinkPage {
                 if (root.linkMenu) {
                     root.linkMenu.close()
                 } else {
-                    if (menu.status == DialogStatus.Closed)
+                    if (menu.status === DialogStatus.Closed)
                         menu.open()
                     else
                         menu.close()

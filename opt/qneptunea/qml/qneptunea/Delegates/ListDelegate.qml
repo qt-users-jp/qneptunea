@@ -25,7 +25,7 @@
  */
 
 import QtQuick 1.1
-import com.nokia.meego 1.0
+import '../QNeptunea/Components/'
 
 MouseArea {
     id: root
@@ -38,18 +38,16 @@ MouseArea {
     Item {
         id: container
         anchors.left: parent.left
+        anchors.leftMargin: constants.listViewScrollbarWidth
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         anchors.bottom: parent.bottom
         height: statusArea.height + 12
 
-        Rectangle {
+        Separator {
             anchors.bottom: parent.bottom
             anchors.left: parent.left
             anchors.right: parent.right
-            height: constants.separatorHeight
-            color: constants.separatorNormalColor
-            opacity: constants.separatorOpacity
         }
 
         Column {
@@ -62,7 +60,7 @@ MouseArea {
             spacing: constants.listViewMargins
 
             Text {
-                text: list.full_name + ' (' + list.member_count +')'
+                text: '%1 (%2)'.arg(list.full_name).arg(list.member_count)
                 width: parent.width
                 font.bold: true
                 font.family: constants.fontFamily
@@ -72,7 +70,7 @@ MouseArea {
                 Image {
                     anchors.right: parent.right
                     anchors.top: parent.top
-                    visible: list.mode == 'private'
+                    visible: list.mode === 'private'
                     source: 'image://theme/icon-m-common-locked'.concat(theme.inverted ? "-inverse" : "")
                 }
             }

@@ -33,7 +33,7 @@ import '../Views'
 AbstractPage {
     id: root
 
-    title: screen_name ? '@' + screen_name: ''
+    title: to_s(screen_name, '@%1')
     busy: model.loading
 
     ListListView {
@@ -58,8 +58,8 @@ AbstractPage {
     toolBarLayout: AbstractToolBarLayout {
         ToolSpacer {columns: 2}
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(screen_name).concat('&size=bigger')
-            shortcutUrl: 'lists://'.concat(id_str).concat('/').concat(screen_name)
+            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(screen_name)
+            shortcutUrl: 'lists://%1/%2'.arg(id_str).arg(screen_name)
         }
         ToolIcon {
             platformIconId: "toolbar-view-menu"

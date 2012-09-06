@@ -42,30 +42,11 @@ Item {
     signal linkActivated(string link)
 
     property StateGroup __pluginItem
-    property string translated: __pluginItem ? __pluginItem.result : ''
-
-    function translate() {
-        var plugin = translationPlugins.pluginMap['Microsoft Translator V2']
-//        console.debug(plugin)
-        if (typeof plugin !== 'undefined') {
-            var component = Qt.createComponent(plugin)
-            if (component.status === Component.Ready) {
-                var lang = LANG
-                if (lang.indexOf('_') > -1)
-                    lang = lang.substring(0, lang.indexOf('_'))
-                root.__pluginItem = component.createObject(root)
-                root.__pluginItem.translate('<html><body>'.concat(root.user.description).concat('</body></html>'), root.user.description, lang)
-            } else {
-                console.debug(component.errorString())
-            }
-        } else {
-            console.debug('plugin not found')
-        }
-    }
 
     Item {
         id: container
         anchors.left: parent.left
+        anchors.leftMargin: constants.listViewScrollbarWidth
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         height: detailArea.y + detailArea.height + 10 + 2
@@ -87,8 +68,8 @@ Item {
 
                 ProfileImage {
                     anchors.fill: parent
-                    source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(user.screen_name).concat('&size=bigger') : ''
-                    _id: user.profile_image_url ? user.profile_image_url : ''
+                    source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(user.screen_name) : ''
+                    _id: to_s(user.profile_image_url)
 
                     Image {
                         anchors.right: parent.right
@@ -114,7 +95,7 @@ Item {
                 anchors.leftMargin: constants.listViewMargins
 
                 Text {
-                    text: user.name ? user.name : ''
+                    text: to_s(user.name)
                     textFormat: Text.PlainText
                     font.bold: true
                     font.family: constants.fontFamily
@@ -124,7 +105,7 @@ Item {
                 Row {
                     spacing: constants.fontDefault
                     Text {
-                        text: user.screen_name ? '@' + user.screen_name : ''
+                        text: to_s(user.screen_name, '@%1')
                         font.family: constants.fontFamily
                         font.pixelSize: constants.fontDefault
                         color: constants.nameColor
@@ -157,32 +138,18 @@ Item {
                 color: constants.contentColor
                 lineHeightMode: Text.FixedHeight
                 lineHeight: constants.fontDefault * 1.40
-                opacity: translated.length > 0 ? 0.75 : 1.0
-            }
-            Text {
-                width: parent.width
-                wrapMode: Text.Wrap
-                textFormat: Text.RichText
-                text: translated
-                visible: translated.length > 0
-                lineHeightMode: Text.FixedHeight
-                lineHeight: constants.fontLarge * 1.40
-                font.family: constants.fontFamily
-                font.pixelSize: constants.fontLarge
-                color: constants.contentColor
-                onLinkActivated: root.linkActivated(link)
             }
 
             Text {
                 width: parent.width
-                text: '<a style="'.concat(constants.placeStyle).concat('" href="').concat(user.location).concat('">').concat(user.location).concat('</a>')
+                text: '<a style="%1" href="%2">%3</a>'.arg(constants.placeStyle).arg(user.location).arg(user.location)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontSmall
                 color: constants.textColor
             }
             Text {
                 width: parent.width
-                text: '<a style="'.concat(constants.linkStyle).concat('" href="').concat(user.url).concat('">').concat(user.url).concat('</a>')
+                text: '<a style="%1" href="%2">%3</a>'.arg(constants.linkStyle).arg(user.url).arg(user.url)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
 
