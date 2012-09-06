@@ -26,7 +26,6 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
 import '../QNeptunea/Components/'
 import '../Delegates'
 
@@ -48,7 +47,10 @@ AbstractPage {
 
             Item {
                 id: userArea
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewMargins
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewMargins
                 height: Math.max(iconArea.height, nameArea.height) + 12
                 Item {
                     id: iconArea
@@ -61,7 +63,7 @@ AbstractPage {
 
                     ProfileImage {
                         anchors.fill: parent
-                        source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(verifyCredentials.screen_name).concat('&size=bigger')
+                        source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(verifyCredentials.screen_name)
                         _id: verifyCredentials.profile_image_url
                     }
                 }
@@ -82,7 +84,7 @@ AbstractPage {
                         color: constants.nameColor
                     }
                     Text {
-                        text: '@'.concat(verifyCredentials.screen_name)
+                        text: '@%1'.arg(verifyCredentials.screen_name)
                         font.family: constants.fontFamily
                         font.pixelSize: constants.fontDefault
                         color: constants.nameColor
@@ -90,7 +92,10 @@ AbstractPage {
                 }
             }
             Flow {
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewMargins
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewMargins
                 spacing: constants.listViewMargins
                 property int columns: window.inPortrait ? 2 : 3
                 property int buttonWidth: (width - constants.listViewMargins * columns) / columns

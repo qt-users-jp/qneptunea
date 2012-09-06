@@ -69,8 +69,11 @@ MouseArea {
 
     Separator {
         id: separator
+        anchors.left: parent.left
+        anchors.leftMargin: constants.listViewMargins
+        anchors.right: parent.right
+        anchors.rightMargin: constants.listViewMargins
         anchors.bottom: parent.bottom
         anchors.bottomMargin: -constants.separatorHeight / 2
-        width: parent.width - constants.listViewScrollbarWidth
     }
 }

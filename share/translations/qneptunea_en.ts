@@ -695,12 +695,12 @@
 <context>
     <name>MainMenuPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+36"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+35"/>
         <source>QNeptunea for N9 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+70"/>
         <source>Tweets</source>
         <translation type="unfinished"></translation>
     </message>
