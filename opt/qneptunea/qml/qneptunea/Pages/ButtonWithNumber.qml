@@ -42,8 +42,9 @@ Button {
         anchors.right: parent.right
         anchors.margins: -5
         largeSized: true
-        scale: value > 0 ? 1.0 : 0.0
+        scale: value > -1 ? 1.0 : 0.0
         visible: scale > 0
+        value: -1
         Behavior on scale { NumberAnimation{duration: 1000; easing.type: Easing.OutElastic} }
     }
 }

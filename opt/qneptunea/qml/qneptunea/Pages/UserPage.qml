@@ -95,42 +95,42 @@ AbstractLinkPage {
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Tweets')
-                    number: user.statuses_count
+                    number: user.loading ? -1 : user.statuses_count
                     onClicked: pageStack.push(userTimelinePage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Favourites')
-                    number: user.favourites_count
+                    number: user.loading ? -1 : user.favourites_count
                     onClicked: pageStack.push(favouritesPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Following')
-                    number: user.friends_count
+                    number: user.loading ? -1 : user.friends_count
                     onClicked: pageStack.push(followingPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Followers')
-                    number: user.followers_count
+                    number: user.loading ? -1 : user.followers_count
                     onClicked: pageStack.push(followersPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Listed')
-                    number: user.listed_count
+                    number: user.loading ? -1 : user.listed_count
                     onClicked: pageStack.push(listedPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    number: listsAllModel.size
+                    number: listsAllModel.loading ? -1 : listsAllModel.size
                     onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
 
                     ListsAllModel { id: listsAllModel; user_id: user.id_str }
