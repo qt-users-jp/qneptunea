@@ -48,10 +48,8 @@ AbstractPage {
                                                return !(typeof page.skipAfterTweeting === 'boolean' && page.skipAfterTweeting)
                                            })
                 if (found) {
-//                    console.debug(found)
                     pageStack.pop(found)
                 } else {
-//                    console.debug('not found')
                     pageStack.pop()
                 }
             }
@@ -86,18 +84,21 @@ AbstractPage {
                 visible: false
                 states: [
                     State {
-                        when: typeof root.in_reply_to !== 'undefined'
+                        when: defined(root.in_reply_to)
                         PropertyChanges {
                             target: in_reply_to
                             item: root.in_reply_to
-                            visible: typeof root.in_reply_to !== 'undefined'
+                            visible: true
                         }
                     }
                 ]
             }
 
             Item {
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewMargins
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewMargins
                 height: detailArea.height + 12
 
                 ProfileImage {
@@ -105,7 +106,7 @@ AbstractPage {
                     anchors.top: parent.top
                     anchors.topMargin: 5
                     anchors.left: parent.left
-                    source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(root.retweet ? root.in_reply_to.user.screen_name : verifyCredentials.screen_name).concat('&size=').concat(constants.listViewIconSizeName)
+                    source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.retweet ? root.in_reply_to.user.screen_name : verifyCredentials.screen_name).arg(constants.listViewIconSizeName)
                     _id: root.retweet ? root.in_reply_to.user.profile_image_url : verifyCredentials.profile_image_url
                     width: constants.listViewIconSize
                     height: width
@@ -140,7 +141,7 @@ AbstractPage {
                             color: constants.nameColor
                         }
                         Text {
-                            text: '@' + oauth.screen_name
+                            text: '@%1'.arg(oauth.screen_name)
                             font.family: constants.fontFamily
                             font.pixelSize: constants.fontSmall
                             color: constants.nameColor
@@ -197,7 +198,7 @@ AbstractPage {
                                 anchors.bottom: parent.bottom
                                 width: parent.width
                                 height: width
-                                source: root.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(root.recipient.screen_name).concat('&size=').concat(constants.listViewIconSizeName) : ''
+                                source: root.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.recipient.screen_name).arg(constants.listViewIconSizeName) : ''
                                 _id: root.recipient.profile_image_url
                                 smooth: true
                             }
@@ -205,11 +206,12 @@ AbstractPage {
                     }
                 }
             }
-            Rectangle {
-                width: parent.width
-                height: constants.separatorHeight
+            Separator {
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewMargins
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewMargins
                 color: constants.separatorFromMeColor
-                opacity: constants.separatorOpacity
             }
         }
     }

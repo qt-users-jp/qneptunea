@@ -33,17 +33,17 @@ AbstractDelegate {
 
     property variant item
 
-    user: root.item.sender
-    text: to_s(root.item.plain_text)
-    separatorColor: root.item.sender.id_str === oauth.user_id ? constants.separatorFromMeColor : constants.separatorToMeColor
+    user: defined(root.item) ? root.item.sender : undefined
+    text: defined(root.item) ? to_s(root.item.plain_text) : ''
+    separatorColor: defined(root.item) && root.item.sender.id_str === oauth.user_id ? constants.separatorFromMeColor : constants.separatorToMeColor
 
     Row {
         anchors.right: parent.right
-        visible: root.item.sender.id_str === oauth.user_id
+        visible: defined(root.item) && (root.item.sender.id_str === oauth.user_id)
         spacing: constants.listViewMargins
 
         Text {
-            text: qsTr('Sent to %1').arg(to_s(root.item.recipient.name))
+            text: defined(root.item) ? qsTr('Sent to %1').arg(to_s(root.item.recipient.name)) : ''
             anchors.bottom: parent.bottom
             color: constants.textColor
             font.family: constants.fontFamily
@@ -53,8 +53,8 @@ AbstractDelegate {
         ProfileImage {
             width: constants.listViewIconSize / 2
             height: width
-            source: root.item.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(recipient.screen_name).arg(constants.listViewIconSizeName) : ''
-            _id: to_s(root.item.recipient.profile_image_url)
+            source: defined(root.item) && root.item.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(recipient.screen_name).arg(constants.listViewIconSizeName) : ''
+            _id: defined(root.item) ? to_s(root.item.recipient.profile_image_url) : ''
             smooth: true
         }
     }

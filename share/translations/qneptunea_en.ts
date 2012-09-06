@@ -879,12 +879,12 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+148"/>
         <source>Send to %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Send</source>
         <translation type="unfinished"></translation>
     </message>
