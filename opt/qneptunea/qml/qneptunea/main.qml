@@ -492,7 +492,7 @@ PageStackWindow {
     }
 
     Component { id: authorizationPage; AuthorizationPage {} }
-    Component { id: mainPage; MainPage {} }
+    MainPage {id: mainPage}
     Component { id: userPage; UserPage {} }
     Component { id: statusPage; StatusPage {} }
     TweetPage { id: tweetPage }
@@ -514,7 +514,7 @@ PageStackWindow {
     Component { id: legalPage; LegalPage {} }
     Component { id: suggestionsPage; SuggestionsPage {} }
     Component { id: searchUsersPage; SearchUsersPage {} }
-    Component { id: settingsPage; SettingsPage {} }
+    SettingsPage {id: settingsPage}
     Component { id: mapPage; MapPage {} }
     Component { id: aboutPage; AboutPage {} }
     Component { id: trendPage; TrendPage {} }

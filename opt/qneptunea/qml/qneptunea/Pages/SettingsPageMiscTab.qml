@@ -29,13 +29,10 @@ import com.nokia.meego 1.0
 import com.nokia.extras 1.0
 import '../QNeptunea/Components/'
 
-Flickable {
+Page {
     id: root
 
-    property int status: PageStatus.Inactive
-    contentHeight: container.height
-    clip: true
-
+    property alias interactive: flickable.interactive
     signal linkActivated(string link)
 
     QueryDialog {
@@ -53,126 +50,133 @@ Flickable {
         }
     }
 
-    Column {
-        id: container
-        width: parent.width
-        spacing: 10
+    Flickable {
+        id: flickable
+        anchors.fill: parent
+        contentHeight: container.height
+        clip: true
 
-        Text {
-            text: qsTr('Display time-out:')
-            color: constants.textColor
-            font.family: constants.fontFamily
-            font.pixelSize: constants.fontDefault
-        }
+        Column {
+            id: container
+            width: parent.width
+            spacing: 10
 
-        Row {
-            Item { width: 30; height: 1 }
-
-            Switch {
-                anchors.verticalCenter: parent.verticalCenter
-                checked: !constants.screenSaverDisabled
-                onCheckedChanged: if (root.status === PageStatus.Active) constants.screenSaverDisabled = !checked
-                platformStyle: SwitchStyle { inverted: true }
+            Text {
+                text: qsTr('Display time-out:')
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
             }
-        }
 
-        Separator { width: parent.width }
+            Row {
+                Item { width: 30; height: 1 }
 
-        Text {
-            text: qsTr('QNeptunea update check:')
-            color: constants.textColor
-            font.family: constants.fontFamily
-            font.pixelSize: constants.fontDefault
-            visible: !currentVersion.trusted
-        }
-
-        Row {
-            visible: !currentVersion.trusted
-            Item { width: 30; height: 1 }
-
-            Switch {
-                anchors.verticalCenter: parent.verticalCenter
-                checked: !constants.updateCheckDisabled
-                onCheckedChanged: if (root.status === PageStatus.Active) constants.updateCheckDisabled = !checked
-                platformStyle: SwitchStyle { inverted: true }
+                Switch {
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: !constants.screenSaverDisabled
+                    onCheckedChanged: if (root.status === PageStatus.Active) constants.screenSaverDisabled = !checked
+                    platformStyle: SwitchStyle { inverted: true }
+                }
             }
-        }
 
-        Separator { width: parent.width; visible: !currentVersion.trusted }
+            Separator { width: parent.width }
 
-        Text {
-            text: qsTr('Language:')
-            color: constants.textColor
-            font.family: constants.fontFamily
-            font.pixelSize: constants.fontDefault
-            visible: !currentVersion.trusted
-        }
+            Text {
+                text: qsTr('QNeptunea update check:')
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+                visible: !currentVersion.trusted
+            }
 
-        Item {
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - 100
-            height: 400
-            Tumbler {
-                columns: [
-                    TumblerColumn {
-                        id: translation
-                        items: ListModel {
-                            id: translationModel
-                            Component.onCompleted: {
-                                for (var i = 0; i < app.translations.length; i++) {
-                                    translationModel.append({'value': app.translations[i].name})
+            Row {
+                visible: !currentVersion.trusted
+                Item { width: 30; height: 1 }
+
+                Switch {
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: !constants.updateCheckDisabled
+                    onCheckedChanged: if (root.status === PageStatus.Active) constants.updateCheckDisabled = !checked
+                    platformStyle: SwitchStyle { inverted: true }
+                }
+            }
+
+            Separator { width: parent.width; visible: !currentVersion.trusted }
+
+            Text {
+                text: qsTr('Language:')
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+                visible: !currentVersion.trusted
+            }
+
+            Item {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width - 100
+                height: 400
+                Tumbler {
+                    columns: [
+                        TumblerColumn {
+                            id: translation
+                            items: ListModel {
+                                id: translationModel
+                                Component.onCompleted: {
+                                    for (var i = 0; i < app.translations.length; i++) {
+                                        translationModel.append({'value': app.translations[i].name})
+                                    }
                                 }
                             }
                         }
+                    ]
+                    onChanged: {
+                        app.translation = app.translations[translation.selectedIndex]
                     }
-                ]
-                onChanged: {
-                    app.translation = app.translations[translation.selectedIndex]
-                }
-                Component.onCompleted: {
-                    for (var i = 0; i < app.translations.length; i++) {
-                        if (app.translation.code === app.translations[i].code) {
-                            translation.selectedIndex = i
-                            break
+                    Component.onCompleted: {
+                        for (var i = 0; i < app.translations.length; i++) {
+                            if (app.translation.code === app.translations[i].code) {
+                                translation.selectedIndex = i
+                                break
+                            }
                         }
                     }
                 }
             }
-        }
 
-        Text {
-            text: qsTr('Restart QNeptunea')
-            x: 30
-            width: parent.width - x
-            wrapMode: Text.Wrap
-            color: constants.textColor
-            font.family: constants.fontFamily
-            font.pixelSize: constants.fontDefault
-            onLinkActivated: root.linkActivated(link)
-        }
+            Text {
+                text: qsTr('Restart QNeptunea')
+                x: 30
+                width: parent.width - x
+                wrapMode: Text.Wrap
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+                onLinkActivated: root.linkActivated(link)
+            }
 
-        Separator { width: parent.width }
+            Separator { width: parent.width }
 
-        Text {
-            text: qsTr('Do you want to translate QNeptunea to your language? visit <a style="%1" href="%2">t.co/aai7EhBi</a> and translate it online!').arg(constants.linkStyle).arg('https://www.transifex.com/projects/p/qneptunea/')
-            x: 30
-            width: parent.width - x
-            wrapMode: Text.Wrap
-            color: constants.textColor
-            font.family: constants.fontFamily
-            font.pixelSize: constants.fontDefault
-            onLinkActivated: root.linkActivated(link)
-        }
+            Text {
+                text: qsTr('Do you want to translate QNeptunea to your language? visit <a style="%1" href="%2">t.co/aai7EhBi</a> and translate it online!').arg(constants.linkStyle).arg('https://www.transifex.com/projects/p/qneptunea/')
+                x: 30
+                width: parent.width - x
+                wrapMode: Text.Wrap
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+                onLinkActivated: root.linkActivated(link)
+            }
 
-        Separator { width: parent.width }
+            Separator { width: parent.width }
 
-        Button {
-            anchors.right: parent.right
-            iconSource: 'image://theme/icon-m-toolbar-update'.concat(theme.inverted ? "-white" : "")
-            text: qsTr('Sign out...')
-            platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
-            onClicked: {
-                signOutConfirmation.open()
+            Button {
+                anchors.right: parent.right
+                iconSource: 'image://theme/icon-m-toolbar-update'.concat(theme.inverted ? "-white" : "")
+                text: qsTr('Sign out...')
+                platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
+                onClicked: {
+                    signOutConfirmation.open()
+                }
             }
         }
     }

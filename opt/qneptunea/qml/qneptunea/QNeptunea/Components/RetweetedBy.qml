@@ -43,7 +43,7 @@ Row {
 
     Text {
         anchors.verticalCenter: parent.verticalCenter
-        text: user.name ? user.name : ''
+        text: defined(root.user) ? to_s(root.user.name) : ''
         textFormat: Text.PlainText
         color: constants.nameColor
         font.pixelSize: constants.fontSmall
@@ -58,8 +58,8 @@ Row {
             anchors.centerIn: parent
             width: constants.listViewIconSize / 2
             height: width
-            source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(user.screen_name).concat('&size=').concat(constants.listViewIconSizeName) : ''
-            _id: user.profile_image_url ? user.profile_image_url : ''
+            source: defined(root.user) && defined(root.user.profile_image_url) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.user.screen_name).arg(constants.listViewIconSizeName) : ''
+            _id: defined(root.user) ? to_s(root.user.profile_image_url) : ''
             smooth: true
         }
     }

@@ -26,82 +26,86 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import com.nokia.extras 1.0
-import Twitter4QML 1.0
 import '../QNeptunea/Components/'
-import '../Delegates'
 
 AbstractLinkPage {
     id: root
 
-    SettingsPageConnectivityTab {
-        id: connectivity
+    TabGroup {
+        id: group
         anchors.fill: parent
         anchors.topMargin: root.headerHeight
         anchors.bottomMargin: root.footerHeight
-        opacity: 0
-        visible: opacity > 0
-    }
-    ScrollBar { target: connectivity }
+        clip: true
+        currentTab: connectivity
 
-    SettingsPageAppearanceTab {
-        id: appearance
-        anchors.fill: parent
-        anchors.topMargin: root.headerHeight
-        anchors.bottomMargin: root.footerHeight
-        opacity: 0
-        visible: opacity > 0
-    }
-    ScrollBar { target: appearance }
+        SettingsPageConnectivityTab {
+            id: connectivity
+            pageStack: root.pageStack
+        }
+        ScrollBar { target: connectivity }
 
-    SettingsPagePluginsTab {
-        id: plugins
-        anchors.fill: parent
-        anchors.topMargin: root.headerHeight
-        anchors.bottomMargin: root.footerHeight
-        opacity: 0
-        visible: opacity > 0
-    }
-    ScrollBar { target: plugins }
+        SettingsPageAppearanceTab {
+            id: appearance
+            pageStack: root.pageStack
+        }
+        ScrollBar { target: appearance }
 
-    SettingsPageMiscTab {
-        id: misc
-        anchors.fill: parent
-        anchors.topMargin: root.headerHeight
-        anchors.bottomMargin: root.footerHeight
-        opacity: 0
-        visible: opacity > 0
-        interactive: typeof root.linkMenu === 'undefined'
-        onLinkActivated: root.openLink(link)
+        SettingsPagePluginsTab {
+            id: plugins
+            pageStack: root.pageStack
+        }
+        ScrollBar { target: plugins }
+
+        SettingsPageMiscTab {
+            id: misc
+            pageStack: root.pageStack
+            interactive: !defined(root.linkMenu)
+            onLinkActivated: root.openLink(link)
+        }
+        ScrollBar { target: misc }
+
+        onCurrentTabChanged: if (root.linkMenu) root.linkMenu.close()
     }
-    ScrollBar { target: misc }
 
     toolBarLayout: AbstractToolBarLayout {
         ButtonRow {
             TabButton {
                 id: showConnectivity
                 iconSource: 'image://theme/icon-m-toolbar-refresh'.concat(theme.inverted ? "-white" : "")
-                checkable: true
+                tab: connectivity
                 checked: true
             }
 
             TabButton {
                 id: showAppearance
                 iconSource: 'image://theme/icon-m-toolbar-gallery'.concat(theme.inverted ? "-white" : "")
-                checkable: true
+                tab: appearance
             }
 
             TabButton {
                 id: showPlugins
                 iconSource: 'image://theme/icon-m-toolbar-settings'.concat(theme.inverted ? "-white" : "")
-                checkable: true
+                tab: plugins
             }
 
             TabButton {
                 id: showMisc
                 iconSource: 'image://theme/icon-m-toolbar-list'.concat(theme.inverted ? "-white" : "")
-                checkable: true
+                tab: misc
+                onClicked: {
+                    onClicked: {
+                        if (root.linkMenu) {
+                            root.linkMenu.close()
+                        } else {
+                            privatePressed()
+                        }
+                    }
+                }
             }
+        }
+        onClosing: {
+            if (root.linkMenu) root.linkMenu.close()
         }
     }
 
@@ -110,44 +114,21 @@ AbstractLinkPage {
             name: 'connectivity'
             when: showConnectivity.checked
             PropertyChanges { target: root; title: qsTr('Connectivity') }
-            PropertyChanges { target: connectivity; opacity: 1; status: root.status }
         },
         State {
             name: 'appearance'
             when: showAppearance.checked
             PropertyChanges { target: root; title: qsTr('Appearance'); busy: appearance.loading }
-            PropertyChanges { target: appearance; opacity: 1; status: root.status }
         },
         State {
             name: 'plugins'
             when: showPlugins.checked
             PropertyChanges { target: root; title: qsTr('Plugins') }
-            PropertyChanges { target: plugins; opacity: 1; status: root.status }
         },
         State {
             name: 'misc'
             when: showMisc.checked
             PropertyChanges { target: root; title: qsTr('Misc'); visualParent: misc }
-            PropertyChanges { target: misc; opacity: 1; status: root.status }
-        }
-    ]
-
-    transitions: [
-        Transition {
-            from: 'connectivity'
-            NumberAnimation { properties: 'opacity' }
-        },
-        Transition {
-            from: 'appearance'
-            NumberAnimation { properties: 'opacity' }
-        },
-        Transition {
-            from: "plugins"
-            NumberAnimation { properties: 'opacity' }
-        },
-        Transition {
-            from: "misc"
-            NumberAnimation { properties: 'opacity' }
         }
     ]
 }
