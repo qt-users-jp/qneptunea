@@ -48,15 +48,13 @@ AbstractLinkPage {
             if (loading) return
             if (id_str.length > 0 && root.status === PageStatus.Active) {
                 var entities = status.entities
-                if (typeof entities.hashtags.length !== 'undefined') {
+                if (defined(entities.hashtags.length)) {
                     for (var j = 0; j < entities.hashtags.length; j++) {
-                        console.debug(entities.hashtags[j].text)
                         hashTagsModel.add(entities.hashtags[j].text)
                     }
                 }
-                if (typeof entities.user_mentions.length !== 'undefined') {
+                if (defined(entities.user_mentions.length)) {
                     for (var j = 0; j < entities.user_mentions.length; j++) {
-                        console.debug(entities.user_mentions[j].id_str, entities.user_mentions[j].screen_name)
                         screenNamesModel.add(entities.user_mentions[j].screen_name)
                     }
                 }
@@ -65,10 +63,8 @@ AbstractLinkPage {
                                                return !(typeof page.skipAfterTweeting === 'boolean' && page.skipAfterTweeting)
                                            })
                 if (found) {
-//                    console.debug(found)
                     pageStack.pop(found)
                 } else {
-//                    console.debug('not found')
                     pageStack.pop()
                 }
             }
@@ -78,8 +74,8 @@ AbstractLinkPage {
     property bool modified: false
     property string statusText
     property variant in_reply_to
-    property bool retweet: typeof root.in_reply_to !== 'undefined' && typeof root.in_reply_to.id_str !== 'undefined' && root.in_reply_to.text.length > 0 && root.statusText == ''
-    property bool reply: typeof root.in_reply_to !== 'undefined' && typeof root.in_reply_to.id_str !== 'undefined' && textArea.text.indexOf('@' + root.in_reply_to.user.screen_name) !== -1
+    property bool retweet: defined(root.in_reply_to) && defined(root.in_reply_to.id_str) && root.in_reply_to.text.length > 0 && root.statusText == ''
+    property bool reply: defined(root.in_reply_to) && defined(root.in_reply_to.id_str) && textArea.text.indexOf('@' + root.in_reply_to.user.screen_name) !== -1
     property bool first: true
 
     property string currentAction
@@ -94,7 +90,7 @@ AbstractLinkPage {
                     textArea.forceActiveFocus()
                 }
             } else if (root.currentAction == 'gallery') {
-                if (mediaSelected !== undefined) {
+                if (defined(mediaSelected)) {
                     var media = root.media
                     media.push(mediaSelected)
                     mediaSelected = undefined
@@ -136,7 +132,7 @@ AbstractLinkPage {
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
         clip: true
         contentHeight: contents.height
-        interactive: typeof root.linkMenu === 'undefined'
+        interactive: !defined(root.linkMenu)
 
         Column {
             id: contents
@@ -149,11 +145,10 @@ AbstractLinkPage {
                 visible: false
                 states: [
                     State {
-                        when: typeof root.in_reply_to !== 'undefined'
+                        when: defined(root.in_reply_to)
                         PropertyChanges {
                             target: in_reply_to
                             item: root.in_reply_to
-                            user: root.in_reply_to.user
                             visible: !root.retweet
                         }
                     }
@@ -161,7 +156,10 @@ AbstractLinkPage {
             }
 
             Item {
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewScrollbarWidth
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewScrollbarWidth
                 height: detailArea.height + 12
                 z: 1
 
@@ -170,7 +168,7 @@ AbstractLinkPage {
                     anchors.top: parent.top
                     anchors.topMargin: 5
                     anchors.left: parent.left
-                    source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(root.retweet ? root.in_reply_to.user.screen_name : verifyCredentials.screen_name).concat('&size=').concat(constants.listViewIconSizeName)
+                    source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.retweet ? root.in_reply_to.user.screen_name : verifyCredentials.screen_name).arg(constants.listViewIconSizeName)
                     _id: root.retweet ? root.in_reply_to.user.profile_image_url : verifyCredentials.profile_image_url
                     width: constants.listViewIconSize
                     height: width
@@ -208,7 +206,7 @@ AbstractLinkPage {
                             color: constants.nameColor
                         }
                         Text {
-                            text: '@' + (root.retweet ? root.in_reply_to.user.screen_name : oauth.screen_name)
+                            text: '@%1'.arg(root.retweet ? root.in_reply_to.user.screen_name : oauth.screen_name)
                             font.family: constants.fontFamily
                             font.pixelSize: constants.fontSmall
                             color: constants.nameColor
@@ -223,7 +221,7 @@ AbstractLinkPage {
                             anchors.top: parent.top
                             anchors.left: parent.left
                             anchors.right: tweetLandscape.left
-                            text: root.statusText == '' && typeof root.in_reply_to !== 'undefined' ? root.in_reply_to.text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&') : root.statusText
+                            text: root.statusText == '' && defined(root.in_reply_to) ? root.in_reply_to.text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&') : root.statusText
                             textFormat: TextEdit.PlainText
                             wrapMode: TextEdit.WordWrap
                             enabled: !status.loading && !currentPluginLoading
@@ -265,7 +263,7 @@ AbstractLinkPage {
                                     if (first) {
                                         first = false
                                         if (root.retweet) {
-                                            textArea.text = ' RT @' + root.in_reply_to.user.screen_name + ': ' + textArea.text
+                                            textArea.text = ' RT @%1: %2'.arg(root.in_reply_to.user.screen_name).arg(textArea.text)
                                             textArea.cursorPosition = 0
                                             root.retweet = false
                                         } else {
@@ -353,11 +351,12 @@ AbstractLinkPage {
                     }
                 }
             }
-            Rectangle {
-                width: parent.width
-                height: constants.separatorHeight
+            Separator {
+                anchors.left: parent.left
+                anchors.leftMargin: constants.listViewScrollbarWidth
+                anchors.right: parent.right
+                anchors.rightMargin: constants.listViewScrollbarWidth
                 color: constants.separatorFromMeColor
-                opacity: constants.separatorOpacity
             }
             Flow {
                 visible: !root.retweet
@@ -374,7 +373,7 @@ AbstractLinkPage {
                         onClicked: {
                             var media = []
                             for (var i = 0; i < root.media.length; i++) {
-                                if (root.media[i] != thumbnail.icon) {
+                                if (root.media[i] !== thumbnail.icon) {
                                     media.push(root.media[i])
                                 }
                             }
@@ -397,7 +396,7 @@ AbstractLinkPage {
                 RectButton {
                     width: 240
                     height: 240
-                    visible: typeof root.location === 'undefined'
+                    visible: !defined(root.location)
                     icon: 'image://theme/icon-m-common-location'.concat(theme.inverted ? "-inverse" : "")
                     enabled: !status.loading && !currentPluginLoading
                     onClicked: {
@@ -410,10 +409,10 @@ AbstractLinkPage {
                     id: map
                     width: 240
                     height: 240
-                    visible: typeof root.location !== 'undefined'
+                    visible: defined(root.location)
                     property double _lat: visible ? root.location.latitude : 0
                     property double _long: visible ? root.location.longitude : 0
-                    icon: visible ? "http://maps.google.com/staticmap?zoom=17&center=" + _lat + "," + _long + "&size=" + width + "x" + height : ''
+                    icon: visible ? "http://maps.google.com/staticmap?zoom=17&center=%1,%2&size=%3x%4".arg(_lat).arg(_long).arg(width).arg(height) : ''
                     fill: true
                     enabled: !status.loading && !currentPluginLoading
                     Item {
@@ -474,7 +473,7 @@ AbstractLinkPage {
     }
     Connections {
         target: menu
-        onStatusChanged: root.linkMenu = (menu.status == DialogStatus.Closed ? undefined : menu)
+        onStatusChanged: root.linkMenu = (menu.status === DialogStatus.Closed ? undefined : menu)
     }
 
     toolBarLayout: AbstractToolBarLayout {
@@ -493,7 +492,7 @@ AbstractLinkPage {
                     else {
                         if (root.reply)
                             parameters['in_reply_to_status_id'] = root.in_reply_to.id_str
-                        if (typeof root.location !== 'undefined') {
+                        if (defined(root.location)) {
                             parameters['_lat'] = root.location.latitude
                             parameters['_long'] = root.location.longitude
                         }

@@ -35,7 +35,7 @@ AbstractDelegate {
     property bool __retweeted: defined(root.item) && defined(root.item.retweeted_status) && defined(root.item.retweeted_status.user)
     property variant __item: __retweeted ? root.item.retweeted_status : root.item
 
-    user: root.__item.user
+    user: defined(root.__item) ? root.__item.user : undefined
     text: defined(root.__item) ? to_s(root.__item.plain_text) : ''
 
     Loader {
@@ -79,6 +79,7 @@ AbstractDelegate {
     }
 
     Component.onCompleted: {
+        if (!defined(root.item) || !defined(root.user)) return
         if (root.user.id_str === oauth.user_id) {
             root.separatorColor = constants.separatorFromMeColor
         } else if (defined(root.__item.entities)){
