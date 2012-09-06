@@ -98,7 +98,7 @@ Flickable {
             }
         }
 
-        Separator { width: parent.width }
+        Separator { width: parent.width; visible: !currentVersion.trusted }
 
         Text {
             text: qsTr('Language:')
