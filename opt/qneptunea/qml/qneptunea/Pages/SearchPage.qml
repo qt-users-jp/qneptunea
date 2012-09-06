@@ -125,13 +125,13 @@ AbstractPage {
         ToolSpacer {columns: 2}
         AddShortcutButton {
             shortcutIcon: 'image://theme/icon-l-search'
-            shortcutUrl: 'search://'.concat(id_str).concat('/').concat(screen_name)
+            shortcutUrl: 'search://%1/%2'.arg(id_str).arg(screen_name)
         }
         ToolIcon {
             platformIconId: "toolbar-view-menu"
             opacity: enabled ? 1.0 : 0.5
             onClicked: {
-                if (menu.status == DialogStatus.Closed)
+                if (menu.status === DialogStatus.Closed)
                     menu.open()
                 else
                     menu.close()

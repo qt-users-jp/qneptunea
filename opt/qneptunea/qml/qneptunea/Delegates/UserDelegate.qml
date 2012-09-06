@@ -25,7 +25,6 @@
  */
 
 import QtQuick 1.1
-import com.nokia.meego 1.0
 import '../QNeptunea/Components/'
 
 MouseArea {
@@ -39,18 +38,16 @@ MouseArea {
     Item {
         id: container
         anchors.left: parent.left
+        anchors.leftMargin: constants.listViewScrollbarWidth
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         anchors.bottom: parent.bottom
         height: Math.max(iconArea.height, statusArea.height) + 12
 
-        Rectangle {
+        Separator {
             anchors.bottom: parent.bottom
             anchors.left: parent.left
             anchors.right: parent.right
-            height: constants.separatorHeight
-            color: constants.separatorNormalColor
-            opacity: constants.separatorOpacity
         }
 
         Item {
@@ -65,8 +62,8 @@ MouseArea {
             ProfileImage {
                 id: icon
                 anchors.fill: parent
-                source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(user.screen_name).concat('&size=').concat(constants.listViewIconSizeName) : ''
-                _id: user.profile_image_url ? user.profile_image_url : ''
+                source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(user.screen_name).arg(constants.listViewIconSizeName) : ''
+                _id: to_s(user.profile_image_url)
 
                 Image {
                     anchors.right: parent.right
@@ -99,7 +96,7 @@ MouseArea {
                 }
                 Text {
                     id: user_screen_name
-                    text: '@' + user.screen_name
+                    text: '@%1'.arg(user.screen_name)
                     color: constants.nameColor
                     font.pixelSize: constants.fontSmall
                     font.family: constants.fontFamily

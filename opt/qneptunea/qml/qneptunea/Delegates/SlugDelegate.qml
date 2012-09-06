@@ -25,7 +25,7 @@
  */
 
 import QtQuick 1.1
-import com.nokia.meego 1.0
+import '../QNeptunea/Components/'
 
 MouseArea {
     id: root
@@ -35,14 +35,12 @@ MouseArea {
 
     property variant slug
 
-    Rectangle {
+    Separator {
         anchors.left: parent.left
+        anchors.leftMargin: constants.listViewScrollbarWidth
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         anchors.bottom: parent.bottom
-        height: constants.separatorHeight
-        color: constants.separatorNormalColor
-        opacity: constants.separatorOpacity
     }
 
     Text {

@@ -36,9 +36,10 @@ AbstractListView {
         id: delegate
         width: ListView.view.width
         search: model
-        metadata: model.metadata
         onClicked: root.showDetail(search)
         onLinkActivated: root.linkActivated(link)
+
+        property int height2: delegate.height
 
         ListView.onAdd: SequentialAnimation {
             PropertyAction { target: delegate; property: "clip"; value: true }
