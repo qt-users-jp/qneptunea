@@ -104,6 +104,14 @@ Page {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
+        visible: !statusBarTimer.running
+        Timer {
+            id: statusBarTimer
+            running: true
+            repeat: false
+            interval: statusBar.platformStyle.visibilityTransitionDuration
+        }
+
         tools: ToolBarLayout {
             ButtonRow {
                 TabButton {
