@@ -56,7 +56,7 @@ MouseArea {
     states: [
         State {
             name: "image"
-            when: root.type === 'image' || root.type === 'youtube' || root.type === 'slideshare'
+            when: root.type === 'image' || root.type === 'web' || root.type === 'youtube' || root.type === 'slideshare'
             PropertyChanges { target: loader; sourceComponent: image }
             PropertyChanges { target: root; visible: true }
         },
@@ -90,7 +90,7 @@ MouseArea {
 
     onClicked: {
         if (root.type == 'web')
-            root.parent.openLink(root.__pluginItem.detail)
+            Qt.openUrlExternally(root.__pluginItem.detail)
         else if (root.type == 'image')
             pageStack.push(imagePreviewPage, {'type': root.__pluginItem.type, 'url': root.__pluginItem.detail})
         else if (root.type == 'youtube')
