@@ -29,7 +29,6 @@ import QNeptunea.Theme 1.0
 
 ThemePlugin {
     id: plugin
-    iconLeftMargin: 5
 
     title: 'QNeptunea'
     author: '@task_jp'

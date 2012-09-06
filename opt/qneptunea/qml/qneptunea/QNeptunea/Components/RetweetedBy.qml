@@ -26,16 +26,15 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import '../QNeptunea/Components/'
 
 Row {
     id: root
-    anchors.right: parent.right
+    anchors.right: parent ? parent.right : undefined
     spacing: constants.listViewMargins
     property variant user
 
     Image {
-        source: '../images/retweet'.concat(theme.inverted ? '-white.png' : '.png')
+        source: '../../images/retweet'.concat(theme.inverted ? '-white.png' : '.png')
         anchors.verticalCenter: parent.verticalCenter
         smooth: true
         width: constants.listViewIconSize / 2

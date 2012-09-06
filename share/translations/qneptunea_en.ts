@@ -272,7 +272,7 @@
 <context>
     <name>DirectMessageDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+144"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+46"/>
         <source>Sent to %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -884,7 +884,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+147"/>
         <source>Send to %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1335,7 +1335,7 @@ Then download the package again.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+101"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
         <source>API rate limited until %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1354,7 +1354,7 @@ Then download the package again.</source>
 <context>
     <name>normal</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+36"/>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+35"/>
         <source>Light theme for QNeptunea.</source>
         <translation type="unfinished"></translation>
     </message>

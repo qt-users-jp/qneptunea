@@ -39,6 +39,9 @@ PageStackWindow {
     id: window
     showToolBar: false
 
+    function defined(obj) { return typeof obj !== 'undefined' }
+    function to_s(obj, format) { return typeof obj === 'string' ? (defined(format) ? format.arg(obj) : obj) : '' }
+
     property alias logoVisible: logo.visible
 
     platformStyle: PageStackWindowStyle {
@@ -508,17 +511,20 @@ PageStackWindow {
     Component { id: listStatusesPage; ListStatusesPage {} }
     Component { id: selectMediaPage; SelectMediaPage {} }
     Component { id: selectLocationPage; SelectLocationPage {} }
-    Component { id: legalPage; LegalPage{} }
-    Component { id: suggestionsPage; SuggestionsPage{} }
-    Component { id: searchUsersPage; SearchUsersPage{} }
-    Component { id: settingsPage; SettingsPage{} }
-    Component { id: mapPage; MapPage{} }
-    Component { id: aboutPage; AboutPage{} }
-    Component { id: trendPage; TrendPage{} }
-    Component { id: slugPage; SlugPage{} }
-    Component { id: nearByPage; NearByPage{} }
-    Component { id: themePage; ThemePage{} }
-    Component { id: mutePage; MutePage{} }
+    Component { id: legalPage; LegalPage {} }
+    Component { id: suggestionsPage; SuggestionsPage {} }
+    Component { id: searchUsersPage; SearchUsersPage {} }
+    Component { id: settingsPage; SettingsPage {} }
+    Component { id: mapPage; MapPage {} }
+    Component { id: aboutPage; AboutPage {} }
+    Component { id: trendPage; TrendPage {} }
+    Component { id: slugPage; SlugPage {} }
+    Component { id: nearByPage; NearByPage {} }
+    Component { id: themePage; ThemePage {} }
+    Component { id: mutePage; MutePage {} }
+
+    Component { id: placeComponent; Place {} }
+    Component { id: retweetedByComponent; RetweetedBy {} }
 
     TextEdit { id: clipboard; visible: false }
 

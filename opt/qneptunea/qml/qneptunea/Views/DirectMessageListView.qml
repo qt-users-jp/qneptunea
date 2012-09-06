@@ -38,9 +38,7 @@ AbstractListView {
     delegate: DirectMessageDelegate {
         id: delegate
         width: ListView.view.width
-        direct_message: model
-        sender: model.sender
-        recipient: model.recipient
+        item: model
         onClicked: root.showDetail(model)
         onLinkActivated: root.linkActivated(link)
 

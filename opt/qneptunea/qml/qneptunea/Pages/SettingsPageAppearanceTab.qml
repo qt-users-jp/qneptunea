@@ -149,6 +149,8 @@ Flickable {
         }
     }
 
+    UserTimelineModel { id: userTimeline; count: 1 }
+
     Column {
         id: container
         width: parent.width
@@ -158,8 +160,6 @@ Flickable {
 
         StatusDelegate {
             width: parent.width
-
-            UserTimelineModel { id: userTimeline; count: 1 }
 
             item: userTimeline.size > 0 ? userTimeline.get(0) : undefined
             user: userTimeline.size > 0 ? userTimeline.get(0).user : undefined

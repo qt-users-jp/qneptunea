@@ -89,9 +89,7 @@ AbstractPage {
                         when: typeof root.in_reply_to !== 'undefined'
                         PropertyChanges {
                             target: in_reply_to
-                            direct_message: root.in_reply_to
-                            sender: root.in_reply_to.sender
-                            recipient: root.in_reply_to.recipient
+                            item: root.in_reply_to
                             visible: typeof root.in_reply_to !== 'undefined'
                         }
                     }

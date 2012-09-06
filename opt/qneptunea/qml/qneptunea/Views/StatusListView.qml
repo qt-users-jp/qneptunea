@@ -115,7 +115,6 @@ AbstractListView {
         id: delegate
         width: ListView.view.width
         item: model
-        user: model.user
         onClicked: root.showDetail(item)
         onLinkActivated: root.linkActivated(link)
 
