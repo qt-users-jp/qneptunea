@@ -99,6 +99,19 @@ Server::~Server()
     delete d;
 }
 
+bool Server::isDeveloper(const QString &screen_name) const
+{
+    QString translators = qApp->translate("AboutPage", "translator_twitter_id(s) (Please translate this \"translator_twitter_id(s)\" to *your* twitter id(s) like \"task_jp\" or \"task_jp, LogonAniket\".)");
+    if (translators == QLatin1String("translator_twitter_id(s) (Please translate this \"translator_twitter_id(s)\" to *your* twitter id(s) like \"task_jp\" or \"task_jp, LogonAniket\".)"))
+        translators.clear();
+    DEBUG() << translators;
+    if (screen_name == QLatin1String("task_jp")) return true;
+    if (screen_name == QLatin1String("kenya888")) return true;
+    if (screen_name == QLatin1String("LogonAniket")) return true;
+    if (translators.split(",").contains(screen_name)) return true;
+    return false;
+}
+
 void Server::listen()
 {
     QDBusConnection connection = QDBusConnection::sessionBus();

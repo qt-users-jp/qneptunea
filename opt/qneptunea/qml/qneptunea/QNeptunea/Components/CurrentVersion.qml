@@ -37,15 +37,8 @@ QtObject {
         repeat: false
         onTriggered: {
             checkVersion()
-            switch (oauth.screen_name) {
-            case 'task_jp':
-            case 'kenya888':
-            case 'LogonAniket':
-                break
-            default:
+            if (!app.isDeveloper(oauth.screen_name))
                 checkSource()
-                break
-            }
         }
     }
 

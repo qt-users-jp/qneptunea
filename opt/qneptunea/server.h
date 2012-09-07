@@ -45,6 +45,8 @@ public:
     const QVariantList &translations() const;
     const QVariantMap &translation() const;
 
+    Q_INVOKABLE bool isDeveloper(const QString &screen_name) const;
+
 public slots:
     void listen();
     void launchWithLink(const QStringList &url);
