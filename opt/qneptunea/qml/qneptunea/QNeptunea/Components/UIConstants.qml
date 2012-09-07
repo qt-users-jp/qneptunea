@@ -183,7 +183,12 @@ QtObject {
 
     property real separatorOpacity: settings.readData('Appearance/SeparatorOpacity', 1.00)
     onSeparatorOpacityChanged: settings.saveData('Appearance/SeparatorOpacity', constants.separatorOpacity)
+
     property int separatorHeight: 2
+
+    property int listViewSpacing: settings.readData('Appearance/ListViewSpacing', 0)
+    onListViewSpacingChanged: settings.saveData('Appearance/ListViewSpacing', constants.listViewSpacing)
+
 
     property bool restoringLastPositionDisabled: settings.readData('Power/RestoringLastPositionDisabled', false)
     onRestoringLastPositionDisabledChanged: settings.saveData('Power/RestoringLastPositionDisabled', constants.restoringLastPositionDisabled)

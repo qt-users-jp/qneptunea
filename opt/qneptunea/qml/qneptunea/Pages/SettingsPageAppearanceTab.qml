@@ -156,8 +156,6 @@ Flickable {
         width: parent.width
         spacing: 4
 
-//        busy: userTimeline.loading
-
         StatusDelegate {
             width: parent.width
 
@@ -170,6 +168,7 @@ Flickable {
             font.family: constants.fontFamily
             font.pixelSize: constants.fontDefault
         }
+
         ButtonRow {
             anchors.horizontalCenter: parent.horizontalCenter
             Button {
@@ -198,6 +197,7 @@ Flickable {
             font.family: constants.fontFamily
             font.pixelSize: constants.fontDefault
         }
+
         Slider {
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - 30
@@ -208,11 +208,28 @@ Flickable {
         }
 
         Text {
+            text: qsTr('List spacing:')
+            color: constants.textColor
+            font.family: constants.fontFamily
+            font.pixelSize: constants.fontDefault
+        }
+
+        Slider {
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - 30
+            minimumValue: 0
+            maximumValue: 20
+            value: constants.listViewSpacing
+            onValueChanged: if (root.status === PageStatus.Active) constants.listViewSpacing = value
+        }
+
+        Text {
             text: qsTr('Separator opacity:')
             color: constants.textColor
             font.family: constants.fontFamily
             font.pixelSize: constants.fontDefault
         }
+
         Slider {
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - 30
@@ -230,7 +247,7 @@ Flickable {
         Item {
             anchors.horizontalCenter: parent.horizontalCenter
             width: constants.fontDefault * 15
-            height: 128
+            height: 256
             Tumbler {
                 id: dateFormat
                 columns: [ firstColumn, secondColumn, thirdColumn ]

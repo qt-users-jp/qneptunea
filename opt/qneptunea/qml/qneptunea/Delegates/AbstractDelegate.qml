@@ -45,11 +45,12 @@ MouseArea {
         anchors.right: parent.right
         anchors.rightMargin: constants.listViewScrollbarWidth
         anchors.bottom: parent.bottom
-        height: Math.max(iconArea.height, contentArea.y + contentArea.height) + 10
+        height: Math.max(iconArea.height, contentArea.y + contentArea.height) + 10 + constants.listViewSpacing - constants.separatorHeight
 
         Separator {
             id: separator
             anchors.bottom: parent.bottom
+            anchors.bottomMargin: (constants.listViewSpacing - constants.separatorHeight) / 2
             anchors.left: parent.left
             anchors.right: parent.right
         }
