@@ -293,7 +293,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+42"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>

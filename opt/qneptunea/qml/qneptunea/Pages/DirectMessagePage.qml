@@ -49,6 +49,7 @@ AbstractLinkPage {
     Item {
         id: container
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
+        clip: true
 
         DirectMessageDetailDelegate {
             id: delegate
