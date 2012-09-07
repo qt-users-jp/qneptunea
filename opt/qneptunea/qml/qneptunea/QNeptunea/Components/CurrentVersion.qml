@@ -39,7 +39,7 @@ QtObject {
             checkVersion()
             switch (oauth.screen_name) {
             case 'task_jp':
-            case 'keny888':
+            case 'kenya888':
             case 'LogonAniket':
                 break
             default:

@@ -33,7 +33,7 @@ AbstractDelegate {
 
     property variant item
     property bool __retweeted: defined(root.item) && defined(root.item.retweeted_status) && defined(root.item.retweeted_status.user)
-    property variant __item: __retweeted ? root.item.retweeted_status : root.item
+    property variant __item: root.__retweeted ? root.item.retweeted_status : root.item
 
     user: defined(root.__item) ? root.__item.user : undefined
     text: defined(root.__item) ? to_s(root.__item.plain_text) : ''
@@ -53,7 +53,7 @@ AbstractDelegate {
         Binding {
             target: place.item
             property: 'place'
-            value: root.__item.place
+            value: defined(root.__item) ? root.__item.place : undefined
             when: place.status === Loader.Ready
         }
     }
@@ -73,7 +73,7 @@ AbstractDelegate {
         Binding {
             target: retweetedBy.item
             property: 'user'
-            value: root.item.user
+            value: defined(root.item) ? root.item.user : undefined
             when: retweetedBy.status === Loader.Ready
         }
     }

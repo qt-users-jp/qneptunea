@@ -915,7 +915,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+169"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1107,7 +1107,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+292"/>
         <source>Unmute @%1</source>
         <translation type="unfinished"></translation>
     </message>

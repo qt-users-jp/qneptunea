@@ -162,7 +162,6 @@ Flickable {
             width: parent.width
 
             item: userTimeline.size > 0 ? userTimeline.get(0) : undefined
-            user: userTimeline.size > 0 ? userTimeline.get(0).user : undefined
         }
 
         Text {

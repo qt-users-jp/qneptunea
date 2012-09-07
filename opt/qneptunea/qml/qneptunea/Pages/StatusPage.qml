@@ -217,7 +217,6 @@ AbstractLinkPage {
                 delegate: StatusDelegate {
                     width: detail.width
                     item: model
-                    user: model.user
                     onClicked: pageStack.push(statusPage, {'id_str': model.id_str})
                     onLinkActivated: openLink(link)
                 }
@@ -307,7 +306,6 @@ AbstractLinkPage {
                 delegate: StatusDelegate {
                     width: detail.width
                     item: model
-                    user: model.user
                     onClicked: pageStack.push(statusPage, {'id_str': model.id_str})
                     onLinkActivated: openLink(link)
                 }
