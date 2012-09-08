@@ -230,7 +230,7 @@
 <context>
     <name>AbstractListView</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+102"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+99"/>
         <source>Loading...</source>
         <translation>载入中。。。</translation>
     </message>
@@ -271,7 +271,7 @@
 <context>
     <name>DirectMessageDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+46"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+144"/>
         <source>Sent to %1</source>
         <translation>发给 %1</translation>
     </message>
@@ -279,7 +279,12 @@
 <context>
     <name>DirectMessageDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+172"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+146"/>
+        <source>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</source>
+        <translation>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Sent to %1</source>
         <translation>发给 %1</translation>
     </message>
@@ -287,12 +292,12 @@
 <context>
     <name>DirectMessagePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+36"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+37"/>
         <source>DirectMessage</source>
         <translation>密信</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Copy to clipboard</source>
         <translation>复制到剪切板</translation>
     </message>
@@ -699,7 +704,7 @@
         <translation>QNeptunea for N9 %1</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+64"/>
         <source>Tweets</source>
         <translation>推文</translation>
     </message>
@@ -729,7 +734,7 @@
         <translation>已订阅列表</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+8"/>
         <source>Trend</source>
         <translation>趋势</translation>
     </message>
@@ -878,12 +883,12 @@ HTML5
         <translation>密信</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+149"/>
         <source>Send to %1</source>
         <translation>发送到 %1</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+42"/>
         <source>Send</source>
         <translation>发送</translation>
     </message>
@@ -914,12 +919,12 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+166"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+169"/>
         <source>Icon size:</source>
         <translation>头像大小：</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Normal</source>
         <translation>正常</translation>
     </message>
@@ -934,17 +939,12 @@ HTML5
         <translation>字体大小：</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>List spacing:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Separator opacity:</source>
         <translation>分割线不透明度：</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Date format:</source>
         <translation>日期格式：</translation>
     </message>
@@ -1025,7 +1025,7 @@ HTML5
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+44"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+43"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation>退出</translation>
@@ -1056,14 +1056,14 @@ HTML5
         <translation>语言：</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+19"/>
         <source>Restart QNeptunea</source>
         <translation>设置将在重启QNeptunea后生效！</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
         <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
-        <translation>你想把QNeptunea翻译成你的语言么？访问&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt;然后就可以在线翻译啦！</translation>
+        <translation>你先把 QNeptunea 翻译成你的语言么？访问&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt;然后就可以在线翻译啦！</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1090,7 +1090,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+193"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+197"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>by &lt;a style=&quot;%2&quot; href=&quot;用户://%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
@@ -1103,12 +1103,12 @@ HTML5
 <context>
     <name>StatusPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+39"/>
         <source>Conversation</source>
         <translation>对话</translation>
     </message>
     <message>
-        <location line="+292"/>
+        <location line="+315"/>
         <source>Unmute @%1</source>
         <translation>取消mute@%1</translation>
     </message>
@@ -1191,18 +1191,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+448"/>
+        <location line="+449"/>
         <source>Tweet</source>
         <translation>发推</translation>
     </message>
     <message>
-        <location line="-371"/>
-        <location line="+393"/>
+        <location line="-368"/>
+        <location line="+390"/>
         <source>Retweet</source>
         <translation>转推</translation>
     </message>
     <message>
-        <location line="-385"/>
+        <location line="-382"/>
         <source>Reply</source>
         <translation>回复</translation>
     </message>
@@ -1239,7 +1239,7 @@ Then download the package again.</source>
 <context>
     <name>UserDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+114"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+133"/>
         <source>FOLLOWS YOU</source>
         <translation>关注你</translation>
     </message>
@@ -1247,7 +1247,7 @@ Then download the package again.</source>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+97"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+94"/>
         <source>Tweets</source>
         <translation>推文</translation>
     </message>
@@ -1277,7 +1277,7 @@ Then download the package again.</source>
         <translation>已订阅列表</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+15"/>
         <source>Unmute @%1</source>
         <translation>取消Mute@%1</translation>
     </message>
@@ -1331,7 +1331,7 @@ Then download the package again.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+101"/>
         <source>API rate limited until %1</source>
         <translation>%1 到达API使用上限</translation>
     </message>
@@ -1350,7 +1350,7 @@ Then download the package again.</source>
 <context>
     <name>normal</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+35"/>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+36"/>
         <source>Light theme for QNeptunea.</source>
         <translation>明亮主题</translation>
     </message>
