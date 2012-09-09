@@ -495,7 +495,7 @@ PageStackWindow {
     Component { id: mainPage; MainPage {} }
     Component { id: userPage; UserPage {} }
     Component { id: statusPage; StatusPage {} }
-    Component { id: tweetPage; TweetPage {} }
+    TweetPage { id: tweetPage }
     Component { id: searchPage; SearchPage {} }
     Component { id: imagePreviewPage; ImagePreviewPage {} }
     Component { id: youtubePreviewPage; YoutubePreviewPage {} }

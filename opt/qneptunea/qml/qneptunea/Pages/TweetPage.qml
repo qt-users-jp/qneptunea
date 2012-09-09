@@ -71,7 +71,6 @@ AbstractLinkPage {
         }
     }
 
-    property bool modified: false
     property string statusText
     property variant in_reply_to
     property bool retweet: defined(root.in_reply_to) && defined(root.in_reply_to.id_str) && root.in_reply_to.text.length > 0 && root.statusText == ''
@@ -79,17 +78,23 @@ AbstractLinkPage {
     property bool first: true
 
     property string currentAction
-    property alias text: textArea.text
     property variant media: []
     property variant location
 
     onStatusChanged: {
-        if (root.status === PageStatus.Active) {
-            if (currentAction == '') {
-                if (!root.retweet) {
-                    textArea.forceActiveFocus()
-                }
-            } else if (root.currentAction == 'gallery') {
+        switch(root.status) {
+        case PageStatus.Active:
+            if (currentAction == '' && !root.retweet) {
+                textArea.forceActiveFocus()
+            }
+            break
+        case PageStatus.Activating: {
+            switch (currentAction) {
+            case '': {
+                textArea.text = root.statusText == '' && defined(root.in_reply_to) ? root.in_reply_to.text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&') : root.statusText
+                root.retweet = defined(root.in_reply_to) && defined(root.in_reply_to.id_str) && root.in_reply_to.text.length > 0 && root.statusText == ''
+                break }
+            case 'gallery':
                 if (defined(mediaSelected)) {
                     var media = root.media
                     media.push(mediaSelected)
@@ -98,11 +103,26 @@ AbstractLinkPage {
                         media.shift()
                     root.media = media
                 }
-                root.currentAction = ''
-            } else if (root.currentAction == 'location') {
+                break
+            case 'location':
                 root.location = locationSelected
-                root.currentAction = ''
+                break
             }
+            root.currentAction = ''
+            break
+        }
+        case PageStatus.Inactive:
+            if (root.currentAction === '') {
+                root.statusText = ''
+                root.in_reply_to = undefined
+                root.first = true
+                root.media = []
+                root.location = undefined
+                textArea.text = ''
+            }
+            break
+        default:
+            break
         }
     }
 
@@ -221,7 +241,6 @@ AbstractLinkPage {
                             anchors.top: parent.top
                             anchors.left: parent.left
                             anchors.right: tweetLandscape.left
-                            text: root.statusText == '' && defined(root.in_reply_to) ? root.in_reply_to.text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&') : root.statusText
                             textFormat: TextEdit.PlainText
                             wrapMode: TextEdit.WordWrap
                             enabled: !status.loading && !currentPluginLoading

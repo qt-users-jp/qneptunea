@@ -1211,18 +1211,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+448"/>
+        <location line="+468"/>
         <source>Tweet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-371"/>
-        <location line="+393"/>
+        <location line="-370"/>
+        <location line="+392"/>
         <source>Retweet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-385"/>
+        <location line="-384"/>
         <source>Reply</source>
         <translation type="unfinished"></translation>
     </message>
