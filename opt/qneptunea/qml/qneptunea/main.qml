@@ -505,7 +505,7 @@ PageStackWindow {
     Component { id: followingPage; FollowingPage {} }
     Component { id: followersPage; FollowersPage {} }
     Component { id: directMessagePage; DirectMessagePage {} }
-    Component { id: sendDirectMessagePage; SendDirectMessagePage {} }
+    SendDirectMessagePage {id: sendDirectMessagePage}
     Component { id: listsPage; ListsPage {} }
     Component { id: listedPage; ListedPage {} }
     Component { id: listStatusesPage; ListStatusesPage {} }

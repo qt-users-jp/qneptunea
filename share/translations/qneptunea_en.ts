@@ -294,7 +294,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -880,7 +880,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+155"/>
         <source>Send to %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1211,7 +1211,7 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+468"/>
+        <location line="+467"/>
         <source>Tweet</source>
         <translation type="unfinished"></translation>
     </message>

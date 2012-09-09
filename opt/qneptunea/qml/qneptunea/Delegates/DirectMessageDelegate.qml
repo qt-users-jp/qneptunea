@@ -43,7 +43,7 @@ AbstractDelegate {
         spacing: constants.listViewMargins
 
         Text {
-            text: defined(root.item) ? qsTr('Sent to %1').arg(to_s(root.item.recipient.name)) : ''
+            text: defined(root.item) && defined(root.item.recipient) ? qsTr('Sent to %1').arg(to_s(root.item.recipient.name)) : ''
             anchors.bottom: parent.bottom
             color: constants.textColor
             font.family: constants.fontFamily
@@ -53,8 +53,8 @@ AbstractDelegate {
         ProfileImage {
             width: constants.listViewIconSize / 2
             height: width
-            source: defined(root.item) && root.item.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(recipient.screen_name).arg(constants.listViewIconSizeName) : ''
-            _id: defined(root.item) ? to_s(root.item.recipient.profile_image_url) : ''
+            source: defined(root.item) && defined(root.item.recipient) && root.item.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(recipient.screen_name).arg(constants.listViewIconSizeName) : ''
+            _id: defined(root.item) && defined(root.item.recipient) ? to_s(root.item.recipient.profile_image_url) : ''
             smooth: true
         }
     }

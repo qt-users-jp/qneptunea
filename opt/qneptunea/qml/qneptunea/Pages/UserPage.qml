@@ -205,7 +205,7 @@ AbstractLinkPage {
         ToolIcon {
             iconSource: '../images/dm'.concat(theme.inverted ? '-white.png' : '.png')
             opacity: enabled ? 1.0 : 0.5
-            enabled: delegate.followsYou
+            enabled: delegate.followsYou || user.id_str === oauth.user_id
             onClicked: {
                 if (root.linkMenu) root.linkMenu.close()
                 menu.close()

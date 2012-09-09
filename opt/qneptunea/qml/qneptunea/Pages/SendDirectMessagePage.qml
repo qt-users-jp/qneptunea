@@ -62,8 +62,15 @@ AbstractPage {
     property variant recipient
 
     onStatusChanged: {
-        if (root.status === PageStatus.Active) {
+        switch (root.status) {
+        case PageStatus.Active:
             textArea.forceActiveFocus()
+            break
+        case PageStatus.Inactive:
+            textArea.text = ''
+            break
+        default:
+            break
         }
     }
 

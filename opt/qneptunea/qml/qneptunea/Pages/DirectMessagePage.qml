@@ -36,6 +36,7 @@ AbstractLinkPage {
     title: qsTr('DirectMessage')
     busy: direct_message.loading
     visualParent: container
+    property bool skipAfterTweeting: true
 
     DirectMessage {
         id: direct_message
@@ -94,7 +95,7 @@ AbstractLinkPage {
         ToolSpacer {}
 
         ToolIcon {
-            platformIconId: "toolbar-reply"
+            iconSource: '../images/dm'.concat(theme.inverted ? '-white.png' : '.png')
             onClicked: {
                 if (root.linkMenu) root.linkMenu.close()
                 menu.close()
