@@ -72,6 +72,11 @@ MouseArea {
             }
 
             onClicked: root.linkActivated('user://%1'.arg(root.user.id_str))
+
+            onPressAndHold: {
+                if (!currentVersion.trusted) return
+                pageStack.push(userTimelinePage, {'id_str': root.user.id_str, 'screen_name': root.user.screen_name})
+            }
         }
 
         Text {
