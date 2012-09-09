@@ -1113,18 +1113,33 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+292"/>
+        <location line="+10"/>
+        <source>Delete Tweet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this Tweet?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+290"/>
         <source>Unmute @%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mute @%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Delete the tweet</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

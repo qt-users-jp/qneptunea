@@ -41,6 +41,18 @@ AbstractLinkPage {
     property variant thumbnails: []
     property bool skipAfterTweeting: true
 
+    QueryDialog {
+        id: destroyStatus
+        icon: 'image://theme/icon-m-content-file-unknown'.concat(theme.inverted ? "-inverse" : "")
+        titleText: qsTr('Delete Tweet')
+        message: qsTr('Are you sure you want to delete this Tweet?')
+
+        acceptButtonText: qsTr('Delete')
+        rejectButtonText: qsTr('Cancel')
+
+        onAccepted: status.destroyStatus()
+    }
+
     Status {
         id: status
         id_str: root.id_str
@@ -341,13 +353,6 @@ AbstractLinkPage {
                     window.filters = filters
                 }
             }
-            MenuItemWithIcon {
-                iconSource: 'image://theme/icon-m-toolbar-delete'.concat(enabled ? "" : "-dimmed").concat(theme.inverted ? "-white" : "")
-                text: qsTr('Delete the tweet')
-                enabled: status.user.id_str === oauth.user_id
-                onClicked: status.destroyStatus()
-            }
-
             Repeater {
                 model: servicePlugins.pluginInfo
                 delegate: MenuItemWithIcon {
@@ -397,6 +402,7 @@ AbstractLinkPage {
         ToolIcon {
             iconSource: '../images/retweet'.concat(theme.inverted ? '-white.png' : '.png')
             enabled: !root.__status.retweeted && (root.__retweeted ? true : !root.__user.protected)
+            visible: status.user.id_str !== oauth.user_id
             opacity: enabled ? 1.0 : 0.5
             onClicked: {
                 if (root.linkMenu) root.linkMenu.close()
@@ -408,6 +414,13 @@ AbstractLinkPage {
                 }
             }
         }
+
+        ToolIcon {
+            iconSource: 'image://theme/icon-m-toolbar-delete'.concat(theme.inverted ? "-white" : "")
+            visible: status.user.id_str === oauth.user_id
+            onClicked: destroyStatus.open()
+        }
+
 
         ToolIcon {
             id: favorite
