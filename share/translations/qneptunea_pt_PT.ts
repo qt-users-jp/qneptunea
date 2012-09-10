@@ -159,6 +159,7 @@
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+104"/>
         <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
         <translation>msullx</translation>
     </message>
@@ -291,7 +292,7 @@
         <translation>Mensagem Direta</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Copy to clipboard</source>
         <translation>Copiar para clipborad</translation>
     </message>
@@ -881,7 +882,7 @@ HTML5
         <translation>Mensagem Direta</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+155"/>
         <source>Send to %1</source>
         <translation>Enviar para %1</translation>
     </message>
@@ -894,22 +895,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+112"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+116"/>
         <source>Connectivity</source>
         <translation>Ligação</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Appearance</source>
         <translation>Apresentação</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Misc</source>
         <translation>Miscelâneos</translation>
     </message>
@@ -917,7 +918,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+166"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+167"/>
         <source>Icon size:</source>
         <translation>Tamanho Icon:</translation>
     </message>
@@ -1028,7 +1029,7 @@ HTML5
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+44"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+41"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation>Saír</translation>
@@ -1044,7 +1045,7 @@ HTML5
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Display time-out:</source>
         <translation>Activar Time-out do Ecrã:</translation>
     </message>
@@ -1111,7 +1112,27 @@ HTML5
         <translation>Ver Conversa</translation>
     </message>
     <message>
-        <location line="+292"/>
+        <location line="+10"/>
+        <source>Delete Tweet</source>
+        <translation>Apagar Tweet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this Tweet?</source>
+        <translation>Tem a certeza que quer apagar este Tweet ?</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete</source>
+        <translation>Apagar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location line="+272"/>
         <source>Unmute @%1</source>
         <translation>Retirar silêncio @%1</translation>
     </message>
@@ -1119,11 +1140,6 @@ HTML5
         <location line="+0"/>
         <source>Mute @%1</source>
         <translation>Silenciar @%1</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Delete the tweet</source>
-        <translation>Apagar o Tweet</translation>
     </message>
 </context>
 <context>
@@ -1162,7 +1178,7 @@ HTML5
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+63"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="-41"/>
         <source>en</source>
         <translation>pt_PT</translation>
     </message>
@@ -1194,18 +1210,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+448"/>
+        <location line="+467"/>
         <source>Tweet</source>
         <translation>Tweet</translation>
     </message>
     <message>
-        <location line="-371"/>
-        <location line="+393"/>
+        <location line="-370"/>
+        <location line="+392"/>
         <source>Retweet</source>
         <translation>Retweet</translation>
     </message>
     <message>
-        <location line="-385"/>
+        <location line="-384"/>
         <source>Reply</source>
         <translation>Responder</translation>
     </message>
