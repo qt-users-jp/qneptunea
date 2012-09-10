@@ -140,6 +140,7 @@ AbstractPage {
                 model: servicePlugins.pluginInfo
                 delegate: MenuItemWithIcon {
                     id: customItem
+                    parent: layout
                     iconSource: model.plugin.icon
                     text: model.plugin.service
                     visible: model.plugin.matches(menu.link)

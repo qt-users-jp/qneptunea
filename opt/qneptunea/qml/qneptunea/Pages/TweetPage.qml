@@ -340,7 +340,7 @@ AbstractLinkPage {
                         onClicked: {
                             var media = []
                             for (var i = 0; i < root.media.length; i++) {
-                                if (root.media[i] !== thumbnail.icon) {
+                                if (root.media[i] != thumbnail.icon) {
                                     media.push(root.media[i])
                                 }
                             }
@@ -473,6 +473,7 @@ AbstractLinkPage {
                 model: tweetPlugins.pluginInfo
                 delegate: MenuItemWithIcon {
                     id: customItem
+                    parent: menuLayout
                     iconSource: model.plugin.icon
                     text: model.plugin.name
                     visible: model.plugin.visible
@@ -486,7 +487,7 @@ AbstractLinkPage {
                         onMediaChanged: root.media = model.plugin.media
                         onLocationChanged: root.location = model.plugin.location
                         onLoadingChanged: {
-                            if (loading) {
+                            if (model.plugin.loading) {
                                 root.currentPlugin = model.plugin
                             }
                         }

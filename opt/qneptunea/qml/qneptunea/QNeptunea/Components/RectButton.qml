@@ -36,6 +36,7 @@ MouseArea {
     Image {
         id: image
         anchors.centerIn: parent
+        cache: false
 
         states: [
             State {
@@ -45,7 +46,6 @@ MouseArea {
                     target: image
                     width: root.width
                     height: root.height
-                    smooth: true
                     clip: true
                     fillMode: Image.PreserveAspectCrop
                 }
@@ -59,6 +59,5 @@ MouseArea {
         color: 'transparent'
         border.color: constants.textColor
         border.width: 2
-
     }
 }
