@@ -35,7 +35,7 @@ AbstractLinkPage {
     id: root
 
     title: qsTr('Conversation')
-    busy: status.loading || relatedResults.loading || delegate.loading || conversationStatus.loading || conversationTimer.running || adjustTimer.running || activitySummary.loading
+    busy: status.loading || relatedResults.loading || delegate.loading || conversationStatus.loading || conversationTimer.running || activitySummary.loading
     visualParent: flickable
 
     property variant thumbnails: []
@@ -166,7 +166,6 @@ AbstractLinkPage {
         onTriggered: {
             var in_reply_to_status_id_str = root.__status.in_reply_to_status_id_str
             if (!defined(in_reply_to_status_id_str) || in_reply_to_status_id_str.length === 0) {
-                adjustTimer.start()
                 return;
             }
             if (conversationStatus.id_str.length > 0) {
@@ -180,32 +179,9 @@ AbstractLinkPage {
 
                 if (defined(in_reply_to_status_id_str) && in_reply_to_status_id_str.length > 0){
                     conversationStatus.id_str = in_reply_to_status_id_str
-                } else {
-                    adjustTimer.start()
                 }
             }
         }
-    }
-
-    Timer {
-        id: adjustTimer
-        repeat: false
-        interval: 100
-        onTriggered: {
-            flickable.contentY = delegate.y + 1
-            flickable.visible = true
-            flickable.contentY = delegate.y
-        }
-    }
-
-    StatusDetailDelegate {
-        anchors.top: parent.top; anchors.topMargin: root.headerHeight
-        width: parent.width
-        temporary: true
-        item: status.data
-        user: status.data.user
-        visible: !flickable.visible
-        onLinkActivated: openLink(link, status.data)
     }
 
     Flickable {
@@ -215,7 +191,6 @@ AbstractLinkPage {
         contentHeight: detail.height
         clip: true
         contentY: delegate.y
-        visible: false
         interactive: !defined(root.linkMenu)
 
         Column {
@@ -257,7 +232,7 @@ AbstractLinkPage {
                     id: map
                     property double _lat: visible && root.__status.geo.coordinates[0] ? root.__status.geo.coordinates[0] : 0.0
                     property double _long: visible && root.__status.geo.coordinates[1] ? root.__status.geo.coordinates[1] : 0.0
-                    source: "http://maps.google.com/staticmap?zoom=15&center=%1,%2&size=240x240&markers=%1,%2,red,a&saturation=-100".arg(_lat).arg(_long)
+                    source: "http://maps.google.com/staticmap?zoom=15&center=%1,%2&size=240x240&markers=%1,%2,red,a&saturation=-100".arg(map._lat).arg(map._long)
                     width: 240
                     height: 240
                     visible: defined(root.__status.geo) && defined(root.__status.geo.coordinates)
@@ -269,6 +244,7 @@ AbstractLinkPage {
                             source: 'http://maps.gstatic.com/mapfiles/markers2/marker.png'
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.top: parent.top
+                            visible: map.status === Image.Ready
                         }
                     }
                     MouseArea {
@@ -321,6 +297,12 @@ AbstractLinkPage {
                     onClicked: pageStack.push(statusPage, {'id_str': model.id_str})
                     onLinkActivated: openLink(link)
                 }
+            }
+
+            Item {
+                width: parent.width
+                height: Math.max(0, flickable.height - y + delegate.y)
+                visible: height > 0
             }
         }
     }

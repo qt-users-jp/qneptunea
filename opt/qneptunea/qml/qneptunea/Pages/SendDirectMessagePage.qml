@@ -205,8 +205,8 @@ AbstractPage {
                                 anchors.bottom: parent.bottom
                                 width: parent.width
                                 height: width
-                                source: root.recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.recipient.screen_name).arg(constants.listViewIconSizeName) : ''
-                                _id: root.recipient.profile_image_url
+                                source: defined(root.recipient) && defined(root.recipient.profile_image_url) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.recipient.screen_name).arg(constants.listViewIconSizeName) : ''
+                                _id: defined(root.recipient) ? to_s(root.recipient.profile_image_url) : ''
                                 smooth: true
                             }
                         }
