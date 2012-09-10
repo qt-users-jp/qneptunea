@@ -159,6 +159,7 @@
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+104"/>
         <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
         <translation>TrayhopeR</translation>
     </message>
@@ -229,7 +230,7 @@
 <context>
     <name>AbstractListView</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+99"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+102"/>
         <source>Loading...</source>
         <translation>Yukleniyor...</translation>
     </message>
@@ -270,7 +271,7 @@
 <context>
     <name>DirectMessageDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+144"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+46"/>
         <source>Sent to %1</source>
         <translation>%1 &apos;a Gonderildi</translation>
     </message>
@@ -278,12 +279,7 @@
 <context>
     <name>DirectMessageDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+146"/>
-        <source>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</source>
-        <translation>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+172"/>
         <source>Sent to %1</source>
         <translation>%1 &apos;a Gonderildi</translation>
     </message>
@@ -291,12 +287,12 @@
 <context>
     <name>DirectMessagePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+36"/>
         <source>DirectMessage</source>
         <translation>DirektMesaj</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+43"/>
         <source>Copy to clipboard</source>
         <translation>Panoya kopyala</translation>
     </message>
@@ -703,7 +699,7 @@
         <translation>N9 icin QNeptunea %1</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+71"/>
         <source>Tweets</source>
         <translation>Tweetler</translation>
     </message>
@@ -733,7 +729,7 @@
         <translation>Liste</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Trend</source>
         <translation>Trend</translation>
     </message>
@@ -882,12 +878,12 @@ HTML5
         <translation>Direk Mesaj</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+155"/>
         <source>Send to %1</source>
         <translation>%1 &apos;a gonder</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Send</source>
         <translation>Gonder</translation>
     </message>
@@ -895,22 +891,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+112"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+116"/>
         <source>Connectivity</source>
         <translation>Baglanti</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Appearance</source>
         <translation>Gorunum</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Plugins</source>
         <translation>Eklentiler</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Misc</source>
         <translation>Karisik</translation>
     </message>
@@ -918,12 +914,12 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+169"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+167"/>
         <source>Icon size:</source>
         <translation>Ikon boyutu:</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
@@ -938,12 +934,17 @@ HTML5
         <translation>Font boyutu:</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
+        <source>List spacing:</source>
+        <translation>Liste araligi:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Separator opacity:</source>
         <translation>Ayirac parlakligi:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Date format:</source>
         <translation>Tarih formati:</translation>
     </message>
@@ -1024,7 +1025,7 @@ HTML5
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+43"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+41"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation>Cikis Yap</translation>
@@ -1040,7 +1041,7 @@ HTML5
         <translation>Iptal</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Display time-out:</source>
         <translation>Goruntu zamanlamasi</translation>
     </message>
@@ -1055,12 +1056,12 @@ HTML5
         <translation>Dil:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+40"/>
         <source>Restart QNeptunea</source>
         <translation>QNeptunea&apos;yi tekrar baslat</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
         <translation>QNeptunea&apos;yi kendi dilinize cevirmek istiyor musunuz ? &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; adresini ziyaret edin ve online ortamda cevirmeye baslayin !</translation>
     </message>
@@ -1089,7 +1090,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+197"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+193"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt; tarafindan</translation>
     </message>
@@ -1102,12 +1103,32 @@ HTML5
 <context>
     <name>StatusPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+39"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+37"/>
         <source>Conversation</source>
         <translation>Konusma</translation>
     </message>
     <message>
-        <location line="+315"/>
+        <location line="+10"/>
+        <source>Delete Tweet</source>
+        <translation>Tweet&apos;i Sil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this Tweet?</source>
+        <translation>Bu Tweet&apos;i silmek istediginizden emin misiniz ?</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete</source>
+        <translation>Sil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation>Iptal</translation>
+    </message>
+    <message>
+        <location line="+272"/>
         <source>Unmute @%1</source>
         <translation>Sesini Ac @%1</translation>
     </message>
@@ -1115,11 +1136,6 @@ HTML5
         <location line="+0"/>
         <source>Mute @%1</source>
         <translation>Sessizlestir @%1</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Delete the tweet</source>
-        <translation>Tweeti sil</translation>
     </message>
 </context>
 <context>
@@ -1158,7 +1174,7 @@ HTML5
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+63"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="-41"/>
         <source>en</source>
         <translation>tr</translation>
     </message>
@@ -1190,18 +1206,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+449"/>
+        <location line="+467"/>
         <source>Tweet</source>
         <translation>Tweet</translation>
     </message>
     <message>
-        <location line="-368"/>
-        <location line="+390"/>
+        <location line="-370"/>
+        <location line="+392"/>
         <source>Retweet</source>
         <translation>Retweet</translation>
     </message>
     <message>
-        <location line="-382"/>
+        <location line="-384"/>
         <source>Reply</source>
         <translation>Cevapla</translation>
     </message>
@@ -1238,7 +1254,7 @@ Then download the package again.</source>
 <context>
     <name>UserDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+133"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+114"/>
         <source>FOLLOWS YOU</source>
         <translation>SENI TAKIP EDIYOR</translation>
     </message>
@@ -1246,7 +1262,7 @@ Then download the package again.</source>
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+97"/>
         <source>Tweets</source>
         <translation>Tweetler</translation>
     </message>
@@ -1276,7 +1292,7 @@ Then download the package again.</source>
         <translation>Liste</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Unmute @%1</source>
         <translation>Sesini Ac @%1</translation>
     </message>
@@ -1330,7 +1346,7 @@ Then download the package again.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+101"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
         <source>API rate limited until %1</source>
         <translation>%1 &apos;e kadar API limitlendi</translation>
     </message>
@@ -1349,7 +1365,7 @@ Then download the package again.</source>
 <context>
     <name>normal</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+36"/>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+35"/>
         <source>Light theme for QNeptunea.</source>
         <translation>QNeptunea icin hafif tema.</translation>
     </message>
