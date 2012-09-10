@@ -38,6 +38,7 @@
 #include <QtCore/QtConcurrentRun>
 #include <QtCore/QFutureWatcher>
 #include <QtGui/QBitmap>
+#include <QtGui/QApplication>
 #include <QtGui/QImageReader>
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkRequest>
@@ -106,10 +107,12 @@ void createAvatar(QIODevice *ioDevice, QString cache)
     ioDevice->deleteLater();
     QImage sourceImage;
     QImageReader reader(&buffer);
+    QApplication::processEvents();
     if (!reader.read(&sourceImage)) {
         return;
     }
 
+    QApplication::processEvents();
     QImage maskImage;
     int width = sourceImage.width();
     if (width == sourceImage.height() && ProfileImage::Private::masks.contains(width)) {
@@ -131,6 +134,7 @@ void createAvatar(QIODevice *ioDevice, QString cache)
                 target++;
                 source++;
                 mask++;
+                QApplication::processEvents();
             }
         }
         break;
@@ -146,6 +150,7 @@ void createAvatar(QIODevice *ioDevice, QString cache)
                 target++;
                 index++;
                 mask++;
+                QApplication::processEvents();
             }
         }
         break; }
@@ -158,11 +163,13 @@ void createAvatar(QIODevice *ioDevice, QString cache)
                 *target = (source & 0x00ffffff) | (((*mask & 0xff000000) >> 24) * ((source & 0xff000000) >> 24) / 0xff) << 24;
                 target++;
                 mask++;
+                QApplication::processEvents();
             }
         }
         break;
     }
     targetImage.save(cache);
+    QApplication::processEvents();
 }
 
 ProfileImage::Private::Private(ProfileImage *parent)
@@ -231,7 +238,7 @@ void ProfileImage::Private::retrieve()
     request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::AlwaysNetwork);
     request.setRawHeader("User-Agent", "QNeptunea for Nokia N9");
     reply = networkAccessManager->get(request);
-    connect(reply, SIGNAL(finished()), this, SLOT(finished()));
+    connect(reply, SIGNAL(finished()), this, SLOT(finished()), Qt::QueuedConnection);
 }
 
 void ProfileImage::Private::finished()
@@ -249,7 +256,7 @@ void ProfileImage::Private::finished()
         request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::AlwaysNetwork);
         request.setRawHeader("User-Agent", "QNeptunea for Nokia N9");
         this->reply = networkAccessManager->get(request);
-        connect(this->reply, SIGNAL(finished()), this, SLOT(finished()));
+        connect(this->reply, SIGNAL(finished()), this, SLOT(finished()), Qt::QueuedConnection);
         reply->deleteLater();
         return;
     }
@@ -405,7 +412,7 @@ void ProfileImage::cleanup()
 {
     QDir cacheDir = ProfileImage::Private::cacheDir;
 
-    QSqlQuery query("SELECT key, value FROM Cache ORDER BY lastModified LIMIT 100000 OFFSET 10000;");
+    QSqlQuery query("SELECT key, value FROM Cache ORDER BY lastModified LIMIT 1000000 OFFSET 100000;");
     QSqlRecord record = query.record();
     int key = record.indexOf("key");
     int value = record.indexOf("value");
