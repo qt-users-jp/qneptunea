@@ -30,7 +30,9 @@ import '../QNeptunea/Components/'
 
 Page {
     id: root
+
     Flickable {
+        id: flickable
         anchors.fill: parent
         contentHeight: container.height
         clip: true
@@ -222,4 +224,6 @@ Page {
             }
         }
     }
+
+    ScrollBar { target: flickable }
 }

@@ -43,19 +43,16 @@ AbstractLinkPage {
             id: connectivity
             pageStack: root.pageStack
         }
-        ScrollBar { target: connectivity }
 
         SettingsPageAppearanceTab {
             id: appearance
             pageStack: root.pageStack
         }
-        ScrollBar { target: appearance }
 
         SettingsPagePluginsTab {
             id: plugins
             pageStack: root.pageStack
         }
-        ScrollBar { target: plugins }
 
         SettingsPageMiscTab {
             id: misc
@@ -63,7 +60,6 @@ AbstractLinkPage {
             interactive: !defined(root.linkMenu)
             onLinkActivated: root.openLink(link)
         }
-        ScrollBar { target: misc }
 
         onCurrentTabChanged: if (root.linkMenu) root.linkMenu.close()
     }
@@ -71,26 +67,22 @@ AbstractLinkPage {
     toolBarLayout: AbstractToolBarLayout {
         ButtonRow {
             TabButton {
-                id: showConnectivity
                 iconSource: 'image://theme/icon-m-toolbar-refresh'.concat(theme.inverted ? "-white" : "")
                 tab: connectivity
                 checked: true
             }
 
             TabButton {
-                id: showAppearance
                 iconSource: 'image://theme/icon-m-toolbar-gallery'.concat(theme.inverted ? "-white" : "")
                 tab: appearance
             }
 
             TabButton {
-                id: showPlugins
                 iconSource: 'image://theme/icon-m-toolbar-settings'.concat(theme.inverted ? "-white" : "")
                 tab: plugins
             }
 
             TabButton {
-                id: showMisc
                 iconSource: 'image://theme/icon-m-toolbar-list'.concat(theme.inverted ? "-white" : "")
                 tab: misc
                 onClicked: {
@@ -112,22 +104,22 @@ AbstractLinkPage {
     states: [
         State {
             name: 'connectivity'
-            when: showConnectivity.checked
+            when: group.currentTab === connectivity
             PropertyChanges { target: root; title: qsTr('Connectivity') }
         },
         State {
             name: 'appearance'
-            when: showAppearance.checked
+            when: group.currentTab === appearance
             PropertyChanges { target: root; title: qsTr('Appearance'); busy: appearance.loading }
         },
         State {
             name: 'plugins'
-            when: showPlugins.checked
+            when: group.currentTab === plugins
             PropertyChanges { target: root; title: qsTr('Plugins') }
         },
         State {
             name: 'misc'
-            when: showMisc.checked
+            when: group.currentTab === misc
             PropertyChanges { target: root; title: qsTr('Misc'); visualParent: misc }
         }
     ]

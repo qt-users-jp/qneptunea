@@ -180,4 +180,6 @@ Page {
             }
         }
     }
+
+    ScrollBar { target: flickable }
 }

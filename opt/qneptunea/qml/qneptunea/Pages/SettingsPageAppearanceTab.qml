@@ -36,6 +36,7 @@ Page {
     property bool loading: userTimeline.loading || qneptuneaTheme.loading
 
     Flickable {
+        id: flickable
         anchors.fill: parent
         contentHeight: container.height
         clip: true
@@ -390,4 +391,6 @@ Page {
             }
         }
     }
+
+    ScrollBar { target: flickable }
 }
