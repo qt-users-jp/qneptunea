@@ -149,7 +149,12 @@ AbstractLinkPage {
 
     Flickable {
         id: container
-        anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
+        anchors.top: parent.top
+        anchors.topMargin: root.headerHeight
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: completion.top
+
         clip: true
         contentHeight: contents.height
         interactive: !defined(root.linkMenu)
@@ -293,63 +298,6 @@ AbstractLinkPage {
                             }
                         }
 
-                        CompletionView {
-                            id: screenNamesView
-                            anchors.top: textArea.bottom
-                            anchors.left: textArea.left
-                            anchors.leftMargin: 15
-                            anchors.right: textArea.right
-                            anchors.rightMargin: 15
-                            model: screenNamesModel
-                            icon: true
-                            z: 1
-                            opacity: filter.length > 0 ? 1.0 : 0.0
-                            onClicked: {
-                                var screenName = new RegExp(/(@[a-zA-z0-9_]*)$/)
-                                if (screenName.test(textArea.text2.substring(0, textArea.cursorPosition))) {
-                                    var len = RegExp.$1.length
-                                    var left = textArea.text2.substring(0, textArea.cursorPosition)
-                                    var center = candidate.substring(len - 1)
-                                    if (left.length === len)
-                                        center = center.concat(' ')
-                                    var right = textArea.text2.substring(textArea.cursorPosition)
-//                                    textArea.preedit = ''
-                                    textArea.text = left.concat(center).concat(right)
-                                    textArea.forceActiveFocus()
-                                    textArea.cursorPosition = left.length + center.length
-                                    textArea.platformPreedit = ''
-                                }
-                                screenNamesView.filter = ''
-                            }
-                        }
-                        CompletionView {
-                            id: hashTagsView
-                            anchors.top: textArea.bottom
-                            anchors.left: textArea.left
-                            anchors.leftMargin: 15
-                            anchors.right: textArea.right
-                            anchors.rightMargin: 15
-                            model: hashTagsModel
-                            z: 1
-                            opacity: filter.length > 0 ? 1.0 : 0.0
-                            onClicked: {
-                                var hashTag = new RegExp(/(#[^ \.]*)$/)
-                                if (hashTag.test(textArea.text2.substring(0, textArea.cursorPosition))) {
-                                    var len = RegExp.$1.length
-                                    var left = textArea.text2.substring(0, textArea.cursorPosition)
-                                    var center = candidate.substring(len - 1)
-                                    if (left.length === len)
-                                        center = center.concat(' ')
-                                    var right = textArea.text2.substring(textArea.cursorPosition)
-                                    textArea.text = left.concat(center).concat(right)
-                                    textArea.forceActiveFocus()
-                                    textArea.cursorPosition = left.length + center.length
-                                    textArea.platformPreedit = ''
-                                }
-                                hashTagsView.filter = ''
-                            }
-                        }
-
                         Button {
                             id: tweetLandscape
                             width: visible ? 322 / 2 : 0
@@ -454,6 +402,68 @@ AbstractLinkPage {
 
     ScrollDecorator { flickableItem: container }
 
+    Column {
+        id: completion
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: root.footerHeight
+
+        Behavior on height { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
+
+        CompletionView {
+            id: screenNamesView
+            width: parent.width
+            height: Math.max(constants.fontDefault, 48) * 1.2
+
+            model: screenNamesModel
+            icon: true
+            z: 1
+            opacity: filter.length > 0 ? 1.0 : 0.0
+            onClicked: {
+                var screenName = new RegExp(/(@[a-zA-z0-9_]*)$/)
+                if (screenName.test(textArea.text2.substring(0, textArea.cursorPosition))) {
+                    var len = RegExp.$1.length
+                    var left = textArea.text2.substring(0, textArea.cursorPosition)
+                    var center = candidate.substring(len - 1)
+                    if (left.length === len)
+                        center = center.concat(' ')
+                    var right = textArea.text2.substring(textArea.cursorPosition)
+    //                                    textArea.preedit = ''
+                    textArea.text = left.concat(center).concat(right)
+                    textArea.forceActiveFocus()
+                    textArea.cursorPosition = left.length + center.length
+                    textArea.platformPreedit = ''
+                }
+                screenNamesView.filter = ''
+            }
+        }
+        CompletionView {
+            id: hashTagsView
+            width: parent.width
+            height: Math.max(constants.fontDefault, 48) * 1.2
+
+            model: hashTagsModel
+            z: 1
+            opacity: filter.length > 0 ? 1.0 : 0.0
+            onClicked: {
+                var hashTag = new RegExp(/(#[^ \.]*)$/)
+                if (hashTag.test(textArea.text2.substring(0, textArea.cursorPosition))) {
+                    var len = RegExp.$1.length
+                    var left = textArea.text2.substring(0, textArea.cursorPosition)
+                    var center = candidate.substring(len - 1)
+                    if (left.length === len)
+                        center = center.concat(' ')
+                    var right = textArea.text2.substring(textArea.cursorPosition)
+                    textArea.text = left.concat(center).concat(right)
+                    textArea.forceActiveFocus()
+                    textArea.cursorPosition = left.length + center.length
+                    textArea.platformPreedit = ''
+                }
+                hashTagsView.filter = ''
+            }
+        }
+    }
     Menu {
         id: menu
         visualParent: container

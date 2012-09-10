@@ -31,44 +31,49 @@ ListView {
     width: 200
     height: 240
     clip: true
+    orientation: ListView.Horizontal
 
     property bool icon: false
     property string filter
     signal clicked(string candidate)
 
-    Behavior on opacity {
-        NumberAnimation { easing.type: Easing.OutExpo }
-    }
-
-    delegate: MouseArea {
+    delegate: Row {
         id: delegate
-        width: root.width
-        height: active ? 48 : 0
+        height: root.height
         property bool active: model.key.substring(0, root.filter.length - 1).toLowerCase() === root.filter.substring(1).toLowerCase()
         clip: true
 
-        Behavior on height {
+        Behavior on width {
             NumberAnimation { easing.type: Easing.OutExpo }
         }
 
-        ProfileImage {
-            id: avatar
-            width: root.icon ? 48 : 0
-            height: 48
-            source: root.icon ? 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(model.key) : ''
-            visible: delegate.active
-        }
-        Text {
-            anchors.left: avatar.right
-            anchors.leftMargin: constants.listViewMargins
+        MouseArea {
+            width: root.icon ? 56 : 0
+            height: root.height
             anchors.verticalCenter: parent.verticalCenter
-            font.pixelSize: 24
+            onClicked: root.clicked(model.key)
+            visible: delegate.active
+            ProfileImage {
+                width: 48; height: 48
+                anchors.centerIn: parent
+                source: root.icon ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1'.arg(model.key) : ''
+            }
+        }
+
+        Text {
+            height: root.height
             font.family: constants.fontFamily
-            text: (root.icon ? '@' : '#').concat(model.key)
-            elide: Text.ElideRight
+            font.pixelSize: constants.fontDefault
+            text: '<a style="%3">%1%2</a>'.arg(root.icon ? '' : '#').arg(model.key).arg(root.icon ? constants.screenNameStyle : constants.hashTagStyle)
+            verticalAlignment: Text.AlignVCenter
+            visible: delegate.active
+            MouseArea { anchors.fill: parent; onClicked: root.clicked(model.key) }
+        }
+
+        Item {
+            height: root.height
+            width: constants.fontDefault / 2
             visible: delegate.active
         }
-        onClicked: root.clicked(model.key)
     }
-    Rectangle { anchors.fill: parent; color: 'white'; z: -1 }
 }
