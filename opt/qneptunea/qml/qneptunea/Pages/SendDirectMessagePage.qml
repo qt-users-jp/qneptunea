@@ -190,7 +190,7 @@ AbstractPage {
                         spacing: constants.listViewMargins
 
                         Text {
-                            text: qsTr('Send to %1').arg(root.recipient.name)
+                            text: qsTr('Send to %1').arg(defined(root.recipient) ? to_s(root.recipient.name) : '')
                             anchors.bottom: parent.bottom
                             font.family: constants.fontFamily
                             font.pixelSize: constants.fontSmall

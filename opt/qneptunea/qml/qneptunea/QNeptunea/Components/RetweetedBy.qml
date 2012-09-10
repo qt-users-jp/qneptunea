@@ -29,20 +29,20 @@ import com.nokia.meego 1.0
 
 Row {
     id: root
-    anchors.right: parent ? parent.right : undefined
     spacing: constants.listViewMargins
     property variant user
 
     Image {
         source: '../../images/retweet'.concat(theme.inverted ? '-white.png' : '.png')
-        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenter: name.verticalCenter
         smooth: true
         width: constants.listViewIconSize / 2
         height: width
     }
 
     Text {
-        anchors.verticalCenter: parent.verticalCenter
+        id: name
+        anchors.bottom: parent.bottom
         text: defined(root.user) ? to_s(root.user.name) : ''
         textFormat: Text.PlainText
         color: constants.nameColor
@@ -50,17 +50,12 @@ Row {
         font.family: constants.fontFamily
     }
 
-    Item {
-        anchors.verticalCenter: parent.verticalCenter
+    ProfileImage {
+        anchors.bottom: parent.bottom
         width: constants.listViewIconSize / 2
-        height: width + constants.listViewMargins
-        ProfileImage {
-            anchors.centerIn: parent
-            width: constants.listViewIconSize / 2
-            height: width
-            source: defined(root.user) && defined(root.user.profile_image_url) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.user.screen_name).arg(constants.listViewIconSizeName) : ''
-            _id: defined(root.user) ? to_s(root.user.profile_image_url) : ''
-            smooth: true
-        }
+        height: width
+        source: defined(root.user) && defined(root.user.profile_image_url) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.user.screen_name).arg(constants.listViewIconSizeName) : ''
+        _id: defined(root.user) ? to_s(root.user.profile_image_url) : ''
+        smooth: true
     }
 }

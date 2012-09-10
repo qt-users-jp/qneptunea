@@ -86,7 +86,7 @@ MouseArea {
             anchors.left: parent.left
             anchors.right: parent.right
             height: Math.max(iconArea.height, nameArea.height) + 12
-            Item {
+            ProfileImage {
                 id: iconArea
                 anchors.left: parent.left
                 anchors.leftMargin: constants.iconLeftMargin
@@ -95,11 +95,8 @@ MouseArea {
                 width: 73
                 height: width
 
-                ProfileImage {
-                    anchors.fill: parent
-                    source: root.temporary ? '' : (__item.user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(__item.user.screen_name) : '')
-                    _id: root.temporary ? '' : to_s(__item.user.profile_image_url)
-                }
+                source: root.temporary ? '' : (__item.user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(__item.user.screen_name) : '')
+                _id: root.temporary ? '' : to_s(__item.user.profile_image_url)
             }
 
             Column {

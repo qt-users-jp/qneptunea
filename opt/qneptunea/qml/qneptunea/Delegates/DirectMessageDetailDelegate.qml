@@ -82,7 +82,7 @@ MouseArea {
             anchors.left: parent.left
             anchors.right: parent.right
             height: Math.max(iconArea.height, nameArea.height) + constants.listViewScrollbarWidth * 2
-            Item {
+            ProfileImage {
                 id: iconArea
                 anchors.left: parent.left
                 anchors.leftMargin: constants.iconLeftMargin
@@ -91,11 +91,8 @@ MouseArea {
                 width: 73
                 height: width
 
-                ProfileImage {
-                    anchors.fill: parent
-                    source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(sender.screen_name) : ''
-                    _id: to_s(sender.profile_image_url)
-                }
+                source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(sender.screen_name) : ''
+                _id: to_s(sender.profile_image_url)
             }
 
             Column {
