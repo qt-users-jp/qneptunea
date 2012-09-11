@@ -64,7 +64,7 @@ ListView {
             height: root.height
             font.family: constants.fontFamily
             font.pixelSize: constants.fontDefault
-            text: '<a style="%3">%1%2</a>'.arg(root.icon ? '' : '#').arg(model.key).arg(root.icon ? constants.screenNameStyle : constants.hashTagStyle)
+            text: '<a style="%1">%2%3</a>'.arg(root.icon ? constants.screenNameStyle : constants.hashTagStyle).arg(root.icon ? '' : '#').arg(model.key)
             verticalAlignment: Text.AlignVCenter
             visible: delegate.active
             MouseArea { anchors.fill: parent; onClicked: root.clicked(model.key) }

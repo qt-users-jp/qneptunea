@@ -146,7 +146,7 @@ Item {
             }
             Text {
                 width: parent.width
-                text: '<a style="%1" href="%2">%3</a>'.arg(constants.linkStyle).arg(user.url).arg(user.url)
+                text: '<a style="%1" href="%2">%2</a>'.arg(constants.linkStyle).arg(user.url)
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
 

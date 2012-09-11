@@ -60,7 +60,7 @@ MouseArea {
             spacing: constants.listViewMargins
 
             Text {
-                text: '%1 (%2)'.arg(list.full_name).arg(list.member_count)
+                text: '%2 (%1)'.arg(list.member_count).arg(list.full_name)
                 width: parent.width
                 font.bold: true
                 font.family: constants.fontFamily

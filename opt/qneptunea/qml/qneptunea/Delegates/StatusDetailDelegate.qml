@@ -144,7 +144,7 @@ MouseArea {
                 width: parent.width
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                text: '<style type="text/css">a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}</style>%1'.arg(__item.rich_text).arg(constants.linkStyle).arg(constants.screenNameStyle).arg(constants.hashTagStyle).arg(constants.mediaStyle)
+                text: '<style type="text/css">a.link{%1} a.screen_name{%2} a.hash_tag{%3} a.media{%4}</style>%5'.arg(constants.linkStyle).arg(constants.screenNameStyle).arg(constants.hashTagStyle).arg(constants.mediaStyle).arg(__item.rich_text)
                 lineHeightMode: Text.FixedHeight
                 lineHeight: constants.fontLarge * 1.40
                 font.family: constants.fontFamily
