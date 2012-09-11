@@ -235,7 +235,7 @@ AbstractLinkPage {
                     source: "http://maps.google.com/staticmap?zoom=15&center=%1,%2&size=240x240&markers=%1,%2,red,a&saturation=-100".arg(map._lat).arg(map._long)
                     width: 240
                     height: 240
-                    visible: defined(root.__status.geo) && defined(root.__status.geo.coordinates)
+                    visible: defined(root.__status.geo) && defined(root.__status.geo.coordinates) && root.__status.geo.coordinates[0] !== 0 && root.__status.geo.coordinates[1] !== 0
                     Item {
                         anchors.centerIn: parent
                         height: pin.height * 2
@@ -247,6 +247,7 @@ AbstractLinkPage {
                             visible: map.status === Image.Ready
                         }
                     }
+
                     MouseArea {
                         anchors.fill: parent
                         onClicked: pageStack.push(mapPage, {'_lat': map._lat, '_long': map._long})

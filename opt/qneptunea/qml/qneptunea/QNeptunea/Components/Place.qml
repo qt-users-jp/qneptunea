@@ -29,7 +29,6 @@ import com.nokia.meego 1.0
 
 Row {
     id: root
-    anchors.right: parent.right
     spacing: constants.listViewMargins
     property variant place
 
