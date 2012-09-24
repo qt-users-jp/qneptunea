@@ -512,7 +512,7 @@
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>Dutch</translation>
+        <translation>Nederlands</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -855,7 +855,7 @@ HTML5
     <message>
         <location line="+0"/>
         <source>Remove saved search</source>
-        <translation>Bewaarde zoekopdracht verwijderen</translation>
+        <translation>Verwijder zoekopdracht</translation>
     </message>
 </context>
 <context>
@@ -1185,7 +1185,7 @@ HTML5
     <message>
         <location line="+3"/>
         <source>English</source>
-        <translation>Dutch</translation>
+        <translation>Nederlands</translation>
     </message>
     <message>
         <location line="-5"/>
