@@ -912,7 +912,7 @@ HTML5
     <message>
         <location line="+5"/>
         <source>Misc</source>
-        <translation>Mengeling</translation>
+        <translation>Diversen</translation>
     </message>
 </context>
 <context>
@@ -1195,7 +1195,7 @@ HTML5
     <message>
         <location line="+3"/>
         <source>English (Please translate this &quot;English&quot; to *your* langage name like &quot;Japanese&quot; or &quot;Portuguese (Portugal)&quot;.)</source>
-        <translation>Dutch</translation>
+        <translation>Nederlands</translation>
     </message>
 </context>
 <context>
