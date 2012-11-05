@@ -412,7 +412,7 @@ void ProfileImage::cleanup()
 {
     QDir cacheDir = ProfileImage::Private::cacheDir;
 
-    QSqlQuery query("SELECT key, value FROM Cache ORDER BY lastModified LIMIT 1000000 OFFSET 100000;");
+    QSqlQuery query("SELECT key, value FROM Cache ORDER BY lastModified LIMIT 100000 OFFSET 100000;");
     QSqlRecord record = query.record();
     int key = record.indexOf("key");
     int value = record.indexOf("value");
