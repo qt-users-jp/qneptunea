@@ -45,7 +45,7 @@ AbstractListView {
         onPressed: root.__pressed = true
 
         onPressAndHold: {
-            if (!currentVersion.trusted) return
+//            if (!currentVersion.trusted) return
             var parameters = {}
             parameters['in_reply_to'] = model
             if (model.recipient_id == oauth.user_id) {

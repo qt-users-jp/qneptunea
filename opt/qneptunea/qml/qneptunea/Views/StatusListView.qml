@@ -124,7 +124,7 @@ AbstractListView {
         }
 
         onPressAndHold: {
-            if (!currentVersion.trusted) return
+//            if (!currentVersion.trusted) return
             status.id_str = model.id_str
             actions.parent = delegate
             if (mouse.x < delegate.width / 2) {
