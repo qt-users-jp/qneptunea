@@ -86,7 +86,7 @@ AbstractPage {
     }
 
     function moveToTop() {
-        if (root.topData.id_str == root.__maxReadIdStr || root.unreadCount == 0)
+        if (root.unreadCount == 0)
             view.positionViewAtBeginning()
         else
             view.positionViewAtIndex(root.unreadCount - 1, ListView.Beginning)
