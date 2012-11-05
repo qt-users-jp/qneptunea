@@ -209,7 +209,7 @@ AbstractLinkPage {
             onClicked: {
                 if (root.linkMenu) root.linkMenu.close()
                 menu.close()
-                root.pageStack.push(sendDirectMessagePage, {'recipient': user})
+                root.pageStack.push(sendDirectMessagePage, {'recipient': user, 'in_reply_to': undefined})
             }
         }
         AddShortcutButton {

@@ -113,8 +113,8 @@ AbstractPage {
                     anchors.top: parent.top
                     anchors.topMargin: 5
                     anchors.left: parent.left
-                    source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.retweet ? root.in_reply_to.user.screen_name : verifyCredentials.screen_name).arg(constants.listViewIconSizeName)
-                    _id: root.retweet ? root.in_reply_to.user.profile_image_url : verifyCredentials.profile_image_url
+                    source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(verifyCredentials.screen_name).arg(constants.listViewIconSizeName)
+                    _id: verifyCredentials.profile_image_url
                     width: constants.listViewIconSize
                     height: width
                 }
