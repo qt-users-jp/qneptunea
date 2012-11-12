@@ -41,7 +41,7 @@ ServicePlugin {
         var username = settings.readData('instapaper.com/username', '')
         var password = settings.readData('instapaper.com/password', '')
         if (username.length == 0 || password.length == 0) {
-            pageStack.push(settingsPage, {'state': 'plugins'})
+            pageStack.push(settingsPage, {'currentTab': 'plugins'})
             return
         }
 

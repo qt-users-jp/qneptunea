@@ -31,6 +31,8 @@ import '../QNeptunea/Components/'
 AbstractLinkPage {
     id: root
 
+    property string currentTab: ''
+
     TabGroup {
         id: group
         anchors.fill: parent
@@ -62,6 +64,41 @@ AbstractLinkPage {
         }
 
         onCurrentTabChanged: if (root.linkMenu) root.linkMenu.close()
+
+        states: [
+            State {
+                name: 'setTabToConnectivity'
+                when: root.currentTab === 'connectivity'
+                PropertyChanges {
+                    target: group
+                    currentTab: connectivity
+                }
+            },
+            State {
+                name: 'setTabToAppearance'
+                when: root.currentTab === 'appearance'
+                PropertyChanges {
+                    target: group
+                    currentTab: appearance
+                }
+            },
+            State {
+                name: 'setTabToPlugins'
+                when: root.currentTab === 'plugins'
+                PropertyChanges {
+                    target: group
+                    currentTab: plugins
+                }
+            },
+            State {
+                name: 'setTabToMisc'
+                when: root.currentTab === 'misc'
+                PropertyChanges {
+                    target: group
+                    currentTab: misc
+                }
+            }
+        ]
     }
 
     toolBarLayout: AbstractToolBarLayout {
@@ -106,21 +143,25 @@ AbstractLinkPage {
             name: 'connectivity'
             when: group.currentTab === connectivity
             PropertyChanges { target: root; title: qsTr('Connectivity') }
+            PropertyChanges { target: root; currentTab: 'connectivity' }
         },
         State {
             name: 'appearance'
             when: group.currentTab === appearance
             PropertyChanges { target: root; title: qsTr('Appearance'); busy: appearance.loading }
+            PropertyChanges { target: root; currentTab: 'appearance' }
         },
         State {
             name: 'plugins'
             when: group.currentTab === plugins
             PropertyChanges { target: root; title: qsTr('Plugins') }
+            PropertyChanges { target: root; currentTab: 'plugins' }
         },
         State {
             name: 'misc'
             when: group.currentTab === misc
             PropertyChanges { target: root; title: qsTr('Misc'); visualParent: misc }
+            PropertyChanges { target: root; currentTab: 'misc' }
         }
     ]
 }

@@ -42,7 +42,7 @@ ServicePlugin {
         var username = settings.readData('getpocket.com/username', '')
         var password = settings.readData('getpocket.com/password', '')
         if (username.length == 0 || password.length == 0) {
-            pageStack.push(settingsPage, {'state': 'plugins'})
+            pageStack.push(settingsPage, {'currentTab': 'plugins'})
             return
         }
 
