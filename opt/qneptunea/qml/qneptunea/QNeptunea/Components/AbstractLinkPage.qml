@@ -123,15 +123,6 @@ AbstractPage {
                 text: qsTr('Open in the browser')
                 onClicked: {
                     root.running = true
-                    Qt.openUrlExternally(menu.link)
-                }
-                Component.onCompleted: console.debug('parent0', parent)
-            }
-            MenuItemWithIcon {
-                iconSource: 'image://theme/icon-m-toolbar-application'.concat(theme.inverted ? "-white" : "")
-                text: qsTr('Open in the default app')
-                onClicked: {
-                    root.running = true
                     ActionHandler.openUrlExternally(menu.link)
                 }
             }
