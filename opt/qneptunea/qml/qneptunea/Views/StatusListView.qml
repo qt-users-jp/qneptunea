@@ -74,13 +74,18 @@ AbstractListView {
         }
         Button {
             iconSource: '../images/retweet'.concat(theme.inverted ? '.png' : '-white.png')
-            enabled: typeof actions.__status !== 'undefined' && actions.__status.user.id_str !== oauth.user_id
+            enabled: typeof actions.__status !== 'undefined'
             opacity: enabled ? 1.0 : 0.75
             onClicked: {
-                if (actions.__status.retweeted)
+                if (actions.__status.retweeted) {
                     status.destroyStatus()
-                else
-                    status.retweetStatus({'id': actions.__status.id_str})
+                } else {
+                    if (actions.__status.user.id_str == oauth.user_id) {
+                        pageStack.push(tweetPage, {'statusText': ' RT @%1: %2'.arg(actions.__status.user.screen_name).arg(actions.__status.text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')), 'in_reply_to': actions.__status})
+                    } else {
+                        pageStack.push(tweetPage, {'in_reply_to': actions.__status})
+                    }
+                }
                 actions.parent = root
             }
         }
