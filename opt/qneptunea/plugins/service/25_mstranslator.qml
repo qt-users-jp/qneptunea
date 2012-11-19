@@ -35,14 +35,16 @@ ServicePlugin {
     property variant delegate
 
     function matches(url) {
-        return settings.readData('microsofttranslator.com/client_id', 'qneptunea').length > 0 && settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=').length > 0
+        return true
     }
 
     function open(link, parameters, feedback) {
         root.loading = true
         root.delegate = feedback
         var client_id = settings.readData('microsofttranslator.com/client_id', 'qneptunea')
+        if (client_id.length === 0) client_id = 'qneptunea'
         var client_secret = settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=')
+        if (client_secret.length === 0) client_secret = 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw='
 
         var url = 'https://datamarket.accesscontrol.windows.net/v2/OAuth2-13'
         var query = 'grant_type=client_credentials&client_id='.concat(encodeURIComponent(client_id)).concat('&client_secret=').concat(encodeURIComponent(client_secret)).concat('&scope=').concat(encodeURIComponent('http://api.microsofttranslator.com'))

@@ -37,7 +37,12 @@ AbstractLinkPage {
     visualParent: container
 
     property url __icon: 'mstranslator.png'
-    property bool signedIn: settings.readData('microsofttranslator.com/client_id', 'qneptunea').length > 0 && settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=').length > 0
+    property bool signedIn: clientId.length > 0 && clientSecret.length > 0
+
+    property string clientId: settings.readData('microsofttranslator.com/client_id', 'qneptunea')
+    property string clientSecret: settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=')
+
+    property bool dirty: false
 
     ListModel {
         id: langSource
@@ -125,13 +130,14 @@ AbstractLinkPage {
                 id: clientId
                 width: parent.width
                 enabled: !root.busy && !root.signedIn
-                text: settings.readData('microsofttranslator.com/client_id', 'qneptunea')
+                text: root.clientId.length > 0 ? root.clientId : 'qneptunea'
                 maximumLength: 50
                 platformStyle: TextFieldStyle { textFont.pixelSize: constants.fontDefault }
                 platformSipAttributes: SipAttributes {
                     actionKeyLabel: 'Next'
                 }
                 Keys.onReturnPressed: clientSecret.forceActiveFocus()
+                onTextChanged: if (focus) dirty = true
             }
 
             Text {
@@ -145,13 +151,14 @@ AbstractLinkPage {
                 id: clientSecret
                 width: parent.width
                 enabled: !root.busy && !root.signedIn
-                text: settings.readData('microsofttranslator.com/client_secret', 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw=')
+                text: root.clientSecret.length > 0 ? root.clientSecret : 'PEpfJi37mU8wBvvutyntOiX0VslIHuehGiFLgAbKLlw='
                 maximumLength: 100
                 platformStyle: TextFieldStyle { textFont.pixelSize: constants.fontDefault }
                 platformSipAttributes: SipAttributes {
                     actionKeyLabel: 'Sign In'
                 }
                 Keys.onReturnPressed: button.signIn()
+                onTextChanged: if (focus) dirty = true
             }
 
             Text {
@@ -205,7 +212,7 @@ AbstractLinkPage {
             ToolButton {
                 id: button
 
-                enabled: !root.busy && (root.signedIn || (clientId.text.length > 0 && clientSecret.text.length > 0))
+                enabled: !root.busy && (root.signedIn || (clientId.text.length > 0 && clientSecret.text.length > 0)) && root.dirty
                 checked: enabled
                 text: qsTr('Sign In')
 
