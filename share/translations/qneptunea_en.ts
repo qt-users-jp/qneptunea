@@ -223,11 +223,6 @@
         <source>Open in the browser</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>AbstractListView</name>
@@ -746,7 +741,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1048,6 +1043,11 @@ HTML5
     <message>
         <location line="+20"/>
         <source>Display time-out:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Disable location data:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

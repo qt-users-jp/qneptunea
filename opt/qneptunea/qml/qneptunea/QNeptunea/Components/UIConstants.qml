@@ -196,6 +196,9 @@ QtObject {
     property bool screenSaverDisabled: settings.readData('Power/ScreenSaverDisabled', true)
     onScreenSaverDisabledChanged: settings.saveData('Power/ScreenSaverDisabled', constants.screenSaverDisabled)
 
+    property bool locationDataDisabled: settings.readData('Privacy/LocationDataDisabled', false)
+    onLocationDataDisabledChanged: settings.saveData('Privacy/LocationDataDisabled', constants.locationDataDisabled)
+
     property bool updateCheckDisabled: settings.readData('Power/UpdateCheckDisabled', false)
     onUpdateCheckDisabledChanged: settings.saveData('Power/UpdateCheckDisabled', constants.updateCheckDisabled)
 

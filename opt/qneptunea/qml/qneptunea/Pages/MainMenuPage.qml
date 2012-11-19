@@ -164,8 +164,14 @@ AbstractPage {
                 width: parent.width
                 icon: 'image://theme/icon-m-common-location'.concat(theme.inverted ? "-inverse" : "")
                 text: qsTr('Near by')
+                opacity: constants.locationDataDisabled ? 0.5 : 1.0
 
-                onClicked: pageStack.push(nearByPage)
+                onClicked: {
+                    if (constants.locationDataDisabled) {
+                    } else {
+                        pageStack.push(nearByPage)
+                    }
+                }
             }
             AbstractListDelegate {
                 width: parent.width

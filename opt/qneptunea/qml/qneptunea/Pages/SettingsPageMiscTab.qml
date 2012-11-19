@@ -79,6 +79,24 @@ Page {
                 }
             }
 
+            Text {
+                text: qsTr('Disable location data:')
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+            }
+
+            Row {
+                Item { width: 30; height: 1 }
+
+                Switch {
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: constants.locationDataDisabled
+                    onCheckedChanged: if (root.status === PageStatus.Active) constants.locationDataDisabled = checked
+//                    platformStyle: SwitchStyle { inverted: true }
+                }
+            }
+
             Separator { width: parent.width }
 
             Text {

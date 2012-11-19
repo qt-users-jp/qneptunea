@@ -366,10 +366,15 @@ AbstractLinkPage {
                     visible: !defined(root.location)
                     icon: 'image://theme/icon-m-common-location'.concat(theme.inverted ? "-inverse" : "")
                     enabled: !status.loading && !currentPluginLoading
+                    opacity: constants.locationDataDisabled ? 0.5 : 1.0
                     onClicked: {
-                        root.currentAction = 'location'
-                        locationSelected = undefined
-                        pageStack.push(selectLocationPage)
+                        if (constants.locationDataDisabled) {
+
+                        } else {
+                            root.currentAction = 'location'
+                            locationSelected = undefined
+                            pageStack.push(selectLocationPage)
+                        }
                     }
                 }
                 RectButton {
