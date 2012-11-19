@@ -369,7 +369,7 @@ AbstractLinkPage {
                     opacity: constants.locationDataDisabled ? 0.5 : 1.0
                     onClicked: {
                         if (constants.locationDataDisabled) {
-
+                            pageStack.push(settingsPage, {'currentTab': 'misc'})
                         } else {
                             root.currentAction = 'location'
                             locationSelected = undefined

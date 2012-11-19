@@ -168,6 +168,7 @@ AbstractPage {
 
                 onClicked: {
                     if (constants.locationDataDisabled) {
+                        pageStack.push(settingsPage, {'currentTab': 'misc'})
                     } else {
                         pageStack.push(nearByPage)
                     }
