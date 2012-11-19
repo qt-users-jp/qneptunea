@@ -35,7 +35,7 @@ AbstractLinkPage {
     id: root
 
     title: qsTr('Conversation')
-    busy: status.loading || relatedResults.loading || delegate.loading || conversationStatus.loading || conversationTimer.running || activitySummary.loading
+    busy: status.loading || relatedResults.loading || delegate.loading || conversationStatus.loading || activitySummary.loading
     visualParent: flickable
 
     property variant thumbnails: []
@@ -112,7 +112,7 @@ AbstractLinkPage {
 
     RelatedResultsModel {
         id: relatedResults
-        _id: status.retweeted_status.id_str ? status.retweeted_status.id_str : status.id_str
+        _id: root.__status.id_str
         sortKey: 'id_str'
         property bool done: false
         onLoadingChanged: {
@@ -140,44 +140,22 @@ AbstractLinkPage {
 
     Status {
         id: conversationStatus
-    }
+        id_str: root.__status.in_reply_to_status_id_str
+        onLoadingChanged: {
+            if (loading) return
 
-    StateGroup {
-        states: [
-            State {
-                name: "read more"
-                when: relatedResults.done && !conversationStatus.loading && !conversationTimer.running
-                StateChangeScript {
-                    script: {
-                        conversationTimer.start()
-                    }
+            var found = false
+            for (var j = 0; j < conversationModel.count; j++) {
+                if (conversationModel.get(j).id_str === id_str) {
+                    found = true
+                    break
                 }
             }
-        ]
-    }
-
-    Timer {
-        id: conversationTimer
-        repeat: false
-        interval: 50
-        onTriggered: {
-            var in_reply_to_status_id_str = root.__status.in_reply_to_status_id_str
-            if (!defined(in_reply_to_status_id_str) || in_reply_to_status_id_str.length === 0) {
-                return;
-            }
-            if (conversationStatus.id_str.length > 0) {
+            if (!found)
                 conversationModel.append(conversationStatus.data)
-            }
 
-            if (conversationModel.count == 0) {
-                conversationStatus.id_str = in_reply_to_status_id_str
-            } else {
-                in_reply_to_status_id_str = conversationModel.get(conversationModel.count - 1).in_reply_to_status_id_str
-
-                if (defined(in_reply_to_status_id_str) && in_reply_to_status_id_str.length > 0){
-                    conversationStatus.id_str = in_reply_to_status_id_str
-                }
-            }
+            if (defined(in_reply_to_status_id_str) && in_reply_to_status_id_str.length > 0)
+                id_str = in_reply_to_status_id_str
         }
     }
 
