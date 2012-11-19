@@ -187,6 +187,25 @@ Page {
             Separator { width: parent.width }
 
             Text {
+                text: qsTr('Load RTs and favs automatically:')
+                color: constants.textColor
+                font.family: constants.fontFamily
+                font.pixelSize: constants.fontDefault
+            }
+
+            Row {
+                Item { width: 30; height: 1 }
+
+                Switch {
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: constants.loadRTsAndFavs
+                    onCheckedChanged: if (root.status === PageStatus.Active) constants.loadRTsAndFavs = checked
+                }
+            }
+
+            Separator { width: parent.width }
+
+            Text {
                 text: qsTr('Sync:')
                 color: constants.textColor
                 font.family: constants.fontFamily

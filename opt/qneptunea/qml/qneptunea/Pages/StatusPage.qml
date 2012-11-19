@@ -97,13 +97,10 @@ AbstractLinkPage {
         }
     }
 
-    ActivitySummary {
-        id: activitySummary
-//        _id: root.__status.id_str
-    }
+    ActivitySummary { id: activitySummary }
 
     Timer {
-        running: true
+        running: constants.loadRTsAndFavs
         repeat: false
         interval: 250
         onTriggered: activitySummary._id = root.__status.id_str
@@ -272,6 +269,15 @@ AbstractLinkPage {
                         visible: defined(root.__status.place) && defined(root.__status.place.country)
                     }
                 }
+            }
+
+            AbstractListDelegate {
+                width: parent.width
+                visible: activitySummary._id.length === 0
+                icon: 'image://theme/icon-m-toolbar-grid'.concat(theme.inverted ? "-selected" : "")
+                text: qsTr('Load RTs and Favs')
+                driilldown: false
+                onClicked: activitySummary._id = root.__status.id_str
             }
 
             UserIcons {

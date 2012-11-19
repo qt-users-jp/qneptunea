@@ -202,6 +202,9 @@ QtObject {
     property bool updateCheckDisabled: settings.readData('Power/UpdateCheckDisabled', false)
     onUpdateCheckDisabledChanged: settings.saveData('Power/UpdateCheckDisabled', constants.updateCheckDisabled)
 
+    property bool loadRTsAndFavs: settings.readData('Power/LoadRTsAndFavs', false)
+    onLoadRTsAndFavsChanged: settings.saveData('Power/LoadRTsAndFavs', constants.loadRTsAndFavs)
+
     property ConfItem syncConf: ConfItem { id: syncConf; key: '/apps/QNeptunea/Sync' }
     property bool sync: typeof syncConf.value === 'undefined' ? true : syncConf.value
     onSyncChanged: syncConf.value = root.sync
