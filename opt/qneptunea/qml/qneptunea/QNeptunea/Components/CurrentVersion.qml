@@ -37,8 +37,8 @@ QtObject {
         repeat: false
         onTriggered: {
             checkVersion()
-            if (!app.isDeveloper(oauth.screen_name))
-                checkSource()
+//            if (!app.isDeveloper(oauth.screen_name))
+            checkSource()
         }
     }
 

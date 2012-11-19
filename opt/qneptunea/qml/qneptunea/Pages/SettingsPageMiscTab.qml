@@ -84,6 +84,7 @@ Page {
                 color: constants.textColor
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
+                visible: currentVersion.trusted
             }
 
             Row {
@@ -93,11 +94,14 @@ Page {
                     anchors.verticalCenter: parent.verticalCenter
                     checked: constants.locationDataDisabled
                     onCheckedChanged: if (root.status === PageStatus.Active) constants.locationDataDisabled = checked
-//                    platformStyle: SwitchStyle { inverted: true }
                 }
+                visible: currentVersion.trusted
             }
 
-            Separator { width: parent.width }
+            Separator {
+                width: parent.width
+                visible: currentVersion.trusted
+            }
 
             Text {
                 text: qsTr('QNeptunea update check:')
@@ -126,7 +130,6 @@ Page {
                 color: constants.textColor
                 font.family: constants.fontFamily
                 font.pixelSize: constants.fontDefault
-                visible: !currentVersion.trusted
             }
 
             Item {
