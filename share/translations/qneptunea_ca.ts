@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="ca">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ca" version="2.0">
 <context>
     <name>25_mstranslator</name>
     <message>
@@ -980,11 +978,7 @@ HTML5
     <message numerus="yes">
         <location line="+18"/>
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minut</numerusform>
-            <numerusform>%n minuts</numerusform>
-            <numerusform></numerusform>
-        </translation>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minuts</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1061,7 +1055,7 @@ HTML5
         <translation>Deshabilita les dades d&apos;ubicació</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+19"/>
         <source>QNeptunea update check:</source>
         <translation>Comprova si hi ha actualitzacions:</translation>
     </message>
@@ -1071,7 +1065,7 @@ HTML5
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Restart QNeptunea</source>
         <translation>Reinicia QNeptunea</translation>
     </message>
