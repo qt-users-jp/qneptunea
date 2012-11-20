@@ -7,7 +7,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+96"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>nl (Vertaal deze &quot;nl&quot; naar de meest kloppende taalcode op http://msdn.microsoft.com/en-us/library/hh456380)</translation>
     </message>
@@ -220,11 +220,6 @@
         <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+123"/>
         <source>Open in the browser</source>
         <translation>Open in de browser</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation>Open in het standaard programma</translation>
     </message>
 </context>
 <context>
@@ -450,7 +445,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+73"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Inschrijven &amp; Registreren&lt;/a&gt;</translation>
     </message>
@@ -460,17 +455,17 @@
         <translation>client_id:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>client_secret:</source>
         <translation>client_secret:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>translate to:</source>
         <translation>vertaal naar:</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-116"/>
         <source>Arabic</source>
         <translation>Arabisch</translation>
     </message>
@@ -665,7 +660,7 @@
         <translation>Vietnamees</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>nl (Vertaal deze &quot;nl&quot; naar de meest kloppende taalcode op http://msdn.microsoft.com/en-us/library/hh456380)</translation>
     </message>
@@ -744,7 +739,7 @@
         <translation>In de buurt</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
@@ -895,22 +890,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+108"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation>Verbinding</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Appearance</source>
         <translation>Uiterlijk</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Plugins</source>
         <translation>Toevoegingen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Misc</source>
         <translation>Diversen</translation>
     </message>
@@ -1017,6 +1012,11 @@ HTML5
     </message>
     <message>
         <location line="+11"/>
+        <source>Load RTs and favs automatically:</source>
+        <translation>Laad RT&apos;s en favs automatisch:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sync:</source>
         <translation>Synchroniseer:</translation>
     </message>
@@ -1050,7 +1050,12 @@ HTML5
         <translation>Time-out scherm:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
+        <source>Disable location data:</source>
+        <translation>Schakel locatiegegevens uit:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>QNeptunea update check:</source>
         <translation>Controleren op QNeptunea updates:</translation>
     </message>
@@ -1132,7 +1137,7 @@ HTML5
         <translation>Annuleren</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="+267"/>
         <source>Unmute @%1</source>
         <translation>Deblokkeren @%1</translation>
     </message>
@@ -1210,18 +1215,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+478"/>
+        <location line="+483"/>
         <source>Tweet</source>
         <translation>Tweet</translation>
     </message>
     <message>
-        <location line="-381"/>
-        <location line="+403"/>
+        <location line="-386"/>
+        <location line="+408"/>
         <source>Retweet</source>
         <translation>Retweet</translation>
     </message>
     <message>
-        <location line="-395"/>
+        <location line="-400"/>
         <source>Reply</source>
         <translation>Reageer</translation>
     </message>
