@@ -251,11 +251,21 @@ AbstractLinkPage {
 
             AbstractListDelegate {
                 width: parent.width
-                visible: activitySummary._id.length === 0
-                icon: 'image://theme/icon-m-toolbar-grid'.concat(theme.inverted ? "-selected" : "")
-                text: qsTr('Load RTs and Favs')
+                visible: activitySummary._id.length === 0 || (!constants.loadRTsAndFavs && activitySummary.loading)
+                opacity: activitySummary.loading ? 0.5 : 1.0
+                Row {
+                    anchors.verticalCenter: parent.verticalCenter
+                    Image {
+                        anchors.verticalCenter: parent.verticalCenter
+                        source: 'image://theme/icon-m-toolbar-favorite-mark'.concat(theme.inverted ? "-white" : "")
+                    }
+                    Image {
+                        anchors.verticalCenter: parent.verticalCenter
+                        source: '../images/retweet'.concat(theme.inverted ? "-white.png" : '.png')
+                    }
+                }
                 driilldown: false
-                onClicked: activitySummary._id = root.__status.id_str
+                onClicked: if (!activitySummary.loading) activitySummary._id = root.__status.id_str
             }
 
             UserIcons {

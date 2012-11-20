@@ -741,7 +741,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -888,22 +888,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+108"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Appearance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Misc</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1056,7 +1056,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+19"/>
         <source>QNeptunea update check:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1138,12 +1138,7 @@ HTML5
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+227"/>
-        <source>Load RTs and Favs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+52"/>
+        <location line="+267"/>
         <source>Unmute @%1</source>
         <translation type="unfinished"></translation>
     </message>
