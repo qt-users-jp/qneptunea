@@ -7,7 +7,7 @@
         <translation>مترجم مايكروسوفت</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+96"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>ar</translation>
     </message>
@@ -150,18 +150,18 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/AboutPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
-        <translation>QNeptunea لـN9 %1</translation>
+        <translation>QNeptunea for N9 %1</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>translator1_twitter_id,translator2_twitter_id,...</translation>
+        <translation>talfandi</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../../opt/qneptunea/server.cpp" line="+104"/>
         <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
-        <translation>(translator_twitter_id(s (الرجاء ترجمة هذة &quot;(translator_twitter_id(s&quot; الى *your* معرف(ك) في التويتر like &quot;task_jp&quot; او &quot;task_jp, LogonAniket&quot;.)</translation>
+        <translation>talfandi</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -219,12 +219,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+123"/>
         <source>Open in the browser</source>
-        <translation>فتح في المتصح</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation>فتح في التطبيق الإفتراضي</translation>
+        <translation>فتح في المتصفح</translation>
     </message>
 </context>
 <context>
@@ -289,7 +284,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+36"/>
         <source>DirectMessage</source>
-        <translation>رسالة مباشرة</translation>
+        <translation>رسالة خاصة</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -307,7 +302,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagesPage.qml" line="+37"/>
         <source>Direct Messages</source>
-        <translation>رسائل خاصة</translation>
+        <translation>الرسائل الخاصة</translation>
     </message>
 </context>
 <context>
@@ -450,7 +445,7 @@
         <translation>مترجم مايكروسوفت</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+73"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;إشتراك &amp; تسجيل&lt;/a&gt;</translation>
     </message>
@@ -460,17 +455,17 @@
         <translation>client_id:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>client_secret:</source>
         <translation>المستخدم_سر:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>translate to:</source>
         <translation>ترجم الى:</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-116"/>
         <source>Arabic</source>
         <translation>عربي</translation>
     </message>
@@ -665,7 +660,7 @@
         <translation>الفيتنامية</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>ar</translation>
     </message>
@@ -696,12 +691,12 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MainMenuPage.qml" line="+36"/>
         <source>QNeptunea for N9 %1</source>
-        <translation>QNeptunea لـN9 %1</translation>
+        <translation>QNeptunea for N9 %1</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Tweets</source>
-        <translation>التغريدات</translation>
+        <translation>تغريدات</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -731,7 +726,7 @@
     <message>
         <location line="+10"/>
         <source>Trend</source>
-        <translation>الشائع</translation>
+        <translation>المتداوَلة</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -744,7 +739,7 @@
         <translation>بالقرب من</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation>الإعدادات</translation>
     </message>
@@ -782,7 +777,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
         <source>Mentions</source>
-        <translation>التنويهات</translation>
+        <translation>التفاعُلات</translation>
     </message>
 </context>
 <context>
@@ -879,7 +874,7 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SendDirectMessagePage.qml" line="+38"/>
         <source>Direct Message</source>
-        <translation>رسالة مباشرة</translation>
+        <translation>رسالة خاصة</translation>
     </message>
     <message>
         <location line="+155"/>
@@ -895,22 +890,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+108"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation>الإتصال</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Appearance</source>
         <translation>المظهر</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Plugins</source>
         <translation>الإضافات</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Misc</source>
         <translation>متفرقات</translation>
     </message>
@@ -945,7 +940,7 @@ HTML5
     <message>
         <location line="+16"/>
         <source>Separator opacity:</source>
-        <translation>شفافية الفاصل:</translation>
+        <translation>شفافية الخط الفاصل:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -998,12 +993,12 @@ HTML5
     <message>
         <location line="+18"/>
         <source>Mentions</source>
-        <translation>تنويهات</translation>
+        <translation>التفاعُلات</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Direct Messages</source>
-        <translation>رسائل خاصة</translation>
+        <translation>الرسائل الخاصة</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1013,10 +1008,15 @@ HTML5
     <message>
         <location line="+20"/>
         <source>with vibration</source>
-        <translation>مع الإهتزاز</translation>
+        <translation>مع الهزاز</translation>
     </message>
     <message>
         <location line="+11"/>
+        <source>Load RTs and favs automatically:</source>
+        <translation>تحميل المفضلات والتغريدات المعادة آليا:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sync:</source>
         <translation>تزامن:</translation>
     </message>
@@ -1050,9 +1050,14 @@ HTML5
         <translation>مهلة العرض</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
+        <source>Disable location data:</source>
+        <translation>إيقاف بيانات المكان:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>QNeptunea update check:</source>
-        <translation>فحص التحديث لـ QNeptunea</translation>
+        <translation>بحث عن آخر تحديث لـQNeptunea</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1132,9 +1137,9 @@ HTML5
         <translation>إلغاء</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="+267"/>
         <source>Unmute @%1</source>
-        <translation>إلغاء الكتم @%1</translation>
+        <translation>إلغاء كتم @%1</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1203,27 +1208,27 @@ HTML5
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TrendPage.qml" line="+35"/>
         <source>Trend</source>
-        <translation>شائع</translation>
+        <translation>المتداوَلة</translation>
     </message>
 </context>
 <context>
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+478"/>
+        <location line="+483"/>
         <source>Tweet</source>
-        <translation>غرد</translation>
+        <translation>تغريد</translation>
     </message>
     <message>
-        <location line="-381"/>
-        <location line="+403"/>
+        <location line="-386"/>
+        <location line="+408"/>
         <source>Retweet</source>
         <translation>إعادة تغريد</translation>
     </message>
     <message>
-        <location line="-395"/>
+        <location line="-400"/>
         <source>Reply</source>
-        <translation>رد</translation>
+        <translation>رَد</translation>
     </message>
 </context>
 <context>
@@ -1304,7 +1309,7 @@ $ rm /home/user/.grob/cache/http*/*
     <message>
         <location line="+17"/>
         <source>Unmute @%1</source>
-        <translation>إلغاء الكتم @%1</translation>
+        <translation>إلغاء كتم @%1</translation>
     </message>
     <message>
         <location line="+0"/>
