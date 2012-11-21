@@ -30,10 +30,17 @@ import com.nokia.meego 1.0
 MenuItem {
     id: root
     property alias iconSource: icon.source
+    platformStyle: MenuItemStyle {
+        property string position: root.parent.children.length == 1 ? ""
+      : root.parent.children[0] == root ? "vertical-top"
+      : root.parent.children[root.parent.children.length-1] == root ? "vertical-bottom"
+      : "vertical-center"
+        leftMargin: 64
+    }
     Image {
         id: icon
-        anchors.right: parent.right
-        anchors.rightMargin: (40 - width) / 2 + 24
+        anchors.left: parent.left
+        anchors.leftMargin: (40 - width) / 2 + 12
         anchors.verticalCenter: parent.verticalCenter
         opacity: root.enabled ? 1.0 : 0.5
     }
