@@ -7,7 +7,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+96"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>ja</translation>
     </message>
@@ -159,6 +159,7 @@
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="+104"/>
         <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
         <translation>palmdra</translation>
     </message>
@@ -220,16 +221,11 @@
         <source>Open in the browser</source>
         <translation>ブラウザで開く</translation>
     </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation>既定のアプリで開く</translation>
-    </message>
 </context>
 <context>
     <name>AbstractListView</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+99"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Views/AbstractListView.qml" line="+102"/>
         <source>Loading...</source>
         <translation>ロード中...</translation>
     </message>
@@ -270,7 +266,7 @@
 <context>
     <name>DirectMessageDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+144"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDelegate.qml" line="+46"/>
         <source>Sent to %1</source>
         <translation>%1 へ送信</translation>
     </message>
@@ -278,12 +274,7 @@
 <context>
     <name>DirectMessageDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+146"/>
-        <source>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</source>
-        <translation>&lt;style type=&quot;text/css&quot;&gt;a.link{%2} a.screen_name{%3} a.hash_tag{%4} a.media{%5}&lt;/style&gt;%1</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+169"/>
         <source>Sent to %1</source>
         <translation>%1 へ送信</translation>
     </message>
@@ -291,12 +282,12 @@
 <context>
     <name>DirectMessagePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/DirectMessagePage.qml" line="+36"/>
         <source>DirectMessage</source>
         <translation>メッセージ</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+43"/>
         <source>Copy to clipboard</source>
         <translation>クリップボードにコピー</translation>
     </message>
@@ -454,7 +445,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+73"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;署名と登録&lt;/a&gt;</translation>
     </message>
@@ -464,17 +455,17 @@
         <translation>MS アカウント:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>client_secret:</source>
         <translation>パスワード:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>translate to:</source>
         <translation>翻訳:</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-116"/>
         <source>Arabic</source>
         <translation>アラビア語</translation>
     </message>
@@ -669,7 +660,7 @@
         <translation>ベトナム語</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>ja</translation>
     </message>
@@ -703,7 +694,7 @@
         <translation>QNeptunea for N9 %1</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+71"/>
         <source>Tweets</source>
         <translation>ツイート</translation>
     </message>
@@ -733,7 +724,7 @@
         <translation>保存リスト</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Trend</source>
         <translation>トレンド</translation>
     </message>
@@ -748,7 +739,7 @@
         <translation>位置情報から検索</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation>設定</translation>
     </message>
@@ -886,12 +877,12 @@ HTML5
         <translation>メッセージ</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+155"/>
         <source>Send to %1</source>
         <translation>%1 へ送信</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Send</source>
         <translation>送信</translation>
     </message>
@@ -899,7 +890,7 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+112"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation>接続性</translation>
     </message>
@@ -922,12 +913,12 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+169"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
         <source>Icon size:</source>
         <translation>アイコンサイズ:</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Normal</source>
         <translation>通常</translation>
     </message>
@@ -942,12 +933,17 @@ HTML5
         <translation>文字サイズ:</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
+        <source>List spacing:</source>
+        <translation>リスト間隔:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Separator opacity:</source>
         <translation>仕切り線太さ:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Date format:</source>
         <translation>日付フォーマット:</translation>
     </message>
@@ -965,7 +961,7 @@ HTML5
 <context>
     <name>SettingsPageConnectivityTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+44"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+46"/>
         <source>Update mode:</source>
         <translation>アップデートモード:</translation>
     </message>
@@ -1020,6 +1016,11 @@ HTML5
     </message>
     <message>
         <location line="+11"/>
+        <source>Load RTs and favs automatically:</source>
+        <translation>RTとお気に入りを自動表示:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sync:</source>
         <translation>同期:</translation>
     </message>
@@ -1032,7 +1033,7 @@ HTML5
 <context>
     <name>SettingsPageMiscTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+43"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageMiscTab.qml" line="+41"/>
         <location line="+3"/>
         <source>Sign out</source>
         <translation>サインアウト</translation>
@@ -1048,12 +1049,17 @@ HTML5
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Display time-out:</source>
         <translation>表示 タイムアウト：</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
+        <source>Disable location data:</source>
+        <translation>位置情報取得を停止:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>QNeptunea update check:</source>
         <translation>QNeptunea 更新確認:</translation>
     </message>
@@ -1063,14 +1069,14 @@ HTML5
         <translation>言語：</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+40"/>
         <source>Restart QNeptunea</source>
-        <translation>QNeptuneaを再起動</translation>
+        <translation>QNeptuneaは再起動されます。</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
-        <translation>QNeptuneaをあなたの言語に翻訳したいですか? オンライン上の &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; を訪れて、翻訳して下さい!</translation>
+        <translation>QNeptuneaをあなたの言語に対応させたいですか? オンライン上の &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; を訪れて、翻訳して下さい!</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1097,7 +1103,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+197"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+190"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>by &lt;a style=&quot;%2&quot; href=&quot;ユーザ://%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
@@ -1110,12 +1116,32 @@ HTML5
 <context>
     <name>StatusPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+39"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/StatusPage.qml" line="+37"/>
         <source>Conversation</source>
         <translation>会話</translation>
     </message>
     <message>
-        <location line="+315"/>
+        <location line="+10"/>
+        <source>Delete Tweet</source>
+        <translation>ツイートを削除</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this Tweet?</source>
+        <translation>本当にこのツイートを消しますか？</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete</source>
+        <translation>削除</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation>キャンセル</translation>
+    </message>
+    <message>
+        <location line="+267"/>
         <source>Unmute @%1</source>
         <translation>%1 をミュート解除</translation>
     </message>
@@ -1123,11 +1149,6 @@ HTML5
         <location line="+0"/>
         <source>Mute @%1</source>
         <translation>%1 をミュート</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Delete the tweet</source>
-        <translation>ツイートを削除</translation>
     </message>
 </context>
 <context>
@@ -1166,7 +1187,7 @@ HTML5
 <context>
     <name>Translation</name>
     <message>
-        <location filename="../../opt/qneptunea/server.cpp" line="+63"/>
+        <location filename="../../opt/qneptunea/server.cpp" line="-41"/>
         <source>en</source>
         <translation>ja</translation>
     </message>
@@ -1198,18 +1219,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+449"/>
+        <location line="+483"/>
         <source>Tweet</source>
         <translation>ツイート</translation>
     </message>
     <message>
-        <location line="-368"/>
-        <location line="+390"/>
+        <location line="-386"/>
+        <location line="+408"/>
         <source>Retweet</source>
         <translation>リツイート</translation>
     </message>
     <message>
-        <location line="-382"/>
+        <location line="-400"/>
         <source>Reply</source>
         <translation>返信</translation>
     </message>
@@ -1234,7 +1255,7 @@ Then download the package again.</source>
 パッケージをダウンロードしますか?
 dev.qtquick.me/projects/qneptunea/files
 
-もし失敗した場合は、ブラウザのキャッシュを消去し
+もし失敗した場合は、ブラウザのキャッシュを下記から消去し
 $ rm /home/user/.grob/cache/http*/*
 再度パッケージをダウンロードし直して下さい。</translation>
     </message>
@@ -1252,7 +1273,7 @@ $ rm /home/user/.grob/cache/http*/*
 <context>
     <name>UserDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+133"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+111"/>
         <source>FOLLOWS YOU</source>
         <translation>フォロワー</translation>
     </message>
@@ -1260,7 +1281,7 @@ $ rm /home/user/.grob/cache/http*/*
 <context>
     <name>UserPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/UserPage.qml" line="+97"/>
         <source>Tweets</source>
         <translation>ツイート</translation>
     </message>
@@ -1290,7 +1311,7 @@ $ rm /home/user/.grob/cache/http*/*
         <translation>保存リスト</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Unmute @%1</source>
         <translation>%1 をミュート解除</translation>
     </message>
@@ -1344,7 +1365,7 @@ $ rm /home/user/.grob/cache/http*/*
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+101"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
         <source>API rate limited until %1</source>
         <translation>APIレートが%1 に制限されています。</translation>
     </message>
@@ -1363,7 +1384,7 @@ $ rm /home/user/.grob/cache/http*/*
 <context>
     <name>normal</name>
     <message>
-        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+36"/>
+        <location filename="../../opt/qneptunea/plugins/theme/normal.qml" line="+35"/>
         <source>Light theme for QNeptunea.</source>
         <translation>QNepunea用ライトテーマ</translation>
     </message>
