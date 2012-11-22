@@ -508,12 +508,12 @@
     <message>
         <location line="+1"/>
         <source>English</source>
-        <translation>中文</translation>
+        <translation>English</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Estonian</source>
-        <translation>爱沙尼亚语</translation>
+        <translation>Estonian</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1010,7 +1010,7 @@ HTML5
     <message>
         <location line="+11"/>
         <source>Load RTs and favs automatically:</source>
-        <translation>自动加载RT跟收藏：</translation>
+        <translation>[查看推文时]自动加载RT跟收藏：</translation>
     </message>
     <message>
         <location line="+19"/>
