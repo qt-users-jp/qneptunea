@@ -7,7 +7,7 @@
         <translation>Tradutor Microsoft</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+96"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>pt</translation>
     </message>
@@ -221,11 +221,6 @@
         <source>Open in the browser</source>
         <translation>Abrir no Browser</translation>
     </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation>Abrir na aplicação por defeito</translation>
-    </message>
 </context>
 <context>
     <name>AbstractListView</name>
@@ -279,7 +274,7 @@
 <context>
     <name>DirectMessageDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+172"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/DirectMessageDetailDelegate.qml" line="+169"/>
         <source>Sent to %1</source>
         <translation>Enviado para %1</translation>
     </message>
@@ -450,7 +445,7 @@
         <translation>Tradutor Microsoft</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+73"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscrições &amp; Registar&lt;/a&gt;</translation>
     </message>
@@ -460,17 +455,17 @@
         <translation>client_id:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>client_secret:</source>
         <translation>client_secret:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>translate to:</source>
         <translation>traduzir para:</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-116"/>
         <source>Arabic</source>
         <translation>Árabe</translation>
     </message>
@@ -665,7 +660,7 @@
         <translation>Vietnamita</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>pt</translation>
     </message>
@@ -744,7 +739,7 @@
         <translation>Nas Proximidades</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation>Definições</translation>
     </message>
@@ -895,22 +890,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+116"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation>Ligação</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Appearance</source>
         <translation>Apresentação</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Misc</source>
         <translation>Miscelâneos</translation>
     </message>
@@ -918,7 +913,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+167"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
         <source>Icon size:</source>
         <translation>Tamanho Icon:</translation>
     </message>
@@ -966,7 +961,7 @@ HTML5
 <context>
     <name>SettingsPageConnectivityTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+44"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageConnectivityTab.qml" line="+46"/>
         <source>Update mode:</source>
         <translation>Modo de Update:</translation>
     </message>
@@ -1017,6 +1012,11 @@ HTML5
     </message>
     <message>
         <location line="+11"/>
+        <source>Load RTs and favs automatically:</source>
+        <translation>Carregar RTs e fav. autimaticamente:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sync:</source>
         <translation>Sincronizar mesmo sem estar ativo:</translation>
     </message>
@@ -1050,7 +1050,12 @@ HTML5
         <translation>Activar Time-out do Ecrã:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
+        <source>Disable location data:</source>
+        <translation>Desativar dados localização:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>QNeptunea update check:</source>
         <translation>Verificar updates para QNeptunea:</translation>
     </message>
@@ -1094,7 +1099,7 @@ HTML5
 <context>
     <name>StatusDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+193"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/StatusDetailDelegate.qml" line="+190"/>
         <source>by &lt;a style=&quot;%2&quot; href=&quot;user://%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>por &lt;a style=&quot;%2&quot; href=&quot;utilizador://%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
@@ -1132,7 +1137,7 @@ HTML5
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+267"/>
         <source>Unmute @%1</source>
         <translation>Retirar silêncio @%1</translation>
     </message>
@@ -1210,18 +1215,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+467"/>
+        <location line="+483"/>
         <source>Tweet</source>
         <translation>Tweet</translation>
     </message>
     <message>
-        <location line="-370"/>
-        <location line="+392"/>
+        <location line="-386"/>
+        <location line="+408"/>
         <source>Retweet</source>
         <translation>Retweet</translation>
     </message>
     <message>
-        <location line="-384"/>
+        <location line="-400"/>
         <source>Reply</source>
         <translation>Responder</translation>
     </message>
@@ -1263,7 +1268,7 @@ Depois faça novamente o download da nova versão.</translation>
 <context>
     <name>UserDetailDelegate</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+114"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Delegates/UserDetailDelegate.qml" line="+111"/>
         <source>FOLLOWS YOU</source>
         <translation>SEGUIDORES</translation>
     </message>
