@@ -1013,7 +1013,7 @@ HTML5
     <message>
         <location line="+11"/>
         <source>Load RTs and favs automatically:</source>
-        <translation>Carregar RTs e fav. autimaticamente:</translation>
+        <translation>Carregar RTs e Favoritos automaticamente:</translation>
     </message>
     <message>
         <location line="+19"/>
