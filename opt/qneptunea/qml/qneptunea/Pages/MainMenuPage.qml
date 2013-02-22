@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Delegates'
 
@@ -34,7 +34,7 @@ AbstractPage {
     id: root
 
     title: qsTr('QNeptunea for N9 %1').arg(currentVersion.version)
-    busy: verifyCredentials.loading || listsAllModel.loading
+    busy: verifyCredentials.loading || listsModel.loading
 
     property alias editing: shortcuts.editing
 
@@ -65,8 +65,8 @@ AbstractPage {
 
                     ProfileImage {
                         anchors.fill: parent
-                        source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(verifyCredentials.screen_name)
-                        _id: verifyCredentials.profile_image_url
+                        source: to_s(verifyCredentials.profile_image_url).replace('_normal', '_bigger')
+                        _id: source
                     }
                 }
 
@@ -105,45 +105,45 @@ AbstractPage {
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Tweets')
-                    number: verifyCredentials.statuses_count
-                    onClicked: pageStack.push(userTimelinePage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+                    number: verifyCredentials.loading ? -1 : verifyCredentials.statuses_count
+                    onClicked: pageStack.push(userTimelinePage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name, 'profile_image_url': verifyCredentials.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Favourites')
-                    number: verifyCredentials.favourites_count
-                    onClicked: pageStack.push(favouritesPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+                    number: verifyCredentials.loading ? -1 : verifyCredentials.favourites_count
+                    onClicked: pageStack.push(favouritesPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name, 'profile_image_url': verifyCredentials.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Following')
-                    number: verifyCredentials.friends_count
-                    onClicked: pageStack.push(followingPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+                    number: verifyCredentials.loading ? -1 : verifyCredentials.friends_count
+                    onClicked: pageStack.push(followingPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name, 'profile_image_url': verifyCredentials.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Followers')
-                    number: verifyCredentials.followers_count
-                    onClicked: pageStack.push(followersPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+                    number: verifyCredentials.loading ? -1 : verifyCredentials.followers_count
+                    onClicked: pageStack.push(followersPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name, 'profile_image_url': verifyCredentials.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Listed')
-                    number: verifyCredentials.listed_count
-                    onClicked: pageStack.push(listedPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+                    number: verifyCredentials.loading ? -1 : verifyCredentials.listed_count
+                    onClicked: pageStack.push(listedPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name, 'profile_image_url': verifyCredentials.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    number: listsAllModel.size
-                    onClicked: pageStack.push(listsPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name})
+                    number: listsModel.loading ? -1 : listsModel.size
+                    onClicked: pageStack.push(listsPage, {'id_str': verifyCredentials.id_str, 'screen_name': verifyCredentials.screen_name, 'profile_image_url': verifyCredentials.profile_image_url})
 
-                    ListsAllModel { id: listsAllModel; user_id: verifyCredentials.id_str }
+                    ListsModel { id: listsModel; user_id: verifyCredentials.id_str }
                 }
             }
             AbstractListDelegate {

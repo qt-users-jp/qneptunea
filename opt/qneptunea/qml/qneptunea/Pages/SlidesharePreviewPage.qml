@@ -27,7 +27,7 @@
 import QtQuick 1.1
 import QtWebKit 1.0
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Utils/sha1.js' as Sha1
 

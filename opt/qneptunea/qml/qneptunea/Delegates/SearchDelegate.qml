@@ -33,7 +33,7 @@ AbstractDelegate {
 
     property variant search
 
-    user: { 'id_str': root.search.from_user_id_str, 'name': root.search.from_user_name, 'screen_name': root.search.from_user, 'profile_image_url': root.search.profile_image_url }
+    user: { 'id_str': root.search.user.id_str, 'name': root.search.user.name, 'screen_name': root.search.user.screen_name, 'profile_image_url': root.search.user.profile_image_url }
     text: search.plain_text
 
     Component.onCompleted: {

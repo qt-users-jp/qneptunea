@@ -25,7 +25,7 @@
  */
 
 import QtQuick 1.1
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../Views'
 import '../QNeptunea/Components/'
 

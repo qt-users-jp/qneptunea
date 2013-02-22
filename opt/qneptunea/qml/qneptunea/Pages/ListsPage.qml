@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -39,7 +39,7 @@ AbstractPage {
     ListListView {
         id: view
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
-        model: ListsAllModel { id: model; user_id: root.id_str }
+        model: ListsModel { id: model; user_id: root.id_str }
         onShowDetail: pageStack.push(listStatusesPage, {'id_str': detail.id_str, 'screen_name': detail.user.screen_name})
     }
 
@@ -58,7 +58,7 @@ AbstractPage {
     toolBarLayout: AbstractToolBarLayout {
         ToolSpacer {columns: 2}
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(screen_name)
+            shortcutIcon: to_s(profile_image_url).replace('_normal', '_bigger')
             shortcutUrl: 'lists://%1/%2'.arg(id_str).arg(screen_name)
         }
         ToolIcon {

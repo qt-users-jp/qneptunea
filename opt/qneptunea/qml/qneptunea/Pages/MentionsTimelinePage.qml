@@ -26,8 +26,8 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
-import Twitter4QML.extra 1.0
+import Twitter4QML 1.1
+import QNeptunea 1.0
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -39,7 +39,7 @@ AbstractPage {
     onHeaderClicked: if (!model.loading) view.positionViewAtBeginning()
 
     property bool active: false
-    property string __maxReadIdStr: settings.readData('MentionsPage/maxReadIdStr', '')
+    property string __maxReadIdStr: settings.readData('MentionsTimelinePage/maxReadIdStr', '')
     property variant topData: model.get(view.topItemIndex)
     onTopDataChanged: refresh.toBeRefreshed = true
     property int unreadCount: 0
@@ -209,10 +209,10 @@ AbstractPage {
 //                }
 //            }
 
-            MentionsModel {
+            MentionsTimelineModel {
                 id: mentions
                 count: 50
-                pushOrder: MentionsModel.PushAtOnce
+                pushOrder: MentionsTimelineModel.PushAtOnce
                 sortKey: 'id_str'
                 max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
 
@@ -221,13 +221,13 @@ AbstractPage {
                 property int lastSize: 0
 
                 function loadUntilLatest() {
-                    mentions.pushOrder = MentionsModel.PushOlderToNewer
+                    mentions.pushOrder = MentionsTimelineModel.PushOlderToNewer
                     loadingUntilLatest = true
                     lastSize = size
                     since_id = size > 0 ? get(0).id_str : ''
                     max_id = ''
                     count = 200
-                    page = 1
+                    //page = 1
                     view.contentY++
                     reload()
                 }
@@ -246,7 +246,7 @@ AbstractPage {
                                 loadingUntilLatest = false
                             } else {
                                 lastSize = size
-                                page++
+                                //page++
                                 reload()
                             }
                         }
@@ -284,7 +284,7 @@ AbstractPage {
 //            }
 
             if (!mentions.loading) {
-                mentions.pushOrder = MentionsModel.PushNewerToOlder
+                mentions.pushOrder = MentionsTimelineModel.PushNewerToOlder
                 mentions.max_id = mentions.size == 0 ? '' : mentions.get(mentions.size - 1).id_str
                 mentions.count = 50
                 mentions.since_id = ''
@@ -335,16 +335,16 @@ AbstractPage {
         target: oauth
         onStateChanged: {
             if (oauth.state === OAuth.Unauthorized) {
-                settings.saveData('MentionsPage/maxReadIdStr', '')
-                settings.saveData('MentionsPage/maxLoadedIdStr', '')
+                settings.saveData('MentionsTimelinePage/maxReadIdStr', '')
+                settings.saveData('MentionsTimelinePage/maxLoadedIdStr', '')
             }
         }
     }
 
     Component.onDestruction: {
         if (oauth.state === OAuth.Authorized) {
-            settings.saveData('MentionsPage/maxReadIdStr', root.__maxReadIdStr)
-            settings.saveData('MentionsPage/maxLoadedIdStr', mentions.size > 0 ? mentions.get(0).id_str : '')
+            settings.saveData('MentionsTimelinePage/maxReadIdStr', root.__maxReadIdStr)
+            settings.saveData('MentionsTimelinePage/maxLoadedIdStr', mentions.size > 0 ? mentions.get(0).id_str : '')
         }
     }
 

@@ -62,8 +62,8 @@ MouseArea {
             ProfileImage {
                 id: icon
                 anchors.fill: parent
-                source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(user.screen_name).arg(constants.listViewIconSizeName) : ''
-                _id: to_s(user.profile_image_url)
+                source: user.profile_image_url ? to_s(root.user.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName) : ''
+                _id: icon.source
 
                 Image {
                     anchors.right: parent.right

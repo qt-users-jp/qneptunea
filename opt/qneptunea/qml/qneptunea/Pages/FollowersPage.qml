@@ -25,7 +25,7 @@
  */
 
 import QtQuick 1.1
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -33,44 +33,26 @@ AbstractPage {
     id: root
 
     title: to_s(screen_name, '@%1')
-    busy: friendModel.loading || model.loading
+    busy: followersModel.loading
 
     UserListView {
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
-        model: UsersModel {
-            id: friendModel
-
-            FollowersModel {
-                id: model
-                user_id: root.id_str
-                property variant ids: []
-                onSizeChanged: {
-                    var ids = []
-                    for (var i = 0; i < model.size; i++) {
-                        ids.push(model.get(i).id_str ? model.get(i).id_str : model.get(i).id)
-                    }
-//                    console.debug(ids)
-                    model.ids = ids
-                }
-
-                Timer {
-                    running: model.ids.length > 0 && !friendModel.loading
-                    interval: 100
-                    repeat: true
-                    onTriggered: {
-//                        console.debug('triggered')
-                        var ids = model.ids
-                        var user_id = []
-                        for (var i = 0; i < 100 && ids.length > 0; i++) {
-                            user_id.push(ids.shift())
-                        }
-//                        console.debug(user_id)
-                        model.ids = ids
-                        friendModel.user_id = user_id.join(',')
-                        friendModel.reload();
-                    }
-                }
+        model: FollowersModel {
+            id: followersModel
+            user_id: root.id_str
+            property string max_cursor_str
+            onNext_cursor_strChanged: {
+                if (max_cursor_str < next_cursor_str)
+                    max_cursor_str = next_cursor_str
             }
+        }
+        onReload: {
+            followersModel.cursor = ''
+            followersModel.reload()
+        }
+        onMore: {
+            followersModel.cursor = followersModel.next_cursor_str
+            followersModel.reload()
         }
         onShowDetail: pageStack.push(userPage, {'id_str': detail.id_str})
     }
@@ -78,7 +60,7 @@ AbstractPage {
     toolBarLayout: AbstractToolBarLayout {
         ToolSpacer {columns: 2}
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(screen_name)
+            shortcutIcon: to_s(profile_image_url).replace('_normal', '_bigger')
             shortcutUrl: 'followers://%1/%2'.arg(id_str).arg(screen_name)
         }
         ToolSpacer {}

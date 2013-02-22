@@ -27,7 +27,7 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
 import com.nokia.extras 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Delegates'
 import '../Utils/TweetCounter.js' as TweetCounter
@@ -42,7 +42,7 @@ AbstractPage {
 
     DirectMessage {
         id: directMessage
-        onIdStrChanged: {
+        onId_strChanged: {
             if (id_str.length > 0 && root.status === PageStatus.Active) {
                 var found = pageStack.find( function(page) {
                                                return !(typeof page.skipAfterTweeting === 'boolean' && page.skipAfterTweeting)
@@ -113,7 +113,7 @@ AbstractPage {
                     anchors.top: parent.top
                     anchors.topMargin: 5
                     anchors.left: parent.left
-                    source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(verifyCredentials.screen_name).arg(constants.listViewIconSizeName)
+                    source: to_s(verifyCredentials.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName)
                     _id: verifyCredentials.profile_image_url
                     width: constants.listViewIconSize
                     height: width
@@ -205,8 +205,8 @@ AbstractPage {
                                 anchors.bottom: parent.bottom
                                 width: parent.width
                                 height: width
-                                source: defined(root.recipient) && defined(root.recipient.profile_image_url) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.recipient.screen_name).arg(constants.listViewIconSizeName) : ''
-                                _id: defined(root.recipient) ? to_s(root.recipient.profile_image_url) : ''
+                                source: defined(root.recipient) && defined(root.recipient.profile_image_url) ? to_s(root.recipient.profile_image.url).replace('_normal', '%1').arg(constants.listViewIconSizeName) : ''
+                                _id: source
                                 smooth: true
                             }
                         }

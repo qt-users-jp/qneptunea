@@ -27,7 +27,7 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
 import com.nokia.extras 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Delegates'
 
@@ -41,12 +41,12 @@ Page {
         contentHeight: container.height
         clip: true
 
-        RetweetedByUserModel {
+        UserTimelineModel {
             id: qneptuneaTheme
-            _id: 'QNeptuneaTheme'
-            count: 200
-            page: 1
-            sortKey: 'id_str'
+            screen_name: 'QNeptuneaTheme'
+            count: 100
+            trim_user: true
+            sortKey: 'retweet_count'
             property int lastSize: 0
             onLoadingChanged: {
                 if (loading) return
@@ -58,7 +58,7 @@ Page {
                 } else {
                     // load until last
                     lastSize = size
-                    page++
+                    //page++
                     reload()
                 }
 
@@ -80,7 +80,7 @@ Page {
             id: themes
 
             function add(data) {
-                if (data.retweeted_status.media.length !== 1) return
+                if (data.retweeted_status.entities.media.length !== 1) return
                 if (data.retweeted_status.entities.urls.length !== 1) return
 
                 var theme = data.retweeted_status
@@ -88,13 +88,15 @@ Page {
                 for (var i = 0; i < count; i++) {
                     if (get(i).vote < 0) continue
                     if (get(i).vote < theme.retweet_count) {
-                        insert(i, {'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme})
+                        //insert(i, {'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.user.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.user.profile_image_url})
+                        insert(i, {'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.profile_image_url})
                         found = true
                         break
                     }
                 }
                 if (!found) {
-                    append({'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme})
+                    append({'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.profile_image_url})
+                    //append({'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.user.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.user.profile_image_url})
                 }
             }
         }
@@ -352,7 +354,8 @@ Page {
                             anchors.bottom: parent.bottom
                             width: 48
                             height: 48
-                            source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(model.author).concat('&size=normal')
+                            //source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(model.author).concat('&size=normal')
+                            source: model.profile_image_url.concat('&size=normal')
                             smooth: true
                         }
 

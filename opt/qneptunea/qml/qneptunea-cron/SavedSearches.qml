@@ -25,8 +25,7 @@
  */
 
 import QtQuick 1.1
-import Twitter4QML 1.0
-import Twitter4QML.extra 1.0
+import Twitter4QML 1.1
 import QNeptunea 1.0
 
 Item {
@@ -42,12 +41,12 @@ Item {
 
     Component {
         id: searchModel
-        SearchStatusesModel {
-            id: searchStatuses
-            rpp: 200
+        SearchModel {
+            id: search
+            count: 200
             sortKey: 'id_str'
             since_id: settings.readData('SavedSearchStreamPage/maxReadIdStr', '')
-            onFiltering: if (window.filter(value)) searchStatuses.filter()
+            onFiltering: if (window.filter(value)) search.filter()
         }
     }
 

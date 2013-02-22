@@ -27,7 +27,7 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
 import com.nokia.extras 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Delegates'
 import '../Utils/TweetCounter.js' as TweetCounter
@@ -193,8 +193,8 @@ AbstractLinkPage {
                     anchors.top: parent.top
                     anchors.topMargin: 5
                     anchors.left: parent.left
-                    source: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.retweet ? root.in_reply_to.user.screen_name : verifyCredentials.screen_name).arg(constants.listViewIconSizeName)
-                    _id: root.retweet ? root.in_reply_to.user.profile_image_url : verifyCredentials.profile_image_url
+                    source: to_s(root.retweet ? root.in_reply_to.user.profile_image_url : verifyCredentials.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName)
+                    _id: source
                     width: constants.listViewIconSize
                     height: width
                 }

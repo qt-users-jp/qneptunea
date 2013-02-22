@@ -27,7 +27,7 @@
 import QtQuick 1.1
 import QtMultimediaKit 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 
 AbstractPage {

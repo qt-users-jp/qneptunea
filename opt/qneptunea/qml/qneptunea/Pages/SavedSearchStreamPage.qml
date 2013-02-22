@@ -26,8 +26,8 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
-import Twitter4QML.extra 1.0
+import Twitter4QML 1.1
+import QNeptunea 1.0
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -161,24 +161,24 @@ AbstractPage {
 
     Component {
         id: searchModel
-        SearchStatusesModel {
-            id: searchStatuses
-            rpp: 50
-            pushOrder: SearchStatusesModel.PushAtOnce
+        SearchModel {
+            id: search
+            count: 50
+            pushOrder: SearchModel.PushAtOnce
             sortKey: 'id_str'
             max_id: constants.restoringLastPositionDisabled ? '' : root.__maxReadIdStr
-            onFiltering: if (window.filter(value)) searchStatuses.filter()
+            onFiltering: if (window.filter(value)) search.filter()
             property bool loadingUntilLastPos: true
             property bool loadingUntilLatest: false
             property int lastSize: 0
 
             function loadUntilLatest() {
-                searchStatuses.pushOrder = SearchStatusesModel.PushOlderToNewer
+                search.pushOrder = SearchModel.PushOlderToNewer
                 loadingUntilLatest = true
                 lastSize = size
                 since_id = size > 0 ? get(0).id_str : ''
                 max_id = ''
-                rpp = 100
+                count = 100
                 page = 1
                 view.contentY++
                 reload()
@@ -274,9 +274,9 @@ AbstractPage {
                 var child = model.childObjects[i]
                 if (!child.loading) {
                     if (!child.streaming) {
-                        child.pushOrder = SearchStatusesModel.PushNewerToOlder
+                        child.pushOrder = SearchModel.PushNewerToOlder
                         child.max_id = child.size == 0 ? '' : child.get(child.size - 1).id_str
-                        child.rpp = 20
+                        child.count = 20
                         child.since_id = ''
                         child.reload()
                     }

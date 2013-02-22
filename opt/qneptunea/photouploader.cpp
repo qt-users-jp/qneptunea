@@ -26,7 +26,7 @@
 
 #include "photouploader.h"
 #include <QtNetwork/QNetworkReply>
-#include <tools/oauthmanager.h>
+#include <oauthmanager.h>
 
 class PhotoUploader::Private : public QObject
 {

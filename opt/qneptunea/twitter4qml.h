@@ -1,4 +1,4 @@
-/* Copyright (c) 2012 QNeptunea Project.
+/* Copyright (c) 2012-2013 QNeptunea Project.
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -24,29 +24,31 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import QtQuick 1.1
-import Twitter4QML 1.1
-import '../QNeptunea/Components/'
-import '../Views'
+#ifndef TWITTER4QML_H
+#define TWITTER4QML_H
 
-AbstractPage {
-    id: root
+#include <twitter4qml_global.h>
 
-    title: root.id_str
-    busy: model.loading
+#include <QtCore/QObject>
 
-    UserListView {
-        anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
-        model: SearchUsersModel { id: model; q: root.id_str }
-        onShowDetail: pageStack.push(userPage, {'id_str': detail.id_str})
-    }
+class QNetworkAccessManager;
 
-    toolBarLayout: AbstractToolBarLayout {
-        ToolSpacer {columns: 2}
-        AddShortcutButton {
-            shortcutIcon: 'image://theme/icon-l-search'
-            shortcutUrl: 'searchusers://'.concat(id_str).concat('/').concat(screen_name)
-        }
-        ToolSpacer {}
-    }
-}
+class TWITTER4QML_EXPORT Twitter4QML : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Twitter4QML(QObject *parent = 0);
+
+    QNetworkAccessManager *networkAccessManager() const;
+
+public slots:
+    void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
+
+signals:
+    void networkAccessManagerChanged(QNetworkAccessManager *networkAccessManager);
+
+private:
+    Q_DISABLE_COPY(Twitter4QML)
+};
+
+#endif // TWITTER4QML_H

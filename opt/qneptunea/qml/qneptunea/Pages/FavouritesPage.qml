@@ -25,7 +25,7 @@
  */
 
 import QtQuick 1.1
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -75,7 +75,7 @@ AbstractPage {
     toolBarLayout: AbstractToolBarLayout {
         ToolSpacer {columns: 2}
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(screen_name).concat('&size=bigger')
+            shortcutIcon: to_s(profile_image_url).replace('_normal', '_bigger')
             shortcutUrl: 'favourites://'.concat(id_str).concat('/').concat(screen_name)
         }
         ToolSpacer {}

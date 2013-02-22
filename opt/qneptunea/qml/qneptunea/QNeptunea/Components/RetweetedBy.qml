@@ -54,8 +54,8 @@ Row {
         anchors.bottom: parent.bottom
         width: constants.listViewIconSize / 2
         height: width
-        source: defined(root.user) && defined(root.user.profile_image_url) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.user.screen_name).arg(constants.listViewIconSizeName) : ''
-        _id: defined(root.user) ? to_s(root.user.profile_image_url) : ''
+        source: defined(root.user) && defined(root.user.profile_image_url) ? to_s(root.user.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName) : ''
+        _id: source
         smooth: true
     }
 }

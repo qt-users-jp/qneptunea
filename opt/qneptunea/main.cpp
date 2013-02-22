@@ -35,7 +35,7 @@
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtDeclarative/qdeclarative.h>
 
-#include <twitter4qml.h>
+#include "twitter4qml.h"
 
 #include "qmlapplicationviewer.h"
 #include "server.h"
@@ -50,6 +50,7 @@
 #include "themedownloader.h"
 #include "confitem.h"
 #include "photouploader.h"
+#include "unionmodel.h"
 
 #include <MComponentData>
 
@@ -137,6 +138,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<ConfItem>("QNeptunea", 1, 0, "ConfItem");
     qmlRegisterType<PhotoUploader>("QNeptunea", 1, 0, "PhotoUploader");
     qmlRegisterType<AutoTest>("QNeptunea", 1, 0, "AutoTest");
+    qmlRegisterType<UnionModel>("QNeptunea", 1, 0, "UnionModel");
 
 //    QDir home("/home/developer");
     QDir home = QDir::home();

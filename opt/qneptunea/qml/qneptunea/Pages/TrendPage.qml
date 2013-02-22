@@ -25,7 +25,7 @@
  */
 
 import QtQuick 1.1
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../Views'
 import '../QNeptunea/Components/'
 
@@ -51,7 +51,7 @@ AbstractPage {
         id: trendsView
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
 
-        model: TrendsModel { id: trendsModel }
+        model: TrendsPlaceModel { id: trendsModel; _id: 1 }
         onShowDetail: pageStack.push(searchPage, {'id_str': detail.name})
     }
 

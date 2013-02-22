@@ -91,8 +91,8 @@ MouseArea {
                 width: 73
                 height: width
 
-                source: sender.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(sender.screen_name) : ''
-                _id: to_s(sender.profile_image_url)
+                source: sender.profile_image_url ? to_s(sender.profile_image_url).replace('_normal', '_bigger') : ''
+                _id: iconArea.source
             }
 
             Column {
@@ -186,8 +186,8 @@ MouseArea {
                         anchors.bottom: parent.bottom
                         width: parent.width
                         height: width
-                        source: recipient.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(recipient.screen_name).arg(constants.listViewIconSizeName) : ''
-                        _id: recipient.profile_image_url ? recipient.profile_image_url : ''
+                        source: recipient.profile_image_url ? to_s(recipient.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName) : ''
+                        _id: source
                         smooth: true
                     }
                     MouseArea {

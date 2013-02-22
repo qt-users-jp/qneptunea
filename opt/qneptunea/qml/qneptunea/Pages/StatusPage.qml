@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import QNeptunea 1.0
 import '../Delegates'
 import '../QNeptunea/Components/'
@@ -56,7 +56,7 @@ AbstractLinkPage {
     Status {
         id: status
         id_str: root.id_str
-        onIdStrChanged: {
+        onId_strChanged: {
             if (id_str.length == 0 && root.status === PageStatus.Active)
                 pageStack.pop()
         }

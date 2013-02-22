@@ -26,8 +26,8 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
-import Twitter4QML.extra 1.0
+import Twitter4QML 1.1
+import QNeptunea 1.0
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -184,16 +184,16 @@ AbstractPage {
                     since_id = size > 0 ? get(0).id_str : ''
                     max_id = ''
                     count = 200
-                    page = 1
+                    //page = 1
                     view.contentY++
                     reload()
                 }
 
                 onLoadingChanged: {
                     if (loading) {
-//                        console.debug('loading:', max_id, since_id, size, lastSize)
+                        console.debug('loading:', max_id, since_id, size, lastSize)
                     } else {
-//                        console.debug('loaded:', max_id, since_id, size, lastSize)
+                        console.debug('loaded:', max_id, since_id, size, lastSize)
                         if (loadingUntilLastPos) {
                             loadingUntilLastPos = false
                             root.updateLoadedUntilLastPos()
@@ -203,7 +203,7 @@ AbstractPage {
                                 loadingUntilLatest = false
                             } else {
                                 lastSize = size
-                                page++
+                                //page++
                                 reload()
                             }
                         }

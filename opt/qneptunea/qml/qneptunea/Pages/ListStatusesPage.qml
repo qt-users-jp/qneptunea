@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Views'
 
@@ -64,7 +64,7 @@ AbstractPage {
             id: statusesModel
             list_id: list.id_str
             sortKey: 'id_str'
-            per_page: 100
+            count: 100
         }
         onReload: {
             statusesModel.since_id = statusesModel.get(0).id_str
@@ -88,7 +88,7 @@ AbstractPage {
             id: membersModel
             list_id: list.id_str
             property string max_cursor_str
-            onNextCursorStrChanged: {
+            onNext_cursor_strChanged: {
 //                console.debug('next_cursor_str', next_cursor_str)
                 if (max_cursor_str < next_cursor_str)
                     max_cursor_str = next_cursor_str
@@ -145,7 +145,7 @@ AbstractPage {
         }
 
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(screen_name).concat('&size=bigger')
+            shortcutIcon: to_s(profile_image_url).replace('_normal', '_bigger')
             shortcutUrl: 'list://'.concat(id_str).concat('/').concat(screen_name)
         }
 

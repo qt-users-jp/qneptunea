@@ -25,22 +25,22 @@
  */
 
 import QtQuick 1.1
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import QNeptunea 1.0
 
-MentionsModel {
+MentionsTimelineModel {
     id: model
     property bool done: false
 
     count: 200
     sortKey: 'id_str'
-    since_id: settings.readData('MentionsPage/maxReadIdStr', '')
+    since_id: settings.readData('MentionsTimelinePage/maxReadIdStr', '')
 
     onLoadingChanged: {
         if (loading) {
             //                console.debug('since_id', since_id)
         } else {
-            if (model.size > 0 && model.get(0).id_str !== settings.readData('MentionsPage/maxLoadedIdStr', '')) {
+            if (model.size > 0 && model.get(0).id_str !== settings.readData('MentionsTimelinePage/maxLoadedIdStr', '')) {
                 var component = notification.createObject(window)
                 component.eventType = 'qneptunea.mentions'
                 component.image = settings.readData('Theme/NotificationIconForMentions', 'icon-m-service-qneptunea-mention')

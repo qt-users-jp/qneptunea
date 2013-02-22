@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../Views'
 import '../Delegates'
 import '../QNeptunea/Components/'
@@ -36,8 +36,6 @@ AbstractPage {
 
     title: unescape(root.id_str)
     busy: model.loading || savedSearchesModel.loading
-
-    property string id_str
 
     property int __topIndex: view.indexAt(0, view.contentY)
     property variant __topData: model.get(__topIndex)
@@ -67,7 +65,7 @@ AbstractPage {
             id: model
             q: unescape(root.id_str)
             result_type: 'recent'
-            rpp: 100
+            count: 100
             sortKey: 'id_str'
         }
         onReload: {

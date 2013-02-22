@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import QNeptunea 1.0
 
 AbstractPage {
@@ -58,7 +58,7 @@ AbstractPage {
 
     User {
         id: userToOpen
-        onIdStrChanged: {
+        onId_strChanged: {
             if (id_str.length > 0)
                 pageStack.push(userPage, {'id_str': userToOpen.id_str})
         }

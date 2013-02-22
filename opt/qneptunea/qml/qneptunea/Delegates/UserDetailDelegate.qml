@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 
 Item {
@@ -66,8 +66,8 @@ Item {
                 width: 73
                 height: width
 
-                source: user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(user.screen_name) : ''
-                _id: to_s(user.profile_image_url)
+                source: user.profile_image_url ? to_s(root.user.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName) : ''
+                _id: iconArea.source
 
                 Image {
                     anchors.right: parent.right

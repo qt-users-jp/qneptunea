@@ -67,8 +67,8 @@ MouseArea {
             ProfileImage {
                 id: icon
                 anchors.fill: parent
-                source: defined(root.user) && defined(root.user.screen_name) ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=%2'.arg(root.user.screen_name).arg(constants.listViewIconSizeName) : ''
-                _id: defined(root.user) ? to_s(root.user.profile_image_url) : ''
+                source: defined(root.user) && defined(root.user.screen_name) ? to_s(root.user.profile_image_url).replace('_normal', '_%1').arg(constants.listViewIconSizeName) : ''
+                _id: icon.source
             }
 
             onClicked: root.linkActivated('user://%1'.arg(root.user.id_str))

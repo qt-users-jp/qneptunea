@@ -32,6 +32,7 @@ Page {
 
     property string id_str
     property string screen_name
+    property string profile_image_url
 
     property alias title: header.text
     property bool busy: false

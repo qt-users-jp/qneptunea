@@ -29,7 +29,7 @@ import QtMobility.systeminfo 1.1
 import QtMobility.feedback 1.1
 import com.nokia.meego 1.0
 import com.nokia.extras 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import QNeptunea 1.0
 import 'Pages'
 import 'QNeptunea/Components/'
@@ -372,7 +372,25 @@ PageStackWindow {
         description: 'http://twitter.com/task_jp'
     }
 
-    Test { id: test; property bool online: networkConfigurationManager.online && test.ok }
+
+    QtObject {
+        id: test
+        property bool online: networkConfigurationManager.online && test.ok
+        property bool ok: false
+
+        function exec() {
+            var request = new XMLHttpRequest()
+            request.open('GET', 'http://api.twitter.com/1/help/test.json')
+            request.onreadystatechange = function() {
+                        if( request.readyState === XMLHttpRequest.DONE ) {
+                            if( request.status === 200) {
+                                test.ok = request.responseText === '\"ok\"'
+                            }
+                        }
+                    }
+            request.send()
+        }
+    }
 
     Timer {
         running: networkConfigurationManager.online && constants.streaming && !test.ok
@@ -414,7 +432,7 @@ PageStackWindow {
             case OAuth.Unauthorized:
                 if (completed) {
                     settings.saveData('Mute/IDs', '')
-                    settings.saveData('MentionsPage/maxLoadedIdStr', '')
+                    settings.saveData('MentionsTimelinePage/maxLoadedIdStr', '')
                     for (var i = 0; i < 6; i++) {
                         if (i < shortcutModel.count) {
                             var item = shortcutModel.get(i)

@@ -95,8 +95,8 @@ MouseArea {
                 width: 73
                 height: width
 
-                source: root.temporary ? '' : (__item.user.profile_image_url ? 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(__item.user.screen_name) : '')
-                _id: root.temporary ? '' : to_s(__item.user.profile_image_url)
+                source: root.temporary ? '' : (__item.user.profile_image_url ? to_s(__item.user.profile_image_url).replace('_normal', '_bigger') : '' )
+                _id: iconArea.source
             }
 
             Column {

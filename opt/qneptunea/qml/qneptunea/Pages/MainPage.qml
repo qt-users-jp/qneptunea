@@ -27,7 +27,7 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
 import com.nokia.extras 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../Views'
 import '../QNeptunea/Components/'
 
@@ -93,7 +93,7 @@ Page {
 
         property bool active: root.status === PageStatus.Active && platformWindow.viewMode === WindowState.Fullsize && platformWindow.visible && platformWindow.active
         HomePage { id: home; pageStack: root.pageStack; active: tabGroup.currentTab === home && tabGroup.active }
-        MentionsPage { id: mentions; pageStack: root.pageStack; active: tabGroup.currentTab === mentions && tabGroup.active }
+        MentionsTimelinePage { id: mentions; pageStack: root.pageStack; active: tabGroup.currentTab === mentions && tabGroup.active }
         DirectMessagesPage { id: directMessage; pageStack: root.pageStack; active: tabGroup.currentTab === directMessage && tabGroup.active }
         SavedSearchStreamPage { id: savedSearches; pageStack: root.pageStack; active: tabGroup.currentTab === savedSearches && tabGroup.active }
         MainMenuPage { id: menu; pageStack: root.pageStack }

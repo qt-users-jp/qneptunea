@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../QNeptunea/Components/'
 import '../Delegates'
 
@@ -35,7 +35,7 @@ AbstractLinkPage {
 
     screen_name: user.screen_name
     title: to_s(screen_name, '@%1')
-    busy: user.loading || listsAllModel.loading
+    busy: user.loading || listsModel.loading
     visualParent: flickable
 
     User {
@@ -96,44 +96,46 @@ AbstractLinkPage {
                     width: parent.buttonWidth
                     text: qsTr('Tweets')
                     number: user.loading ? -1 : user.statuses_count
-                    onClicked: pageStack.push(userTimelinePage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+                    onClicked: pageStack.push(userTimelinePage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Favourites')
                     number: user.loading ? -1 : user.favourites_count
-                    onClicked: pageStack.push(favouritesPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+                    onClicked: pageStack.push(favouritesPage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Following')
                     number: user.loading ? -1 : user.friends_count
-                    onClicked: pageStack.push(followingPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+                    onClicked: {
+                        pageStack.push(followingPage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
+                    }
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Followers')
                     number: user.loading ? -1 : user.followers_count
-                    onClicked: pageStack.push(followersPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+                    onClicked: pageStack.push(followersPage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('Listed')
                     number: user.loading ? -1 : user.listed_count
-                    onClicked: pageStack.push(listedPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+                    onClicked: pageStack.push(listedPage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
                 }
 
                 ButtonWithNumber {
                     width: parent.buttonWidth
                     text: qsTr('List')
-                    number: listsAllModel.loading ? -1 : listsAllModel.size
-                    onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name})
+                    number: listsModel.loading ? -1 : listsModel.size
+                    onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
 
-                    ListsAllModel { id: listsAllModel; user_id: user.id_str }
+                    ListsModel { id: listsModel; user_id: user.id_str }
                 }
             }
         }
@@ -213,7 +215,7 @@ AbstractLinkPage {
             }
         }
         AddShortcutButton {
-            shortcutIcon: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=bigger'.arg(screen_name)
+            shortcutIcon: to_s(profile_image_url).replace('_normal', '_bigger')
             shortcutUrl: 'user://%1/%2'.arg(id_str).arg(screen_name)
         }
         ToolIcon {

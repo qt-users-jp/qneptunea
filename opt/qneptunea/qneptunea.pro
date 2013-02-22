@@ -25,10 +25,14 @@ CONFIG += qdeclarative-boostable
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp server.cpp \
     themedownloader.cpp \
-    photouploader.cpp
+    photouploader.cpp \
+    twitter4qml.cpp \
+    unionmodel.cpp
 HEADERS += server.h \
     themedownloader.h \
-    photouploader.h
+    photouploader.h \
+    twitter4qml.h \
+    unionmodel.h
 
 # Please do not modify the following two lines. Required for deployment.
 include(qmlapplicationviewer/qmlapplicationviewer.pri)

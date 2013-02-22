@@ -26,7 +26,7 @@
 
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import Twitter4QML 1.0
+import Twitter4QML 1.1
 import '../Delegates'
 import '../QNeptunea/Components/'
 
@@ -41,7 +41,7 @@ AbstractLinkPage {
     DirectMessage {
         id: direct_message
         id_str: root.id_str
-        onIdStrChanged: {
+        onId_strChanged: {
             if (id_str.length == 0 && root.status === PageStatus.Active)
                 pageStack.pop()
         }
