@@ -36,12 +36,20 @@ StateGroup {
     property string message
 
     property string text
+    property int selectionEnd
+    property int selectionStart
     property variant media: []
     property variant location
 
+    signal selected(int selectionStart, int selectionEnd)
+
     // overload this function in subclasses
     function exec() {
-        console.debug(text, media, location)
+        console.debug(text, media, location, selectionStart, selectionEnd)
+    }
+
+    function select(selectionStart, selectionEnd) {
+        root.selected(selectionStart, selectionEnd)
     }
 }
 

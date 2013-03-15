@@ -484,11 +484,14 @@ AbstractLinkPage {
                     visible: model.plugin.visible
                     enabled: model.plugin.enabled
                     Binding { target: model.plugin; property: 'text'; value: textArea.text }
+                    Binding { target: model.plugin; property: 'selectionEnd'; value: textArea.selectionEnd }
+                    Binding { target: model.plugin; property: 'selectionStart'; value: textArea.selectionStart }
                     Binding { target: model.plugin; property: 'media'; value: root.media }
                     Binding { target: model.plugin; property: 'location'; value: root.location }
                     Connections {
                         target: model.plugin
                         onTextChanged: textArea.text = model.plugin.text
+                        onSelected: textArea.select(selectionStart, selectionEnd)
                         onMediaChanged: root.media = model.plugin.media
                         onLocationChanged: root.location = model.plugin.location
                         onLoadingChanged: {
