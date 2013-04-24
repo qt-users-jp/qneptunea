@@ -1,4 +1,4 @@
-/* Copyright (c) 2012 QNeptunea Project.
+/* Copyright (c) 2012-2013 QNeptunea Project.
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
