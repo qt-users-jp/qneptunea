@@ -46,6 +46,7 @@ AbstractPage {
     property string description
     property alias localPath: downloader.localPath
     property alias remoteUrl: downloader.remoteUrl
+    property alias profile_image_url: profileImage.source
 
     ThemeDownloader {
         id: downloader
@@ -110,10 +111,10 @@ AbstractPage {
                 Row {
                     visible: root.source !== '' && root.source.id_str.length > 0
                     ProfileImage {
+                        id: profileImage
                         anchors.verticalCenter: parent.verticalCenter
                         width: constants.listViewIconSize
                         height: width
-                        source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(root.author).concat('&size=').concat(constants.listViewIconSizeName)
                         smooth: true
                         MouseArea {
                             anchors.fill: parent

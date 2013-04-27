@@ -45,23 +45,18 @@ Page {
             id: qneptuneaTheme
             screen_name: 'QNeptuneaTheme'
             count: 100
-            trim_user: true
             sortKey: 'retweet_count'
             property int lastSize: 0
             onLoadingChanged: {
                 if (loading) return
-                if (size == lastSize) {
+                if (size !== 0) {
                     // read all data
                     for (var i = 0; i < size; i++) {
                         themes.add(get(i))
                     }
                 } else {
-                    // load until last
-                    lastSize = size
-                    //page++
                     reload()
                 }
-
             }
         }
 
@@ -88,15 +83,13 @@ Page {
                 for (var i = 0; i < count; i++) {
                     if (get(i).vote < 0) continue
                     if (get(i).vote < theme.retweet_count) {
-                        //insert(i, {'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.user.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.user.profile_image_url})
-                        insert(i, {'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.profile_image_url})
+                        insert(i, {'preview': theme.entities.media[0].media_url_https, 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.user.profile_image_url })
                         found = true
                         break
                     }
                 }
                 if (!found) {
-                    append({'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.profile_image_url})
-                    //append({'preview': theme.media[0], 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.user.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.user.profile_image_url})
+                    append({'preview': theme.entities.media[0].media_url_https, 'author': theme.user.screen_name, 'path': '.local/share/data/QNeptunea/QNeptunea/theme/'.concat(theme.id_str), 'description': theme.rich_text.replace(/<a .*?>.*?<\/a>/g, ''), 'vote': theme.retweet_count, 'voted': theme.retweeted, 'download': theme.entities.urls[0].expanded_url, 'source': theme, 'profile_image_url': theme.user.profile_image_url })
                 }
             }
         }
@@ -354,8 +347,7 @@ Page {
                             anchors.bottom: parent.bottom
                             width: 48
                             height: 48
-                            //source: 'http://api.twitter.com/1/users/profile_image?screen_name='.concat(model.author).concat('&size=normal')
-                            source: model.profile_image_url.concat('&size=normal')
+                            source: typeof model.profile_image_url !== 'undefined' ? model.profile_image_url : ''
                             smooth: true
                         }
 
@@ -380,11 +372,11 @@ Page {
                                 parameters.localPath = model.path
                                 parameters.retweet_count = model.vote
                                 parameters.retweeted = model.voted
-                                //                    console.debug('typeof model.vote', typeof model.vote)
+                                parameters.profile_image_url = model.profile_image_url
                                 if (typeof model.vote === 'undefined') {
                                 } else {
-                                    //                        console.debug('model.download', model.download)
                                     parameters.remoteUrl = model.download
+                                    console.debug(parameters.remoteUrl)
                                 }
                                 pageStack.push(themePage, parameters)
                             }

@@ -43,7 +43,7 @@ PluginLoader {
                 var component = Qt.createComponent(root.plugins[i])
                 if (component.status === Component.Ready) {
                     var object = component.createObject(window, {visible: false})
-                    pluginInfo.append({'preview': object.preview, 'author': object.author, 'path': root.plugins[i], 'description': object.description, 'vote': -1, 'voted': false, 'download': '', 'source': ''})
+                    pluginInfo.append({'preview': object.preview, 'author': object.author, 'path': root.plugins[i], 'description': object.description, 'vote': -1, 'voted': false, 'download': '', 'source': '', 'profile_image_url': object.profile_image_url })
                     object.destroy()
                 } else {
                     console.debug(root.plugins[i], component.errorString())
