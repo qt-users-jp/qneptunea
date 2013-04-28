@@ -380,12 +380,11 @@ PageStackWindow {
 
         function exec() {
             var request = new XMLHttpRequest()
-            request.open('GET', 'http://api.twitter.com/1/help/test.json')
+            request.open('GET', 'https://api.twitter.com/1.1/help/tos.json')
+            request.setRequestHeader("Content-Type", "application/json")
             request.onreadystatechange = function() {
-                        if( request.readyState === XMLHttpRequest.DONE ) {
-                            if( request.status === 200) {
-                                test.ok = request.responseText === '\"ok\"'
-                            }
+                        if( request.readyState === XMLHttpRequest.HEADERS_RECEIVED && request.status !== 0 ) {
+                            test.ok = true
                         }
                     }
             request.send()
