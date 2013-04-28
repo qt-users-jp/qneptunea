@@ -149,6 +149,17 @@ void ThemeDownloader::Private::finished()
         return;
     }
 
+    int httpStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    switch (httpStatusCode) {
+    case 301:
+    case 302:
+        q->setRemoteUrl(reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toString());
+        start();
+        return;
+    default:
+        break;
+    }
+
     QString qmlFile;
     QDir dir(localPath);
     QBuffer buffer;
