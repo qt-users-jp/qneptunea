@@ -253,6 +253,10 @@ AbstractPage {
                     }
                 }
 
+                onRateLimitExceeded: {
+                    infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+                }
+
                 onFiltering: if (window.filter(value)) mentions.filter()
             }
             onSizeChanged: {

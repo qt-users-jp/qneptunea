@@ -204,6 +204,10 @@ AbstractPage {
                     }
                 }
             }
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
     }
 
@@ -254,6 +258,10 @@ AbstractPage {
             id: filterStream
             enabled: test.online && constants.streaming
             track: savedSearchesModel.searchTerms.join(',')
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
         onTopItemIndexChanged: refresh.toBeRefreshed = true
         onReload: {

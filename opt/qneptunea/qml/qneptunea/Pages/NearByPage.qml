@@ -49,7 +49,12 @@ AbstractPage {
         id: locationView
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
 
-        model: SearchModel { id: searchModel }
+        model: SearchModel {
+            id: searchModel
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
 
         states: [
             State {

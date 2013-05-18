@@ -37,7 +37,14 @@ AbstractPage {
 
     UserListView {
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
-        model: SearchUsersModel { id: model; q: root.id_str }
+        model: SearchUsersModel {
+            id: model
+            q: root.id_str
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
         onShowDetail: pageStack.push(userPage, {'id_str': detail.id_str})
     }
 

@@ -65,6 +65,10 @@ AbstractPage {
             list_id: list.id_str
             sortKey: 'id_str'
             count: 100
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
         onReload: {
             statusesModel.since_id = statusesModel.get(0).id_str
@@ -92,6 +96,9 @@ AbstractPage {
 //                console.debug('next_cursor_str', next_cursor_str)
                 if (max_cursor_str < next_cursor_str)
                     max_cursor_str = next_cursor_str
+            }
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
             }
         }
         onReload: {

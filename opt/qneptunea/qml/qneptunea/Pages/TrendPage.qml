@@ -51,7 +51,14 @@ AbstractPage {
         id: trendsView
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
 
-        model: TrendsPlaceModel { id: trendsModel; _id: 1 }
+        model: TrendsPlaceModel {
+            id: trendsModel
+            _id: 1
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
         onShowDetail: pageStack.push(searchPage, {'id_str': detail.name})
     }
 

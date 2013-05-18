@@ -42,6 +42,10 @@ AbstractPage {
         model: SuggestionsModel {
             id: model
             slug: root.id_str
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
         onShowDetail: pageStack.push(userPage, {'id_str': detail.id_str})
     }

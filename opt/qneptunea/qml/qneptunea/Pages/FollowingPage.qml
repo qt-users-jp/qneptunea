@@ -45,6 +45,10 @@ AbstractPage {
                 if (max_cursor_str < next_cursor_str)
                     max_cursor_str = next_cursor_str
             }
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
         onReload: {
             friendsModel.cursor = ''

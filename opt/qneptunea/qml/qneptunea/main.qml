@@ -94,17 +94,6 @@ PageStackWindow {
 
     ShareInterface { id: share }
 
-    RateLimitStatus {
-        id: rls
-        property string hhmm
-        onLoadingChanged: {
-            if (loading) return
-            if (remaining_hits > 0 || reset_time.length == 0) return
-            hhmm = Qt.formatDateTime(new Date(reset_time), 'hh:mm')
-            infoBanners.message({'text': qsTr('API rate limited until %1').arg(hhmm)})
-        }
-    }
-
     PreviewPlugins { id: previewPlugins }
     TranslationPlugins { id: translationPlugins }
     ThemePlugins { id: themePlugins }
@@ -321,6 +310,15 @@ PageStackWindow {
 
         function message(properties) {
             infoBannerComponent.createObject(infoBanners, properties).show()
+        }
+
+        function rateLimitMessage(xrlLimit, xrlRemaining, xrlReset) {
+            var xrlResetSec = Math.floor((xrlReset.getTime() - new Date().getTime()) / 1000)
+            var properties = {
+                'iconSource': 'image://theme/icon-m-presence-busy'
+                , 'text': qsTr('API rate limit has exceeded(%1/%2), \nwill be reset about %3s later').arg(xrlRemaining).arg(xrlLimit).arg(xrlResetSec)
+            }
+            message(properties)
         }
     }
 

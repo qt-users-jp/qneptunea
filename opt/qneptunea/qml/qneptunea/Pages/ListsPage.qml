@@ -39,7 +39,14 @@ AbstractPage {
     ListListView {
         id: view
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
-        model: ListsModel { id: model; user_id: root.id_str }
+        model: ListsModel {
+            id: model
+            user_id: root.id_str
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
         onShowDetail: pageStack.push(listStatusesPage, {'id_str': detail.id_str, 'screen_name': detail.user.screen_name})
     }
 

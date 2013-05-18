@@ -135,7 +135,14 @@ AbstractLinkPage {
                     number: listsModel.loading ? -1 : listsModel.size
                     onClicked: pageStack.push(listsPage, {'id_str': user.id_str, 'screen_name': user.screen_name, 'profile_image_url': user.profile_image_url})
 
-                    ListsModel { id: listsModel; user_id: user.id_str }
+                    ListsModel {
+                        id: listsModel
+                        user_id: user.id_str
+
+                        onRateLimitExceeded: {
+                            infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+                        }
+                    }
                 }
             }
         }

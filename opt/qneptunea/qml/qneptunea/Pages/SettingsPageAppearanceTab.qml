@@ -58,6 +58,10 @@ Page {
                     reload()
                 }
             }
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
 
         Timer {
@@ -146,7 +150,14 @@ Page {
             }
         }
 
-        UserTimelineModel { id: userTimeline; count: 1 }
+        UserTimelineModel {
+            id: userTimeline
+            count: 1
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
 
         Column {
             id: container

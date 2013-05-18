@@ -57,7 +57,15 @@ AbstractPage {
     StatusListView {
         id: view
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
-        model: FavoritesModel { id: model; user_id: root.id_str; sortKey: 'id_str' }
+        model: FavoritesModel {
+            id: model
+            user_id: root.id_str
+            sortKey: 'id_str'
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
         onReload: {
             model.since_id = model.size == 0 ? '' : model.get(0).id_str
             model.max_id = ''

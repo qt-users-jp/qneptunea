@@ -202,6 +202,10 @@ AbstractPage {
                         }
                     }
                 }
+
+                onRateLimitExceeded: {
+                    infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+                }
             }
 
             onSizeChanged: refresh.toBeRefreshed = true

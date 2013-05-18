@@ -43,7 +43,14 @@ AbstractPage {
         id: suggestionsView
         anchors.fill: parent; anchors.topMargin: root.headerHeight; anchors.bottomMargin: root.footerHeight
 
-        model: SlugsModel { id: slugsModel; lang: settings.language }
+        model: SlugsModel {
+            id: slugsModel
+            lang: settings.language
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
+        }
         onShowDetail: pageStack.push(suggestionsPage, {'id_str': detail.slug, 'screen_name': detail.name, 'lang': settings.language})
     }
 

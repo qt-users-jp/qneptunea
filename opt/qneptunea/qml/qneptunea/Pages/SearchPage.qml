@@ -67,6 +67,10 @@ AbstractPage {
             result_type: 'recent'
             count: 100
             sortKey: 'id_str'
+
+            onRateLimitExceeded: {
+                infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
+            }
         }
         onReload: {
             model.since_id = model.size == 0 ? '' : model.get(0).id_str
