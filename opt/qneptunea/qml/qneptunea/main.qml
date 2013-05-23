@@ -314,9 +314,11 @@ PageStackWindow {
 
         function rateLimitMessage(xrlLimit, xrlRemaining, xrlReset) {
             var xrlResetSec = Math.floor((xrlReset.getTime() - new Date().getTime()) / 1000)
+            var xrlResetSecString = xrlResetSec < 5 ? qsTr('in seconds') : qsTr('in another %1 seconds').arg(xrlResetSec)
+
             var properties = {
                 'iconSource': 'image://theme/icon-m-presence-busy'
-                , 'text': qsTr('API rate limit has exceeded(%1/%2), \nwill be reset about %3s later').arg(xrlRemaining).arg(xrlLimit).arg(xrlResetSec)
+                , 'text': qsTr('API rate limit has exceeded(%1/%2), \nwill be reset %3').arg(xrlRemaining).arg(xrlLimit).arg(xrlResetSecString)
             }
             message(properties)
         }
