@@ -151,7 +151,7 @@ AbstractPage {
             id: model
             UserStreamModel {
                 id: userStream
-                enabled: !(homeTimeline.loading && homeTimeline.pushOrder != HomeTimelineModel.PushOlderToNewer) && !positionViewAtBeginning.running && test.online && constants.streaming
+                enabled: !(homeTimeline.loading && homeTimeline.pushOrder != HomeTimelineModel.PushOlderToNewer) && !positionViewAtBeginning.running && test.online && constants.streaming && !(constants.streamingOnlyWifi && !window.wlanConnected)
                 onFollowedBy: infoBanners.followedBy(status)
                 onFavorited: infoBanners.favorited(status)
                 onFiltering: {
@@ -262,7 +262,7 @@ AbstractPage {
     }
 
     Timer {
-        running: !constants.streaming && interval > 0 && test.online
+        running: (window.timerUpdateForcedOnWifi || !constants.streaming) && interval > 0 && test.online
         interval: constants.updateInterval * 60 * 1000
         repeat: true
         onTriggered: {

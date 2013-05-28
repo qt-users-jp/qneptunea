@@ -330,7 +330,7 @@ AbstractPage {
     }
 
     Timer {
-        running: !constants.streaming && interval > 0 && test.online
+        running: (window.timerUpdateForcedOnWifi || !constants.streaming) && interval > 0 && test.online
         interval: constants.updateInterval * 60 * 1000
         repeat: true
         onTriggered: {

@@ -256,7 +256,7 @@ AbstractPage {
         }
         FilterStreamModel {
             id: filterStream
-            enabled: test.online && constants.streaming
+            enabled: test.online && constants.streaming && !(constants.streamingOnlyWifi && !window.wlanConnected)
             track: savedSearchesModel.searchTerms.join(',')
 
             onRateLimitExceeded: {
@@ -318,7 +318,7 @@ AbstractPage {
     }
 
     Timer {
-        running: !constants.streaming && interval > 0 && test.online
+        running: (window.timerUpdateForcedOnWifi || !constants.streaming) && interval > 0 && test.online
         interval: constants.updateInterval * 60 * 1000
         repeat: true
         onTriggered: {

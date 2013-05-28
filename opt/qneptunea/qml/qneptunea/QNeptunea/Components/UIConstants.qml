@@ -232,6 +232,12 @@ QtObject {
     property bool streaming: settings.readData('Connection/Streaming', true)
     onStreamingChanged: settings.saveData('Connection/Streaming', constants.streaming)
 
+    property bool streamingOnlyWifi: settings.readData('Connection/StreamingOnlyWifi', false)
+    onStreamingOnlyWifiChanged: settings.saveData('Connection/StreamingOnlyWifi', constants.streamingOnlyWifi)
+
+    property bool forceTimerUpdate: settings.readData('Connection/ForceTimerUpdate', false)
+    onForceTimerUpdateChanged: settings.saveData('Connection/ForceTimerUpdate', constants.forceTimerUpdate)
+
     property int updateInterval: settings.readData('Connection/UpdateInterval', 5)
     onUpdateIntervalChanged: settings.saveData('Connection/UpdateInterval', constants.updateInterval)
 

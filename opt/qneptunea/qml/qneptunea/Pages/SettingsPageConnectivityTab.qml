@@ -52,6 +52,7 @@ Page {
             ButtonRow {
                 anchors.horizontalCenter: parent.horizontalCenter
                 Button {
+                    id: streamingButton
                     text: qsTr('Streaming')
                     platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
                     checked: constants.streaming
@@ -60,6 +61,7 @@ Page {
                     }
                 }
                 Button {
+                    id: timerButton
                     text: qsTr('Timer')
                     platformStyle: ButtonStyle { fontPixelSize: constants.fontDefault }
                     checked: !constants.streaming
@@ -76,7 +78,7 @@ Page {
                 minimumValue: 0
                 maximumValue: 10
                 stepSize: 1
-                enabled: !constants.streaming
+                enabled: !constants.streaming || (constants.streaming && constants.streamingOnlyWifi && constants.forceTimerUpdate)
                 valueIndicatorVisible: true
                 valueIndicatorText: qsTr('%n minute(s)', '', value)
                 valueIndicatorMargin: 20
@@ -93,6 +95,49 @@ Page {
                         }
                     }
                 ]
+            }
+
+            Row {
+                spacing: 10
+                Item { width: 20; height: 1 }
+
+                Switch {
+                    id: streamingOnlyWifiSwitch
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: constants.streamingOnlyWifi
+                    onCheckedChanged: if (root.status === PageStatus.Active) constants.streamingOnlyWifi = checked
+                }
+
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: qsTr('Streaming over WiFi only')
+                    color: constants.textColor
+                    font.family: constants.fontFamily
+                    font.pixelSize: constants.fontDefault
+                    MouseArea { anchors.fill: parent; onClicked: streamingOnlyWifiSwitch.checked = !streamingOnlyWifiSwitch.checked }
+                }
+            }
+
+            Row {
+                spacing: 10
+                Item { width: 40; height: 1 }
+                enabled: constants.streamingOnlyWifi
+
+                Switch {
+                    id: forceTimerUpdateSwitch
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: constants.forceTimerUpdate
+                    onCheckedChanged: if (root.status === PageStatus.Active) constants.forceTimerUpdate = checked
+                }
+
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: qsTr('Forced switch to timer on non-WiFi')
+                    color: constants.textColor
+                    font.family: constants.fontFamily
+                    font.pixelSize: constants.fontDefault
+                    MouseArea { anchors.fill: parent; onClicked: forceTimerUpdateSwitch.checked = ! forceTimerUpdateSwitch.checked }
+                }
             }
 
             Separator { width: parent.width }

@@ -48,6 +48,10 @@ PageStackWindow {
         background: constants.background
     }
 
+    NetworkInfo { id: networkInfo; mode: NetworkInfo.WlanMode; monitorStatusChanges: true }
+    property bool wlanConnected: networkInfo.networkStatus === 'Connected'
+    property bool timerUpdateForcedOnWifi: constants.streaming && constants.streamingOnlyWifi && constants.forceTimerUpdate && !window.wlanConnected
+
     Timer {
         id: autoTestTimer
         interval: 10000
@@ -274,7 +278,7 @@ PageStackWindow {
         ]
     }
 
-    UIConstants { id: constants }
+    UIConstants { id: constants; onStreamingOnlyWifiChanged: test.exec() }
 
     Binding { target: theme; property: 'inverted'; value: constants.themeInverted }
     Binding { target: theme; property: 'colorScheme'; value: constants.themeColorScheme }
@@ -392,7 +396,7 @@ PageStackWindow {
     }
 
     Timer {
-        running: networkConfigurationManager.online && constants.streaming && !test.ok
+        running: !(constants.streamingOnlyWifi && !window.wlanConnected) && networkConfigurationManager.online && constants.streaming && !test.ok
         interval: 30 * 1000
         triggeredOnStart: true
         repeat: true
@@ -400,10 +404,10 @@ PageStackWindow {
     }
 
     Timer {
-        running: !constants.streaming && interval > 0 && !test.online
+        running: ( window.timerUpdateForcedOnWifi || !constants.streaming ) && interval > 0 && !test.online
         interval: constants.updateInterval * 60 * 1000
         repeat: true
-        onTriggered: test.exec()
+        onTriggered: { test.exec() }
     }
 
     OAuth {
