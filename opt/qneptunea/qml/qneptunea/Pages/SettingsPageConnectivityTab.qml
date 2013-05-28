@@ -154,6 +154,7 @@ Page {
                 Item { width: 20; height: 1 }
 
                 Switch {
+                    id: mentionsNotificationSwitch
                     anchors.verticalCenter: parent.verticalCenter
                     checked: constants.mentionsNotification
                     onCheckedChanged: if (root.status === PageStatus.Active) constants.mentionsNotification = checked
@@ -165,7 +166,7 @@ Page {
                     color: constants.textColor
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.mentionsNotification = !constants.mentionsNotification }
+                    MouseArea { anchors.fill: parent; onClicked: mentionsNotificationSwitch.checked = !mentionsNotificationSwitch.checked }
                 }
             }
 
@@ -174,6 +175,7 @@ Page {
                 Item { width: 20; height: 1 }
 
                 Switch {
+                    id: messagesNotificationSwitch
                     anchors.verticalCenter: parent.verticalCenter
                     checked: constants.messagesNotification
                     onCheckedChanged: if (root.status === PageStatus.Active) constants.messagesNotification = checked
@@ -185,7 +187,7 @@ Page {
                     color: constants.textColor
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.messagesNotification = !constants.messagesNotification }
+                    MouseArea { anchors.fill: parent; onClicked: messagesNotificationSwitch.checked = !messagesNotificationSwitch.checked }
                 }
             }
 
@@ -194,6 +196,7 @@ Page {
                 Item { width: 20; height: 1 }
 
                 Switch {
+                    id: searchesNotificationSwitch
                     anchors.verticalCenter: parent.verticalCenter
                     checked: constants.searchesNotification
                     onCheckedChanged: if (root.status === PageStatus.Active) constants.searchesNotification = checked
@@ -205,7 +208,7 @@ Page {
                     color: constants.textColor
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.searchesNotification = !constants.searchesNotification }
+                    MouseArea { anchors.fill: parent; onClicked: searchesNotificationSwitch.checked = !searchesNotificationSwitch.checked }
                 }
             }
 
@@ -214,6 +217,7 @@ Page {
                 Item { width: 40; height: 1 }
 
                 Switch {
+                    id: notificationsWithHapticsFeedbackSwitch
                     anchors.verticalCenter: parent.verticalCenter
                     checked: constants.notificationsWithHapticsFeedback
                     onCheckedChanged: if (root.status === PageStatus.Active) constants.notificationsWithHapticsFeedback = checked
@@ -225,7 +229,7 @@ Page {
                     color: constants.textColor
                     font.family: constants.fontFamily
                     font.pixelSize: constants.fontDefault
-                    MouseArea { anchors.fill: parent; onClicked: constants.notificationsWithHapticsFeedback = !constants.notificationsWithHapticsFeedback }
+                    MouseArea { anchors.fill: parent; onClicked: notificationsWithHapticsFeedbackSwitch.checked = !notificationsWithHapticsFeedbackSwitch.checked }
                 }
             }
 
