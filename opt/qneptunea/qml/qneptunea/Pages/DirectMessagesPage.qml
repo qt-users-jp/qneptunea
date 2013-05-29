@@ -211,7 +211,7 @@ AbstractPage {
                 }
 
                 onRateLimitExceeded: {
-                    infoBanners.message({'text': 'API rate limit has exceeded (%1/%2), will be reset on %3'.arg(xrlRemaining).arg(xrlLimit).arg(xrlReset)})
+                    infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
                 }
             }
 
@@ -257,10 +257,6 @@ AbstractPage {
                             }
                         }
                     }
-                }
-
-                onRateLimitExceeded: {
-                    infoBanners.rateLimitMessage(xrlLimit, xrlRemaining, xrlReset)
                 }
             }
             onSizeChanged: {
