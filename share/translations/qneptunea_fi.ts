@@ -7,7 +7,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+96"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>fi</translation>
     </message>
@@ -221,11 +221,6 @@
         <source>Open in the browser</source>
         <translation>Avaa selaimessa</translation>
     </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation>Avaa oletussovelluksessa</translation>
-    </message>
 </context>
 <context>
     <name>AbstractListView</name>
@@ -432,7 +427,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+122"/>
         <source>Unsubscribe</source>
         <translation>Poista tilaus</translation>
     </message>
@@ -450,7 +445,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+73"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Tilaa &amp; Rekisteröidy&lt;/a&gt;</translation>
     </message>
@@ -460,17 +455,17 @@
         <translation>client_id:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>client_secret:</source>
         <translation>client_secret:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>translate to:</source>
         <translation>käännä:</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-116"/>
         <source>Arabic</source>
         <translation>Arabiaksi</translation>
     </message>
@@ -665,7 +660,7 @@
         <translation>Vietnamiksi</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>en (Käännä &quot;en&quot; lähimpään kielikoodiin http://msdn.microsoft.com/en-us/library/hh456380.)</translation>
     </message>
@@ -729,7 +724,7 @@
         <translation>Listat</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Trend</source>
         <translation>Suositut puheenaiheet</translation>
     </message>
@@ -744,7 +739,7 @@
         <translation>Lähistöllä</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
@@ -778,9 +773,9 @@
     </message>
 </context>
 <context>
-    <name>MentionsPage</name>
+    <name>MentionsTimelinePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsTimelinePage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>Maininnat</translation>
     </message>
@@ -838,7 +833,7 @@ HTML5
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+97"/>
         <source>Unmute %1</source>
         <translation>Poista mykistys %1</translation>
     </message>
@@ -895,22 +890,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+108"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation>Käytettävyys</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Appearance</source>
         <translation>Ulkoasu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Plugins</source>
         <translation>Liitännäiset</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Misc</source>
         <translation>Sekalaiset</translation>
     </message>
@@ -918,7 +913,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+174"/>
         <source>Icon size:</source>
         <translation>Kuvakkeen koko:</translation>
     </message>
@@ -971,12 +966,12 @@ HTML5
         <translation>Päivitystapa:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Streaming</source>
         <translation>Jatkuva</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Timer</source>
         <translation>Ajastettu</translation>
     </message>
@@ -991,7 +986,17 @@ HTML5
         <translation>OFF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+19"/>
+        <source>Streaming over WiFi only</source>
+        <translation>Jatkuva päivitys vain WiFi-verkossa</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Forced switch to timer on non-WiFi</source>
+        <translation>Ei WiFi-yhteyttä, päivitys vaihdettu ajastetuksi</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Notifications:</source>
         <translation>Ilmoitukset:</translation>
     </message>
@@ -1017,6 +1022,11 @@ HTML5
     </message>
     <message>
         <location line="+11"/>
+        <source>Load RTs and favs automatically:</source>
+        <translation>Lataa RT:t ja suosikit automaattisesti:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sync:</source>
         <translation>Taustapäivitys:</translation>
     </message>
@@ -1050,7 +1060,12 @@ HTML5
         <translation>Näytön aikakatkaisu:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
+        <source>Disable location data:</source>
+        <translation>Poista sijaintitiedot käytöstä:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>QNeptunea update check:</source>
         <translation>QNeptunean päivitysten tarkastus:</translation>
     </message>
@@ -1060,7 +1075,7 @@ HTML5
         <translation>Kieli:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+39"/>
         <source>Restart QNeptunea</source>
         <translation>Käynnistä QNeptunea uudestaan</translation>
     </message>
@@ -1132,7 +1147,7 @@ HTML5
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="+267"/>
         <source>Unmute @%1</source>
         <translation>Poista mykistys @%1</translation>
     </message>
@@ -1150,7 +1165,7 @@ HTML5
         <translation>Teema</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+119"/>
         <source>%1 times retweeted</source>
         <translation>%1 kertaa uudelleentwiitattu</translation>
     </message>
@@ -1210,18 +1225,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+478"/>
+        <location line="+486"/>
         <source>Tweet</source>
         <translation>Twiittaa</translation>
     </message>
     <message>
-        <location line="-381"/>
-        <location line="+403"/>
+        <location line="-389"/>
+        <location line="+411"/>
         <source>Retweet</source>
         <translation>Uudelleentwiittaa</translation>
     </message>
     <message>
-        <location line="-395"/>
+        <location line="-403"/>
         <source>Reply</source>
         <translation>Vastaa</translation>
     </message>
@@ -1287,7 +1302,7 @@ Yritä sitten asennuspaketin latausta uudelleen.</translation>
         <translation>Seuratut</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Followers</source>
         <translation>Seuraajat</translation>
     </message>
@@ -1302,7 +1317,7 @@ Yritä sitten asennuspaketin latausta uudelleen.</translation>
         <translation>Listat</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Unmute @%1</source>
         <translation>Poista mykistys @%1</translation>
     </message>
@@ -1356,12 +1371,7 @@ Yritä sitten asennuspaketin latausta uudelleen.</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
-        <source>API rate limited until %1</source>
-        <translation>API:n arvoa rajoitettu %1 saakka</translation>
-    </message>
-    <message>
-        <location line="+199"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+296"/>
         <source>@%1 following you</source>
         <translation>@%1 seuraa sinua</translation>
     </message>
@@ -1371,6 +1381,23 @@ Yritä sitten asennuspaketin latausta uudelleen.</translation>
 %2</source>
         <translation>@%1 suosi twiittiäsi
 %2</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>in seconds</source>
+        <translation>sekuntia</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in another %1 seconds</source>
+        <translation>vielä %1 sekuntia</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>API rate limit has exceeded(%1/%2), 
+will be reset %3</source>
+        <translation>API:n raja on ylitetty(%1/%2), 
+raja nollataan %3</translation>
     </message>
 </context>
 <context>
