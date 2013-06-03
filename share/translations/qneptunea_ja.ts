@@ -427,7 +427,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+122"/>
         <source>Unsubscribe</source>
         <translation>購読解除</translation>
     </message>
@@ -724,7 +724,7 @@
         <translation>保存リスト</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Trend</source>
         <translation>トレンド</translation>
     </message>
@@ -773,9 +773,9 @@
     </message>
 </context>
 <context>
-    <name>MentionsPage</name>
+    <name>MentionsTimelinePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsTimelinePage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>関連ツイート</translation>
     </message>
@@ -833,7 +833,7 @@ HTML5
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+97"/>
         <source>Unmute %1</source>
         <translation>%1 をミュート解除</translation>
     </message>
@@ -913,7 +913,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+174"/>
         <source>Icon size:</source>
         <translation>アイコンサイズ:</translation>
     </message>
@@ -966,12 +966,12 @@ HTML5
         <translation>アップデートモード:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Streaming</source>
         <translation>ストリーミング</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Timer</source>
         <translation>タイマー</translation>
     </message>
@@ -980,9 +980,9 @@ HTML5
         <source>%n minute(s)</source>
         <translation><numerusform>複数の翻訳
 
-現状: %n 分(秒)
+現状: %n 分
 
-他: %n 分(秒)</numerusform></translation>
+他: %n 分</numerusform></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -990,7 +990,17 @@ HTML5
         <translation>OFF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+19"/>
+        <source>Streaming over WiFi only</source>
+        <translation>WiFi接続時のみストリーミングを有効</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Forced switch to timer on non-WiFi</source>
+        <translation>WiFi接続でないときにタイマーに切り替え</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Notifications:</source>
         <translation>通知:</translation>
     </message>
@@ -1007,12 +1017,12 @@ HTML5
     <message>
         <location line="+20"/>
         <source>Saved Searches</source>
-        <translation>検索を保存</translation>
+        <translation>保存された検索結果</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>with vibration</source>
-        <translation>バイブ</translation>
+        <translation>バイブレーションを有効</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1041,7 +1051,7 @@ HTML5
     <message>
         <location line="-2"/>
         <source>QNeptunea will be closed.</source>
-        <translation>QNeptuneaを終了</translation>
+        <translation>QNeptuneaは終了します</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1051,7 +1061,7 @@ HTML5
     <message>
         <location line="+20"/>
         <source>Display time-out:</source>
-        <translation>表示 タイムアウト：</translation>
+        <translation>画面表示のタイムアウト：</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -1059,7 +1069,7 @@ HTML5
         <translation>位置情報取得を停止:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+24"/>
         <source>QNeptunea update check:</source>
         <translation>QNeptunea 更新確認:</translation>
     </message>
@@ -1069,9 +1079,9 @@ HTML5
         <translation>言語：</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+39"/>
         <source>Restart QNeptunea</source>
-        <translation>QNeptuneaは再起動されます。</translation>
+        <translation>QNeptuneaを再起動してください。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1159,7 +1169,7 @@ HTML5
         <translation>テーマ</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+119"/>
         <source>%1 times retweeted</source>
         <translation>%1 回リツイート</translation>
     </message>
@@ -1219,18 +1229,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+483"/>
+        <location line="+486"/>
         <source>Tweet</source>
         <translation>ツイート</translation>
     </message>
     <message>
-        <location line="-386"/>
-        <location line="+408"/>
+        <location line="-389"/>
+        <location line="+411"/>
         <source>Retweet</source>
         <translation>リツイート</translation>
     </message>
     <message>
-        <location line="-400"/>
+        <location line="-403"/>
         <source>Reply</source>
         <translation>返信</translation>
     </message>
@@ -1296,14 +1306,14 @@ $ rm /home/user/.grob/cache/http*/*
         <translation>フォロー</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Followers</source>
         <translation>フォロワー</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Listed</source>
-        <translation>追加リスト</translation>
+        <translation>追加されたリスト</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1311,7 +1321,7 @@ $ rm /home/user/.grob/cache/http*/*
         <translation>保存リスト</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Unmute @%1</source>
         <translation>%1 をミュート解除</translation>
     </message>
@@ -1365,12 +1375,7 @@ $ rm /home/user/.grob/cache/http*/*
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
-        <source>API rate limited until %1</source>
-        <translation>APIレートが%1 に制限されています。</translation>
-    </message>
-    <message>
-        <location line="+199"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+296"/>
         <source>@%1 following you</source>
         <translation>@%1 にフォローされました</translation>
     </message>
@@ -1379,6 +1384,23 @@ $ rm /home/user/.grob/cache/http*/*
         <source>@%1 favorited your tweet
 %2</source>
         <translation>@%1 がツイートをお気に入りにしました⏎ %2</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>in seconds</source>
+        <translation>もうすぐ</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in another %1 seconds</source>
+        <translation>あと %1 秒で</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>API rate limit has exceeded(%1/%2), 
+will be reset %3</source>
+        <translation>API制限中(%1/%2)⏎
+%3リセットされます</translation>
     </message>
 </context>
 <context>
