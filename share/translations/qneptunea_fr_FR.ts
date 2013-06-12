@@ -7,7 +7,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+94"/>
+        <location filename="../../opt/qneptunea/plugins/service/25_mstranslator.qml" line="+96"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>fr</translation>
     </message>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../../opt/qneptunea/plugins/service/90_clipboard.qml" line="+31"/>
         <source>Copy to clipboard</source>
-        <translation>Copier dans le presse papier</translation>
+        <translation>Copier dans le presse-papier</translation>
     </message>
 </context>
 <context>
@@ -155,13 +155,13 @@
     <message>
         <location line="+4"/>
         <source>translator1_twitter_id,translator2_twitter_id,...</source>
-        <translation>nsuffys,ultrariri</translation>
+        <translation>nsuffys,ultrariri, binbrkn</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../../opt/qneptunea/server.cpp" line="+104"/>
         <source>translator_twitter_id(s) (Please translate this &quot;translator_twitter_id(s)&quot; to *your* twitter id(s) like &quot;task_jp&quot; or &quot;task_jp, LogonAniket&quot;.)</source>
-        <translation>nsuffys,ultrariri</translation>
+        <translation>nsuffys,ultrariri, binbrkn</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -219,12 +219,7 @@
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/QNeptunea/Components/AbstractLinkPage.qml" line="+123"/>
         <source>Open in the browser</source>
-        <translation>Ouvrir dans un navigateur</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Open in the default app</source>
-        <translation>Ouvrir dans l&apos;onglet par défaut</translation>
+        <translation>Ouvrir dans le navigateur</translation>
     </message>
 </context>
 <context>
@@ -294,7 +289,7 @@
     <message>
         <location line="+43"/>
         <source>Copy to clipboard</source>
-        <translation>Copier dans le presse papier</translation>
+        <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -432,7 +427,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+122"/>
         <source>Unsubscribe</source>
         <translation>Se désabonner</translation>
     </message>
@@ -450,7 +445,7 @@
         <translation>Microsoft Translator</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+73"/>
         <source>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;Subscribe &amp; Register&lt;/a&gt;</source>
         <translation>&lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;S&apos;abonner &amp; s&apos;inscrire&lt;/a&gt;</translation>
     </message>
@@ -460,17 +455,17 @@
         <translation>client_id :</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>client_secret:</source>
         <translation>client_secret :</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>translate to:</source>
         <translation>traduire en :</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-116"/>
         <source>Arabic</source>
         <translation>Arabe</translation>
     </message>
@@ -665,7 +660,7 @@
         <translation>Vietnamien</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>en (Please translate this &quot;en&quot; to closest langage code in http://msdn.microsoft.com/en-us/library/hh456380.)</source>
         <translation>fr</translation>
     </message>
@@ -729,7 +724,7 @@
         <translation>Listes</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Trend</source>
         <translation>Tendance</translation>
     </message>
@@ -744,7 +739,7 @@
         <translation>A proximité de</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
@@ -778,9 +773,9 @@
     </message>
 </context>
 <context>
-    <name>MentionsPage</name>
+    <name>MentionsTimelinePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsTimelinePage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>Mentions</translation>
     </message>
@@ -838,7 +833,7 @@ HTML5
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+97"/>
         <source>Unmute %1</source>
         <translation>Débloquer %1</translation>
     </message>
@@ -895,22 +890,22 @@ HTML5
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+108"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPage.qml" line="+145"/>
         <source>Connectivity</source>
         <translation>Connectivité</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Misc</source>
         <translation>Divers</translation>
     </message>
@@ -918,7 +913,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+174"/>
         <source>Icon size:</source>
         <translation>Taille de l&apos;icone :</translation>
     </message>
@@ -971,14 +966,14 @@ HTML5
         <translation>Mode de mise à jour :</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Streaming</source>
-        <translation>Progressif</translation>
+        <translation>Continu</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Timer</source>
-        <translation>intervalle</translation>
+        <translation>Minuterie</translation>
     </message>
     <message numerus="yes">
         <location line="+18"/>
@@ -991,7 +986,17 @@ HTML5
         <translation>éteint</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+19"/>
+        <source>Streaming over WiFi only</source>
+        <translation>Continu en WiFi seulement</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Forced switch to timer on non-WiFi</source>
+        <translation>Minuterie forcée en non-WiFi</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Notifications:</source>
         <translation>Notifications :</translation>
     </message>
@@ -1017,6 +1022,11 @@ HTML5
     </message>
     <message>
         <location line="+11"/>
+        <source>Load RTs and favs automatically:</source>
+        <translation>Charger les Retweets et les favoris automatiquement</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sync:</source>
         <translation>Synchroniser :</translation>
     </message>
@@ -1050,7 +1060,12 @@ HTML5
         <translation>Délai d&apos;affichage :</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
+        <source>Disable location data:</source>
+        <translation>Désactiver les données de localisation</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>QNeptunea update check:</source>
         <translation>Mise à jour automatique de QNeptunea :</translation>
     </message>
@@ -1060,7 +1075,7 @@ HTML5
         <translation>Langue :</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+39"/>
         <source>Restart QNeptunea</source>
         <translation>Redémarrer QNeptunea</translation>
     </message>
@@ -1132,7 +1147,7 @@ HTML5
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="+267"/>
         <source>Unmute @%1</source>
         <translation>Débloquer @%1</translation>
     </message>
@@ -1150,7 +1165,7 @@ HTML5
         <translation>Thème</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+119"/>
         <source>%1 times retweeted</source>
         <translation>Retweeté %1 fois</translation>
     </message>
@@ -1210,18 +1225,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+478"/>
+        <location line="+486"/>
         <source>Tweet</source>
         <translation>Tweeter</translation>
     </message>
     <message>
-        <location line="-381"/>
-        <location line="+403"/>
+        <location line="-389"/>
+        <location line="+411"/>
         <source>Retweet</source>
         <translation>Retweeter</translation>
     </message>
     <message>
-        <location line="-395"/>
+        <location line="-403"/>
         <source>Reply</source>
         <translation>Répondre</translation>
     </message>
@@ -1287,7 +1302,7 @@ Puis téléchargez de nouveau le paquet.</translation>
         <translation>Suivis</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Followers</source>
         <translation>Abonnés</translation>
     </message>
@@ -1302,7 +1317,7 @@ Puis téléchargez de nouveau le paquet.</translation>
         <translation>Listes</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Unmute @%1</source>
         <translation>Débloquer @%1</translation>
     </message>
@@ -1356,12 +1371,7 @@ Puis téléchargez de nouveau le paquet.</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
-        <source>API rate limited until %1</source>
-        <translation>Transfert limité par l&apos;API jusque %1</translation>
-    </message>
-    <message>
-        <location line="+199"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+296"/>
         <source>@%1 following you</source>
         <translation>@%1 s&apos;est abonné à vous</translation>
     </message>
@@ -1371,6 +1381,23 @@ Puis téléchargez de nouveau le paquet.</translation>
 %2</source>
         <translation>@%1 a mis votre tweet en favoris
 %2</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>in seconds</source>
+        <translation>en secondes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in another %1 seconds</source>
+        <translation>dans les prochaines %1 secondes</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>API rate limit has exceeded(%1/%2), 
+will be reset %3</source>
+        <translation>Le quota d&apos;accès à l&apos;API a dépassé(%1 %2),
+sera réinitialisé %3</translation>
     </message>
 </context>
 <context>
