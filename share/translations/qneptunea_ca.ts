@@ -427,7 +427,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+122"/>
         <source>Unsubscribe</source>
         <translation>Doneu-vos de baixa</translation>
     </message>
@@ -701,12 +701,12 @@
     <message>
         <location line="+7"/>
         <source>Favourites</source>
-        <translation>Preferits</translation>
+        <translation>Favorits</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Following</source>
-        <translation>Esteu seguint</translation>
+        <translation>Seguint</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -716,15 +716,15 @@
     <message>
         <location line="+7"/>
         <source>Listed</source>
-        <translation>Llistat</translation>
+        <translation>Llistat a</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List</source>
-        <translation>Llista</translation>
+        <translation>Llistes</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Trend</source>
         <translation>Tendències</translation>
     </message>
@@ -773,9 +773,9 @@
     </message>
 </context>
 <context>
-    <name>MentionsPage</name>
+    <name>MentionsTimelinePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsTimelinePage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>Mencions</translation>
     </message>
@@ -833,7 +833,7 @@ HTML5
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+97"/>
         <source>Unmute %1</source>
         <translation>De-silencia %1 </translation>
     </message>
@@ -913,7 +913,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+174"/>
         <source>Icon size:</source>
         <translation>Mida de les icones:</translation>
     </message>
@@ -966,12 +966,12 @@ HTML5
         <translation>Forma d&apos;actualització:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Streaming</source>
         <translation>Flux</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Timer</source>
         <translation>Temporitzador</translation>
     </message>
@@ -986,7 +986,17 @@ HTML5
         <translation>Inactiu</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+19"/>
+        <source>Streaming over WiFi only</source>
+        <translation>Flux de twits només en WiFi</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Forced switch to timer on non-WiFi</source>
+        <translation>Força el canvi a temporitzador en no-WiFi</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Notifications:</source>
         <translation>Notificacions:</translation>
     </message>
@@ -1055,7 +1065,7 @@ HTML5
         <translation>Deshabilita les dades d&apos;ubicació</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+24"/>
         <source>QNeptunea update check:</source>
         <translation>Comprova si hi ha actualitzacions:</translation>
     </message>
@@ -1065,7 +1075,7 @@ HTML5
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+39"/>
         <source>Restart QNeptunea</source>
         <translation>Reinicia QNeptunea</translation>
     </message>
@@ -1155,7 +1165,7 @@ HTML5
         <translation>Tema</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+119"/>
         <source>%1 times retweeted</source>
         <translation>retwitat %1 vegades</translation>
     </message>
@@ -1215,18 +1225,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+483"/>
+        <location line="+486"/>
         <source>Tweet</source>
         <translation>Twit</translation>
     </message>
     <message>
-        <location line="-386"/>
-        <location line="+408"/>
+        <location line="-389"/>
+        <location line="+411"/>
         <source>Retweet</source>
         <translation>Retwit</translation>
     </message>
     <message>
-        <location line="-400"/>
+        <location line="-403"/>
         <source>Reply</source>
         <translation>Respon</translation>
     </message>
@@ -1284,30 +1294,30 @@ En acabat torneu a descarregar-vos el fitxer del paquet.</translation>
     <message>
         <location line="+7"/>
         <source>Favourites</source>
-        <translation>Preferits</translation>
+        <translation>Favorits</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Following</source>
-        <translation>Esteu seguint</translation>
+        <translation>Seguint</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Followers</source>
         <translation>Seguidors</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Listed</source>
-        <translation>Llistat</translation>
+        <translation>Llistat a</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List</source>
-        <translation>Llista</translation>
+        <translation>Llistes</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Unmute @%1</source>
         <translation>De-silencia @%1</translation>
     </message>
@@ -1361,12 +1371,7 @@ En acabat torneu a descarregar-vos el fitxer del paquet.</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
-        <source>API rate limited until %1</source>
-        <translation>Rapidesa de l&apos;API limitada fins a %1</translation>
-    </message>
-    <message>
-        <location line="+199"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+296"/>
         <source>@%1 following you</source>
         <translation>@%1 us està seguint</translation>
     </message>
@@ -1375,6 +1380,23 @@ En acabat torneu a descarregar-vos el fitxer del paquet.</translation>
         <source>@%1 favorited your tweet
 %2</source>
         <translation>@%1 ha marcat com a preferit el vostre tuit⏎ %2</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>in seconds</source>
+        <translation>en segons</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in another %1 seconds</source>
+        <translation>en %1 segons més</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>API rate limit has exceeded(%1/%2), 
+will be reset %3</source>
+        <translation>S&apos;ha excedit el límit de velocitat de l&apos;API(%1/%2),
+es reiniciarà %3</translation>
     </message>
 </context>
 <context>
