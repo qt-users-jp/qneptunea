@@ -427,7 +427,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+122"/>
         <source>Unsubscribe</source>
         <translation>Harpidetza utzi</translation>
     </message>
@@ -724,7 +724,7 @@
         <translation>Zerrendak</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Trend</source>
         <translation>Joerak</translation>
     </message>
@@ -773,9 +773,9 @@
     </message>
 </context>
 <context>
-    <name>MentionsPage</name>
+    <name>MentionsTimelinePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsTimelinePage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>Aipamenak</translation>
     </message>
@@ -833,7 +833,7 @@ HTML5
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+97"/>
         <source>Unmute %1</source>
         <translation>Hitza eman %1 -i</translation>
     </message>
@@ -913,7 +913,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+174"/>
         <source>Icon size:</source>
         <translation>Ikono tamaina:</translation>
     </message>
@@ -966,12 +966,12 @@ HTML5
         <translation>Eguneratze modua:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Streaming</source>
         <translation>Streaminga</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Timer</source>
         <translation>Tenporizatua</translation>
     </message>
@@ -986,7 +986,17 @@ HTML5
         <translation>OFF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+19"/>
+        <source>Streaming over WiFi only</source>
+        <translation>Streaming-a WiFi konexioan baino ez</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Forced switch to timer on non-WiFi</source>
+        <translation>WiFi konexiorik gabe modu tenporizatura aldatua </translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Notifications:</source>
         <translation>Jakinarazpenak:</translation>
     </message>
@@ -1055,7 +1065,7 @@ HTML5
         <translation>Ezgaitu kokapenaren datuak:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+24"/>
         <source>QNeptunea update check:</source>
         <translation>QNeptunea eguneraketa:</translation>
     </message>
@@ -1065,7 +1075,7 @@ HTML5
         <translation>Hizkuntza:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+39"/>
         <source>Restart QNeptunea</source>
         <translation>Qneptunea berrabiarazi</translation>
     </message>
@@ -1155,7 +1165,7 @@ HTML5
         <translation>Gaia</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+119"/>
         <source>%1 times retweeted</source>
         <translation>%1 aldiz bertxiotua</translation>
     </message>
@@ -1215,18 +1225,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+483"/>
+        <location line="+486"/>
         <source>Tweet</source>
         <translation>Txiokatu</translation>
     </message>
     <message>
-        <location line="-386"/>
-        <location line="+408"/>
+        <location line="-389"/>
+        <location line="+411"/>
         <source>Retweet</source>
         <translation>Bertxiotu</translation>
     </message>
     <message>
-        <location line="-400"/>
+        <location line="-403"/>
         <source>Reply</source>
         <translation>Erantzun</translation>
     </message>
@@ -1292,7 +1302,7 @@ Ondoren jaitsi paketea berriz.</translation>
         <translation>Jarraitzen</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Followers</source>
         <translation>Jarraitzaileak</translation>
     </message>
@@ -1307,7 +1317,7 @@ Ondoren jaitsi paketea berriz.</translation>
         <translation>Zerrendak</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Unmute @%1</source>
         <translation>Hitza eman @%1 -i</translation>
     </message>
@@ -1361,12 +1371,7 @@ Ondoren jaitsi paketea berriz.</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
-        <source>API rate limited until %1</source>
-        <translation>API ratioa mugatua %1 arte</translation>
-    </message>
-    <message>
-        <location line="+199"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+296"/>
         <source>@%1 following you</source>
         <translation>@%1 ek jarraitzen zaitu</translation>
     </message>
@@ -1376,6 +1381,23 @@ Ondoren jaitsi paketea berriz.</translation>
 %2</source>
         <translation>@%1 ek zure txioa gogoko du
 %2</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>in seconds</source>
+        <translation>segundutan</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in another %1 seconds</source>
+        <translation>beste %1 segundutan</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>API rate limit has exceeded(%1/%2), 
+will be reset %3</source>
+        <translation>Api tasa limiteak (%1/%2) gainditu du
+Berrabiarazia izango da %3</translation>
     </message>
 </context>
 <context>
