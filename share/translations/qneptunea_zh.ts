@@ -965,7 +965,7 @@ HTML5
     <message>
         <location line="+10"/>
         <source>Streaming</source>
-        <translation>实时</translation>
+        <translation>流</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -985,12 +985,12 @@ HTML5
     <message>
         <location line="+19"/>
         <source>Streaming over WiFi only</source>
-        <translation>流模式仅限WiFi网络可用</translation>
+        <translation>流模式仅在WiFi连接时</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Forced switch to timer on non-WiFi</source>
-        <translation>无WiFi时强制切换为按时刷新模式</translation>
+        <translation>无WiFi时强制切换为定时刷新</translation>
     </message>
     <message>
         <location line="+11"/>
