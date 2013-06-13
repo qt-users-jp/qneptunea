@@ -428,7 +428,7 @@
 <context>
     <name>ListStatusesPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+115"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/ListStatusesPage.qml" line="+122"/>
         <source>Unsubscribe</source>
         <translation>退订</translation>
     </message>
@@ -725,7 +725,7 @@
         <translation>已订阅列表</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Trend</source>
         <translation>趋势</translation>
     </message>
@@ -774,9 +774,9 @@
     </message>
 </context>
 <context>
-    <name>MentionsPage</name>
+    <name>MentionsTimelinePage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsPage.qml" line="+37"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/MentionsTimelinePage.qml" line="+37"/>
         <source>Mentions</source>
         <translation>提到</translation>
     </message>
@@ -830,7 +830,7 @@ HTML5
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+95"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SearchPage.qml" line="+97"/>
         <source>Unmute %1</source>
         <translation>取消mute %1</translation>
     </message>
@@ -910,7 +910,7 @@ HTML5
 <context>
     <name>SettingsPageAppearanceTab</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+168"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/Pages/SettingsPageAppearanceTab.qml" line="+174"/>
         <source>Icon size:</source>
         <translation>头像大小：</translation>
     </message>
@@ -963,12 +963,12 @@ HTML5
         <translation>刷新模式：</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Streaming</source>
         <translation>实时</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Timer</source>
         <translation>定时</translation>
     </message>
@@ -983,7 +983,17 @@ HTML5
         <translation>关</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+19"/>
+        <source>Streaming over WiFi only</source>
+        <translation>流模式仅限WiFi网络可用</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Forced switch to timer on non-WiFi</source>
+        <translation>无WiFi时强制切换为按时刷新模式</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Notifications:</source>
         <translation>提醒：</translation>
     </message>
@@ -1010,7 +1020,7 @@ HTML5
     <message>
         <location line="+11"/>
         <source>Load RTs and favs automatically:</source>
-        <translation>[查看推文时]自动加载RT跟收藏：</translation>
+        <translation>[查看推文时]自动加载官推与收藏数：</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1052,7 +1062,7 @@ HTML5
         <translation>禁用定位功能：</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+24"/>
         <source>QNeptunea update check:</source>
         <translation>检查QNeptunea版本更新：</translation>
     </message>
@@ -1062,7 +1072,7 @@ HTML5
         <translation>语言：</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+39"/>
         <source>Restart QNeptunea</source>
         <translation>设置将在重启QNeptunea后生效！</translation>
     </message>
@@ -1152,7 +1162,7 @@ HTML5
         <translation>主题</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+119"/>
         <source>%1 times retweeted</source>
         <translation>%1 次转推</translation>
     </message>
@@ -1212,18 +1222,18 @@ HTML5
     <name>TweetPage</name>
     <message>
         <location filename="../../opt/qneptunea/qml/qneptunea/Pages/TweetPage.qml" line="+39"/>
-        <location line="+483"/>
+        <location line="+486"/>
         <source>Tweet</source>
         <translation>发推</translation>
     </message>
     <message>
-        <location line="-386"/>
-        <location line="+408"/>
+        <location line="-389"/>
+        <location line="+411"/>
         <source>Retweet</source>
         <translation>转推</translation>
     </message>
     <message>
-        <location line="-400"/>
+        <location line="-403"/>
         <source>Reply</source>
         <translation>回复</translation>
     </message>
@@ -1283,7 +1293,7 @@ Then download the package again.</source>
         <translation>正关注</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Followers</source>
         <translation>关注者</translation>
     </message>
@@ -1298,7 +1308,7 @@ Then download the package again.</source>
         <translation>已订阅列表</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Unmute @%1</source>
         <translation>取消Mute@%1</translation>
     </message>
@@ -1352,12 +1362,7 @@ Then download the package again.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+104"/>
-        <source>API rate limited until %1</source>
-        <translation>%1 到达API使用上限</translation>
-    </message>
-    <message>
-        <location line="+199"/>
+        <location filename="../../opt/qneptunea/qml/qneptunea/main.qml" line="+296"/>
         <source>@%1 following you</source>
         <translation>@%1 正在关注你</translation>
     </message>
@@ -1366,6 +1371,23 @@ Then download the package again.</source>
         <source>@%1 favorited your tweet
 %2</source>
         <translation>@%1 收藏了你的推⏎ %2</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>in seconds</source>
+        <translation>秒内</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in another %1 seconds</source>
+        <translation>另 %1 秒内</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>API rate limit has exceeded(%1/%2), 
+will be reset %3</source>
+        <translation>API刷新上限已经达到(%1/%2), ⏎
+%3秒后重置</translation>
     </message>
 </context>
 <context>
