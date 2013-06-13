@@ -62,7 +62,7 @@ void PhotoUploader::Private::upload(const QUrl &url, const QVariant &parameters)
             params.insert(key, map.value(key).toByteArray());
         }
     }
-    QNetworkReply *reply = OAuthManager::instance().echo("POST", url, params, QUrl("https://api.twitter.com/1/account/verify_credentials." + verifyCredentialsFormat), QUrl("http://api.twitter.com/"), true);
+    QNetworkReply *reply = OAuthManager::instance().echo("POST", url, params, QUrl("https://api.twitter.com/1.1/account/verify_credentials." + verifyCredentialsFormat), QUrl("http://api.twitter.com/"), true);
     connect(reply, SIGNAL(finished()), this, SLOT(finished()));
     connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(error(QNetworkReply::NetworkError)));
 }
