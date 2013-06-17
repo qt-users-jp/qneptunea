@@ -27,7 +27,7 @@ import QNeptunea.Service 1.0
 
 ServicePlugin {
     id: root
-    service: 'Link to this Tweet'
+    service: qsTr('Link to this Tweet')
     icon: 'linkto.png'
 
     function matches(url) {
