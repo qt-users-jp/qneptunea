@@ -39,6 +39,14 @@
     </message>
 </context>
 <context>
+    <name>35_linkto</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/35_linkto.qml" line="+30"/>
+        <source>Link to this Tweet</source>
+        <translation>发送推文地址</translation>
+    </message>
+</context>
+<context>
     <name>39_mobypicture</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/39_mobypicture.qml" line="+33"/>
@@ -998,22 +1006,22 @@ HTML5
         <translation>提醒：</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Mentions</source>
         <translation>提到</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Direct Messages</source>
         <translation>密信</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Saved Searches</source>
         <translation>保存的搜索更新</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>with vibration</source>
         <translation>带震动</translation>
     </message>
