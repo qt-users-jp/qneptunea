@@ -39,6 +39,14 @@
     </message>
 </context>
 <context>
+    <name>35_linkto</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/35_linkto.qml" line="+30"/>
+        <source>Link to this Tweet</source>
+        <translation>Link naar deze tweet</translation>
+    </message>
+</context>
+<context>
     <name>39_mobypicture</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/39_mobypicture.qml" line="+33"/>
@@ -1001,22 +1009,22 @@ HTML5
         <translation>Notificaties:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Mentions</source>
         <translation>Vermeldingen</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Direct Messages</source>
         <translation>Privéberichten</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Saved Searches</source>
         <translation>Opgeslagen zoekopdrachten</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>with vibration</source>
         <translation>met trillen</translation>
     </message>
