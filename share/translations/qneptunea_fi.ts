@@ -39,6 +39,14 @@
     </message>
 </context>
 <context>
+    <name>35_linkto</name>
+    <message>
+        <location filename="../../opt/qneptunea/plugins/service/35_linkto.qml" line="+30"/>
+        <source>Link to this Tweet</source>
+        <translation>Linkki tähän Twiittiin</translation>
+    </message>
+</context>
+<context>
     <name>39_mobypicture</name>
     <message>
         <location filename="../../opt/qneptunea/plugins/tweet/39_mobypicture.qml" line="+33"/>
@@ -993,7 +1001,7 @@ HTML5
     <message>
         <location line="+22"/>
         <source>Forced switch to timer on non-WiFi</source>
-        <translation>Ei WiFi-yhteyttä, päivitys vaihdettu ajastetuksi</translation>
+        <translation>Ei WiFi-yhteyttä, vaihda ajastetuksi</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1001,24 +1009,24 @@ HTML5
         <translation>Ilmoitukset:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Mentions</source>
         <translation>Maininnat</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Direct Messages</source>
         <translation>Yksityisviestit</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Saved Searches</source>
         <translation>Tallennetut haut</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>with vibration</source>
-        <translation>värinähälytys</translation>
+        <translation>Värinähälytys</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1082,7 +1090,7 @@ HTML5
     <message>
         <location line="+13"/>
         <source>Do you want to translate QNeptunea to your language? visit &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; and translate it online!</source>
-        <translation>Haluatko kääntää QNeptunean omalle kielellesi? vieraile &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; ja käänne se verkossa!</translation>
+        <translation>Haluatko kääntää QNeptunean omalle kielellesi? vieraile &lt;a style=&quot;%1&quot; href=&quot;%2&quot;&gt;t.co/aai7EhBi&lt;/a&gt; ja käännä se verkossa!</translation>
     </message>
     <message>
         <location line="+15"/>
