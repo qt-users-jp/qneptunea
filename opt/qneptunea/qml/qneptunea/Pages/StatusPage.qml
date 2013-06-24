@@ -207,7 +207,7 @@ AbstractLinkPage {
                     id: map
                     property double _lat: visible && root.__status.geo.coordinates[0] ? root.__status.geo.coordinates[0] : 0.0
                     property double _long: visible && root.__status.geo.coordinates[1] ? root.__status.geo.coordinates[1] : 0.0
-                    source: "http://maps.google.com/staticmap?zoom=15&center=%1,%2&size=240x240&markers=%1,%2,red,a&saturation=-100".arg(map._lat).arg(map._long)
+                    source: "http://maps.googleapis.com/maps/api/staticmap?zoom=15&center=%1,%2&size=240x240&markers=%1,%2,red,a&saturation=-100&sensor=false".arg(map._lat).arg(map._long)
                     width: 240
                     height: 240
                     visible: defined(root.__status.geo) && defined(root.__status.geo.coordinates) && root.__status.geo.coordinates[0] !== 0 && root.__status.geo.coordinates[1] !== 0

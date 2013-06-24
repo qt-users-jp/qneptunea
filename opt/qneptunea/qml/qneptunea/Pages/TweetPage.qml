@@ -384,7 +384,7 @@ AbstractLinkPage {
                     visible: defined(root.location)
                     property double _lat: visible ? root.location.latitude : 0
                     property double _long: visible ? root.location.longitude : 0
-                    icon: visible ? "http://maps.google.com/staticmap?zoom=17&center=%1,%2&size=%3x%4".arg(_lat).arg(_long).arg(width).arg(height) : ''
+                    icon: visible ? "http://maps.googleapis.com/maps/api/staticmap?zoom=17&center=%1,%2&size=%3x%4&sensor=false".arg(_lat).arg(_long).arg(width).arg(height) : ''
                     fill: true
                     enabled: !status.loading && !currentPluginLoading
                     Item {
