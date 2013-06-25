@@ -78,7 +78,7 @@ AbstractLinkPage {
                 user: user
                 followsYou: defined(showFriendships.relationship.target) && showFriendships.relationship.target.following
                 onAvatarClicked: {
-                    pageStack.push(imagePreviewPage, {'type': 'image', url: 'http://api.twitter.com/1/users/profile_image?screen_name=%1&size=original'.arg(user.screen_name)})
+                    pageStack.push(imagePreviewPage, {'type': 'image', url: to_s(user.profile_image_url).replace('_normal', '')})
                 }
 
                 onLinkActivated: root.openLink(link)
