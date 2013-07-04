@@ -179,7 +179,7 @@ AbstractPage {
                 since_id = size > 0 ? get(0).id_str : ''
                 max_id = ''
                 count = 100
-                page = 1
+//                page = 1
                 view.contentY++
                 reload()
             }
@@ -198,7 +198,8 @@ AbstractPage {
                             loadingUntilLatest = false
                         } else {
                             lastSize = size
-                            page++
+//                            page++
+                            since_id = get(0).id_str
                             reload()
                         }
                     }
