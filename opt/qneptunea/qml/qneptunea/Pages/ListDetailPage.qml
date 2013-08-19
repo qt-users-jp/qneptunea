@@ -95,9 +95,9 @@ AbstractPage {
             platformIconId: 'toolbar-done'
             onClicked: {
                 if (list.id_str.length == 0) {
-                    list.createList({'name': name.text, 'description': description.text, 'mode': modePublic.checked ? 'public' : 'private' })
+                    list.createLists({'name': name.text, 'description': description.text, 'mode': modePublic.checked ? 'public' : 'private' })
                 } else {
-                    list.updateList({'list_id': list.id_str, 'name': name.text, 'description': description.text, 'mode': modePublic.checked ? 'public' : 'private' })
+                    list.updateLists({'list_id': list.id_str, 'name': name.text, 'description': description.text, 'mode': modePublic.checked ? 'public' : 'private' })
                 }
             }
         }

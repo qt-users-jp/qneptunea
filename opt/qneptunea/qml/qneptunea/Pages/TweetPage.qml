@@ -526,7 +526,7 @@ AbstractLinkPage {
                 function tweet() {
                     var parameters = {'status': textArea.text, 'media': root.media}
                     if (root.retweet)
-                        status.retweetStatus({'id': root.in_reply_to.id_str})
+                        status.retweetStatuses({'id': root.in_reply_to.id_str})
                     else {
                         if (root.reply)
                             parameters['in_reply_to_status_id'] = root.in_reply_to.id_str
@@ -534,7 +534,7 @@ AbstractLinkPage {
                             parameters['_lat'] = root.location.latitude
                             parameters['_long'] = root.location.longitude
                         }
-                        status.updateStatus(parameters)
+                        status.updateStatuses(parameters)
                     }
                 }
                 onClicked: tweet.tweet()

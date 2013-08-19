@@ -78,7 +78,7 @@ AbstractListView {
             opacity: enabled ? 1.0 : 0.75
             onClicked: {
                 if (actions.__status.retweeted) {
-                    status.destroyStatus()
+                    status.destroyStatuses()
                 } else {
                     if (actions.__status.user.id_str == oauth.user_id) {
                         pageStack.push(tweetPage, {'statusText': ' RT @%1: %2'.arg(actions.__status.user.screen_name).arg(actions.__status.text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')), 'in_reply_to': actions.__status})

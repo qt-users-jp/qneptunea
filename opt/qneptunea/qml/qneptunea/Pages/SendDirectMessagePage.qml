@@ -236,7 +236,7 @@ AbstractPage {
                 text: qsTr('Send')
                 function send() {
                     var parameters = {'user_id': root.recipient.id_str, 'text': textArea.text}
-                    directMessage.newDirectMessage(parameters)
+                    directMessage.newDirectMessages(parameters)
                 }
                 onClicked: send.send()
             }

@@ -86,7 +86,7 @@ AbstractLinkPage {
             MenuItemWithIcon {
                 iconSource: 'image://theme/icon-m-toolbar-delete'.concat(theme.inverted ? "-white" : "")
                 text: qsTr('Delete')
-                onClicked: direct_message.destroyDirectMessage()
+                onClicked: direct_message.destroyDirectMessages()
             }
         }
     }

@@ -42,7 +42,7 @@ AbstractLinkPage {
     property bool skipAfterTweeting: true
 
     QueryDialog {
-        id: destroyStatus
+        id: destroyStatuses
         icon: 'image://theme/icon-m-content-file-unknown'.concat(theme.inverted ? "-inverse" : "")
         titleText: qsTr('Delete Tweet')
         message: qsTr('Are you sure you want to delete this Tweet?')
@@ -50,7 +50,7 @@ AbstractLinkPage {
         acceptButtonText: qsTr('Delete')
         rejectButtonText: qsTr('Cancel')
 
-        onAccepted: status.destroyStatus()
+        onAccepted: status.destroyStatuses()
     }
 
     Status {
@@ -395,7 +395,7 @@ AbstractLinkPage {
         ToolIcon {
             iconSource: 'image://theme/icon-m-toolbar-delete'.concat(theme.inverted ? "-white" : "")
             visible: status.user.id_str === oauth.user_id
-            onClicked: destroyStatus.open()
+            onClicked: destroyStatuses.open()
         }
 
 

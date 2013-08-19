@@ -54,9 +54,9 @@
 #include <directmessage.h>
 
 // Friends & Followers
-#include <noretweetids.h>
-#include <followerids.h>
-#include <friendids.h>
+#include <noretweetsids.h>
+#include <followersids.h>
+#include <friendsids.h>
 #include <incoming.h>
 #include <outgoing.h>
 #include <followers.h>
@@ -68,8 +68,8 @@
 #include <verifycredentials.h>
 #include <updatesettings.h>
 #include <updateprofile.h>
-#include <blocklist.h>
-#include <blockids.h>
+#include <blockslist.h>
+#include <blocksids.h>
 #include <lookupusers.h>
 #include <user.h>
 #include <searchusers.h>
@@ -83,9 +83,9 @@
 
 // Lists
 #include <lists.h>
-#include <liststatuses.h>
+#include <listsstatuses.h>
 #include <listsmemberships.h>
-#include <listmembers.h>
+#include <listsmembers.h>
 #include <listssubscriptions.h>
 #include <list.h> // TODO ?
 
@@ -151,9 +151,9 @@ Twitter4QML::Twitter4QML(QObject *parent)
     qmlRegisterType<DirectMessage>("Twitter4QML", major, minor, "DirectMessage");
 
     // Friends & Followers
-    qmlRegisterType<NoRetweetIds>("Twitter4QML", major, minor, "NoRetweetIdsModel");
-    qmlRegisterType<FriendIds>("Twitter4QML", major, minor, "FriendIdsModel");
-    qmlRegisterType<FollowerIds>("Twitter4QML", major, minor, "FollowerIdsModel");
+    qmlRegisterType<NoRetweetsIds>("Twitter4QML", major, minor, "NoRetweetIdsModel");
+    qmlRegisterType<FriendsIds>("Twitter4QML", major, minor, "FriendIdsModel");
+    qmlRegisterType<FollowersIds>("Twitter4QML", major, minor, "FollowerIdsModel");
     qmlRegisterType<Incoming>("Twitter4QML", major, minor, "IncomingModel");
     qmlRegisterType<Outgoing>("Twitter4QML", major, minor, "OutgoingModel");
     qmlRegisterType<ShowFriendships>("Twitter4QML", major, minor, "ShowFriendships");
@@ -173,8 +173,8 @@ Twitter4QML::Twitter4QML(QObject *parent)
     qmlRegisterType<Lists>("Twitter4QML", major, minor, "ListsModel");
     qmlRegisterType<ListsSubscriptions>("Twitter4QML", major, minor, "ListsSubscriptionsModel");
     qmlRegisterType<ListsMemberships>("Twitter4QML", major, minor, "ListsMembershipsModel");
-    qmlRegisterType<ListStatuses>("Twitter4QML", major, minor, "ListStatusesModel");
-    qmlRegisterType<ListMembers>("Twitter4QML", major, minor, "ListMembersModel");
+    qmlRegisterType<ListsStatuses>("Twitter4QML", major, minor, "ListStatusesModel");
+    qmlRegisterType<ListsMembers>("Twitter4QML", major, minor, "ListMembersModel");
     qmlRegisterType<List>("Twitter4QML", major, minor, "List");
 
     qmlRegisterType<VerifyCredentials>("Twitter4QML", major, minor, "VerifyCredentials");
